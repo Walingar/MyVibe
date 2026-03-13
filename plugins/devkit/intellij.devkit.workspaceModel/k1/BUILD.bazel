@@ -27,7 +27,6 @@ jvm_library(
   kotlinc_opts = ":custom_k1",
   deps = [
     "//platform/workspace/storage",
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel",
     "//java/java-psi-api:psi",
     "//java/java-indexing-api:indexing",
     "@lib//:kotlin-stdlib",
@@ -50,8 +49,6 @@ jvm_library(
   deps = [
     "//platform/workspace/storage",
     "//platform/workspace/storage:storage_test_lib",
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel",
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel_test_lib",
     "//java/java-psi-api:psi",
     "//java/java-psi-api:psi_test_lib",
     "//java/java-indexing-api:indexing",

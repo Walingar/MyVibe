@@ -2017,13 +2017,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "gradle-provided",
-  exports = [":gradle"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.apache.ant/ant-1.10.15.jar_copy",
   src = "@org_apache_ant-ant-1_10_15_http//file",
@@ -6907,13 +6900,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-jvm_import(
-  name = "jsr305",
-  jar = "@com_google_code_findbugs-jsr305-3_0_2_http//file",
-  source_jar = "@com_google_code_findbugs-jsr305-3_0_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "junit/junit-4.13.2.jar_copy",
   src = "@junit-junit-4_13_2_http//file",
@@ -7606,28 +7592,6 @@ java_library(
 )
 
 copy_file(
-  name = "org.jetbrains.kotlin/analysis-api-k2-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-analysis-api-k2-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/analysis-api-k2-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-analysis-api-k2",
-  jar = "@org_jetbrains_kotlin-analysis-api-k2-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-analysis-api-k2-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-analysis-api-k2-provided",
-  exports = [":kotlinc-analysis-api-k2"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.jetbrains.kotlin/assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   out = "org.jetbrains.kotlin/assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
@@ -7654,13 +7618,6 @@ jvm_import(
   name = "kotlinc-compose-compiler-plugin",
   jar = "@org_jetbrains_kotlin-compose-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-compose-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-compose-compiler-plugin-provided",
-  exports = [":kotlinc-compose-compiler-plugin"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -10826,21 +10783,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.apache.thrift/libthrift-0.19.0.jar_copy",
-  src = "@org_apache_thrift-libthrift-0_19_0_http//file",
-  out = "org.apache.thrift/libthrift-0.19.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "libthrift",
-  jar = "@org_apache_thrift-libthrift-0_19_0_http//file",
-  source_jar = "@org_apache_thrift-libthrift-0_19_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.slf4j/log4j-over-slf4j-1.7.36.jar_copy",
   src = "@org_slf4j-log4j-over-slf4j-1_7_36_http//file",
   out = "org.slf4j/log4j-over-slf4j-1.7.36.jar",
@@ -13519,35 +13461,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.jetbrains.intellij.deps.completion/completion-ranking-python-with-full-line-0.2.1.jar_copy",
-  src = "@org_jetbrains_intellij_deps_completion-completion-ranking-python-with-full-line-0_2_1_http//file",
-  out = "org.jetbrains.intellij.deps.completion/completion-ranking-python-with-full-line-0.2.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "python-community-impl-completion-ranking-python-with-full-line",
-  jar = "@org_jetbrains_intellij_deps_completion-completion-ranking-python-with-full-line-0_2_1_http//file",
-  source_jar = "@org_jetbrains_intellij_deps_completion-completion-ranking-python-with-full-line-0_2_1-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "completion.ml.python.features/ml-completion-prev-exprs-models-1.11.jar_copy",
-  src = "@completion_ml_python_features-ml-completion-prev-exprs-models-1_11_http//file",
-  out = "completion.ml.python.features/ml-completion-prev-exprs-models-1.11.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "python-community-impl-ml-completion-prev-exprs-models",
-  jar = "@completion_ml_python_features-ml-completion-prev-exprs-models-1_11_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "com.jetbrains.qodana/qodana-sarif-0.2.115.jar_copy",
   src = "@com_jetbrains_qodana-qodana-sarif-0_2_115_http//file",
   out = "com.jetbrains.qodana/qodana-sarif-0.2.115.jar",
@@ -14101,43 +14014,6 @@ jvm_import(
   jar = "@org_jetbrains_intellij_deps_completion-performance-kotlin-0_0_9_http//file",
   source_jar = "@org_jetbrains_intellij_deps_completion-performance-kotlin-0_0_9-sources_http//file",
   visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.consensys.tuweni/tuweni-toml-2.7.1.jar_copy",
-  src = "@io_consensys_tuweni-tuweni-toml-2_7_1_http//file",
-  out = "io.consensys.tuweni/tuweni-toml-2.7.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.antlr/antlr4-runtime-4.13.0.jar_copy",
-  src = "@org_antlr-antlr4-runtime-4_13_0_http//file",
-  out = "org.antlr/antlr4-runtime-4.13.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "tuweni-toml",
-  exports = [
-    ":io_consensys_tuweni-tuweni-toml-2_7_1_http_import",
-    ":org_antlr-antlr4-runtime-4_13_0_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io_consensys_tuweni-tuweni-toml-2_7_1_http_import",
-  jar = "@io_consensys_tuweni-tuweni-toml-2_7_1_http//file",
-  source_jar = "@io_consensys_tuweni-tuweni-toml-2_7_1-sources_http//file"
-)
-
-jvm_import(
-  name = "org_antlr-antlr4-runtime-4_13_0_http_import",
-  jar = "@org_antlr-antlr4-runtime-4_13_0_http//file",
-  source_jar = "@org_antlr-antlr4-runtime-4_13_0-sources_http//file"
 )
 
 copy_file(

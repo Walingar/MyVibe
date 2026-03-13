@@ -21,18 +21,12 @@
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="JUnit5" level="project" />
     <orderEntry type="module" module-name="intellij.platform.projectModel" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.community.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.libraries.hamcrest" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.community.services.shared" exported="" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.community.services.internal.impl" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.util" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.community.junit5Tests.framework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.python.community.impl.installer" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.psi.impl" scope="TEST" />
     <orderEntry type="module" module-name="intellij.python.community.execService.python" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5.eel" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.community.services.systemPython" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="intellij.python.community.services.systemPython" />
 </module>

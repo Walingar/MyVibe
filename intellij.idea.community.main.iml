@@ -67,7 +67,6 @@
     <orderEntry type="module" module-name="intellij.platform.testFramework" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.guiForms.designer" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.dev.plugin.main" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.devkit.plugin.main" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.eclipse" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.git" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.git.shared" scope="RUNTIME" />
@@ -157,14 +156,7 @@
     <orderEntry type="module" module-name="intellij.vcs.github.json" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.github.tracker" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.grazie" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.k1" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.k2" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.shared" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.resources" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.compose.ide.plugin.gradleTooling.rt" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.git.commit.modal" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.mcpserver" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.python.community.plugin" scope="RUNTIME" />
   </component>
 </module>

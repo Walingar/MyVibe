@@ -1,67 +1,7 @@
-### auto-generated section `build intellij.compose.ide.plugin.k2` start
-load("//build:compiler-options.bzl", "create_kotlinc_options")
-load("@rules_jvm//:jvm.bzl", "jvm_library", "resourcegroup")
-
-create_kotlinc_options(
-  name = "custom_ide-plugin-k2",
-  x_context_parameters = True
-)
-
-resourcegroup(
-  name = "ide-plugin-k2_resources",
-  srcs = glob(["resources/**/*"]),
-  strip_prefix = "resources"
-)
-
-jvm_library(
-  name = "ide-plugin-k2",
-  module_name = "intellij.compose.ide.plugin.k2",
-  visibility = ["//visibility:public"],
-  srcs = glob(["src/**/*.kt", "src/**/*.java", "src/**/*.form"], allow_empty = True),
-  resources = [":ide-plugin-k2_resources"],
-  kotlinc_opts = ":custom_ide-plugin-k2",
-  deps = [
-    "@lib//:kotlin-stdlib",
-    "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared",
-    "//platform/analysis-api:analysis",
-    "//platform/core-api:core",
-    "//platform/lang-api:lang",
-    "//platform/util",
-    "//platform/analysis-impl",
-    "//platform/core-impl",
-    "@lib//:kotlinc-kotlin-compiler-common-provided",
-    "@lib//:kotlinc-analysis-api-provided",
-    "//java/java-psi-api:psi",
-    "@lib//:kotlinc-analysis-api-k2-provided",
-    "@lib//:kotlinc-compose-compiler-plugin-provided",
-  ]
-)
-
-jvm_library(
-  name = "ide-plugin-k2_test_lib",
-  module_name = "intellij.compose.ide.plugin.k2",
-  visibility = ["//visibility:public"],
-  srcs = glob([], allow_empty = True),
-  kotlinc_opts = ":custom_ide-plugin-k2",
-  runtime_deps = [
-    ":ide-plugin-k2",
-    "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared_test_lib",
-    "//platform/analysis-api:analysis_test_lib",
-    "//platform/core-api:core_test_lib",
-    "//platform/lang-api:lang_test_lib",
-    "//platform/util:util_test_lib",
-    "//platform/analysis-impl:analysis-impl_test_lib",
-    "//platform/core-impl:core-impl_test_lib",
-    "@lib//:kotlinc-kotlin-compiler-common-provided",
-    "@lib//:kotlinc-analysis-api-provided",
-    "//java/java-psi-api:psi_test_lib",
-    "@lib//:kotlinc-analysis-api-k2-provided",
-    "@lib//:kotlinc-compose-compiler-plugin-provided",
-  ]
-)
-### auto-generated section `build intellij.compose.ide.plugin.k2` end
-
 ### auto-generated section `build intellij.compose.ide.plugin.k2.tests` start
+load("//build:compiler-options.bzl", "create_kotlinc_options")
+load("@rules_jvm//:jvm.bzl", "jvm_library")
+
 create_kotlinc_options(
   name = "custom_ide-plugin-k2-tests",
   x_context_parameters = True
@@ -75,16 +15,11 @@ jvm_library(
 
 jvm_library(
   name = "ide-plugin-k2-tests_test_lib",
+  module_name = "intellij.compose.ide.plugin.k2.tests",
   visibility = ["//visibility:public"],
   srcs = glob(["tests/**/*.kt", "tests/**/*.java", "tests/**/*.form"], allow_empty = True),
   kotlinc_opts = ":custom_ide-plugin-k2-tests",
-  associates = [
-    "//plugins/compose/intellij.compose.ide.plugin.k2:ide-plugin-k2",
-    "//plugins/compose/intellij.compose.ide.plugin.k2:ide-plugin-k2_test_lib",
-  ],
   deps = [
-    "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared",
-    "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared_test_lib",
     "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared-tests",
     "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared-tests_test_lib",
     "//java/testFramework",

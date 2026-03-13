@@ -27,7 +27,6 @@ jvm_library(
   resources = [":k2_resources"],
   kotlinc_opts = ":custom_k2",
   deps = [
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel",
     "//platform/core-api:core",
     "//platform/indexing-api:indexing",
     "//java/java-indexing-api:indexing",
@@ -49,8 +48,6 @@ jvm_library(
   kotlinc_opts = ":custom_k2",
   associates = [":k2"],
   deps = [
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel",
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel_test_lib",
     "//platform/core-api:core",
     "//platform/core-api:core_test_lib",
     "//platform/indexing-api:indexing",

@@ -33,7 +33,6 @@ jvm_library(
     "//platform/core-impl",
     "//platform/refactoring",
     "//platform/lang-impl",
-    "//plugins/devkit/devkit-core:core",
   ]
 )
 
@@ -59,14 +58,8 @@ jvm_library(
     "//platform/refactoring:refactoring_test_lib",
     "//platform/lang-impl",
     "//platform/lang-impl:lang-impl_test_lib",
-    "//plugins/devkit/devkit-kotlin-tests:kotlin-tests",
-    "//plugins/devkit/devkit-kotlin-tests:kotlin-tests_test_lib",
-    "//plugins/devkit/devkit-tests:testFramework",
-    "//plugins/devkit/devkit-tests:testFramework_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//plugins/devkit/devkit-core:core",
-    "//plugins/devkit/devkit-core:core_test_lib",
   ]
 )
 ### auto-generated section `build intellij.kotlin.devkit.k1` end

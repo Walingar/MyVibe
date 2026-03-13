@@ -43,7 +43,6 @@
     <orderEntry type="module" module-name="intellij.platform.lang.core" />
     <orderEntry type="module" module-name="intellij.platform.projectModel" />
     <orderEntry type="module" module-name="intellij.platform.usageView.impl" />
-    <orderEntry type="module" module-name="intellij.python.community.impl" />
     <orderEntry type="module" module-name="intellij.platform.lang" />
     <orderEntry type="module" module-name="intellij.platform.lang.impl" />
     <orderEntry type="module" module-name="intellij.platform.execution.impl" />
@@ -64,10 +63,8 @@
     <orderEntry type="module" module-name="intellij.platform.util.coroutines" />
     <orderEntry type="module" module-name="intellij.platform.experiment" />
     <orderEntry type="library" name="jna" level="project" />
-    <orderEntry type="module" module-name="intellij.python.community.services.systemPython" />
     <orderEntry type="module" module-name="intellij.platform.eel" />
     <orderEntry type="module" module-name="intellij.platform.eel.provider" />
-    <orderEntry type="module" module-name="intellij.python.community.services.shared" />
     <orderEntry type="module" module-name="intellij.python.community.impl.pipenv" />
     <orderEntry type="library" name="jetbrains-annotations" level="project" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
@@ -75,8 +72,6 @@
     <orderEntry type="library" scope="PROVIDED" name="io.github.z4kn4fein.semver.jvm" level="project" />
     <orderEntry type="module" module-name="intellij.platform.ide.nonModalWelcomeScreen" />
     <orderEntry type="module" module-name="intellij.platform.ide.nonModalWelcomeScreen.backend" />
-    <orderEntry type="module" module-name="intellij.python.community.execService" />
-    <orderEntry type="module" module-name="intellij.python.sdk.ui" />
     <orderEntry type="module" module-name="intellij.python.community.impl.poetry.common" />
     <orderEntry type="module" module-name="intellij.python.community.impl.uv.common" />
     <orderEntry type="module" module-name="intellij.python.community.execService.python" />

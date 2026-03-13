@@ -1,78 +1,7 @@
-### auto-generated section `build intellij.compose.ide.plugin.shared` start
-load("//build:compiler-options.bzl", "create_kotlinc_options")
-load("@rules_jvm//:jvm.bzl", "jvm_library", "resourcegroup")
-
-create_kotlinc_options(
-  name = "custom_ide-plugin-shared",
-  x_context_parameters = True
-)
-
-resourcegroup(
-  name = "ide-plugin-shared_resources",
-  srcs = glob(["resources/**/*"]),
-  strip_prefix = "resources"
-)
-
-jvm_library(
-  name = "ide-plugin-shared",
-  module_name = "intellij.compose.ide.plugin.shared",
-  visibility = ["//visibility:public"],
-  srcs = glob(["src/**/*.kt", "src/**/*.java", "src/**/*.form"], allow_empty = True),
-  resources = [":ide-plugin-shared_resources"],
-  kotlinc_opts = ":custom_ide-plugin-shared",
-  deps = [
-    "//plugins/compose:compose-ide-plugin",
-    "//platform/analysis-api:analysis",
-    "//platform/analysis-impl",
-    "//platform/core-api:core",
-    "//platform/core-impl",
-    "//platform/editor-ui-api:editor-ui",
-    "//platform/platform-impl:ide-impl",
-    "//platform/indexing-api:indexing",
-    "//platform/lang-api:lang",
-    "//platform/lang-core",
-    "//platform/projectModel-api:projectModel",
-    "//platform/projectModel-impl",
-    "//uast/uast-common:uast",
-    "//platform/util",
-    "@lib//:kotlinc-kotlin-compiler-common-provided",
-    "@lib//:kotlinc-analysis-api-provided",
-    "//java/java-psi-api:psi",
-    "//platform/lang-impl",
-  ]
-)
-
-jvm_library(
-  name = "ide-plugin-shared_test_lib",
-  module_name = "intellij.compose.ide.plugin.shared",
-  visibility = ["//visibility:public"],
-  srcs = glob([], allow_empty = True),
-  kotlinc_opts = ":custom_ide-plugin-shared",
-  runtime_deps = [
-    ":ide-plugin-shared",
-    "//plugins/compose:compose-ide-plugin_test_lib",
-    "//platform/analysis-api:analysis_test_lib",
-    "//platform/analysis-impl:analysis-impl_test_lib",
-    "//platform/core-api:core_test_lib",
-    "//platform/core-impl:core-impl_test_lib",
-    "//platform/editor-ui-api:editor-ui_test_lib",
-    "//platform/platform-impl:ide-impl_test_lib",
-    "//platform/indexing-api:indexing_test_lib",
-    "//platform/lang-api:lang_test_lib",
-    "//platform/lang-core:lang-core_test_lib",
-    "//platform/projectModel-api:projectModel_test_lib",
-    "//platform/projectModel-impl:projectModel-impl_test_lib",
-    "//uast/uast-common:uast_test_lib",
-    "//platform/util:util_test_lib",
-    "@lib//:kotlinc-kotlin-compiler-common-provided",
-    "@lib//:kotlinc-analysis-api-provided",
-    "//java/java-psi-api:psi_test_lib",
-    "//platform/lang-impl:lang-impl_test_lib",
-  ]
-)
-### auto-generated section `build intellij.compose.ide.plugin.shared` end
-
 ### auto-generated section `build intellij.compose.ide.plugin.shared.tests` start
+load("//build:compiler-options.bzl", "create_kotlinc_options")
+load("@rules_jvm//:jvm.bzl", "jvm_library")
+
 create_kotlinc_options(
   name = "custom_ide-plugin-shared-tests",
   opt_in = [
@@ -89,13 +18,10 @@ jvm_library(
 
 jvm_library(
   name = "ide-plugin-shared-tests_test_lib",
+  module_name = "intellij.compose.ide.plugin.shared.tests",
   visibility = ["//visibility:public"],
   srcs = glob(["tests/**/*.kt", "tests/**/*.java", "tests/**/*.form"], allow_empty = True),
   kotlinc_opts = ":custom_ide-plugin-shared-tests",
-  associates = [
-    "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared",
-    "//plugins/compose/intellij.compose.ide.plugin.shared:ide-plugin-shared_test_lib",
-  ],
   deps = [
     "//platform/analysis-api:analysis",
     "//platform/analysis-api:analysis_test_lib",

@@ -19,7 +19,6 @@
     <orderEntry type="module" module-name="intellij.terminal.backend" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.pycharm.community" />
     <orderEntry type="module" module-name="intellij.pycharm.community.customization" />
-    <orderEntry type="module" module-name="intellij.python.community.plugin" />
     <orderEntry type="module" module-name="intellij.python.community.plugin.modules" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.starter" />
     <orderEntry type="module" module-name="intellij.tasks.jira" />

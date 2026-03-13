@@ -6,7 +6,6 @@ jvm_library(
   visibility = ["//visibility:public"],
   srcs = glob([], allow_empty = True),
   runtime_deps = [
-    "//plugins/devkit",
     "//libraries/kotlinx/coroutines/core",
     "//platform/workspace/jps/tests",
     "@lib//:workspace-model-codegen",
@@ -40,8 +39,6 @@ jvm_library(
     "//java/testFramework:testFramework_test_lib",
     "//java/openapi:java",
     "//java/openapi:java_test_lib",
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel",
-    "//plugins/devkit/intellij.devkit.workspaceModel:workspaceModel_test_lib",
     "//platform/workspace/storage",
     "//platform/workspace/storage:storage_test_lib",
     "@lib//:kotlinc-kotlin-compiler-common",
@@ -76,10 +73,7 @@ jvm_library(
     "//plugins/copyright",
     "//plugins/copyright:copyright_test_lib",
   ],
-  runtime_deps = [
-    ":tests",
-    "//plugins/devkit:devkit_test_lib",
-  ]
+  runtime_deps = [":tests"]
 )
 ### auto-generated section `build intellij.devkit.workspaceModel.tests` end
 

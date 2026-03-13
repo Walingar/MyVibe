@@ -18,7 +18,6 @@
     <orderEntry type="module" module-name="intellij.markdown" scope="TEST" />
     <orderEntry type="module" module-name="intellij.java.plugin" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.collaborationTools" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.community.plugin" scope="RUNTIME" />
     <orderEntry type="module-library" scope="TEST">
       <library name="jetbrains.intellij.deps.languagetool.language.de" type="repository">
         <properties maven-id="org.jetbrains.intellij.deps.languagetool:language-de:6.7.20">
@@ -784,9 +783,7 @@
     <orderEntry type="module" module-name="intellij.platform.images.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.regexp.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.debugger.impl.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.venv.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.python.community.services.systemPython.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.python.pyproject.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.python.community.services.internal.impl.tests" scope="TEST" />
   </component>
 </module>

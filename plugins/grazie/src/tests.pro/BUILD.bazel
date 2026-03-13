@@ -14,7 +14,6 @@ jvm_library(
   runtime_deps = [
     "@lib//:kotlin-stdlib",
     "//libraries/rd/core",
-    "//python/pluginCore:community-plugin",
     "//plugins/grazie",
     "//plugins/grazie/src:core",
     "@lib//:grazie-tests-pro-ai-grazie-model-ner-jvm",
@@ -89,19 +88,12 @@ jvm_library(
     "//RegExpSupport:regexp-tests_test_lib",
     "//platform/xdebugger-impl:debugger-impl-tests",
     "//platform/xdebugger-impl:debugger-impl-tests_test_lib",
-    "//python/python-venv:venv-tests",
-    "//python/python-venv:venv-tests_test_lib",
     "//python/services/system-python:python-community-services-systemPython-tests",
     "//python/services/system-python:python-community-services-systemPython-tests_test_lib",
-    "//python/python-pyproject:pyproject-tests",
-    "//python/python-pyproject:pyproject-tests_test_lib",
     "//python/services/internal-impl:python-community-services-internal-impl-tests",
     "//python/services/internal-impl:python-community-services-internal-impl-tests_test_lib",
   ],
-  runtime_deps = [
-    ":tests.pro",
-    "//python/pluginCore:community-plugin_test_lib",
-  ]
+  runtime_deps = [":tests.pro"]
 )
 ### auto-generated section `build intellij.grazie.tests.pro` end
 

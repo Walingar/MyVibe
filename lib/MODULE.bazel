@@ -6335,20 +6335,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_kotlin-analysis-api-k2-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/analysis-api-k2-for-ide/2.4.0-dev-5744/analysis-api-k2-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "eb057fb9a5a6e4908a666bfdb22bc138337d7d91555b3ebfdca82c10dc682b86",
-  downloaded_file_path = "analysis-api-k2-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-analysis-api-k2-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/analysis-api-k2-for-ide/2.4.0-dev-5744/analysis-api-k2-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "984323578b5b4e948c764d1c6af5e938871b4c3620fe2b3855d1c02c6a10bd37",
-  downloaded_file_path = "analysis-api-k2-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
   name = "org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/assignment-compiler-plugin-for-ide/2.4.0-dev-5744/assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
   sha256 = "7e378bbc24cdb0bedfa352c54e04df8df23f0c84a6759b095aafa090b0d419b9",
@@ -8904,20 +8890,6 @@ http_file(
 )
 
 http_file(
-  name = "org_apache_thrift-libthrift-0_19_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/thrift/libthrift/0.19.0/libthrift-0.19.0.jar",
-  sha256 = "2b6e6550b40467ede7b3034a1a9eb9148fbf920cfdae5bf0b1d2bb3d4e780625",
-  downloaded_file_path = "libthrift-0.19.0.jar"
-)
-
-http_file(
-  name = "org_apache_thrift-libthrift-0_19_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/thrift/libthrift/0.19.0/libthrift-0.19.0-sources.jar",
-  sha256 = "93334310686b6594800b431db134b5f37c3a02ad8dda71a9ea93d999389fc721",
-  downloaded_file_path = "libthrift-0.19.0-sources.jar"
-)
-
-http_file(
   name = "org_slf4j-log4j-over-slf4j-1_7_36_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.36/log4j-over-slf4j-1.7.36.jar",
   sha256 = "0a7e032bf5bcdd5b2bf8bf2e5cf02c5646f2aa6fee66933b8150dbe84e651e8a",
@@ -11081,27 +11053,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-ranking-python-with-full-line-0_2_1_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-ranking-python-with-full-line/0.2.1/completion-ranking-python-with-full-line-0.2.1.jar",
-  sha256 = "141df5d2e70b27911bb5b601e1574623dc43b31bc6b4160f164ddd6f2ca27e6f",
-  downloaded_file_path = "completion-ranking-python-with-full-line-0.2.1.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-ranking-python-with-full-line-0_2_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-ranking-python-with-full-line/0.2.1/completion-ranking-python-with-full-line-0.2.1-sources.jar",
-  sha256 = "dbbebaee27a22b02cadae8e37a76d45076ba897b836f23e8b300dd88c6eaff4d",
-  downloaded_file_path = "completion-ranking-python-with-full-line-0.2.1-sources.jar"
-)
-
-http_file(
-  name = "completion_ml_python_features-ml-completion-prev-exprs-models-1_11_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/completion/ml/python/features/ml-completion-prev-exprs-models/1.11/ml-completion-prev-exprs-models-1.11.jar",
-  sha256 = "8924b199c8cc52530de2b250670806d8b046fa5ae9d32a9f27a9b224e934a1ad",
-  downloaded_file_path = "ml-completion-prev-exprs-models-1.11.jar"
-)
-
-http_file(
   name = "com_jetbrains_qodana-qodana-sarif-0_2_115_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/qodana/qodana-sarif/0.2.115/qodana-sarif-0.2.115.jar",
   sha256 = "d4adc9b59fb524337717569800ae58513ef7b9c7c9749b72a4245f13ae932268",
@@ -11561,34 +11512,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/performance-kotlin/0.0.9/performance-kotlin-0.0.9-sources.jar",
   sha256 = "99bd24325f26788e5679a29bbdaa1d5668c304d5096bca2eb9de691dac26a21c",
   downloaded_file_path = "performance-kotlin-0.0.9-sources.jar"
-)
-
-http_file(
-  name = "io_consensys_tuweni-tuweni-toml-2_7_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/consensys/tuweni/tuweni-toml/2.7.1/tuweni-toml-2.7.1.jar",
-  sha256 = "00cfcc187ff46ce8d702a0f2cb98d6a4f2a67f8f41242b5901e46efdcb7c84b7",
-  downloaded_file_path = "tuweni-toml-2.7.1.jar"
-)
-
-http_file(
-  name = "org_antlr-antlr4-runtime-4_13_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar",
-  sha256 = "bd7f7b5d07bc0b047f10915b32ca4bb1de9e57d8049098882e4453c88c076a5d",
-  downloaded_file_path = "antlr4-runtime-4.13.0.jar"
-)
-
-http_file(
-  name = "io_consensys_tuweni-tuweni-toml-2_7_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/consensys/tuweni/tuweni-toml/2.7.1/tuweni-toml-2.7.1-sources.jar",
-  sha256 = "c59f3eeedc451b9ae8487d61543e50dcca26e8e678640d05e20984575b91febd",
-  downloaded_file_path = "tuweni-toml-2.7.1-sources.jar"
-)
-
-http_file(
-  name = "org_antlr-antlr4-runtime-4_13_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0-sources.jar",
-  sha256 = "5254f04a09c29ff33da06592ed70312cfdb386a49ea407fe6c03cdb8a3665953",
-  downloaded_file_path = "antlr4-runtime-4.13.0-sources.jar"
 )
 
 http_file(

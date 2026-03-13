@@ -56,8 +56,6 @@ jvm_library(
     "//jps/model-serialization:model-serialization_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//plugins/devkit/runtimeModuleRepository/generator",
-    "//plugins/devkit/runtimeModuleRepository/generator:generator_test_lib",
     "//java/java-runtime:rt",
     "//java/java-runtime:rt_test_lib",
     "//platform/runtime/repository",

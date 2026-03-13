@@ -29,7 +29,6 @@ jvm_library(
     "//platform/projectModel-impl",
     "//platform/core-impl",
     "//platform/analysis-impl",
-    "//plugins/devkit/api-dump",
     "//java/java-impl:impl",
   ]
 )
@@ -67,8 +66,6 @@ jvm_library(
     "//platform/core-impl:core-impl_test_lib",
     "//platform/analysis-impl",
     "//platform/analysis-impl:analysis-impl_test_lib",
-    "//plugins/devkit/api-dump",
-    "//plugins/devkit/api-dump:api-dump_test_lib",
     "//java/java-impl:impl",
     "//java/java-impl:impl_test_lib",
     "//platform/testFramework",
