@@ -148,8 +148,6 @@ jvm/jvm-analysis-api
 jvm/jvm-analysis-impl
 jvm/jvm-analysis-internal-testFramework
 jvm/jvm-analysis-java-tests
-jvm/jvm-analysis-kotlin-tests-k1
-jvm/jvm-analysis-kotlin-tests-k2
 jvm/jvm-analysis-kotlin-tests-shared
 jvm/jvm-analysis-quickFix
 jvm/jvm-analysis-refactoring
@@ -539,7 +537,6 @@ platform/remote-servers/agent-rt
 platform/remote-servers/api
 platform/remote-servers/clouds
 platform/remote-servers/impl
-platform/remote-servers/target-integration-tests
 platform/remote-topics/backend
 platform/remote-topics/frontend
 platform/remote-topics/shared
@@ -708,8 +705,6 @@ plugins/compilation-charts
 plugins/compilation-charts/jps-plugin
 plugins/completion-ml-ranking
 plugins/completion-ml-ranking-models
-plugins/compose/intellij.compose.ide.plugin.k1
-plugins/compose/intellij.compose.ide.plugin.k2
 plugins/compose/intellij.compose.ide.plugin.shared
 plugins/configuration-script
 plugins/copyright
@@ -761,7 +756,6 @@ plugins/grazie/markdown
 plugins/grazie/properties
 plugins/grazie/src
 plugins/grazie/src/test
-plugins/grazie/src/tests.pro
 plugins/grazie/xml
 plugins/grazie/yaml
 plugins/groovy
@@ -787,7 +781,6 @@ plugins/java-decompiler/plugin
 plugins/java-i18n
 plugins/javaFX
 plugins/javaFX/common
-plugins/javaFX/community
 plugins/javaFX/jps
 plugins/javaFX/sceneBuilder
 plugins/jshell
@@ -799,14 +792,10 @@ plugins/jsonpath
 plugins/junit
 plugins/junit/groovy-tests
 plugins/junit/java-tests
-plugins/junit/kotlin-tests-k1
-plugins/junit/kotlin-tests-k2
 plugins/junit/kotlin-tests-shared
 plugins/junit/testFramework
 plugins/junit5_rt
-plugins/junit5_rt_tests
 plugins/junit6_rt
-plugins/junit6_rt_tests
 plugins/junit_rt
 plugins/keymaps/eclipse-keymap
 plugins/keymaps/netbeans5.6-keymap
@@ -820,7 +809,6 @@ plugins/keymaps/vscode-keymap
 plugins/keymaps/xcode-keymap
 plugins/laf/macos
 plugins/laf/win10
-plugins/lombok
 plugins/lombok/generated
 plugins/markdown/compose
 plugins/markdown/core
@@ -837,7 +825,6 @@ plugins/markdown/spellchecker
 plugins/markdown/test
 plugins/markdown/xml
 plugins/marketplace-ml
-plugins/maven-server-api/test
 plugins/maven/artifact-resolver/common
 plugins/mcp-server
 plugins/mcp-server/mcpserver.stdio
@@ -859,8 +846,6 @@ plugins/properties/properties-psi-impl
 plugins/properties/tests
 plugins/rareJavaRefactorings
 plugins/remote-control
-plugins/repository-search
-plugins/repository-search/common
 plugins/restructuredtext
 plugins/settings-repository
 plugins/settings-sync/jba
@@ -873,7 +858,6 @@ plugins/sh/plugin
 plugins/sh/terminal
 plugins/space/jps-plugin
 plugins/stats-collector
-plugins/stream-debugger
 plugins/svn4idea
 plugins/tasks/tasks-api
 plugins/tasks/tasks-compatibility
@@ -892,7 +876,6 @@ plugins/terminal/sh
 plugins/terminal/tests
 plugins/testng
 plugins/testng_rt
-plugins/testng_rt/tests
 plugins/textmate
 plugins/textmate/backend
 plugins/textmate/common
@@ -942,7 +925,6 @@ uast/uast-common
 uast/uast-common-ide
 uast/uast-java
 uast/uast-java-ide
-uast/uast-tests
 updater
 wintools
 xml/dom-impl
