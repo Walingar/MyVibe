@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="intellij.agent.workbench.chat" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.agent.workbench.plugin" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.agent.workbench.sessions" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.community.wintools" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.idea.community.build.tasks" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.idea.tools.launch" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.json.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.jsonpath" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.buildScripts.productDsl" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.builtInServer.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.completion.common.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.core.nio.fs.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.debugger.impl.frontend.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.debugger.impl.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.debugger.impl.ui.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.diagnostic.telemetry.agent.extension" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.diff.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.eel.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.execution.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.ide.nonModalWelcomeScreen" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.images.build" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.images.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.indexing.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.inspect" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.instanceContainer.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.jewel.detektPlugin" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.jps.build.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.jps.model.serialization.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.jps.model.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.langInjection.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.polySymbols.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.runtime.product.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.runtime.repository.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.scriptDebugger.ui" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.settings.local.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.statistics.envTests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.structuralSearch.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.testFramework.junit5.jimfs" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.testFramework.monorepo" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.testFramework.selfContainedProjects" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.util.coroutines.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.util.progress.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl.frontend.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl.shared.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.whatsNew" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.workspace.jps.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.workspace.storage.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.regexp.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.remoteDev.util" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.terminal.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.textmate.backend" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.textmate.plugin" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.tools.cmd.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.tools.devLauncher.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.tools.ide.starter.junit5" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.vcs.git.coverage" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.vcs.git.terminal" scope="TEST" />
+  </component>
+</module>

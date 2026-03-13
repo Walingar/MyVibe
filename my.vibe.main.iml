@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/android/android-uitests" />
+      <excludeFolder url="file://$MODULE_DIR$/config" />
+      <excludeFolder url="file://$MODULE_DIR$/system" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/plugin-graph/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/docs/dist-visualizer/dist" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="intellij.agent.workbench.plugin" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.copyright" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.editorconfig.plugin.main" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.emojipicker" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.ide.startup.importSettings" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.idea.community.customization" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.javaFX.jps" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.json" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.json.backend" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.keymap.eclipse" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.keymap.netbeans" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.keymap.visualStudio" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.markdown" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.markdown.plugin.main" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.marketplaceMl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.mcpserver" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.boot" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.bootstrap" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.compose" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.debugger" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.debugger.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.diff" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.diff.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.extensions" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.icons" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.ide" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.ide.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.ide.newUiOnboarding" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.ide.newUsersOnboarding" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.images" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.lang" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.lang.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.lvcs" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.lvcs.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.monolith.main" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.polySymbols" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.remoteServers.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.starter" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.structuralSearch" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.testFramework" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.testRunner" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.tracing.ide" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.usageView" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.util" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.vcs" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl.exec" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl.lang" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.vcs.impl.lang.actions" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.platform.warmup" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.properties.backend" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.regexp" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.remoteControl" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.sh.plugin.main" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.smart.update" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.spellchecker" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.terminal" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.terminal.backend" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.terminal.frontend" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.terminal.sh" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.git" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.git.frontend" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.git.shared" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.github" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.github.json" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.github.tracker" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.vcs.gitlab.yaml" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.yaml" scope="RUNTIME" />
+    <orderEntry type="module" module-name="intellij.yaml.backend" scope="RUNTIME" />
+  </component>
+</module>
