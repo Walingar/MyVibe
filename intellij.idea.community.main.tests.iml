@@ -108,6 +108,5 @@
     <orderEntry type="module" module-name="intellij.platform.jewel.detektPlugin" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.selfContainedProjects" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.cmd.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.turboComplete.tests" scope="TEST" />
   </component>
 </module>

@@ -11452,20 +11452,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_intellij_deps_completion-performance-kotlin-0_0_9_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/performance-kotlin/0.0.9/performance-kotlin-0.0.9.jar",
-  sha256 = "fabf4f175e25ea01a72fb18e6ba1479ebbbd555245021a83174089dc4fac1f5f",
-  downloaded_file_path = "performance-kotlin-0.0.9.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-performance-kotlin-0_0_9-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/performance-kotlin/0.0.9/performance-kotlin-0.0.9-sources.jar",
-  sha256 = "99bd24325f26788e5679a29bbdaa1d5668c304d5096bca2eb9de691dac26a21c",
-  downloaded_file_path = "performance-kotlin-0.0.9-sources.jar"
-)
-
-http_file(
   name = "com_apollographql_apollo-apollo-ast-jvm-4_0_0_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/apollographql/apollo/apollo-ast-jvm/4.0.0/apollo-ast-jvm-4.0.0.jar",
   sha256 = "1e83e448c104d946a6146c32409275a6ed4259999d469514be4f878a420f0b4f",

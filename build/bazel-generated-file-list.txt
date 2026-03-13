@@ -800,7 +800,6 @@ plugins/grazie/xml
 plugins/grazie/yaml
 plugins/groovy
 plugins/groovy-live-templates
-plugins/groovy/ant
 plugins/groovy/byteCodeViewer
 plugins/groovy/git
 plugins/groovy/groovy-psi
@@ -943,8 +942,6 @@ plugins/toml/frontend
 plugins/toml/grazie
 plugins/toml/json
 plugins/toml/tests
-plugins/turboComplete
-plugins/turboComplete/languages/kotlin/k1
 plugins/ui-designer
 plugins/ui-designer-core
 plugins/ui-designer/jps-plugin

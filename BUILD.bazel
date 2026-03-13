@@ -194,7 +194,6 @@ jvm_library(
     "//java/structuralsearch-java:structuralSearch",
     "//plugins/groovy/structuralsearch-groovy:structuralSearch",
     "//plugins/groovy/git",
-    "//plugins/groovy/ant",
     "//plugins/groovy/byteCodeViewer",
     "//json/backend",
     "//java/typeMigration",
@@ -348,7 +347,6 @@ jvm_library(
     "//java/structuralsearch-java:structuralSearch_test_lib",
     "//plugins/groovy/structuralsearch-groovy:structuralSearch_test_lib",
     "//plugins/groovy/git:git_test_lib",
-    "//plugins/groovy/ant:ant_test_lib",
     "//plugins/groovy/byteCodeViewer:byteCodeViewer_test_lib",
     "//json/backend:backend_test_lib",
     "//java/typeMigration:typeMigration_test_lib",
@@ -629,8 +627,6 @@ jvm_library(
     "//platform/testFramework/selfContainedProjects:selfContainedProjects_test_lib",
     "//tools/tests",
     "//tools/tests:tests_test_lib",
-    "//plugins/turboComplete:turboComplete-tests",
-    "//plugins/turboComplete:turboComplete-tests_test_lib",
   ]
 )
 ### auto-generated section `build intellij.idea.community.main.tests` end
