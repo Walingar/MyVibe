@@ -5,7 +5,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="intellij.java.ui.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.junit.java.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.jvm.analysis.java.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.xml.dom.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.langInjection.tests" scope="TEST" />
@@ -29,7 +28,6 @@
     <orderEntry type="module" module-name="intellij.space.java.jps" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.community.build.tasks" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.execution.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.commander" scope="TEST" />
     <orderEntry type="module" module-name="intellij.configurationScript" scope="TEST" />
     <orderEntry type="module" module-name="intellij.configurationScript.test.java" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.statistics.envTests" scope="TEST" />

@@ -2883,155 +2883,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.jacoco/org.jacoco.ant-0.8.14.jar_copy",
-  src = "@org_jacoco-org_jacoco_ant-0_8_14_http//file",
-  out = "org.jacoco/org.jacoco.ant-0.8.14.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jacoco/org.jacoco.core-0.8.14.jar_copy",
-  src = "@org_jacoco-org_jacoco_core-0_8_14_http//file",
-  out = "org.jacoco/org.jacoco.core-0.8.14.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.ow2.asm/asm-9.9.jar_copy",
-  src = "@org_ow2_asm-asm-9_9_http//file",
-  out = "org.ow2.asm/asm-9.9.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.ow2.asm/asm-commons-9.9.jar_copy",
-  src = "@org_ow2_asm-asm-commons-9_9_http//file",
-  out = "org.ow2.asm/asm-commons-9.9.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.ow2.asm/asm-tree-9.9.jar_copy",
-  src = "@org_ow2_asm-asm-tree-9_9_http//file",
-  out = "org.ow2.asm/asm-tree-9.9.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jacoco/org.jacoco.report-0.8.14.jar_copy",
-  src = "@org_jacoco-org_jacoco_report-0_8_14_http//file",
-  out = "org.jacoco/org.jacoco.report-0.8.14.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jacoco/org.jacoco.agent-0.8.14.jar_copy",
-  src = "@org_jacoco-org_jacoco_agent-0_8_14_http//file",
-  out = "org.jacoco/org.jacoco.agent-0.8.14.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "java-coverage-_ja_co_co",
-  exports = [
-    ":org_jacoco-org_jacoco_ant-0_8_14_http_import",
-    ":org_jacoco-org_jacoco_core-0_8_14_http_import",
-    ":org_ow2_asm-asm-9_9_http_import",
-    ":org_ow2_asm-asm-commons-9_9_http_import",
-    ":org_ow2_asm-asm-tree-9_9_http_import",
-    ":org_jacoco-org_jacoco_report-0_8_14_http_import",
-    ":org_jacoco-org_jacoco_agent-0_8_14_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "org_jacoco-org_jacoco_ant-0_8_14_http_import",
-  jar = "@org_jacoco-org_jacoco_ant-0_8_14_http//file",
-  source_jar = "@org_jacoco-org_jacoco_ant-0_8_14-sources_http//file"
-)
-
-jvm_import(
-  name = "org_jacoco-org_jacoco_core-0_8_14_http_import",
-  jar = "@org_jacoco-org_jacoco_core-0_8_14_http//file",
-  source_jar = "@org_jacoco-org_jacoco_core-0_8_14-sources_http//file"
-)
-
-jvm_import(
-  name = "org_ow2_asm-asm-9_9_http_import",
-  jar = "@org_ow2_asm-asm-9_9_http//file",
-  source_jar = "@org_ow2_asm-asm-9_9-sources_http//file"
-)
-
-jvm_import(
-  name = "org_ow2_asm-asm-commons-9_9_http_import",
-  jar = "@org_ow2_asm-asm-commons-9_9_http//file",
-  source_jar = "@org_ow2_asm-asm-commons-9_9-sources_http//file"
-)
-
-jvm_import(
-  name = "org_ow2_asm-asm-tree-9_9_http_import",
-  jar = "@org_ow2_asm-asm-tree-9_9_http//file",
-  source_jar = "@org_ow2_asm-asm-tree-9_9-sources_http//file"
-)
-
-jvm_import(
-  name = "org_jacoco-org_jacoco_report-0_8_14_http_import",
-  jar = "@org_jacoco-org_jacoco_report-0_8_14_http//file",
-  source_jar = "@org_jacoco-org_jacoco_report-0_8_14-sources_http//file"
-)
-
-jvm_import(
-  name = "org_jacoco-org_jacoco_agent-0_8_14_http_import",
-  jar = "@org_jacoco-org_jacoco_agent-0_8_14_http//file",
-  source_jar = "@org_jacoco-org_jacoco_agent-0_8_14-sources_http//file"
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps/coverage-report-1.0.25.jar_copy",
-  src = "@org_jetbrains_intellij_deps-coverage-report-1_0_25_http//file",
-  out = "org.jetbrains.intellij.deps/coverage-report-1.0.25.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.freemarker/freemarker-2.3.32.jar_copy",
-  src = "@org_freemarker-freemarker-2_3_32_http//file",
-  out = "org.freemarker/freemarker-2.3.32.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "java-coverage-coverage-report",
-  exports = [
-    ":org_jetbrains_intellij_deps-coverage-report-1_0_25_http_import",
-    ":org_freemarker-freemarker-2_3_32_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "org_jetbrains_intellij_deps-coverage-report-1_0_25_http_import",
-  jar = "@org_jetbrains_intellij_deps-coverage-report-1_0_25_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-coverage-report-1_0_25-sources_http//file"
-)
-
-jvm_import(
-  name = "org_freemarker-freemarker-2_3_32_http_import",
-  jar = "@org_freemarker-freemarker-2_3_32_http//file",
-  source_jar = "@org_freemarker-freemarker-2_3_32-sources_http//file"
-)
-
-copy_file(
   name = "org.jetbrains.intellij.deps/debugger-agent-1.144.jar_copy",
   src = "@org_jetbrains_intellij_deps-debugger-agent-1_144_http//file",
   out = "org.jetbrains.intellij.deps/debugger-agent-1.144.jar",
@@ -3146,27 +2997,6 @@ jvm_import(
   name = "java_compatibility",
   jar = "@org_jetbrains_intellij_deps-java-compatibility-1_0_1_http//file",
   source_jar = "@org_jetbrains_intellij_deps-java-compatibility-1_0_1-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps/scenebuilderkit-11.0.5.jar_copy",
-  src = "@org_jetbrains_intellij_deps-scenebuilderkit-11_0_5_http//file",
-  out = "org.jetbrains.intellij.deps/scenebuilderkit-11.0.5.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "java_f_x-scene_builder-_scene_builder_kit11",
-  jar = "@org_jetbrains_intellij_deps-scenebuilderkit-11_0_5_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "java_f_x-scene_builder-_scene_builder_kit11-provided",
-  exports = [":java_f_x-scene_builder-_scene_builder_kit11"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -4364,13 +4194,6 @@ jvm_import(
   source_jar = "@org_junit_platform-junit-platform-commons-6_0_0-sources_http//file"
 )
 
-java_library(
-  name = "junit6-provided",
-  exports = [":junit6"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.junit.platform/junit-platform-launcher-6.0.0.jar_copy",
   src = "@org_junit_platform-junit-platform-launcher-6_0_0_http//file",
@@ -4407,13 +4230,6 @@ jvm_import(
   name = "org_junit_platform-junit-platform-engine-6_0_0_http_import",
   jar = "@org_junit_platform-junit-platform-engine-6_0_0_http//file",
   source_jar = "@org_junit_platform-junit-platform-engine-6_0_0-sources_http//file"
-)
-
-java_library(
-  name = "junit6Launcher-provided",
-  exports = [":junit6Launcher"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
 )
 
 copy_file(
@@ -6773,6 +6589,14 @@ copy_file(
 )
 
 copy_file(
+  name = "org.freemarker/freemarker-2.3.32.jar_copy",
+  src = "@org_freemarker-freemarker-2_3_32_http//file",
+  out = "org.freemarker/freemarker-2.3.32.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
   name = "org.jetbrains.dokka/kotlin-as-java-plugin-2.0.0.jar_copy",
   src = "@org_jetbrains_dokka-kotlin-as-java-plugin-2_0_0_http//file",
   out = "org.jetbrains.dokka/kotlin-as-java-plugin-2.0.0.jar",
@@ -6819,6 +6643,12 @@ jvm_import(
   name = "org_jetbrains_dokka-dokka-base-2_0_0_http_import",
   jar = "@org_jetbrains_dokka-dokka-base-2_0_0_http//file",
   source_jar = "@org_jetbrains_dokka-dokka-base-2_0_0-sources_http//file"
+)
+
+jvm_import(
+  name = "org_freemarker-freemarker-2_3_32_http_import",
+  jar = "@org_freemarker-freemarker-2_3_32_http//file",
+  source_jar = "@org_freemarker-freemarker-2_3_32-sources_http//file"
 )
 
 jvm_import(
@@ -8019,21 +7849,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.apache.lucene/lucene-codecs-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-codecs-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-codecs-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-codecs",
-  jar = "@org_apache_lucene-lucene-codecs-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-codecs-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.apache.lucene/lucene-core-10.3.0.jar_copy",
   src = "@org_apache_lucene-lucene-core-10_3_0_http//file",
   out = "org.apache.lucene/lucene-core-10.3.0.jar",
@@ -8045,96 +7860,6 @@ jvm_import(
   name = "lucene-core",
   jar = "@org_apache_lucene-lucene-core-10_3_0_http//file",
   source_jar = "@org_apache_lucene-lucene-core-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.lucene/lucene-highlighter-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-highlighter-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-highlighter-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-highlighter",
-  jar = "@org_apache_lucene-lucene-highlighter-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-highlighter-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.lucene/lucene-memory-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-memory-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-memory-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-memory",
-  jar = "@org_apache_lucene-lucene-memory-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-memory-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.lucene/lucene-queries-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-queries-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-queries-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-queries",
-  jar = "@org_apache_lucene-lucene-queries-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-queries-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.lucene/lucene-queryparser-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-queryparser-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-queryparser-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-queryparser",
-  jar = "@org_apache_lucene-lucene-queryparser-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-queryparser-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.lucene/lucene-sandbox-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-sandbox-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-sandbox-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-sandbox",
-  jar = "@org_apache_lucene-lucene-sandbox-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-sandbox-10_3_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.lucene/lucene-suggest-10.3.0.jar_copy",
-  src = "@org_apache_lucene-lucene-suggest-10_3_0_http//file",
-  out = "org.apache.lucene/lucene-suggest-10.3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "lucene-suggest",
-  jar = "@org_apache_lucene-lucene-suggest-10_3_0_http//file",
-  source_jar = "@org_apache_lucene-lucene-suggest-10_3_0-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -9341,6 +9066,14 @@ copy_file(
 )
 
 copy_file(
+  name = "org.jetbrains.intellij.deps/coverage-report-1.0.25.jar_copy",
+  src = "@org_jetbrains_intellij_deps-coverage-report-1_0_25_http//file",
+  out = "org.jetbrains.intellij.deps/coverage-report-1.0.25.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
   name = "org.jetbrains.intellij.deps/intellij-coverage-agent-1.0.766.jar_copy",
   src = "@org_jetbrains_intellij_deps-intellij-coverage-agent-1_0_766_http//file",
   out = "org.jetbrains.intellij.deps/intellij-coverage-agent-1.0.766.jar",
@@ -9363,6 +9096,12 @@ jvm_import(
   name = "org_jetbrains_intellij_deps-intellij-coverage-reporter-1_0_766_http_import",
   jar = "@org_jetbrains_intellij_deps-intellij-coverage-reporter-1_0_766_http//file",
   source_jar = "@org_jetbrains_intellij_deps-intellij-coverage-reporter-1_0_766-sources_http//file"
+)
+
+jvm_import(
+  name = "org_jetbrains_intellij_deps-coverage-report-1_0_25_http_import",
+  jar = "@org_jetbrains_intellij_deps-coverage-report-1_0_25_http//file",
+  source_jar = "@org_jetbrains_intellij_deps-coverage-report-1_0_25-sources_http//file"
 )
 
 jvm_import(
@@ -10645,36 +10384,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.eclipse.jgit/org.eclipse.jgit.ssh.apache-6.6.1.202309021850-r.jar_copy",
-  src = "@org_eclipse_jgit-org_eclipse_jgit_ssh_apache-6_6_1_202309021850-r_http//file",
-  out = "org.eclipse.jgit/org.eclipse.jgit.ssh.apache-6.6.1.202309021850-r.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "settings_repository-eclipse-jgit-ssh-apache",
-  jar = "@org_eclipse_jgit-org_eclipse_jgit_ssh_apache-6_6_1_202309021850-r_http//file",
-  source_jar = "@org_eclipse_jgit-org_eclipse_jgit_ssh_apache-6_6_1_202309021850-r-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.eclipse.jgit/org.eclipse.jgit.ssh.apache.agent-6.6.1.202309021850-r.jar_copy",
-  src = "@org_eclipse_jgit-org_eclipse_jgit_ssh_apache_agent-6_6_1_202309021850-r_http//file",
-  out = "org.eclipse.jgit/org.eclipse.jgit.ssh.apache.agent-6.6.1.202309021850-r.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "settings_repository-eclipse-jgit-ssh-apache-agent",
-  jar = "@org_eclipse_jgit-org_eclipse_jgit_ssh_apache_agent-6_6_1_202309021850-r_http//file",
-  source_jar = "@org_eclipse_jgit-org_eclipse_jgit_ssh_apache_agent-6_6_1_202309021850-r-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.slf4j/slf4j-api-2.0.13.jar_copy",
   src = "@org_slf4j-slf4j-api-2_0_13_http//file",
   out = "org.slf4j/slf4j-api-2.0.13.jar",
@@ -10902,13 +10611,6 @@ jvm_import(
   name = "org_webjars-jquery-3_6_1_http_import",
   jar = "@org_webjars-jquery-3_6_1_http//file",
   source_jar = "@org_webjars-jquery-3_6_1-sources_http//file"
-)
-
-java_library(
-  name = "test_n_g-provided",
-  exports = [":test_n_g"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
 )
 
 copy_file(

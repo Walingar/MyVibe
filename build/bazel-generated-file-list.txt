@@ -5,7 +5,6 @@ build/deps
 build/launch
 build/tasks
 build/tests
-commandInterface
 community-resources
 fleet/andel
 fleet/bifurcan
@@ -94,7 +93,6 @@ java/idea-ui
 java/java-analysis-api
 java/java-analysis-impl
 java/java-backend
-java/java-copyright
 java/java-frontback-impl
 java/java-frontback-psi-api
 java/java-frontback-psi-impl
@@ -686,8 +684,6 @@ plugins/agent-workbench/sessions-actions
 plugins/agent-workbench/sessions-core
 plugins/agent-workbench/sessions-toolwindow
 plugins/ant/jps-plugin
-plugins/built-in-help
-plugins/classic-ui
 plugins/color-schemes/all-hallows-eve-color-scheme
 plugins/color-schemes/blackboard-color-scheme
 plugins/color-schemes/cobalt-color-scheme
@@ -697,7 +693,6 @@ plugins/color-schemes/rails-casts-color-scheme
 plugins/color-schemes/twilight-color-scheme
 plugins/color-schemes/vibrant-ink-color-scheme
 plugins/color-schemes/warm-neon-color-scheme
-plugins/commander
 plugins/compilation-charts
 plugins/compilation-charts/jps-plugin
 plugins/completion-ml-ranking
@@ -706,10 +701,8 @@ plugins/compose/intellij.compose.ide.plugin.shared
 plugins/configuration-script
 plugins/copyright
 plugins/copyright/vcs
-plugins/coverage
 plugins/coverage-common
 plugins/coverage-common/intellij.platform.coverage.agent
-plugins/coverage/coverage_rt
 plugins/dev
 plugins/dev/intellij.dev
 plugins/dev/intellij.dev.codeInsight
@@ -746,23 +739,12 @@ plugins/ide-startup/importSettings
 plugins/java-decompiler/engine
 plugins/java-decompiler/plugin
 plugins/java-i18n
-plugins/javaFX
-plugins/javaFX/common
-plugins/javaFX/jps
-plugins/javaFX/sceneBuilder
 plugins/jshell
 plugins/jshell/console
 plugins/jshell/execution
 plugins/jshell/frontend
 plugins/jshell/protocol
 plugins/jsonpath
-plugins/junit
-plugins/junit/groovy-tests
-plugins/junit/java-tests
-plugins/junit/kotlin-tests-shared
-plugins/junit/testFramework
-plugins/junit5_rt
-plugins/junit6_rt
 plugins/junit_rt
 plugins/keymaps/eclipse-keymap
 plugins/keymaps/netbeans5.6-keymap
@@ -809,7 +791,6 @@ plugins/properties/properties-psi-impl
 plugins/rareJavaRefactorings
 plugins/remote-control
 plugins/restructuredtext
-plugins/settings-repository
 plugins/settings-sync/jba
 plugins/settings-sync/settingsSync.performanceTesting
 plugins/sh/backend
@@ -825,7 +806,6 @@ plugins/tasks/tasks-core
 plugins/tasks/tasks-core/bugzilla
 plugins/tasks/tasks-core/jira
 plugins/tasks/tasks-core/trac
-plugins/tasks/tasks-java
 plugins/terminal
 plugins/terminal/backend
 plugins/terminal/cloud
