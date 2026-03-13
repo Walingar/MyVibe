@@ -125,8 +125,6 @@ jvm_library(
     "//platform/vcs-impl:vcs-impl_test_lib",
     "//spellchecker",
     "//spellchecker:spellchecker_test_lib",
-    "//plugins/grazie/src:core",
-    "//plugins/grazie/src:core_test_lib",
     "//libraries/http-client",
     "//libraries/http-client:http-client_test_lib",
     "//jps/model-impl",

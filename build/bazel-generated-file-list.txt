@@ -722,9 +722,6 @@ plugins/dev/intellij.groovy.dev
 plugins/dev/intellij.java.dev
 plugins/devkit/runtimeModuleRepository/generator
 plugins/devkit/runtimeModuleRepository/jps
-plugins/eclipse
-plugins/eclipse/common-eclipse-util
-plugins/eclipse/jps-plugin
 plugins/editorconfig
 plugins/editorconfig/backend
 plugins/editorconfig/backend.spellchecking
@@ -733,8 +730,6 @@ plugins/editorconfig/frontend
 plugins/emojipicker
 plugins/env-files-support
 plugins/env-files-support/java
-plugins/filePrediction
-plugins/findUsagesMl
 plugins/git-features-trainer
 plugins/git-modal-commit
 plugins/git4idea
@@ -752,15 +747,6 @@ plugins/github/ultimate-promo
 plugins/gitlab/gitlab-core
 plugins/gitlab/gitlab-git
 plugins/gitlab/gitlab-yaml
-plugins/grazie
-plugins/grazie/java
-plugins/grazie/json
-plugins/grazie/markdown
-plugins/grazie/properties
-plugins/grazie/src
-plugins/grazie/src/test
-plugins/grazie/xml
-plugins/grazie/yaml
 plugins/groovy
 plugins/groovy-live-templates
 plugins/groovy/byteCodeViewer
@@ -776,8 +762,6 @@ plugins/groovy/spock-rt
 plugins/groovy/structuralsearch-groovy
 plugins/hg4idea
 plugins/htmltools
-plugins/ide-features-trainer
-plugins/ide-features-trainer/onboarding
 plugins/ide-startup/importSettings
 plugins/java-decompiler/engine
 plugins/java-decompiler/plugin

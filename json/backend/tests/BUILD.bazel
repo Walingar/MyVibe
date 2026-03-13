@@ -50,8 +50,6 @@ jvm_library(
     "//json/backend/regexp:regexp_test_lib",
     "//spellchecker",
     "//spellchecker:spellchecker_test_lib",
-    "//plugins/grazie/src:core",
-    "//plugins/grazie/src:core_test_lib",
     "//platform/lang-impl",
     "//platform/lang-impl:lang-impl_test_lib",
     "//platform/testFramework/extensions:testExtensions",

@@ -173,8 +173,6 @@ jvm_library(
     "//jps/jps-builders:build_test_lib",
     "//spellchecker",
     "//spellchecker:spellchecker_test_lib",
-    "//plugins/grazie/src:core",
-    "//plugins/grazie/src:core_test_lib",
     "//plugins/junit",
     "//plugins/junit:junit_test_lib",
     "//plugins/junit_rt:junit-rt",

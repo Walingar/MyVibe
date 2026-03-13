@@ -49,8 +49,6 @@ jvm_library(
     "//platform/util/diff:diff_test_lib",
     "//spellchecker",
     "//spellchecker:spellchecker_test_lib",
-    "//plugins/grazie/src:core",
-    "//plugins/grazie/src:core_test_lib",
     "//java/openapi:java",
     "//java/openapi:java_test_lib",
     "//xml/impl",

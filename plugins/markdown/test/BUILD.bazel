@@ -91,8 +91,6 @@ jvm_library(
     "//platform/usageView:usageView_test_lib",
     "//spellchecker",
     "//spellchecker:spellchecker_test_lib",
-    "//plugins/grazie/src:core",
-    "//plugins/grazie/src:core_test_lib",
     "//xml/xml-psi-api:psi",
     "//xml/xml-psi-api:psi_test_lib",
     "//plugins/yaml",
