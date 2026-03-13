@@ -1,6 +1,5 @@
 RegExpSupport
 aether-dependency-resolver
-android-customization
 build
 build/deps
 build/launch
@@ -90,15 +89,12 @@ java/execution/frontend
 java/execution/impl
 java/execution/openapi
 java/execution/shared
-java/ide-customization
-java/ide-customization/training
 java/ide-resources
 java/idea-ui
 java/java-analysis-api
 java/java-analysis-impl
 java/java-backend
 java/java-copyright
-java/java-features-trainer
 java/java-frontback-impl
 java/java-frontback-psi-api
 java/java-frontback-psi-impl
@@ -730,8 +726,6 @@ plugins/editorconfig/frontend
 plugins/emojipicker
 plugins/env-files-support
 plugins/env-files-support/java
-plugins/git-features-trainer
-plugins/git-modal-commit
 plugins/git4idea
 plugins/git4idea/frontend
 plugins/git4idea/intellij.vcs.git.coverage
@@ -760,7 +754,6 @@ plugins/groovy/rt-constants
 plugins/groovy/rt/classLoader
 plugins/groovy/spock-rt
 plugins/groovy/structuralsearch-groovy
-plugins/hg4idea
 plugins/htmltools
 plugins/ide-startup/importSettings
 plugins/java-decompiler/engine
@@ -802,14 +795,10 @@ plugins/markdown/core
 plugins/markdown/core/backend
 plugins/markdown/core/frontend
 plugins/markdown/fenceInjection
-plugins/markdown/frontmatter
-plugins/markdown/frontmatter/toml
-plugins/markdown/frontmatter/yaml
 plugins/markdown/images
 plugins/markdown/model
 plugins/markdown/plugin
 plugins/markdown/spellchecker
-plugins/markdown/test
 plugins/markdown/xml
 plugins/marketplace-ml
 plugins/maven/artifact-resolver/common
@@ -830,7 +819,6 @@ plugins/properties/copyright
 plugins/properties/properties-common
 plugins/properties/properties-psi-api
 plugins/properties/properties-psi-impl
-plugins/properties/tests
 plugins/rareJavaRefactorings
 plugins/remote-control
 plugins/restructuredtext
@@ -845,7 +833,6 @@ plugins/sh/plugin
 plugins/sh/terminal
 plugins/space/jps-plugin
 plugins/stats-collector
-plugins/svn4idea
 plugins/tasks/tasks-api
 plugins/tasks/tasks-compatibility
 plugins/tasks/tasks-core
@@ -853,7 +840,6 @@ plugins/tasks/tasks-core/bugzilla
 plugins/tasks/tasks-core/jira
 plugins/tasks/tasks-core/trac
 plugins/tasks/tasks-java
-plugins/tasks/tasks-tests
 plugins/terminal
 plugins/terminal/backend
 plugins/terminal/cloud
@@ -870,14 +856,6 @@ plugins/textmate/core
 plugins/textmate/core/tests
 plugins/textmate/joni
 plugins/textmate/plugin
-plugins/textmate/tests
-plugins/toml
-plugins/toml/backend
-plugins/toml/core
-plugins/toml/frontend
-plugins/toml/grazie
-plugins/toml/json
-plugins/toml/tests
 plugins/ui-designer
 plugins/ui-designer-core
 plugins/ui-designer/jps-plugin

@@ -1673,13 +1673,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_intellij_deps_ift-git-learning-project-212_0_2_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/ift/git-learning-project/212.0.2/git-learning-project-212.0.2.jar",
-  sha256 = "648eaffe833416e2accea4bf82b980f0e91ae51ef065f5bc74fa3481c373e9fd",
-  downloaded_file_path = "git-learning-project-212.0.2.jar"
-)
-
-http_file(
   name = "com_github_oshi-oshi-core-6_9_2_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/github/oshi/oshi-core/6.9.2/oshi-core-6.9.2.jar",
   sha256 = "7a572731c8076e27135b9a57cf166bb43c09909407f5b0853100d7efe9fcb7ee",
@@ -8985,20 +8978,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-log-events/0.0.3/completion-log-events-0.0.3-sources.jar",
   sha256 = "e676eba6e23858b42e5cd98139217b1c7e3aa4bf69f47d825b52d27ebfd6357a",
   downloaded_file_path = "completion-log-events-0.0.3-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-studio-platform-2025_2_1-alpha01-290_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/studio-platform/2025.2.1-alpha01-290/studio-platform-2025.2.1-alpha01-290.jar",
-  sha256 = "b819e0b26651bf09b35beab8d9b065a42ed372812cd014e0090371ccf12ad101",
-  downloaded_file_path = "studio-platform-2025.2.1-alpha01-290.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-studio-platform-2025_2_1-alpha01-290-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/studio-platform/2025.2.1-alpha01-290/studio-platform-2025.2.1-alpha01-290-sources.jar",
-  sha256 = "66581e6d97dc509793f6fe773bb78bf5041efaa954fc6e7f0cfc6be3ad1ba259",
-  downloaded_file_path = "studio-platform-2025.2.1-alpha01-290-sources.jar"
 )
 
 http_file(

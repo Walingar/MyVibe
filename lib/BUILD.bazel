@@ -1892,20 +1892,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.jetbrains.intellij.deps.ift/git-learning-project-212.0.2.jar_copy",
-  src = "@org_jetbrains_intellij_deps_ift-git-learning-project-212_0_2_http//file",
-  out = "org.jetbrains.intellij.deps.ift/git-learning-project-212.0.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "git-learning-project",
-  jar = "@org_jetbrains_intellij_deps_ift-git-learning-project-212_0_2_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "com.github.oshi/oshi-core-6.9.2.jar_copy",
   src = "@com_github_oshi-oshi-core-6_9_2_http//file",
   out = "com.github.oshi/oshi-core-6.9.2.jar",
@@ -10854,21 +10840,6 @@ jvm_import(
   name = "stats_collector-tests-completion-log-events",
   jar = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3_http//file",
   source_jar = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps/studio-platform-2025.2.1-alpha01-290.jar_copy",
-  src = "@org_jetbrains_intellij_deps-studio-platform-2025_2_1-alpha01-290_http//file",
-  out = "org.jetbrains.intellij.deps/studio-platform-2025.2.1-alpha01-290.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "studio-platform",
-  jar = "@org_jetbrains_intellij_deps-studio-platform-2025_2_1-alpha01-290_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-studio-platform-2025_2_1-alpha01-290-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
