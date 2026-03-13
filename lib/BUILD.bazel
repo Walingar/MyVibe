@@ -2084,21 +2084,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.jetbrains.intellij.deps/intellij-test-discovery-agent-1.0.771.jar_copy",
-  src = "@org_jetbrains_intellij_deps-intellij-test-discovery-agent-1_0_771_http//file",
-  out = "org.jetbrains.intellij.deps/intellij-test-discovery-agent-1.0.771.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "intellij-test-discovery",
-  jar = "@org_jetbrains_intellij_deps-intellij-test-discovery-agent-1_0_771_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-intellij-test-discovery-agent-1_0_771-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "io.github.oshai/kotlin-logging-jvm-7.0.3.jar_copy",
   src = "@io_github_oshai-kotlin-logging-jvm-7_0_3_http//file",
   out = "io.github.oshai/kotlin-logging-jvm-7.0.3.jar",
@@ -2606,66 +2591,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.jetbrains.intellij.deps/debugger-agent-1.144.jar_copy",
-  src = "@org_jetbrains_intellij_deps-debugger-agent-1_144_http//file",
-  out = "org.jetbrains.intellij.deps/debugger-agent-1.144.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "java-debugger-agent-holder-debugger-agent",
-  jar = "@org_jetbrains_intellij_deps-debugger-agent-1_144_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-debugger-agent-1_144-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps/sa-jdwp-1.25.jar_copy",
-  src = "@org_jetbrains_intellij_deps-sa-jdwp-1_25_http//file",
-  out = "org.jetbrains.intellij.deps/sa-jdwp-1.25.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "java-debugger-impl-sa-jdwp",
-  jar = "@org_jetbrains_intellij_deps-sa-jdwp-1_25_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-sa-jdwp-1_25-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps/debugger-memory-agent-1.0.51.jar_copy",
-  src = "@org_jetbrains_intellij_deps-debugger-memory-agent-1_0_51_http//file",
-  out = "org.jetbrains.intellij.deps/debugger-memory-agent-1.0.51.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "java-debugger-memory-agent-debugger-memory-agent",
-  jar = "@org_jetbrains_intellij_deps-debugger-memory-agent-1_0_51_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-debugger-memory-agent-1_0_51-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps.completion/completion-ranking-java-0.9.3.jar_copy",
-  src = "@org_jetbrains_intellij_deps_completion-completion-ranking-java-0_9_3_http//file",
-  out = "org.jetbrains.intellij.deps.completion/completion-ranking-java-0.9.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "java-impl-completion-ranking-java",
-  jar = "@org_jetbrains_intellij_deps_completion-completion-ranking-java-0_9_3_http//file",
-  source_jar = "@org_jetbrains_intellij_deps_completion-completion-ranking-java-0_9_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.apache.ant/ant-1.7.1.jar_copy",
   src = "@org_apache_ant-ant-1_7_1_http//file",
   out = "org.apache.ant/ant-1.7.1.jar",
@@ -2833,21 +2758,6 @@ jvm_import(
   name = "com_sun_activation-jakarta_activation-1_2_2_http_import",
   jar = "@com_sun_activation-jakarta_activation-1_2_2_http//file",
   source_jar = "@com_sun_activation-jakarta_activation-1_2_2-sources_http//file"
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps/jb-jdi-2.45.jar_copy",
-  src = "@org_jetbrains_intellij_deps-jb-jdi-2_45_http//file",
-  out = "org.jetbrains.intellij.deps/jb-jdi-2.45.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "jb-jdi",
-  jar = "@org_jetbrains_intellij_deps-jb-jdi-2_45_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-jb-jdi-2_45-sources_http//file",
-  visibility = ["//visibility:public"]
 )
 
 copy_file(

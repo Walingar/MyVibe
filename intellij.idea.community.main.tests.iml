@@ -15,13 +15,11 @@
     <orderEntry type="module" module-name="intellij.platform.scriptDebugger.ui" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.images.build" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.workspace.storage.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.platform.workspace.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.textmate.plugin" scope="TEST" />
     <orderEntry type="module" module-name="intellij.textmate.backend" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.community.build.tasks" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.execution.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.configurationScript" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.configurationScript.test.java" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.statistics.envTests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
     <orderEntry type="module" module-name="intellij.performanceTesting.ui" scope="TEST" />
@@ -41,7 +39,6 @@
     <orderEntry type="module" module-name="intellij.platform.testFramework.monorepo" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.ide.starter.junit5" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.buildScripts.productDsl" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.terminal.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.vcs.git.terminal" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.instanceContainer.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.agent.workbench.chat" scope="TEST" />

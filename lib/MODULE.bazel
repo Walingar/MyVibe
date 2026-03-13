@@ -1820,20 +1820,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_intellij_deps-intellij-test-discovery-agent-1_0_771_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jetbrains/intellij/deps/intellij-test-discovery-agent/1.0.771/intellij-test-discovery-agent-1.0.771.jar",
-  sha256 = "29de9b5ec9d586dee34d75f191adfe227c2e9f2fc15c5c075a060fa31390414f",
-  downloaded_file_path = "intellij-test-discovery-agent-1.0.771.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-intellij-test-discovery-agent-1_0_771-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jetbrains/intellij/deps/intellij-test-discovery-agent/1.0.771/intellij-test-discovery-agent-1.0.771-sources.jar",
-  sha256 = "165e14ac139b776447ff68e6a2b482b68ee7cc3f3f88830a80f08cf0a777a89a",
-  downloaded_file_path = "intellij-test-discovery-agent-1.0.771-sources.jar"
-)
-
-http_file(
   name = "io_github_oshai-kotlin-logging-jvm-7_0_3_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/github/oshai/kotlin-logging-jvm/7.0.3/kotlin-logging-jvm-7.0.3.jar",
   sha256 = "241daa21665dd0ca55576a4bc4d8e9ace8891ae3c698cc77f13bb4bdac372e94",
@@ -2268,62 +2254,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_intellij_deps-debugger-agent-1_144_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/debugger-agent/1.144/debugger-agent-1.144.jar",
-  sha256 = "7a875d1e98a380b647fd57fde078ec535b4a22b09f92b86b4a65ec07059ecb16",
-  downloaded_file_path = "debugger-agent-1.144.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-debugger-agent-1_144-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/debugger-agent/1.144/debugger-agent-1.144-sources.jar",
-  sha256 = "103fdb044af03710a1cc987e30a06dc362bdf6b7e5d7c99d86ecf48016c80ba1",
-  downloaded_file_path = "debugger-agent-1.144-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-sa-jdwp-1_25_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/sa-jdwp/1.25/sa-jdwp-1.25.jar",
-  sha256 = "b2c8f5883adcb8dc37dacca7359df1557cdd8f77144d68752403bf6f6e2de92b",
-  downloaded_file_path = "sa-jdwp-1.25.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-sa-jdwp-1_25-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/sa-jdwp/1.25/sa-jdwp-1.25-sources.jar",
-  sha256 = "9bb47cc5c36346a6faa43f80fb36132767f10668329e0b2c791abadcfa251269",
-  downloaded_file_path = "sa-jdwp-1.25-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-debugger-memory-agent-1_0_51_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/debugger-memory-agent/1.0.51/debugger-memory-agent-1.0.51.jar",
-  sha256 = "1408ae6528102c098971bde601f99c791cd1c57cc2485516f75f4ccbb45202ef",
-  downloaded_file_path = "debugger-memory-agent-1.0.51.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-debugger-memory-agent-1_0_51-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/debugger-memory-agent/1.0.51/debugger-memory-agent-1.0.51-sources.jar",
-  sha256 = "57212a6024fe5c84c879bcffd3d2acd0d2d5a167208c9be0875652b57f1ca3ed",
-  downloaded_file_path = "debugger-memory-agent-1.0.51-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-ranking-java-0_9_3_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-ranking-java/0.9.3/completion-ranking-java-0.9.3.jar",
-  sha256 = "e3dcfee71eb13467139a1385152bd28554c79c677738cb617a91a772ea6e9f87",
-  downloaded_file_path = "completion-ranking-java-0.9.3.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-ranking-java-0_9_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-ranking-java/0.9.3/completion-ranking-java-0.9.3-sources.jar",
-  sha256 = "1b70dfcaf9feb4027ece78a2613c347549917a2bd204245fe0f607307fc792ab",
-  downloaded_file_path = "completion-ranking-java-0.9.3-sources.jar"
-)
-
-http_file(
   name = "org_apache_ant-ant-1_7_1_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/ant/ant/1.7.1/ant-1.7.1.jar",
   sha256 = "ebe592c9af9fdb6c55f0e6c6fabc76f6e0eec8efdec535398e86c3a883687ebf",
@@ -2454,20 +2384,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2-sources.jar",
   sha256 = "f8f52ce9df5d5d29c1778183d48214624caa36be202a7eff2cef5a0519f2aa53",
   downloaded_file_path = "jakarta.activation-1.2.2-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-jb-jdi-2_45_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/jb-jdi/2.45/jb-jdi-2.45.jar",
-  sha256 = "f31793446f372ee33659fc7a4ce93a079fa520ae89ddf6f6280ea50425c408d4",
-  downloaded_file_path = "jb-jdi-2.45.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps-jb-jdi-2_45-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/jb-jdi/2.45/jb-jdi-2.45-sources.jar",
-  sha256 = "63b3530031093bb1eea1f82a730a8114ebaeeff62e44f35d5e1e88f28a653bd6",
-  downloaded_file_path = "jb-jdi-2.45-sources.jar"
 )
 
 http_file(

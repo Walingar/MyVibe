@@ -245,8 +245,6 @@ jvm_library(
     "//libraries/jsvg:jsvg_test_lib",
     "//libraries/hash4j",
     "//libraries/hash4j:hash4j_test_lib",
-    "//java/java-impl:impl",
-    "//java/java-impl:impl_test_lib",
     "//platform/platform-impl/internal",
     "//platform/util/storages",
     "//platform/util/storages:storages_test_lib",
