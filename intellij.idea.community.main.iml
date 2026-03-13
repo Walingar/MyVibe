@@ -124,7 +124,6 @@
     <orderEntry type="module" module-name="intellij.settingsSync.core" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.settingsSync" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.featuresTrainer" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.ml.models.local.java" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.laf.macos" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.laf.win10" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.marketplaceMl" scope="RUNTIME" />
@@ -133,8 +132,6 @@
     <orderEntry type="module" module-name="intellij.keymap.eclipse" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.keymap.visualStudio" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.keymap.netbeans" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.evaluationPlugin" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.evaluationPlugin.languages.java" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.warmup" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.remoteControl" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.polySymbols" scope="RUNTIME" />

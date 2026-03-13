@@ -88,10 +88,6 @@ jvm_library(
     "//RegExpSupport:regexp-tests_test_lib",
     "//platform/xdebugger-impl:debugger-impl-tests",
     "//platform/xdebugger-impl:debugger-impl-tests_test_lib",
-    "//python/services/system-python:python-community-services-systemPython-tests",
-    "//python/services/system-python:python-community-services-systemPython-tests_test_lib",
-    "//python/services/internal-impl:python-community-services-internal-impl-tests",
-    "//python/services/internal-impl:python-community-services-internal-impl-tests_test_lib",
   ],
   runtime_deps = [":tests.pro"]
 )

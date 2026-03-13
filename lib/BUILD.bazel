@@ -349,21 +349,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "com.github.ajalt.clikt/clikt-jvm-3.5.4.jar_copy",
-  src = "@com_github_ajalt_clikt-clikt-jvm-3_5_4_http//file",
-  out = "com.github.ajalt.clikt/clikt-jvm-3.5.4.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "clikt",
-  jar = "@com_github_ajalt_clikt-clikt-jvm-3_5_4_http//file",
-  source_jar = "@com_github_ajalt_clikt-clikt-jvm-3_5_4-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "com.jetbrains.cloudconfig/cloudconfig-2023.9.jar_copy",
   src = "@com_jetbrains_cloudconfig-cloudconfig-2023_9_http//file",
   out = "com.jetbrains.cloudconfig/cloudconfig-2023.9.jar",
@@ -5294,28 +5279,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "io.github.z4kn4fein/semver-jvm-2.0.0.jar_copy",
-  src = "@io_github_z4kn4fein-semver-jvm-2_0_0_http//file",
-  out = "io.github.z4kn4fein/semver-jvm-2.0.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io-github-z4kn4fein-semver-jvm",
-  jar = "@io_github_z4kn4fein-semver-jvm-2_0_0_http//file",
-  source_jar = "@io_github_z4kn4fein-semver-jvm-2_0_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "io-github-z4kn4fein-semver-jvm-provided",
-  exports = [":io-github-z4kn4fein-semver-jvm"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "io.mockk/mockk-1.14.5.jar_copy",
   src = "@io_mockk-mockk-1_14_5_http//file",
   out = "io.mockk/mockk-1.14.5.jar",
@@ -7588,21 +7551,6 @@ java_library(
   name = "kotlinc-analysis-api-provided",
   exports = [":kotlinc-analysis-api"],
   neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-assignment-compiler-plugin",
-  jar = "@org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -13954,20 +13902,6 @@ jvm_import(
   name = "testcontainers-junit-jupiter",
   jar = "@org_testcontainers-junit-jupiter-1_20_3_http//file",
   source_jar = "@org_testcontainers-junit-jupiter-1_20_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.jetbrains.intellij.documentation/tips-pycharm-community-241.74.jar_copy",
-  src = "@com_jetbrains_intellij_documentation-tips-pycharm-community-241_74_http//file",
-  out = "com.jetbrains.intellij.documentation/tips-pycharm-community-241.74.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "tips-pycharm-community",
-  jar = "@com_jetbrains_intellij_documentation-tips-pycharm-community-241_74_http//file",
   visibility = ["//visibility:public"]
 )
 

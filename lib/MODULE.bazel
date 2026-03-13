@@ -259,20 +259,6 @@ http_file(
 )
 
 http_file(
-  name = "com_github_ajalt_clikt-clikt-jvm-3_5_4_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/github/ajalt/clikt/clikt-jvm/3.5.4/clikt-jvm-3.5.4.jar",
-  sha256 = "b58b4d93fc1870b99b2adb3e16e9c483c8e73766b2944bc3cff805c0be47d19e",
-  downloaded_file_path = "clikt-jvm-3.5.4.jar"
-)
-
-http_file(
-  name = "com_github_ajalt_clikt-clikt-jvm-3_5_4-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/github/ajalt/clikt/clikt-jvm/3.5.4/clikt-jvm-3.5.4-sources.jar",
-  sha256 = "0d781e6ded81e3b3bd4a0e8927de34c0c1f5f92e0b176a86a4469417b6729c3c",
-  downloaded_file_path = "clikt-jvm-3.5.4-sources.jar"
-)
-
-http_file(
   name = "com_jetbrains_cloudconfig-cloudconfig-2023_9_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/cloudconfig/cloudconfig/2023.9/cloudconfig-2023.9.jar",
   sha256 = "e51ee1761684a946b9d5a0caaec2b92cf4598860cf231dbaf495f268fda35d10",
@@ -4508,20 +4494,6 @@ http_file(
 )
 
 http_file(
-  name = "io_github_z4kn4fein-semver-jvm-2_0_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/github/z4kn4fein/semver-jvm/2.0.0/semver-jvm-2.0.0.jar",
-  sha256 = "fbbf174a4e78aa5be1f1b7db73edc5c0a6a2e59e1562263e2c3a2e510fa1ba45",
-  downloaded_file_path = "semver-jvm-2.0.0.jar"
-)
-
-http_file(
-  name = "io_github_z4kn4fein-semver-jvm-2_0_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/github/z4kn4fein/semver-jvm/2.0.0/semver-jvm-2.0.0-sources.jar",
-  sha256 = "db8d695e786aeb04af526a37187f6d9d1b5d27d2d936d7fa41b50e211985a548",
-  downloaded_file_path = "semver-jvm-2.0.0-sources.jar"
-)
-
-http_file(
   name = "io_mockk-mockk-1_14_5_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/mockk/mockk/1.14.5/mockk-1.14.5.jar",
   sha256 = "089e24417bf9f6c34eec5720eebb2cbcc82ea2855ecef90133eb17e1079d5868",
@@ -6332,20 +6304,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/analysis-api-for-ide/2.4.0-dev-5744/analysis-api-for-ide-2.4.0-dev-5744-sources.jar",
   sha256 = "236f4acbd7ab92bbbba7c0d9ff974fc1b9f671f86eb617025eb9ee57bdd1ad39",
   downloaded_file_path = "analysis-api-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/assignment-compiler-plugin-for-ide/2.4.0-dev-5744/assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "7e378bbc24cdb0bedfa352c54e04df8df23f0c84a6759b095aafa090b0d419b9",
-  downloaded_file_path = "assignment-compiler-plugin-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/assignment-compiler-plugin-for-ide/2.4.0-dev-5744/assignment-compiler-plugin-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "ecd1a78a64dee19976aed5a0740d78f9ce454ebb43a0960a6cc36ecd2ce5bc99",
-  downloaded_file_path = "assignment-compiler-plugin-for-ide-2.4.0-dev-5744-sources.jar"
 )
 
 http_file(
@@ -11463,13 +11421,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/testcontainers/junit-jupiter/1.20.3/junit-jupiter-1.20.3-sources.jar",
   sha256 = "0713c61f0cfc2cfc2ef4d73893999dfacc1ad3569d2da457fdff6885a84b5425",
   downloaded_file_path = "junit-jupiter-1.20.3-sources.jar"
-)
-
-http_file(
-  name = "com_jetbrains_intellij_documentation-tips-pycharm-community-241_74_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/intellij/documentation/tips-pycharm-community/241.74/tips-pycharm-community-241.74.jar",
-  sha256 = "7f9fd8e37ec4dfdef7bfc3bc6a687fa5a322976fc588432fa46d2feb1fefc966",
-  downloaded_file_path = "tips-pycharm-community-241.74.jar"
 )
 
 http_file(
