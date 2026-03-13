@@ -42,11 +42,6 @@ jvm_library(
     "//platform/structuralsearch:structuralSearch",
     "//platform/editor-ui-api:editor-ui",
     "//java/java-psi-api:psi",
-    "//plugins/kotlin/base/analysis",
-    "//plugins/kotlin/base/psi",
-    "//plugins/kotlin/base/resources:kotlin-base-resources",
-    "//plugins/kotlin/base/util",
-    "//plugins/kotlin/code-insight/live-templates-shared:kotlin-code-insight-live-templates-shared",
     "//plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin-base-analysis-utils",
   ]
 )
@@ -72,11 +67,6 @@ jvm_library(
     "//platform/structuralsearch:structuralSearch_test_lib",
     "//platform/editor-ui-api:editor-ui_test_lib",
     "//java/java-psi-api:psi_test_lib",
-    "//plugins/kotlin/base/analysis:analysis_test_lib",
-    "//plugins/kotlin/base/psi:psi_test_lib",
-    "//plugins/kotlin/base/resources:kotlin-base-resources_test_lib",
-    "//plugins/kotlin/base/util:util_test_lib",
-    "//plugins/kotlin/code-insight/live-templates-shared:kotlin-code-insight-live-templates-shared_test_lib",
     "//plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin-base-analysis-utils_test_lib",
   ]
 )

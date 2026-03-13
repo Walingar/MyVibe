@@ -11,7 +11,6 @@ jvm_library(
     "//java/java-tests:tests",
     "//java/java-impl-inspections:impl-inspections",
     "//platform/testFramework/junit5",
-    "//plugins/kotlin/base/plugin",
   ]
 )
 
@@ -41,10 +40,6 @@ jvm_library(
     "//java/java-impl-inspections:impl-inspections_test_lib",
     "//platform/testFramework/junit5",
     "//platform/testFramework/junit5:junit5_test_lib",
-    "//plugins/kotlin/base/plugin",
-    "//plugins/kotlin/base/plugin:plugin_test_lib",
-    "//plugins/kotlin/base/test",
-    "//plugins/kotlin/base/test:test_test_lib",
     "//jvm/jvm-analysis-testFramework:analysis-testFramework",
     "//jvm/jvm-analysis-testFramework:analysis-testFramework_test_lib",
     "//java/java-impl-refactorings:impl-refactorings",
@@ -55,8 +50,6 @@ jvm_library(
     "//jvm/jvm-analysis-impl:analysis-impl_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//plugins/kotlin/test-framework",
-    "//plugins/kotlin/test-framework:test-framework_test_lib",
   ],
   exports = [
     "//plugins/kotlin/plugin/common",
@@ -69,8 +62,6 @@ jvm_library(
     "//java/java-impl-inspections:impl-inspections_test_lib",
     "//platform/testFramework/junit5",
     "//platform/testFramework/junit5:junit5_test_lib",
-    "//plugins/kotlin/base/plugin",
-    "//plugins/kotlin/base/plugin:plugin_test_lib",
   ],
   runtime_deps = [":analysis-kotlin-tests-shared"]
 )

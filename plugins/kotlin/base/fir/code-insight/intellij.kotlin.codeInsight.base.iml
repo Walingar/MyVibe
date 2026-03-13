@@ -31,17 +31,10 @@
     <orderEntry type="library" name="kotlinc.analysis-api" level="project" />
     <orderEntry type="module" module-name="intellij.platform.core" />
     <orderEntry type="module" module-name="intellij.platform.execution.impl" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
     <orderEntry type="module" module-name="intellij.platform.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.indices" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.platforms" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.projectStructure" />
     <orderEntry type="module" module-name="intellij.kotlin.base.analysis.utils" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.codeInsight" />
     <orderEntry type="module" module-name="intellij.platform.core.impl" />
     <orderEntry type="module" module-name="intellij.platform.indexing" />
     <orderEntry type="module" module-name="intellij.java.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
   </component>
 </module>

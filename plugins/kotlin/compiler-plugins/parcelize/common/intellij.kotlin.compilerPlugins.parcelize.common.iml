@@ -32,16 +32,8 @@
     <orderEntry type="module" module-name="intellij.platform.analysis" />
     <orderEntry type="module" module-name="intellij.platform.core" />
     <orderEntry type="module" module-name="intellij.platform.projectModel" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.projectStructure" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.analysis" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.codeInsight" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.api" />
     <orderEntry type="module" module-name="intellij.platform.editor.ui" />
     <orderEntry type="module" module-name="intellij.platform.lang.impl" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.compilerConfiguration" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.plugin" />
   </component>
 </module>

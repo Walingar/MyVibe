@@ -15,8 +15,6 @@ jvm_library(
   resources = [":installer_resources"],
   deps = [
     "@lib//:kotlin-stdlib",
-    "//python/openapi:community",
-    "//python/python-sdk:sdk",
     "//platform/core-api:core",
     "//platform/util",
     "//platform/platform-api:ide",
@@ -32,8 +30,6 @@ jvm_library(
   srcs = glob([], allow_empty = True),
   runtime_deps = [
     ":installer",
-    "//python/openapi:community_test_lib",
-    "//python/python-sdk:sdk_test_lib",
     "//platform/core-api:core_test_lib",
     "//platform/util:util_test_lib",
     "//platform/platform-api:ide_test_lib",

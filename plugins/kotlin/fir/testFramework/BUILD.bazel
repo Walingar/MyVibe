@@ -33,14 +33,10 @@ jvm_library(
     "//java/java-runtime:rt_test_lib",
     "//plugins/kotlin/plugin/k2",
     "//plugins/kotlin/plugin/k2:k2_test_lib",
-    "//plugins/kotlin/test-framework",
-    "//plugins/kotlin/test-framework:test-framework_test_lib",
     "//platform/core-api:core",
     "//platform/core-api:core_test_lib",
     "//platform/testFramework/core",
     "//platform/testFramework/core:core_test_lib",
-    "//plugins/kotlin/base/test",
-    "//plugins/kotlin/base/test:test_test_lib",
   ],
   runtime_deps = [":testFramework"]
 )

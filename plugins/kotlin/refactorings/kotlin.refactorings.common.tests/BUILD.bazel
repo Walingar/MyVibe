@@ -6,12 +6,10 @@ jvm_library(
   visibility = ["//visibility:public"],
   srcs = glob([], allow_empty = True),
   runtime_deps = [
-    "//plugins/kotlin/refactorings/kotlin.refactorings.common:kotlin-refactorings-common",
     "//java/openapi:java",
     "//java/java-impl-refactorings:impl-refactorings",
     "//libraries/kotlin/reflect",
     "@lib//:kotlinc-kotlin-compiler-common",
-    "//plugins/kotlin/test-framework",
   ]
 )
 
@@ -33,17 +31,7 @@ jvm_library(
     "//platform/indexing-api:indexing_test_lib",
     "//platform/refactoring",
     "//platform/refactoring:refactoring_test_lib",
-    "//plugins/kotlin/base/test",
-    "//plugins/kotlin/base/test:test_test_lib",
     "@lib//:kotlinc-kotlin-compiler-tests",
-    "//plugins/kotlin/tests-common:common-tests",
-    "//plugins/kotlin/tests-common:common-tests_test_lib",
-    "//plugins/kotlin/base/util",
-    "//plugins/kotlin/base/util:util_test_lib",
-    "//plugins/kotlin/base/indices",
-    "//plugins/kotlin/base/indices:indices_test_lib",
-    "//plugins/kotlin/refactorings/kotlin.refactorings.common:kotlin-refactorings-common",
-    "//plugins/kotlin/refactorings/kotlin.refactorings.common:kotlin-refactorings-common_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
     "//java/openapi:java",
@@ -55,8 +43,6 @@ jvm_library(
     "//java/testFramework",
     "//java/testFramework:testFramework_test_lib",
     "@lib//:kotlinc-kotlin-compiler-common",
-    "//plugins/kotlin/test-framework",
-    "//plugins/kotlin/test-framework:test-framework_test_lib",
   ],
   runtime_deps = [":kotlin-refactorings-common-tests"]
 )

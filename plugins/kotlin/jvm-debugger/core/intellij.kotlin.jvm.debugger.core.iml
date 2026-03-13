@@ -36,15 +36,6 @@
     <orderEntry type="module" module-name="intellij.platform.editor.ui" />
     <orderEntry type="module" module-name="intellij.platform.indexing" />
     <orderEntry type="module" module-name="intellij.platform.projectModel" />
-    <orderEntry type="module" module-name="kotlin.base.frontend-agnostic" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.plugin" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.indices" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.projectStructure" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.analysis" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.codeInsight" />
     <orderEntry type="module" module-name="intellij.kotlin.jvm.debugger.base.util" />
     <orderEntry type="module" module-name="intellij.platform.core.ui" />
     <orderEntry type="module" module-name="intellij.platform.debugger.impl" />
@@ -65,7 +56,6 @@
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.utils" />
     <orderEntry type="module" module-name="intellij.platform.statistics" />
     <orderEntry type="module" module-name="intellij.platform.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.resources" />
     <orderEntry type="module" module-name="intellij.libraries.gson" />
     <orderEntry type="module" module-name="intellij.java.debugger.impl.shared" />
     <orderEntry type="module" module-name="intellij.platform.util.jdom" />

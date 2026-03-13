@@ -35,7 +35,6 @@
     <orderEntry type="module" module-name="intellij.libraries.commons.compress" />
     <orderEntry type="module" module-name="intellij.platform.util" />
     <orderEntry type="module" module-name="intellij.platform.jps.model" />
-    <orderEntry type="module" module-name="intellij.tools.jps.build.standalone" />
     <orderEntry type="library" name="opentelemetry" level="project" />
     <orderEntry type="library" name="opentelemetry-semconv" level="project" />
     <orderEntry type="library" name="kotlin-stdlib" level="project" />

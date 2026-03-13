@@ -20,7 +20,6 @@ jvm_library(
     "//platform/platform-impl:ide-impl",
     "//plugins/ide-features-trainer:featuresTrainer",
     "//java/java-features-trainer:featuresTrainer",
-    "//plugins/kotlin/features-trainer",
     "//platform/statistics",
   ]
 )
@@ -37,7 +36,6 @@ jvm_library(
     "//platform/platform-impl:ide-impl_test_lib",
     "//plugins/ide-features-trainer:featuresTrainer_test_lib",
     "//java/java-features-trainer:featuresTrainer_test_lib",
-    "//plugins/kotlin/features-trainer:features-trainer_test_lib",
     "//platform/statistics:statistics_test_lib",
   ]
 )

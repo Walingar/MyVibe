@@ -1013,545 +1013,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "io.cucumber/cucumber-core-1.2.6.jar_copy",
-  src = "@io_cucumber-cucumber-core-1_2_6_http//file",
-  out = "io.cucumber/cucumber-core-1.2.6.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "info.cukes/gherkin-2.12.2.jar_copy",
-  src = "@info_cukes-gherkin-2_12_2_http//file",
-  out = "info.cukes/gherkin-2.12.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "cucumber-core-1",
-  exports = [
-    ":io_cucumber-cucumber-core-1_2_6_http_import",
-    ":info_cukes-gherkin-2_12_2_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-core-1_2_6_http_import",
-  jar = "@io_cucumber-cucumber-core-1_2_6_http//file",
-  source_jar = "@io_cucumber-cucumber-core-1_2_6-sources_http//file"
-)
-
-jvm_import(
-  name = "info_cukes-gherkin-2_12_2_http_import",
-  jar = "@info_cukes-gherkin-2_12_2_http//file",
-  source_jar = "@info_cukes-gherkin-2_12_2-sources_http//file"
-)
-
-java_library(
-  name = "cucumber-core-1-provided",
-  exports = [":cucumber-core-1"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-core-2.4.0.jar_copy",
-  src = "@io_cucumber-cucumber-core-2_4_0_http//file",
-  out = "io.cucumber/cucumber-core-2.4.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "info.cukes/cucumber-html-0.2.6.jar_copy",
-  src = "@info_cukes-cucumber-html-0_2_6_http//file",
-  out = "info.cukes/cucumber-html-0.2.6.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-jvm-deps-1.0.6.jar_copy",
-  src = "@io_cucumber-cucumber-jvm-deps-1_0_6_http//file",
-  out = "io.cucumber/cucumber-jvm-deps-1.0.6.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/gherkin-5.0.0.jar_copy",
-  src = "@io_cucumber-gherkin-5_0_0_http//file",
-  out = "io.cucumber/gherkin-5.0.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/tag-expressions-1.1.1.jar_copy",
-  src = "@io_cucumber-tag-expressions-1_1_1_http//file",
-  out = "io.cucumber/tag-expressions-1.1.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "cucumber-core-2",
-  exports = [
-    ":io_cucumber-cucumber-core-2_4_0_http_import",
-    ":info_cukes-cucumber-html-0_2_6_http_import",
-    ":io_cucumber-cucumber-jvm-deps-1_0_6_http_import",
-    ":io_cucumber-gherkin-5_0_0_http_import",
-    ":io_cucumber-tag-expressions-1_1_1_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-core-2_4_0_http_import",
-  jar = "@io_cucumber-cucumber-core-2_4_0_http//file",
-  source_jar = "@io_cucumber-cucumber-core-2_4_0-sources_http//file"
-)
-
-jvm_import(
-  name = "info_cukes-cucumber-html-0_2_6_http_import",
-  jar = "@info_cukes-cucumber-html-0_2_6_http//file",
-  source_jar = "@info_cukes-cucumber-html-0_2_6-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-jvm-deps-1_0_6_http_import",
-  jar = "@io_cucumber-cucumber-jvm-deps-1_0_6_http//file",
-  source_jar = "@io_cucumber-cucumber-jvm-deps-1_0_6-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-gherkin-5_0_0_http_import",
-  jar = "@io_cucumber-gherkin-5_0_0_http//file",
-  source_jar = "@io_cucumber-gherkin-5_0_0-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-tag-expressions-1_1_1_http_import",
-  jar = "@io_cucumber-tag-expressions-1_1_1_http//file",
-  source_jar = "@io_cucumber-tag-expressions-1_1_1-sources_http//file"
-)
-
-java_library(
-  name = "cucumber-core-2-provided",
-  exports = [":cucumber-core-2"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-core-3.0.2.jar_copy",
-  src = "@io_cucumber-cucumber-core-3_0_2_http//file",
-  out = "io.cucumber/cucumber-core-3.0.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-html-0.2.7.jar_copy",
-  src = "@io_cucumber-cucumber-html-0_2_7_http//file",
-  out = "io.cucumber/cucumber-html-0.2.7.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-expressions-5.0.19.jar_copy",
-  src = "@io_cucumber-cucumber-expressions-5_0_19_http//file",
-  out = "io.cucumber/cucumber-expressions-5.0.19.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/datatable-1.0.3.jar_copy",
-  src = "@io_cucumber-datatable-1_0_3_http//file",
-  out = "io.cucumber/datatable-1.0.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/datatable-dependencies-1.0.3.jar_copy",
-  src = "@io_cucumber-datatable-dependencies-1_0_3_http//file",
-  out = "io.cucumber/datatable-dependencies-1.0.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "cucumber-jvm_formatter3-cucumber-core-3-0-2",
-  exports = [
-    ":io_cucumber-cucumber-core-3_0_2_http_import",
-    ":io_cucumber-cucumber-html-0_2_7_http_import",
-    ":io_cucumber-gherkin-5_0_0_http_import",
-    ":io_cucumber-tag-expressions-1_1_1_http_import",
-    ":io_cucumber-cucumber-expressions-5_0_19_http_import",
-    ":io_cucumber-datatable-1_0_3_http_import",
-    ":io_cucumber-datatable-dependencies-1_0_3_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-core-3_0_2_http_import",
-  jar = "@io_cucumber-cucumber-core-3_0_2_http//file",
-  source_jar = "@io_cucumber-cucumber-core-3_0_2-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-html-0_2_7_http_import",
-  jar = "@io_cucumber-cucumber-html-0_2_7_http//file",
-  source_jar = "@io_cucumber-cucumber-html-0_2_7-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-expressions-5_0_19_http_import",
-  jar = "@io_cucumber-cucumber-expressions-5_0_19_http//file",
-  source_jar = "@io_cucumber-cucumber-expressions-5_0_19-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-datatable-1_0_3_http_import",
-  jar = "@io_cucumber-datatable-1_0_3_http//file",
-  source_jar = "@io_cucumber-datatable-1_0_3-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-datatable-dependencies-1_0_3_http_import",
-  jar = "@io_cucumber-datatable-dependencies-1_0_3_http//file",
-  source_jar = "@io_cucumber-datatable-dependencies-1_0_3-sources_http//file"
-)
-
-java_library(
-  name = "cucumber-jvm_formatter3-cucumber-core-3-0-2-provided",
-  exports = [":cucumber-jvm_formatter3-cucumber-core-3-0-2"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-core-4.0.1.jar_copy",
-  src = "@io_cucumber-cucumber-core-4_0_1_http//file",
-  out = "io.cucumber/cucumber-core-4.0.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/gherkin-5.1.0.jar_copy",
-  src = "@io_cucumber-gherkin-5_1_0_http//file",
-  out = "io.cucumber/gherkin-5.1.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-expressions-6.1.0.jar_copy",
-  src = "@io_cucumber-cucumber-expressions-6_1_0_http//file",
-  out = "io.cucumber/cucumber-expressions-6.1.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/datatable-1.1.3.jar_copy",
-  src = "@io_cucumber-datatable-1_1_3_http//file",
-  out = "io.cucumber/datatable-1.1.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/datatable-dependencies-1.1.3.jar_copy",
-  src = "@io_cucumber-datatable-dependencies-1_1_3_http//file",
-  out = "io.cucumber/datatable-dependencies-1.1.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "cucumber-jvm_formatter4-cucumber-core-4-0-1",
-  exports = [
-    ":io_cucumber-cucumber-core-4_0_1_http_import",
-    ":io_cucumber-cucumber-html-0_2_7_http_import",
-    ":io_cucumber-gherkin-5_1_0_http_import",
-    ":io_cucumber-tag-expressions-1_1_1_http_import",
-    ":io_cucumber-cucumber-expressions-6_1_0_http_import",
-    ":io_cucumber-datatable-1_1_3_http_import",
-    ":io_cucumber-datatable-dependencies-1_1_3_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-core-4_0_1_http_import",
-  jar = "@io_cucumber-cucumber-core-4_0_1_http//file",
-  source_jar = "@io_cucumber-cucumber-core-4_0_1-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-gherkin-5_1_0_http_import",
-  jar = "@io_cucumber-gherkin-5_1_0_http//file",
-  source_jar = "@io_cucumber-gherkin-5_1_0-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-expressions-6_1_0_http_import",
-  jar = "@io_cucumber-cucumber-expressions-6_1_0_http//file",
-  source_jar = "@io_cucumber-cucumber-expressions-6_1_0-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-datatable-1_1_3_http_import",
-  jar = "@io_cucumber-datatable-1_1_3_http//file",
-  source_jar = "@io_cucumber-datatable-1_1_3-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-datatable-dependencies-1_1_3_http_import",
-  jar = "@io_cucumber-datatable-dependencies-1_1_3_http//file",
-  source_jar = "@io_cucumber-datatable-dependencies-1_1_3-sources_http//file"
-)
-
-java_library(
-  name = "cucumber-jvm_formatter4-cucumber-core-4-0-1-provided",
-  exports = [":cucumber-jvm_formatter4-cucumber-core-4-0-1"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-java-5.0.0-RC1.jar_copy",
-  src = "@io_cucumber-cucumber-java-5_0_0-RC1_http//file",
-  out = "io.cucumber/cucumber-java-5.0.0-RC1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-core-5.0.0-RC1.jar_copy",
-  src = "@io_cucumber-cucumber-core-5_0_0-RC1_http//file",
-  out = "io.cucumber/cucumber-core-5.0.0-RC1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/gherkin-5.2.0.jar_copy",
-  src = "@io_cucumber-gherkin-5_2_0_http//file",
-  out = "io.cucumber/gherkin-5.2.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/gherkin-jvm-deps-1.0.6.jar_copy",
-  src = "@io_cucumber-gherkin-jvm-deps-1_0_6_http//file",
-  out = "io.cucumber/gherkin-jvm-deps-1.0.6.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/tag-expressions-2.0.2.jar_copy",
-  src = "@io_cucumber-tag-expressions-2_0_2_http//file",
-  out = "io.cucumber/tag-expressions-2.0.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-expressions-8.0.0.jar_copy",
-  src = "@io_cucumber-cucumber-expressions-8_0_0_http//file",
-  out = "io.cucumber/cucumber-expressions-8.0.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.hamcrest/hamcrest-core-2.1.jar_copy",
-  src = "@org_hamcrest-hamcrest-core-2_1_http//file",
-  out = "org.hamcrest/hamcrest-core-2.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.hamcrest/hamcrest-2.1.jar_copy",
-  src = "@org_hamcrest-hamcrest-2_1_http//file",
-  out = "org.hamcrest/hamcrest-2.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.hamcrest/hamcrest-library-2.1.jar_copy",
-  src = "@org_hamcrest-hamcrest-library-2_1_http//file",
-  out = "org.hamcrest/hamcrest-library-2.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/datatable-3.0.0.jar_copy",
-  src = "@io_cucumber-datatable-3_0_0_http//file",
-  out = "io.cucumber/datatable-3.0.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/datatable-dependencies-3.0.0.jar_copy",
-  src = "@io_cucumber-datatable-dependencies-3_0_0_http//file",
-  out = "io.cucumber/datatable-dependencies-3.0.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/cucumber-plugin-5.0.0-RC1.jar_copy",
-  src = "@io_cucumber-cucumber-plugin-5_0_0-RC1_http//file",
-  out = "io.cucumber/cucumber-plugin-5.0.0-RC1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.cucumber/docstring-5.0.0-RC1.jar_copy",
-  src = "@io_cucumber-docstring-5_0_0-RC1_http//file",
-  out = "io.cucumber/docstring-5.0.0-RC1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apiguardian/apiguardian-api-1.1.0.jar_copy",
-  src = "@org_apiguardian-apiguardian-api-1_1_0_http//file",
-  out = "org.apiguardian/apiguardian-api-1.1.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "cucumber-jvm_formatter5-cucumber-java-5-0-0-_r_c1",
-  exports = [
-    ":io_cucumber-cucumber-java-5_0_0-RC1_http_import",
-    ":io_cucumber-cucumber-core-5_0_0-RC1_http_import",
-    ":io_cucumber-gherkin-5_2_0_http_import",
-    ":io_cucumber-gherkin-jvm-deps-1_0_6_http_import",
-    ":io_cucumber-tag-expressions-2_0_2_http_import",
-    ":io_cucumber-cucumber-expressions-8_0_0_http_import",
-    ":org_hamcrest-hamcrest-core-2_1_http_import",
-    ":org_hamcrest-hamcrest-2_1_http_import",
-    ":org_hamcrest-hamcrest-library-2_1_http_import",
-    ":io_cucumber-datatable-3_0_0_http_import",
-    ":io_cucumber-datatable-dependencies-3_0_0_http_import",
-    ":io_cucumber-cucumber-plugin-5_0_0-RC1_http_import",
-    ":io_cucumber-docstring-5_0_0-RC1_http_import",
-    ":org_apiguardian-apiguardian-api-1_1_0_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-java-5_0_0-RC1_http_import",
-  jar = "@io_cucumber-cucumber-java-5_0_0-RC1_http//file",
-  source_jar = "@io_cucumber-cucumber-java-5_0_0-RC1-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-core-5_0_0-RC1_http_import",
-  jar = "@io_cucumber-cucumber-core-5_0_0-RC1_http//file",
-  source_jar = "@io_cucumber-cucumber-core-5_0_0-RC1-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-gherkin-5_2_0_http_import",
-  jar = "@io_cucumber-gherkin-5_2_0_http//file",
-  source_jar = "@io_cucumber-gherkin-5_2_0-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-gherkin-jvm-deps-1_0_6_http_import",
-  jar = "@io_cucumber-gherkin-jvm-deps-1_0_6_http//file",
-  source_jar = "@io_cucumber-gherkin-jvm-deps-1_0_6-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-tag-expressions-2_0_2_http_import",
-  jar = "@io_cucumber-tag-expressions-2_0_2_http//file",
-  source_jar = "@io_cucumber-tag-expressions-2_0_2-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-expressions-8_0_0_http_import",
-  jar = "@io_cucumber-cucumber-expressions-8_0_0_http//file",
-  source_jar = "@io_cucumber-cucumber-expressions-8_0_0-sources_http//file"
-)
-
-jvm_import(
-  name = "org_hamcrest-hamcrest-core-2_1_http_import",
-  jar = "@org_hamcrest-hamcrest-core-2_1_http//file",
-  source_jar = "@org_hamcrest-hamcrest-core-2_1-sources_http//file"
-)
-
-jvm_import(
-  name = "org_hamcrest-hamcrest-2_1_http_import",
-  jar = "@org_hamcrest-hamcrest-2_1_http//file",
-  source_jar = "@org_hamcrest-hamcrest-2_1-sources_http//file"
-)
-
-jvm_import(
-  name = "org_hamcrest-hamcrest-library-2_1_http_import",
-  jar = "@org_hamcrest-hamcrest-library-2_1_http//file",
-  source_jar = "@org_hamcrest-hamcrest-library-2_1-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-datatable-3_0_0_http_import",
-  jar = "@io_cucumber-datatable-3_0_0_http//file",
-  source_jar = "@io_cucumber-datatable-3_0_0-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-datatable-dependencies-3_0_0_http_import",
-  jar = "@io_cucumber-datatable-dependencies-3_0_0_http//file",
-  source_jar = "@io_cucumber-datatable-dependencies-3_0_0-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-cucumber-plugin-5_0_0-RC1_http_import",
-  jar = "@io_cucumber-cucumber-plugin-5_0_0-RC1_http//file",
-  source_jar = "@io_cucumber-cucumber-plugin-5_0_0-RC1-sources_http//file"
-)
-
-jvm_import(
-  name = "io_cucumber-docstring-5_0_0-RC1_http_import",
-  jar = "@io_cucumber-docstring-5_0_0-RC1_http//file",
-  source_jar = "@io_cucumber-docstring-5_0_0-RC1-sources_http//file"
-)
-
-jvm_import(
-  name = "org_apiguardian-apiguardian-api-1_1_0_http_import",
-  jar = "@org_apiguardian-apiguardian-api-1_1_0_http//file",
-  source_jar = "@org_apiguardian-apiguardian-api-1_1_0-sources_http//file"
-)
-
-java_library(
-  name = "cucumber-jvm_formatter5-cucumber-java-5-0-0-_r_c1-provided",
-  exports = [":cucumber-jvm_formatter5-cucumber-java-5-0-0-_r_c1"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "info.cukes/cucumber-jvm-deps-1.0.5.jar_copy",
   src = "@info_cukes-cucumber-jvm-deps-1_0_5_http//file",
   out = "info.cukes/cucumber-jvm-deps-1.0.5.jar",
@@ -6433,21 +5894,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "com.fasterxml.jackson.dataformat/jackson-dataformat-toml-2.19.0.jar_copy",
-  src = "@com_fasterxml_jackson_dataformat-jackson-dataformat-toml-2_19_0_http//file",
-  out = "com.fasterxml.jackson.dataformat/jackson-dataformat-toml-2.19.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "jackson-dataformat-toml",
-  jar = "@com_fasterxml_jackson_dataformat-jackson-dataformat-toml-2_19_0_http//file",
-  source_jar = "@com_fasterxml_jackson_dataformat-jackson-dataformat-toml-2_19_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "com.fasterxml.jackson.dataformat/jackson-dataformat-yaml-2.19.0.jar_copy",
   src = "@com_fasterxml_jackson_dataformat-jackson-dataformat-yaml-2_19_0_http//file",
   out = "com.fasterxml.jackson.dataformat/jackson-dataformat-yaml-2.19.0.jar",
@@ -7307,35 +6753,6 @@ jvm_import(
   name = "jetbrains-markdown",
   jar = "@org_jetbrains-markdown-jvm-0_7_2_http//file",
   source_jar = "@org_jetbrains-markdown-jvm-0_7_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.jetbrains.mlapi/mlapi-catboost-0.2.3.jar_copy",
-  src = "@com_jetbrains_mlapi-mlapi-catboost-0_2_3_http//file",
-  out = "com.jetbrains.mlapi/mlapi-catboost-0.2.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "jetbrains-mlapi-catboost",
-  jar = "@com_jetbrains_mlapi-mlapi-catboost-0_2_3_http//file",
-  source_jar = "@com_jetbrains_mlapi-mlapi-catboost-0_2_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.jetbrains.mlapi/catboost-shadow-need-slf4j-1.2.5.jar_copy",
-  src = "@com_jetbrains_mlapi-catboost-shadow-need-slf4j-1_2_5_http//file",
-  out = "com.jetbrains.mlapi/catboost-shadow-need-slf4j-1.2.5.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "jetbrains-mlapi-catboost-shadow-need-slf4j",
-  jar = "@com_jetbrains_mlapi-catboost-shadow-need-slf4j-1_2_5_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -8255,31 +7672,9 @@ copy_file(
 )
 
 jvm_import(
-  name = "kotlin-analysis-platform-ehcache-sizeof",
-  jar = "@org_ehcache-sizeof-0_4_0_http//file",
-  source_jar = "@org_ehcache-sizeof-0_4_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
   name = "kotlin-analysis-platform-tests-ehcache-sizeof",
   jar = "@org_ehcache-sizeof-0_4_0_http//file",
   source_jar = "@org_ehcache-sizeof-0_4_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps.completion/completion-ranking-kotlin-0.4.0.jar_copy",
-  src = "@org_jetbrains_intellij_deps_completion-completion-ranking-kotlin-0_4_0_http//file",
-  out = "org.jetbrains.intellij.deps.completion/completion-ranking-kotlin-0.4.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlin-completion-ml-completion-ranking-kotlin",
-  jar = "@org_jetbrains_intellij_deps_completion-completion-ranking-kotlin-0_4_0_http//file",
-  source_jar = "@org_jetbrains_intellij_deps_completion-completion-ranking-kotlin-0_4_0-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -8355,21 +7750,6 @@ jvm_import(
   name = "kotlin-reflect",
   jar = "@org_jetbrains_kotlin-kotlin-reflect-2_3_20-RC2_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-reflect-2_3_20-RC2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-script-runtime-2.3.20-RC2.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-script-runtime-2_3_20-RC2_http//file",
-  out = "org.jetbrains.kotlin/kotlin-script-runtime-2.3.20-RC2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlin-script-runtime",
-  jar = "@org_jetbrains_kotlin-kotlin-script-runtime-2_3_20-RC2_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-script-runtime-2_3_20-RC2-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -8538,13 +7918,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-allopen-compiler-plugin-provided",
-  exports = [":kotlinc-allopen-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/analysis-api-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-analysis-api-for-ide-2_4_0-dev-5744_http//file",
@@ -8582,13 +7955,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-analysis-api-fe10-provided",
-  exports = [":kotlinc-analysis-api-fe10"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/analysis-api-impl-base-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-analysis-api-impl-base-for-ide-2_4_0-dev-5744_http//file",
@@ -8604,13 +7970,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-analysis-api-impl-base-provided",
-  exports = [":kotlinc-analysis-api-impl-base"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/analysis-api-impl-base-tests-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-analysis-api-impl-base-tests-for-ide-2_4_0-dev-5744_http//file",
@@ -8623,13 +7982,6 @@ jvm_import(
   name = "kotlinc-analysis-api-impl-base-tests",
   jar = "@org_jetbrains_kotlin-analysis-api-impl-base-tests-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-analysis-api-impl-base-tests-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-analysis-api-impl-base-tests-provided",
-  exports = [":kotlinc-analysis-api-impl-base-tests"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -8656,28 +8008,6 @@ java_library(
 )
 
 copy_file(
-  name = "org.jetbrains.kotlin/analysis-api-k2-tests-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-analysis-api-k2-tests-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/analysis-api-k2-tests-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-analysis-api-k2-tests",
-  jar = "@org_jetbrains_kotlin-analysis-api-k2-tests-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-analysis-api-k2-tests-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-analysis-api-k2-tests-provided",
-  exports = [":kotlinc-analysis-api-k2-tests"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.jetbrains.kotlin/analysis-api-platform-interface-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-analysis-api-platform-interface-for-ide-2_4_0-dev-5744_http//file",
   out = "org.jetbrains.kotlin/analysis-api-platform-interface-for-ide-2.4.0-dev-5744.jar",
@@ -8689,13 +8019,6 @@ jvm_import(
   name = "kotlinc-analysis-api-platform-interface",
   jar = "@org_jetbrains_kotlin-analysis-api-platform-interface-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-analysis-api-platform-interface-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-analysis-api-platform-interface-provided",
-  exports = [":kotlinc-analysis-api-platform-interface"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -8711,13 +8034,6 @@ jvm_import(
   name = "kotlinc-assignment-compiler-plugin",
   jar = "@org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-assignment-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-assignment-compiler-plugin-provided",
-  exports = [":kotlinc-assignment-compiler-plugin"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -8744,28 +8060,6 @@ java_library(
 )
 
 copy_file(
-  name = "org.jetbrains.kotlin/incremental-compilation-impl-tests-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-incremental-compilation-impl-tests-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/incremental-compilation-impl-tests-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-incremental-compilation-impl-tests",
-  jar = "@org_jetbrains_kotlin-incremental-compilation-impl-tests-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-incremental-compilation-impl-tests-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-incremental-compilation-impl-tests-provided",
-  exports = [":kotlinc-incremental-compilation-impl-tests"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.jetbrains.kotlin/js-plain-objects-compiler-plugin-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-js-plain-objects-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   out = "org.jetbrains.kotlin/js-plain-objects-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
@@ -8777,101 +8071,6 @@ jvm_import(
   name = "kotlinc-js-plain-objects-compiler-plugin",
   jar = "@org_jetbrains_kotlin-js-plain-objects-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-js-plain-objects-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-js-plain-objects-compiler-plugin-provided",
-  exports = [":kotlinc-js-plain-objects-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-build-common-tests-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-build-common-tests-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-build-common-tests-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-build-common-tests",
-  jar = "@org_jetbrains_kotlin-kotlin-build-common-tests-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-build-common-tests-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-build-common-tests-provided",
-  exports = [":kotlinc-kotlin-build-common-tests"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-build-tools-api-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-build-tools-api-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-build-tools-api-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-build-tools-api",
-  jar = "@org_jetbrains_kotlin-kotlin-build-tools-api-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-build-tools-api-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-build-tools-api-provided",
-  exports = [":kotlinc-kotlin-build-tools-api"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-build-tools-cri-impl-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-build-tools-cri-impl-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-build-tools-cri-impl-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-build-tools-cri-impl",
-  jar = "@org_jetbrains_kotlin-kotlin-build-tools-cri-impl-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-build-tools-cri-impl-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-build-tools-cri-impl-provided",
-  exports = [":kotlinc-kotlin-build-tools-cri-impl"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-build-tools-impl-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-build-tools-impl-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-build-tools-impl-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-build-tools-impl",
-  jar = "@org_jetbrains_kotlin-kotlin-build-tools-impl-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-build-tools-impl-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-build-tools-impl-provided",
-  exports = [":kotlinc-kotlin-build-tools-impl"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -8887,13 +8086,6 @@ jvm_import(
   name = "kotlinc-kotlin-compiler-cli",
   jar = "@org_jetbrains_kotlin-kotlin-compiler-cli-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-compiler-cli-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-compiler-cli-provided",
-  exports = [":kotlinc-kotlin-compiler-cli"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -8956,13 +8148,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-kotlin-compiler-fir-provided",
-  exports = [":kotlinc-kotlin-compiler-fir"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/kotlin-compiler-ir-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-kotlin-compiler-ir-for-ide-2_4_0-dev-5744_http//file",
@@ -8975,13 +8160,6 @@ jvm_import(
   name = "kotlinc-kotlin-compiler-ir",
   jar = "@org_jetbrains_kotlin-kotlin-compiler-ir-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-compiler-ir-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-compiler-ir-provided",
-  exports = [":kotlinc-kotlin-compiler-ir"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9000,13 +8178,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-kotlin-compiler-tests-provided",
-  exports = [":kotlinc-kotlin-compiler-tests"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/kotlin-dataframe-compiler-plugin-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-kotlin-dataframe-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
@@ -9019,57 +8190,6 @@ jvm_import(
   name = "kotlinc-kotlin-dataframe-compiler-plugin",
   jar = "@org_jetbrains_kotlin-kotlin-dataframe-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-dataframe-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-dataframe-compiler-plugin-provided",
-  exports = [":kotlinc-kotlin-dataframe-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-dist-for-ide-2.3.10.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-dist-for-ide-2_3_10_http//file",
-  out = "org.jetbrains.kotlin/kotlin-dist-for-ide-2.3.10.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-dist",
-  jar = "@org_jetbrains_kotlin-kotlin-dist-for-ide-2_3_10_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-dist-for-ide-2_3_10-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-dist-provided",
-  exports = [":kotlinc-kotlin-dist"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-gradle-statistics-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-gradle-statistics-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-gradle-statistics-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-gradle-statistics",
-  jar = "@org_jetbrains_kotlin-kotlin-gradle-statistics-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-gradle-statistics-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-gradle-statistics-provided",
-  exports = [":kotlinc-kotlin-gradle-statistics"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9096,94 +8216,6 @@ java_library(
 )
 
 copy_file(
-  name = "org.jetbrains.kotlin/kotlin-jps-plugin-classpath-2.3.10.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_3_10_http//file",
-  out = "org.jetbrains.kotlin/kotlin-jps-plugin-classpath-2.3.10.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-jps-plugin-classpath",
-  jar = "@org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_3_10_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_3_10-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-jps-plugin-classpath-provided",
-  exports = [":kotlinc-kotlin-jps-plugin-classpath"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-jps-plugin-classpath-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-jps-plugin-classpath-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-jps-plugin-classpath-bootstrap-for-tests",
-  jar = "@org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-jps-plugin-classpath-bootstrap-for-tests-provided",
-  exports = [":kotlinc-kotlin-jps-plugin-classpath-bootstrap-for-tests"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-jps-plugin-tests-for-ide-2.3.10.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-jps-plugin-tests-for-ide-2_3_10_http//file",
-  out = "org.jetbrains.kotlin/kotlin-jps-plugin-tests-for-ide-2.3.10.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-jps-plugin-tests",
-  jar = "@org_jetbrains_kotlin-kotlin-jps-plugin-tests-for-ide-2_3_10_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-jps-plugin-tests-for-ide-2_3_10-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-jps-plugin-tests-provided",
-  exports = [":kotlinc-kotlin-jps-plugin-tests"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-objcexport-header-generator-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-objcexport-header-generator-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-objcexport-header-generator-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-objcexport-header-generator",
-  jar = "@org_jetbrains_kotlin-kotlin-objcexport-header-generator-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-objcexport-header-generator-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-objcexport-header-generator-provided",
-  exports = [":kotlinc-kotlin-objcexport-header-generator"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "org.jetbrains.kotlin/kotlin-script-runtime-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-kotlin-script-runtime-2_4_0-dev-5744_http//file",
   out = "org.jetbrains.kotlin/kotlin-script-runtime-2.4.0-dev-5744.jar",
@@ -9195,13 +8227,6 @@ jvm_import(
   name = "kotlinc-kotlin-script-runtime",
   jar = "@org_jetbrains_kotlin-kotlin-script-runtime-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-script-runtime-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-script-runtime-provided",
-  exports = [":kotlinc-kotlin-script-runtime"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9220,13 +8245,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-kotlin-scripting-common-provided",
-  exports = [":kotlinc-kotlin-scripting-common"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/kotlin-scripting-compiler-impl-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-kotlin-scripting-compiler-impl-2_4_0-dev-5744_http//file",
@@ -9239,13 +8257,6 @@ jvm_import(
   name = "kotlinc-kotlin-scripting-compiler-impl",
   jar = "@org_jetbrains_kotlin-kotlin-scripting-compiler-impl-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-scripting-compiler-impl-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-scripting-compiler-impl-provided",
-  exports = [":kotlinc-kotlin-scripting-compiler-impl"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9264,13 +8275,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-kotlin-scripting-dependencies-provided",
-  exports = [":kotlinc-kotlin-scripting-dependencies"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/kotlin-scripting-jvm-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-kotlin-scripting-jvm-2_4_0-dev-5744_http//file",
@@ -9283,35 +8287,6 @@ jvm_import(
   name = "kotlinc-kotlin-scripting-jvm",
   jar = "@org_jetbrains_kotlin-kotlin-scripting-jvm-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-scripting-jvm-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-scripting-jvm-provided",
-  exports = [":kotlinc-kotlin-scripting-jvm"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-swift-export-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-swift-export-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-swift-export-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-swift-export",
-  jar = "@org_jetbrains_kotlin-kotlin-swift-export-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-swift-export-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-swift-export-provided",
-  exports = [":kotlinc-kotlin-swift-export"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9352,13 +8327,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-lombok-compiler-plugin-provided",
-  exports = [":kotlinc-lombok-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/low-level-api-fir-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-low-level-api-fir-for-ide-2_4_0-dev-5744_http//file",
@@ -9371,13 +8339,6 @@ jvm_import(
   name = "kotlinc-low-level-api-fir",
   jar = "@org_jetbrains_kotlin-low-level-api-fir-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-low-level-api-fir-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-low-level-api-fir-provided",
-  exports = [":kotlinc-low-level-api-fir"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9396,13 +8357,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-noarg-compiler-plugin-provided",
-  exports = [":kotlinc-noarg-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/parcelize-compiler-plugin-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-parcelize-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
@@ -9415,13 +8369,6 @@ jvm_import(
   name = "kotlinc-parcelize-compiler-plugin",
   jar = "@org_jetbrains_kotlin-parcelize-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-parcelize-compiler-plugin-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-parcelize-compiler-plugin-provided",
-  exports = [":kotlinc-parcelize-compiler-plugin"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9440,13 +8387,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-sam-with-receiver-compiler-plugin-provided",
-  exports = [":kotlinc-sam-with-receiver-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/scripting-compiler-plugin-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-scripting-compiler-plugin-for-ide-2_4_0-dev-5744_http//file",
@@ -9462,13 +8402,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-scripting-compiler-plugin-provided",
-  exports = [":kotlinc-scripting-compiler-plugin"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/symbol-light-classes-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-symbol-light-classes-for-ide-2_4_0-dev-5744_http//file",
@@ -9481,13 +8414,6 @@ jvm_import(
   name = "kotlinc-symbol-light-classes",
   jar = "@org_jetbrains_kotlin-symbol-light-classes-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-symbol-light-classes-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-symbol-light-classes-provided",
-  exports = [":kotlinc-symbol-light-classes"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -18873,21 +17799,6 @@ copy_file(
 jvm_import(
   name = "python-community-impl-ml-completion-prev-exprs-models",
   jar = "@completion_ml_python_features-ml-completion-prev-exprs-models-1_11_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.jetbrains.ml.models/python-imports-ranking-model-coral-panda-republished-6.jar_copy",
-  src = "@com_jetbrains_ml_models-python-imports-ranking-model-coral-panda-republished-6_http//file",
-  out = "com.jetbrains.ml.models/python-imports-ranking-model-coral-panda-republished-6.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "python-ml-features-jetbrains-ml-models-python-imports-ranking-model",
-  jar = "@com_jetbrains_ml_models-python-imports-ranking-model-coral-panda-republished-6_http//file",
-  source_jar = "@com_jetbrains_ml_models-python-imports-ranking-model-coral-panda-republished-6-sources_http//file",
   visibility = ["//visibility:public"]
 )
 

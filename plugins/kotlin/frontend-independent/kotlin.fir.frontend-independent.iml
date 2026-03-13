@@ -25,13 +25,6 @@
     <orderEntry type="module" module-name="intellij.platform.projectModel" />
     <orderEntry type="module" module-name="intellij.platform.refactoring" />
     <orderEntry type="module" module-name="intellij.xml.psi" />
-    <orderEntry type="module" module-name="kotlin.base.frontend-agnostic" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.analysis" />
-    <orderEntry type="module" module-name="kotlin.highlighting.shared" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.codeInsight" />
     <orderEntry type="module" module-name="intellij.platform.lang" />
     <orderEntry type="module" module-name="intellij.platform.ide.impl" />
     <orderEntry type="module" module-name="intellij.java.analysis.impl" />
@@ -40,15 +33,9 @@
     <orderEntry type="module" module-name="intellij.xml.psi.impl" />
     <orderEntry type="module" module-name="intellij.platform.core.ui" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.api" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.resources" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.shared" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.utils" />
     <orderEntry type="module" module-name="intellij.platform.util" />
     <orderEntry type="module" module-name="intellij.platform.externalSystem" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.plugin" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.projectStructure" />
-    <orderEntry type="module" module-name="intellij.kotlin.projectConfiguration" />
-    <orderEntry type="module" module-name="kotlin.refactorings.common" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.compilerConfiguration" />
   </component>
 </module>

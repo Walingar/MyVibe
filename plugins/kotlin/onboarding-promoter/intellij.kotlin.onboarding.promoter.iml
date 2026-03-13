@@ -14,7 +14,6 @@
     <orderEntry type="module" module-name="intellij.platform.ide.impl" />
     <orderEntry type="module" module-name="intellij.featuresTrainer" />
     <orderEntry type="module" module-name="intellij.java.featuresTrainer" />
-    <orderEntry type="module" module-name="intellij.kotlin.featuresTrainer" />
     <orderEntry type="module" module-name="intellij.platform.statistics" />
   </component>
 </module>

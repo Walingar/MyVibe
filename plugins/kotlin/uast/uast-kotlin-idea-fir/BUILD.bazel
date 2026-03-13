@@ -32,9 +32,6 @@ jvm_library(
     "//platform/core-impl",
     "//platform/projectModel-api:projectModel",
     "//uast/uast-common:uast",
-    "//plugins/kotlin/uast/uast-kotlin-fir:kotlin-uast",
-    "//plugins/kotlin/base/util",
-    "//plugins/kotlin/refactorings/kotlin.refactorings.common:kotlin-refactorings-common",
     "//plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin-base-analysis-utils",
     "//uast/uast-common-ide:ide",
   ]
@@ -58,11 +55,6 @@ jvm_library(
     "//platform/core-impl:core-impl_test_lib",
     "//platform/projectModel-api:projectModel_test_lib",
     "//uast/uast-common:uast_test_lib",
-    "//plugins/kotlin/uast/uast-kotlin-fir:kotlin-uast_test_lib",
-    "//plugins/kotlin/test-framework",
-    "//plugins/kotlin/test-framework:test-framework_test_lib",
-    "//plugins/kotlin/base/util:util_test_lib",
-    "//plugins/kotlin/refactorings/kotlin.refactorings.common:kotlin-refactorings-common_test_lib",
     "//plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin-base-analysis-utils_test_lib",
     "//uast/uast-common-ide:ide_test_lib",
   ]

@@ -21,9 +21,6 @@
     <orderEntry type="module" module-name="intellij.platform.usageView.impl" />
     <orderEntry type="module" module-name="intellij.xml.psi" />
     <orderEntry type="module" module-name="intellij.kotlin.gradle.tooling.impl" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.projectModel" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
     <orderEntry type="module" module-name="intellij.platform.externalSystem" />
     <orderEntry type="module" module-name="intellij.gradle" />
     <orderEntry type="module" module-name="intellij.xml.psi.impl" />
@@ -41,12 +38,8 @@
     <orderEntry type="module" module-name="intellij.compose.ide.plugin.shared" />
     <orderEntry type="module" module-name="intellij.xml.parser" />
     <orderEntry type="module" module-name="intellij.platform.usageView" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.indices" />
-    <orderEntry type="module" module-name="kotlin.refactorings.common" />
     <orderEntry type="module" module-name="intellij.platform.core.ui" />
     <orderEntry type="module" module-name="intellij.platform.ide.impl" />
-    <orderEntry type="module" module-name="kotlin.base.test" scope="TEST" />
-    <orderEntry type="module" module-name="kotlin.gradle.gradle-java.tests.shared" scope="TEST" />
     <orderEntry type="module" module-name="intellij.gradle.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.externalSystem.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.externalSystem.testFramework" scope="TEST" />
@@ -54,7 +47,5 @@
     <orderEntry type="module" module-name="intellij.gradle.toolingExtension.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.statistics" />
     <orderEntry type="module" module-name="intellij.libraries.kotlinx.coroutines.test" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.kotlin.testFramework" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.kotlin.common.tests" scope="TEST" />
   </component>
 </module>

@@ -16,7 +16,6 @@ jvm_library(
     "//platform/platform-impl:ide-impl",
     "//platform/analysis-api:analysis",
     "@lib//:kotlinc-kotlin-compiler-common",
-    "//plugins/kotlin/formatter",
   ]
 )
 
@@ -43,12 +42,8 @@ jvm_library(
     "//platform/analysis-api:analysis",
     "//platform/analysis-api:analysis_test_lib",
     "@lib//:kotlinc-kotlin-compiler-common",
-    "//plugins/kotlin/formatter",
-    "//plugins/kotlin/formatter:formatter_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//plugins/kotlin/features-trainer",
-    "//plugins/kotlin/features-trainer:features-trainer_test_lib",
   ],
   runtime_deps = [
     ":tests",

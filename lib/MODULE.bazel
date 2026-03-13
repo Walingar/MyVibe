@@ -833,440 +833,6 @@ http_file(
 )
 
 http_file(
-  name = "io_cucumber-cucumber-core-1_2_6_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/1.2.6/cucumber-core-1.2.6.jar",
-  sha256 = "ace77c533236213a1aa9f68b8de10e564da809605371ef2f8c73cd8f4c71293a",
-  downloaded_file_path = "cucumber-core-1.2.6.jar"
-)
-
-http_file(
-  name = "info_cukes-gherkin-2_12_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar",
-  sha256 = "0a5ebc0506ab1e4a08af1ca150f797304ff53b953c5b1f6fcf1f81551d964aad",
-  downloaded_file_path = "gherkin-2.12.2.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-1_2_6-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/1.2.6/cucumber-core-1.2.6-sources.jar",
-  sha256 = "2fe494ef57545207cf705f6294c5cfc0c4481268d06918bd223ff1cf7d4edc5a",
-  downloaded_file_path = "cucumber-core-1.2.6-sources.jar"
-)
-
-http_file(
-  name = "info_cukes-gherkin-2_12_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2-sources.jar",
-  sha256 = "a60731e4a2c1c87e99fc4c15cbc6b36df52887dcb33039d7a0d0922e1582ef39",
-  downloaded_file_path = "gherkin-2.12.2-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-2_4_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/2.4.0/cucumber-core-2.4.0.jar",
-  sha256 = "ac0f343d6fc0dca4c93f8b6a6266b3bf4cb4d61913b8a4cd2b3abf50025268cf",
-  downloaded_file_path = "cucumber-core-2.4.0.jar"
-)
-
-http_file(
-  name = "info_cukes-cucumber-html-0_2_6_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/info/cukes/cucumber-html/0.2.6/cucumber-html-0.2.6.jar",
-  sha256 = "e2167e99bdb018576cce9cc0aad154ad995fe67a4b0c36c63344f743865f96e7",
-  downloaded_file_path = "cucumber-html-0.2.6.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-jvm-deps-1_0_6_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-jvm-deps/1.0.6/cucumber-jvm-deps-1.0.6.jar",
-  sha256 = "d1c2cc901dd702eb77a2258c0d1446e4a302d28da0d4b49cd11ff3d5929281fa",
-  downloaded_file_path = "cucumber-jvm-deps-1.0.6.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-5_0_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin/5.0.0/gherkin-5.0.0.jar",
-  sha256 = "e35cfa4a16204bf59fa167bb6d45be0717d6b7cfba1c30f156d8f21cde2f4065",
-  downloaded_file_path = "gherkin-5.0.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-tag-expressions-1_1_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/tag-expressions/1.1.1/tag-expressions-1.1.1.jar",
-  sha256 = "e5a0a71fb846752900c0e5a99aa13e5a1bbc3ec97e7faf26803648fa45215584",
-  downloaded_file_path = "tag-expressions-1.1.1.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-2_4_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/2.4.0/cucumber-core-2.4.0-sources.jar",
-  sha256 = "e8fcf4be681789d4e85bb7858e7d23a69f3742c1a5baf0ea80b285815de77e3d",
-  downloaded_file_path = "cucumber-core-2.4.0-sources.jar"
-)
-
-http_file(
-  name = "info_cukes-cucumber-html-0_2_6-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/info/cukes/cucumber-html/0.2.6/cucumber-html-0.2.6-sources.jar",
-  sha256 = "4b2762eae9c75211eeb1dd887bd25763e866867bf90f1ef772d619bfcb9df104",
-  downloaded_file_path = "cucumber-html-0.2.6-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-jvm-deps-1_0_6-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-jvm-deps/1.0.6/cucumber-jvm-deps-1.0.6-sources.jar",
-  sha256 = "93961faae08479f6e63035722853e7185fd3738daad2c7d111f3b3787bfc7f0c",
-  downloaded_file_path = "cucumber-jvm-deps-1.0.6-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-5_0_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin/5.0.0/gherkin-5.0.0-sources.jar",
-  sha256 = "1abb7819cb6f04701ed55b708eb7356acf114dea1beb9463bc04369b56364570",
-  downloaded_file_path = "gherkin-5.0.0-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-tag-expressions-1_1_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/tag-expressions/1.1.1/tag-expressions-1.1.1-sources.jar",
-  sha256 = "58530973a7b7cdb20a0e1f54ccec5001ba3bc6b16402b44cc9f0578414bb1da5",
-  downloaded_file_path = "tag-expressions-1.1.1-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-3_0_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/3.0.2/cucumber-core-3.0.2.jar",
-  sha256 = "d3fc5dce5cd26a8a71a94b932395b9588c1c6abbd40c49c2281da74e5e48f6a4",
-  downloaded_file_path = "cucumber-core-3.0.2.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-html-0_2_7_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-html/0.2.7/cucumber-html-0.2.7.jar",
-  sha256 = "c2413a16c107a137f7a9d73f24af17211ef9580eef5fc2fab589610166781099",
-  downloaded_file_path = "cucumber-html-0.2.7.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-expressions-5_0_19_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-expressions/5.0.19/cucumber-expressions-5.0.19.jar",
-  sha256 = "e7e296e57f911d4f3827df55753611446c427fc46f41ecb94d5e9f9dacda872a",
-  downloaded_file_path = "cucumber-expressions-5.0.19.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-1_0_3_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable/1.0.3/datatable-1.0.3.jar",
-  sha256 = "0d7fa64225d159ee9d29554ea6fa2bd0891319e5c06a3b0b58db2decf72fd6f2",
-  downloaded_file_path = "datatable-1.0.3.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-dependencies-1_0_3_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable-dependencies/1.0.3/datatable-dependencies-1.0.3.jar",
-  sha256 = "ec82d25da10509aab64430406fbcdc9a376f1c55a0081cf1326429ff691fc99d",
-  downloaded_file_path = "datatable-dependencies-1.0.3.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-3_0_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/3.0.2/cucumber-core-3.0.2-sources.jar",
-  sha256 = "1c4db8247e3ad39ae84558d227435b375cd34800d992fa6a320e948f988a821c",
-  downloaded_file_path = "cucumber-core-3.0.2-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-html-0_2_7-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-html/0.2.7/cucumber-html-0.2.7-sources.jar",
-  sha256 = "bd54e6c9f8bfce5ebbaceacc6fe230064963c1b4075088d38f075efe561692c7",
-  downloaded_file_path = "cucumber-html-0.2.7-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-expressions-5_0_19-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-expressions/5.0.19/cucumber-expressions-5.0.19-sources.jar",
-  sha256 = "b29c19d19f15caf84af6800b9fda1e4208cbec0870569c214731741fa7cd4f81",
-  downloaded_file_path = "cucumber-expressions-5.0.19-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-1_0_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable/1.0.3/datatable-1.0.3-sources.jar",
-  sha256 = "d2d7563147629244494fae00044272739f23db8eb8806623317b2db01a2d1704",
-  downloaded_file_path = "datatable-1.0.3-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-dependencies-1_0_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable-dependencies/1.0.3/datatable-dependencies-1.0.3-sources.jar",
-  sha256 = "808de0c7dda0c50cb4a52462098d57797557aeb9b21380e0a82844847b851ed5",
-  downloaded_file_path = "datatable-dependencies-1.0.3-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-4_0_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/4.0.1/cucumber-core-4.0.1.jar",
-  sha256 = "25c52c0401f0786f66be90e384e765dbe0358b73fddd8874f7029da5f1b3c259",
-  downloaded_file_path = "cucumber-core-4.0.1.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-5_1_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin/5.1.0/gherkin-5.1.0.jar",
-  sha256 = "67f1cedeb8e85e6af84f89a8fe70bafaf6216dfad7a46b76fe10c5ee814e51e3",
-  downloaded_file_path = "gherkin-5.1.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-expressions-6_1_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-expressions/6.1.0/cucumber-expressions-6.1.0.jar",
-  sha256 = "660ba952417b95cfb22dda2e8be6fba46f521188e4f8a47ae9614f675bdb9bb8",
-  downloaded_file_path = "cucumber-expressions-6.1.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-1_1_3_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable/1.1.3/datatable-1.1.3.jar",
-  sha256 = "487db14bc5471639a5b05e66f3b5f60ca3f73f9d984088ba88c64078709f38aa",
-  downloaded_file_path = "datatable-1.1.3.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-dependencies-1_1_3_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable-dependencies/1.1.3/datatable-dependencies-1.1.3.jar",
-  sha256 = "33b9c48799b681328ec865756a0eb9c8ade946052ef1409a4d882e438956692c",
-  downloaded_file_path = "datatable-dependencies-1.1.3.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-4_0_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/4.0.1/cucumber-core-4.0.1-sources.jar",
-  sha256 = "8af4d1321da0e54790c398016d85c756d30fd55c342044cb2d1c6cde6178969d",
-  downloaded_file_path = "cucumber-core-4.0.1-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-5_1_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin/5.1.0/gherkin-5.1.0-sources.jar",
-  sha256 = "1734aa80e18f7c1d133b777eb55b2dfc2873e08178e92b9c00be2c223c9ce23b",
-  downloaded_file_path = "gherkin-5.1.0-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-expressions-6_1_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-expressions/6.1.0/cucumber-expressions-6.1.0-sources.jar",
-  sha256 = "cef0c8a3ada7623125204ecda190a6842a6e61aa22b982f419c8e304552e9fe9",
-  downloaded_file_path = "cucumber-expressions-6.1.0-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-1_1_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable/1.1.3/datatable-1.1.3-sources.jar",
-  sha256 = "15fee47d2a919785bdcdcde9fbb558a97608733d3f11bd1e55f3817a90f9af66",
-  downloaded_file_path = "datatable-1.1.3-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-dependencies-1_1_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable-dependencies/1.1.3/datatable-dependencies-1.1.3-sources.jar",
-  sha256 = "dc1eed55cf0327caeaedfbd13131115edc3d27eddb33d59924b0541919c336bf",
-  downloaded_file_path = "datatable-dependencies-1.1.3-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-java-5_0_0-RC1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-java/5.0.0-RC1/cucumber-java-5.0.0-RC1.jar",
-  sha256 = "789e598804155bcca83a01071382af90d0e9e1f6c686c881800b07fc0c1ea3c4",
-  downloaded_file_path = "cucumber-java-5.0.0-RC1.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-5_0_0-RC1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/5.0.0-RC1/cucumber-core-5.0.0-RC1.jar",
-  sha256 = "ada4315573c505d9dbb03cb0624f4a4e9fe9af92f4d278c4d7eb0422cdf299ff",
-  downloaded_file_path = "cucumber-core-5.0.0-RC1.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-5_2_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin/5.2.0/gherkin-5.2.0.jar",
-  sha256 = "ab8af6e8e1f5bea8cf04aeb6e87a96121d554132615c35d1d0d0bb8aac6ebe05",
-  downloaded_file_path = "gherkin-5.2.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-jvm-deps-1_0_6_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin-jvm-deps/1.0.6/gherkin-jvm-deps-1.0.6.jar",
-  sha256 = "6ac4b12c6b694ac9ee4eecc8949cf7976d1bd892871cf816298de404bde44bb2",
-  downloaded_file_path = "gherkin-jvm-deps-1.0.6.jar"
-)
-
-http_file(
-  name = "io_cucumber-tag-expressions-2_0_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/tag-expressions/2.0.2/tag-expressions-2.0.2.jar",
-  sha256 = "2c0fd9f293b2ca0ce22531b8769dc2aef37eb704f1212030513a90f6eb975476",
-  downloaded_file_path = "tag-expressions-2.0.2.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-expressions-8_0_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-expressions/8.0.0/cucumber-expressions-8.0.0.jar",
-  sha256 = "81ad14ebf1a885ab4a201f0e48695eb60d8c55265c8323d49b98a0e34093e30b",
-  downloaded_file_path = "cucumber-expressions-8.0.0.jar"
-)
-
-http_file(
-  name = "org_hamcrest-hamcrest-core-2_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/2.1/hamcrest-core-2.1.jar",
-  sha256 = "e09109e54a289d88506b9bfec987ddd199f4217c9464132668351b9a4f00bee9",
-  downloaded_file_path = "hamcrest-core-2.1.jar"
-)
-
-http_file(
-  name = "org_hamcrest-hamcrest-2_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar",
-  sha256 = "ba93b2e3a562322ba432f0a1b53addcc55cb188253319a020ed77f824e692050",
-  downloaded_file_path = "hamcrest-2.1.jar"
-)
-
-http_file(
-  name = "org_hamcrest-hamcrest-library-2_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/hamcrest/hamcrest-library/2.1/hamcrest-library-2.1.jar",
-  sha256 = "b7e2b6895b3b679f0e47b6380fda391b225e9b78505db9d8bdde8d3cc8d52a21",
-  downloaded_file_path = "hamcrest-library-2.1.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-3_0_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable/3.0.0/datatable-3.0.0.jar",
-  sha256 = "c021f59d4d914edc42cb4c40dc440dca05f36902e0eb36c0307ed2d192ae0860",
-  downloaded_file_path = "datatable-3.0.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-dependencies-3_0_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable-dependencies/3.0.0/datatable-dependencies-3.0.0.jar",
-  sha256 = "0348ab1b354dbaa327ee3bead884cf6d7b4cb23c086d803012dbb7cc319277b0",
-  downloaded_file_path = "datatable-dependencies-3.0.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-plugin-5_0_0-RC1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-plugin/5.0.0-RC1/cucumber-plugin-5.0.0-RC1.jar",
-  sha256 = "4d4cc28f9c73f5137db7b0ecd371d33696f5eac18db6c1ef65b65dd16275b3f3",
-  downloaded_file_path = "cucumber-plugin-5.0.0-RC1.jar"
-)
-
-http_file(
-  name = "io_cucumber-docstring-5_0_0-RC1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/docstring/5.0.0-RC1/docstring-5.0.0-RC1.jar",
-  sha256 = "90049802a975fde907069eea511687871b53824027ba54d2b7d7f447502e5d59",
-  downloaded_file_path = "docstring-5.0.0-RC1.jar"
-)
-
-http_file(
-  name = "org_apiguardian-apiguardian-api-1_1_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar",
-  sha256 = "a9aae9ff8ae3e17a2a18f79175e82b16267c246fbbd3ca9dfbbb290b08dcfdd4",
-  downloaded_file_path = "apiguardian-api-1.1.0.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-java-5_0_0-RC1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-java/5.0.0-RC1/cucumber-java-5.0.0-RC1-sources.jar",
-  sha256 = "d32f36ef90ed1982907c6f883f434f2e642693888f1891563a0f668c80bebf5c",
-  downloaded_file_path = "cucumber-java-5.0.0-RC1-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-core-5_0_0-RC1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-core/5.0.0-RC1/cucumber-core-5.0.0-RC1-sources.jar",
-  sha256 = "e349ef5ece581357227f40d88151a5282cb39b08f9d4175b6b7b53ace80a375e",
-  downloaded_file_path = "cucumber-core-5.0.0-RC1-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-5_2_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin/5.2.0/gherkin-5.2.0-sources.jar",
-  sha256 = "144e1af77a43a5fc61046cfee8be666146d0d41927571da9174dda6f5806c9af",
-  downloaded_file_path = "gherkin-5.2.0-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-gherkin-jvm-deps-1_0_6-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/gherkin-jvm-deps/1.0.6/gherkin-jvm-deps-1.0.6-sources.jar",
-  sha256 = "eeeb20acd46ef3215821bbf86e547d473da3066668492787a36c4a6da170a57a",
-  downloaded_file_path = "gherkin-jvm-deps-1.0.6-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-tag-expressions-2_0_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/tag-expressions/2.0.2/tag-expressions-2.0.2-sources.jar",
-  sha256 = "7194bae6637d9e12a61cdc38cdb78c272aa889d4302f04a9fbe0c456da1a0301",
-  downloaded_file_path = "tag-expressions-2.0.2-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-expressions-8_0_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-expressions/8.0.0/cucumber-expressions-8.0.0-sources.jar",
-  sha256 = "2ac0181cdf14d1cfb217b0d99192ec5a0607d9a7d251115f32a2880b2eb87524",
-  downloaded_file_path = "cucumber-expressions-8.0.0-sources.jar"
-)
-
-http_file(
-  name = "org_hamcrest-hamcrest-core-2_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/2.1/hamcrest-core-2.1-sources.jar",
-  sha256 = "7da51da1e717c08c9cdc3d5c1d3d80d7ce1f98afb1c20585d35d388c7daa1604",
-  downloaded_file_path = "hamcrest-core-2.1-sources.jar"
-)
-
-http_file(
-  name = "org_hamcrest-hamcrest-2_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/hamcrest/hamcrest/2.1/hamcrest-2.1-sources.jar",
-  sha256 = "70ddd82a79f885022cae5320082cf3219055d1bd0f74406f814c67da29a74d31",
-  downloaded_file_path = "hamcrest-2.1-sources.jar"
-)
-
-http_file(
-  name = "org_hamcrest-hamcrest-library-2_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/hamcrest/hamcrest-library/2.1/hamcrest-library-2.1-sources.jar",
-  sha256 = "6d0e42e87d69d9b3f3f606787b736b890bb165dfc8eec05d044d23d10e86fe3b",
-  downloaded_file_path = "hamcrest-library-2.1-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-3_0_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable/3.0.0/datatable-3.0.0-sources.jar",
-  sha256 = "3f080a1b41590c4e416f01862fb1a8ea6023b6da59374cc362c2c963af29d7d0",
-  downloaded_file_path = "datatable-3.0.0-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-datatable-dependencies-3_0_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/datatable-dependencies/3.0.0/datatable-dependencies-3.0.0-sources.jar",
-  sha256 = "5fb6c1f182a204e166431effa7aaf635522d0d9a486559a5c57958485859d6af",
-  downloaded_file_path = "datatable-dependencies-3.0.0-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-cucumber-plugin-5_0_0-RC1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/cucumber-plugin/5.0.0-RC1/cucumber-plugin-5.0.0-RC1-sources.jar",
-  sha256 = "075c211b443efad0baaad293880eadff1e2d37005ef141bd4a02c51ca312ebb4",
-  downloaded_file_path = "cucumber-plugin-5.0.0-RC1-sources.jar"
-)
-
-http_file(
-  name = "io_cucumber-docstring-5_0_0-RC1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/cucumber/docstring/5.0.0-RC1/docstring-5.0.0-RC1-sources.jar",
-  sha256 = "1c054e7b0ce745bfeec4511b3f2e3d9c75cd172a014b3b551e558d7128ff29ae",
-  downloaded_file_path = "docstring-5.0.0-RC1-sources.jar"
-)
-
-http_file(
-  name = "org_apiguardian-apiguardian-api-1_1_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0-sources.jar",
-  sha256 = "d39a5bb9b4b57e7584ac81f714ba8ef73b08ca462a48d7828d4a93fa5013fe1e",
-  downloaded_file_path = "apiguardian-api-1.1.0-sources.jar"
-)
-
-http_file(
   name = "info_cukes-cucumber-jvm-deps-1_0_5_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar",
   sha256 = "2a4e84a51defe9108579b3c0a86bb41e54f04e9042e83adf4348a974dcf1dee6",
@@ -5404,20 +4970,6 @@ http_file(
 )
 
 http_file(
-  name = "com_fasterxml_jackson_dataformat-jackson-dataformat-toml-2_19_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.19.0/jackson-dataformat-toml-2.19.0.jar",
-  sha256 = "e6312d390c6bef67681f8e258f29ced2f3d0fa1d83a72e0bec1513b8c1c4f430",
-  downloaded_file_path = "jackson-dataformat-toml-2.19.0.jar"
-)
-
-http_file(
-  name = "com_fasterxml_jackson_dataformat-jackson-dataformat-toml-2_19_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.19.0/jackson-dataformat-toml-2.19.0-sources.jar",
-  sha256 = "6ed663fd97c068c855ea60552905f9b30856de1b10e445bd41d1197cd3271979",
-  downloaded_file_path = "jackson-dataformat-toml-2.19.0-sources.jar"
-)
-
-http_file(
   name = "com_fasterxml_jackson_dataformat-jackson-dataformat-yaml-2_19_0_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.19.0/jackson-dataformat-yaml-2.19.0.jar",
   sha256 = "46e54dcbd39d4d12cda18ec9276e7b888e08fc765ea0c77e71662306f0d4abc4",
@@ -6132,27 +5684,6 @@ http_file(
 )
 
 http_file(
-  name = "com_jetbrains_mlapi-mlapi-catboost-0_2_3_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/mlapi/mlapi-catboost/0.2.3/mlapi-catboost-0.2.3.jar",
-  sha256 = "d4d795edbd37d0460ab8d6899f397d8bcb79d3cdbbcb6054a9235f0ff22577e0",
-  downloaded_file_path = "mlapi-catboost-0.2.3.jar"
-)
-
-http_file(
-  name = "com_jetbrains_mlapi-mlapi-catboost-0_2_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/mlapi/mlapi-catboost/0.2.3/mlapi-catboost-0.2.3-sources.jar",
-  sha256 = "701e70661d876546e3540ce7f3b8fc2c14b9d8d1114a6539c943e960cbe1319e",
-  downloaded_file_path = "mlapi-catboost-0.2.3-sources.jar"
-)
-
-http_file(
-  name = "com_jetbrains_mlapi-catboost-shadow-need-slf4j-1_2_5_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/mlapi/catboost-shadow-need-slf4j/1.2.5/catboost-shadow-need-slf4j-1.2.5.jar",
-  sha256 = "94a06c3fdd4aa638df59c8c783a379ca43a5b933187760e219e09e84f1633d76",
-  downloaded_file_path = "catboost-shadow-need-slf4j-1.2.5.jar"
-)
-
-http_file(
   name = "com_jetbrains_mlapi-mlapi-core-0_2_3_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/mlapi/mlapi-core/0.2.3/mlapi-core-0.2.3.jar",
   sha256 = "13f52c729e4ba3c536880c9177d272ec1e134d07172cd923720c03e0deefc9fa",
@@ -6832,20 +6363,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-ranking-kotlin-0_4_0_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-ranking-kotlin/0.4.0/completion-ranking-kotlin-0.4.0.jar",
-  sha256 = "1849979a0cd2a997e1071ac79741b1a77781357e254138f30eabffebccddfec8",
-  downloaded_file_path = "completion-ranking-kotlin-0.4.0.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-ranking-kotlin-0_4_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-ranking-kotlin/0.4.0/completion-ranking-kotlin-0.4.0-sources.jar",
-  sha256 = "a2606dc207459370518b5e6ea2a356c1f9552a9eb53613cb9a57ce762ce8d6e9",
-  downloaded_file_path = "completion-ranking-kotlin-0.4.0-sources.jar"
-)
-
-http_file(
   name = "org_jetbrains_kotlin-kotlin-gradle-plugin-idea-1_9_20-dev-8162_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-gradle-plugin-idea/1.9.20-dev-8162/kotlin-gradle-plugin-idea-1.9.20-dev-8162.jar",
   sha256 = "8d1af87632d95148f122a9fa0ae2903c19ee6fab7d01e017f76e0d2c9a022c20",
@@ -6913,20 +6430,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.3.20-RC2/kotlin-reflect-2.3.20-RC2-sources.jar",
   sha256 = "8cbdca65092aa6888901e23c08c7d69d141544107a9bcc9aa47b5453d4dbcf7e",
   downloaded_file_path = "kotlin-reflect-2.3.20-RC2-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-script-runtime-2_3_20-RC2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.20-RC2/kotlin-script-runtime-2.3.20-RC2.jar",
-  sha256 = "4f9d7484608c0c335e6605fb35c37b91989476290df8ee60d0e7487ba9aa0568",
-  downloaded_file_path = "kotlin-script-runtime-2.3.20-RC2.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-script-runtime-2_3_20-RC2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-script-runtime/2.3.20-RC2/kotlin-script-runtime-2.3.20-RC2-sources.jar",
-  sha256 = "275d90c0c92e9680aff9c013394f3f395bc46dc23762107c4fdccd9887a58561",
-  downloaded_file_path = "kotlin-script-runtime-2.3.20-RC2-sources.jar"
 )
 
 http_file(
@@ -7140,20 +6643,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_kotlin-analysis-api-k2-tests-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/analysis-api-k2-tests-for-ide/2.4.0-dev-5744/analysis-api-k2-tests-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "40b47904c1b242e05f1a2052aba25222457049db0fd4cd8c19461638798aeeaa",
-  downloaded_file_path = "analysis-api-k2-tests-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-analysis-api-k2-tests-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/analysis-api-k2-tests-for-ide/2.4.0-dev-5744/analysis-api-k2-tests-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "70fe965b90ebbff5583b66e0ae1a9f1a9165eb3bb0b12e8cbe44c38b7f61a289",
-  downloaded_file_path = "analysis-api-k2-tests-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
   name = "org_jetbrains_kotlin-analysis-api-platform-interface-for-ide-2_4_0-dev-5744_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/analysis-api-platform-interface-for-ide/2.4.0-dev-5744/analysis-api-platform-interface-for-ide-2.4.0-dev-5744.jar",
   sha256 = "3ce18bd1aa9de4df6602aac4500c0f946c53ae7254d1f45dbe3bcda921bcef4b",
@@ -7196,20 +6685,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_kotlin-incremental-compilation-impl-tests-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/incremental-compilation-impl-tests-for-ide/2.4.0-dev-5744/incremental-compilation-impl-tests-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "23950ea902adeaffaf532d02a3855dfc351aeb812e8f41b1533154eb211777ec",
-  downloaded_file_path = "incremental-compilation-impl-tests-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-incremental-compilation-impl-tests-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/incremental-compilation-impl-tests-for-ide/2.4.0-dev-5744/incremental-compilation-impl-tests-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "a9293e127d9d0607655b92089b5d66e3b5318d3a47878ec00821399610dcbeca",
-  downloaded_file_path = "incremental-compilation-impl-tests-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
   name = "org_jetbrains_kotlin-js-plain-objects-compiler-plugin-for-ide-2_4_0-dev-5744_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/js-plain-objects-compiler-plugin-for-ide/2.4.0-dev-5744/js-plain-objects-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
   sha256 = "28a03e94302d797f502356c6c5696d172c6cf142b14a3ae0fcc43f6674a30414",
@@ -7221,62 +6696,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/js-plain-objects-compiler-plugin-for-ide/2.4.0-dev-5744/js-plain-objects-compiler-plugin-for-ide-2.4.0-dev-5744-sources.jar",
   sha256 = "018933386f3db4180ffd2830bbe512600b79582a8e59ecc0338fd57cf5ab17a2",
   downloaded_file_path = "js-plain-objects-compiler-plugin-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-common-tests-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-common-tests-for-ide/2.4.0-dev-5744/kotlin-build-common-tests-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "c440a25f5d4b980c1ae17cf80ce6f8ff34906b490cb82e5af7037c07f604dc3a",
-  downloaded_file_path = "kotlin-build-common-tests-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-common-tests-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-common-tests-for-ide/2.4.0-dev-5744/kotlin-build-common-tests-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "24853451f998a4d0155c15a034c2df61aee0885967a64b03275626b44869a107",
-  downloaded_file_path = "kotlin-build-common-tests-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-tools-api-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-tools-api/2.4.0-dev-5744/kotlin-build-tools-api-2.4.0-dev-5744.jar",
-  sha256 = "7fca90aadf97634702c64007529020194d8496bbd263d2e639ffc2fedcf74dfa",
-  downloaded_file_path = "kotlin-build-tools-api-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-tools-api-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-tools-api/2.4.0-dev-5744/kotlin-build-tools-api-2.4.0-dev-5744-sources.jar",
-  sha256 = "adc136d7b7b0dbc44e26fc3351a7d06c98b0eba580e5447b99b354de72fb710b",
-  downloaded_file_path = "kotlin-build-tools-api-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-tools-cri-impl-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.4.0-dev-5744/kotlin-build-tools-cri-impl-2.4.0-dev-5744.jar",
-  sha256 = "6eb21bddf0a6f80a30c41f7281bad264f231f118871883304523ab15bea77f19",
-  downloaded_file_path = "kotlin-build-tools-cri-impl-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-tools-cri-impl-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.4.0-dev-5744/kotlin-build-tools-cri-impl-2.4.0-dev-5744-sources.jar",
-  sha256 = "e37ee4d03e1afac684f9dba6f159a00e3da5e52251b754f0a78421152e35f4f1",
-  downloaded_file_path = "kotlin-build-tools-cri-impl-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-tools-impl-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-tools-impl/2.4.0-dev-5744/kotlin-build-tools-impl-2.4.0-dev-5744.jar",
-  sha256 = "e2938eb532ee82b202520c5be3891541e3e44ff513d2ceae5d426808d08c9ecb",
-  downloaded_file_path = "kotlin-build-tools-impl-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-build-tools-impl-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-build-tools-impl/2.4.0-dev-5744/kotlin-build-tools-impl-2.4.0-dev-5744-sources.jar",
-  sha256 = "9b58517134ee2139987207736b9275ad984ff32e296eeeeef4020e81461e1580",
-  downloaded_file_path = "kotlin-build-tools-impl-2.4.0-dev-5744-sources.jar"
 )
 
 http_file(
@@ -7378,34 +6797,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_kotlin-kotlin-dist-for-ide-2_3_10_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-dist-for-ide/2.3.10/kotlin-dist-for-ide-2.3.10.jar",
-  sha256 = "9e6e4dad76dcd4fca65ef1e04d6837c5874a16aaa1b1c36ef7a7fcb256c9a6d4",
-  downloaded_file_path = "kotlin-dist-for-ide-2.3.10.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-dist-for-ide-2_3_10-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-dist-for-ide/2.3.10/kotlin-dist-for-ide-2.3.10-sources.jar",
-  sha256 = "c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3",
-  downloaded_file_path = "kotlin-dist-for-ide-2.3.10-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-gradle-statistics-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-gradle-statistics-for-ide/2.4.0-dev-5744/kotlin-gradle-statistics-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "5a79124d95416db1be1ec4b52195d8bcdad79ad4b49a078c6a5c2fb1cbc8f7f1",
-  downloaded_file_path = "kotlin-gradle-statistics-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-gradle-statistics-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-gradle-statistics-for-ide/2.4.0-dev-5744/kotlin-gradle-statistics-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "196ea8a40419a164b5af65d6817781329ce9e828dba0283a1d32133aded8344f",
-  downloaded_file_path = "kotlin-gradle-statistics-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
   name = "org_jetbrains_kotlin-kotlin-jps-common-for-ide-2_4_0-dev-5744_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-common-for-ide/2.4.0-dev-5744/kotlin-jps-common-for-ide-2.4.0-dev-5744.jar",
   sha256 = "8f8767ddd4cac874f44ab5faaffdcac2f9cf009c4df34e2e73c231f675ddd7f8",
@@ -7417,62 +6808,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-common-for-ide/2.4.0-dev-5744/kotlin-jps-common-for-ide-2.4.0-dev-5744-sources.jar",
   sha256 = "385ec483591f016c5471829d54c830d3250bebeba16a2a7ed12b99682611fef0",
   downloaded_file_path = "kotlin-jps-common-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_3_10_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-plugin-classpath/2.3.10/kotlin-jps-plugin-classpath-2.3.10.jar",
-  sha256 = "cf910288eaadbdf897d2fe739821d07489727b63e169d648531baa95cef50e01",
-  downloaded_file_path = "kotlin-jps-plugin-classpath-2.3.10.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_3_10-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-plugin-classpath/2.3.10/kotlin-jps-plugin-classpath-2.3.10-sources.jar",
-  sha256 = "478298dc90547796ba3b67db0273d3d382bb0991df2b54657f594966da493821",
-  downloaded_file_path = "kotlin-jps-plugin-classpath-2.3.10-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-plugin-classpath/2.4.0-dev-5744/kotlin-jps-plugin-classpath-2.4.0-dev-5744.jar",
-  sha256 = "afcdb112f17739415a0bbda639ad39ec065bf44b930fff51699f8fd5d8ef8f7f",
-  downloaded_file_path = "kotlin-jps-plugin-classpath-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-plugin-classpath-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-plugin-classpath/2.4.0-dev-5744/kotlin-jps-plugin-classpath-2.4.0-dev-5744-sources.jar",
-  sha256 = "cd89a4efc656772480a9c3f2bb7c3ce3ec9ac0286ff6c7344cabcf129d18205f",
-  downloaded_file_path = "kotlin-jps-plugin-classpath-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-plugin-tests-for-ide-2_3_10_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-plugin-tests-for-ide/2.3.10/kotlin-jps-plugin-tests-for-ide-2.3.10.jar",
-  sha256 = "f49a98bf974f0ec47616a66018667e4159070aeeb0f25bcdeb97d5ba2cbb4057",
-  downloaded_file_path = "kotlin-jps-plugin-tests-for-ide-2.3.10.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-plugin-tests-for-ide-2_3_10-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-plugin-tests-for-ide/2.3.10/kotlin-jps-plugin-tests-for-ide-2.3.10-sources.jar",
-  sha256 = "3f512bf2249e583f963e09a15cfb5b43565d6342da72905dae3c2d5a12d7021d",
-  downloaded_file_path = "kotlin-jps-plugin-tests-for-ide-2.3.10-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-objcexport-header-generator-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-objcexport-header-generator-for-ide/2.4.0-dev-5744/kotlin-objcexport-header-generator-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "eb6e5016f516abbd965eb312b295237788b8c09e137c16a0a8254a4474bfaffa",
-  downloaded_file_path = "kotlin-objcexport-header-generator-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-objcexport-header-generator-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-objcexport-header-generator-for-ide/2.4.0-dev-5744/kotlin-objcexport-header-generator-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "d9e80540ac6ac061f7bcbfe4e7076fa64eaea067c0cb51bcc4aa583e383cf781",
-  downloaded_file_path = "kotlin-objcexport-header-generator-for-ide-2.4.0-dev-5744-sources.jar"
 )
 
 http_file(
@@ -7543,20 +6878,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-scripting-jvm/2.4.0-dev-5744/kotlin-scripting-jvm-2.4.0-dev-5744-sources.jar",
   sha256 = "7448c25496ee80b75634d8074cd306e6fabc500bbb3174b2a5c1ef992b940abd",
   downloaded_file_path = "kotlin-scripting-jvm-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-swift-export-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-swift-export-for-ide/2.4.0-dev-5744/kotlin-swift-export-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "8884b4919deb16c06f200bd4d6d5abce00b697620463cd814de6e00d5305d12a",
-  downloaded_file_path = "kotlin-swift-export-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-swift-export-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-swift-export-for-ide/2.4.0-dev-5744/kotlin-swift-export-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "306586b021c550bd966b245625380f0808d12026e74340919bffe692096a3f9c",
-  downloaded_file_path = "kotlin-swift-export-for-ide-2.4.0-dev-5744-sources.jar"
 )
 
 http_file(
@@ -15075,20 +14396,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/completion/ml/python/features/ml-completion-prev-exprs-models/1.11/ml-completion-prev-exprs-models-1.11.jar",
   sha256 = "8924b199c8cc52530de2b250670806d8b046fa5ae9d32a9f27a9b224e934a1ad",
   downloaded_file_path = "ml-completion-prev-exprs-models-1.11.jar"
-)
-
-http_file(
-  name = "com_jetbrains_ml_models-python-imports-ranking-model-coral-panda-republished-6_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/ml/models/python-imports-ranking-model/coral-panda-republished-6/python-imports-ranking-model-coral-panda-republished-6.jar",
-  sha256 = "2dbd0ae71bac24a83db76238f0a0cf2bd6b0fd1963b6827371ae8813a0434827",
-  downloaded_file_path = "python-imports-ranking-model-coral-panda-republished-6.jar"
-)
-
-http_file(
-  name = "com_jetbrains_ml_models-python-imports-ranking-model-coral-panda-republished-6-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/ml/models/python-imports-ranking-model/coral-panda-republished-6/python-imports-ranking-model-coral-panda-republished-6-sources.jar",
-  sha256 = "3b0e9358cb7dfa787a28ce3502655f39cd73c6f65a2b1eed7074f04acb562584",
-  downloaded_file_path = "python-imports-ranking-model-coral-panda-republished-6-sources.jar"
 )
 
 http_file(

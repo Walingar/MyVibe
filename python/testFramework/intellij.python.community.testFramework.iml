@@ -18,7 +18,6 @@
     <orderEntry type="module" module-name="intellij.platform.projectModel" />
     <orderEntry type="module" module-name="intellij.platform.remote.core" />
     <orderEntry type="module" module-name="intellij.platform.testFramework" />
-    <orderEntry type="module" module-name="intellij.python.sdk" />
     <orderEntry type="module" module-name="intellij.platform.execution" />
     <orderEntry type="module" module-name="intellij.platform.lang.impl" />
     <orderEntry type="module" module-name="intellij.python.community.impl" />

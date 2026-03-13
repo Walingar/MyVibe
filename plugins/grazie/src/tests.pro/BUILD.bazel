@@ -15,7 +15,6 @@ jvm_library(
     "@lib//:kotlin-stdlib",
     "//libraries/rd/core",
     "//python/pluginCore:community-plugin",
-    "//plugins/kotlin:kotlin-plugin-community-main",
     "//plugins/grazie",
     "//plugins/grazie/src:core",
     "@lib//:grazie-tests-pro-ai-grazie-model-ner-jvm",
@@ -57,8 +56,6 @@ jvm_library(
     "@lib//:grazie-tests-pro-jetbrains-intellij-deps-languagetool-language-ru",
     "@lib//:grazie-tests-pro-jetbrains-intellij-deps-languagetool-core",
     "@lib//:grazie-tests-pro-ai-grazie-nlp-detect-jvm",
-    "//python/python-grazie:grazie",
-    "//python/python-grazie:grazie_test_lib",
     "//plugins/grazie",
     "//plugins/grazie:grazie_test_lib",
     "//plugins/grazie/src:core",
@@ -104,7 +101,6 @@ jvm_library(
   runtime_deps = [
     ":tests.pro",
     "//python/pluginCore:community-plugin_test_lib",
-    "//plugins/kotlin:kotlin-plugin-community-main_test_lib",
   ]
 )
 ### auto-generated section `build intellij.grazie.tests.pro` end

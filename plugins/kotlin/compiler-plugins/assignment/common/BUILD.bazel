@@ -27,7 +27,6 @@ jvm_library(
     "@lib//:kotlinc-analysis-api-k2",
     "@lib//:kotlinc-kotlin-compiler-common",
     "//plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin-base-analysis-utils",
-    "//plugins/kotlin/fir",
     "@lib//:kotlinc-analysis-api",
     "@lib//:kotlinc-analysis-api-platform-interface",
     "//platform/util",
@@ -35,7 +34,6 @@ jvm_library(
     "//platform/analysis-api:analysis",
     "//java/java-psi-api:psi",
     "//plugins/kotlin/code-insight/fixes-k2:kotlin-codeInsight-fixes",
-    "//plugins/kotlin/base/project-structure",
   ]
 )
 
@@ -50,13 +48,11 @@ jvm_library(
     "//platform/core-api:core_test_lib",
     "//plugins/kotlin/code-insight/api:api_test_lib",
     "//plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin-base-analysis-utils_test_lib",
-    "//plugins/kotlin/fir:fir_test_lib",
     "//platform/util:util_test_lib",
     "//platform/core-impl:core-impl_test_lib",
     "//platform/analysis-api:analysis_test_lib",
     "//java/java-psi-api:psi_test_lib",
     "//plugins/kotlin/code-insight/fixes-k2:kotlin-codeInsight-fixes_test_lib",
-    "//plugins/kotlin/base/project-structure:project-structure_test_lib",
   ]
 )
 ### auto-generated section `build intellij.kotlin.compilerPlugins.assignment.fixes` end

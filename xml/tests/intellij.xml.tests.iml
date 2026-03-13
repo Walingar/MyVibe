@@ -29,7 +29,6 @@
     <orderEntry type="module" module-name="intellij.xml.psi" scope="TEST" />
     <orderEntry type="module" module-name="intellij.xml.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.ant" scope="TEST" />
     <orderEntry type="module" module-name="intellij.xpath" scope="TEST" />
     <orderEntry type="module" module-name="intellij.xml.dom.impl" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.tests" scope="TEST" />
@@ -57,10 +56,5 @@
     <orderEntry type="module" module-name="intellij.libraries.fastutil" scope="TEST" />
     <orderEntry type="module" module-name="intellij.libraries.kotlinx.collections.immutable" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.concurrency" scope="TEST" />
-  </component>
-  <component name="copyright">
-    <Base>
-      <setting name="state" value="1" />
-    </Base>
   </component>
 </module>

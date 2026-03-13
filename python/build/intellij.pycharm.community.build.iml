@@ -23,8 +23,6 @@
     <orderEntry type="module" module-name="intellij.platform.core" />
     <orderEntry type="module" module-name="intellij.platform.ide.util.io" />
     <orderEntry type="module" module-name="intellij.platform.ide.core" />
-    <orderEntry type="module" module-name="intellij.python.sdk" />
-    <orderEntry type="module" module-name="intellij.python.parser" />
     <orderEntry type="module" module-name="intellij.platform.jps.model" />
     <orderEntry type="module" module-name="intellij.libraries.jsoup" />
     <orderEntry type="module" module-name="intellij.platform.images.tests" scope="TEST" />

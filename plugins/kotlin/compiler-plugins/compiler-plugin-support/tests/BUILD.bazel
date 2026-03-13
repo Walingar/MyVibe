@@ -9,7 +9,6 @@ jvm_library(
     "@lib//:kotlin-stdlib",
     "@lib//:kotlinc-kotlin-compiler-common",
     "@lib//:kotlinc-kotlin-jps-common",
-    "//plugins/kotlin/base/facet",
   ]
 )
 
@@ -32,16 +31,8 @@ jvm_library(
     "//platform/projectModel-api:projectModel_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//plugins/kotlin/base/facet",
-    "//plugins/kotlin/base/facet:facet_test_lib",
     "//plugins/kotlin/base/facet/tests",
     "//plugins/kotlin/base/facet/tests:tests_test_lib",
-    "//plugins/kotlin/compiler-plugins/compiler-plugin-support/common:kotlin-compilerPlugins-support",
-    "//plugins/kotlin/compiler-plugins/compiler-plugin-support/common:kotlin-compilerPlugins-support_test_lib",
-    "//plugins/kotlin/base/plugin",
-    "//plugins/kotlin/base/plugin:plugin_test_lib",
-    "//plugins/kotlin/base/test",
-    "//plugins/kotlin/base/test:test_test_lib",
   ],
   runtime_deps = [":tests"]
 )

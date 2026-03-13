@@ -28,12 +28,8 @@ jvm_library(
     "//platform/code-style-api:codeStyle",
     "//platform/core-api:core",
     "//platform/editor-ui-api:editor-ui",
-    "//plugins/kotlin/base/util",
-    "//plugins/kotlin/base/kdoc",
-    "//plugins/kotlin/base/resources:kotlin-base-resources",
     "//plugins/kotlin/frontend-independent",
     "//plugins/kotlin/code-insight/api",
-    "//plugins/kotlin/code-insight/override-implement-shared:kotlin-code-insight-override-implement-shared",
     "//platform/core-impl",
     "//platform/lang-impl",
     "//platform/lang-api:lang",
@@ -42,9 +38,7 @@ jvm_library(
     "//platform/core-ui",
     "//platform/platform-impl:ide-impl",
     "//plugins/kotlin/code-insight/impl-base:kotlin-codeInsight-shared",
-    "//plugins/kotlin/base/analysis",
     "@lib//:kotlinc-analysis-api-impl-base",
-    "//plugins/kotlin/base/code-insight",
   ]
 )
 
@@ -60,12 +54,8 @@ jvm_library(
     "//platform/code-style-api:codeStyle_test_lib",
     "//platform/core-api:core_test_lib",
     "//platform/editor-ui-api:editor-ui_test_lib",
-    "//plugins/kotlin/base/util:util_test_lib",
-    "//plugins/kotlin/base/kdoc:kdoc_test_lib",
-    "//plugins/kotlin/base/resources:kotlin-base-resources_test_lib",
     "//plugins/kotlin/frontend-independent:frontend-independent_test_lib",
     "//plugins/kotlin/code-insight/api:api_test_lib",
-    "//plugins/kotlin/code-insight/override-implement-shared:kotlin-code-insight-override-implement-shared_test_lib",
     "//platform/core-impl:core-impl_test_lib",
     "//platform/lang-impl:lang-impl_test_lib",
     "//platform/lang-api:lang_test_lib",
@@ -74,8 +64,6 @@ jvm_library(
     "//platform/core-ui:core-ui_test_lib",
     "//platform/platform-impl:ide-impl_test_lib",
     "//plugins/kotlin/code-insight/impl-base:kotlin-codeInsight-shared_test_lib",
-    "//plugins/kotlin/base/analysis:analysis_test_lib",
-    "//plugins/kotlin/base/code-insight:code-insight_test_lib",
   ]
 )
 ### auto-generated section `build intellij.kotlin.codeInsight.overrideImplement` end

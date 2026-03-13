@@ -36,14 +36,12 @@ jvm_library(
     "@lib//:kotlinc-kotlin-compiler-common",
     "//platform/lang-impl",
     "//platform/util/jdom",
-    "//plugins/kotlin/base/resources:kotlin-base-resources",
     "//platform/core-ui",
     "//plugins/kotlin/highlighting/highlighting-minimal:kotlin-highlighting-minimal",
     "//platform/code-style-impl:codeStyle-impl",
     "//platform/lang-api:lang",
     "//libraries/kotlinx/collections-immutable:libraries-kotlinx-collections-immutable",
-  ],
-  runtime_deps = ["//plugins/kotlin/base/frontend-agnostic"]
+  ]
 )
 
 jvm_library(
@@ -63,8 +61,6 @@ jvm_library(
     "//platform/projectModel-api:projectModel_test_lib",
     "//platform/lang-impl:lang-impl_test_lib",
     "//platform/util/jdom:jdom_test_lib",
-    "//plugins/kotlin/base/frontend-agnostic:frontend-agnostic_test_lib",
-    "//plugins/kotlin/base/resources:kotlin-base-resources_test_lib",
     "//platform/core-ui:core-ui_test_lib",
     "//plugins/kotlin/highlighting/highlighting-minimal:kotlin-highlighting-minimal_test_lib",
     "//platform/code-style-impl:codeStyle-impl_test_lib",

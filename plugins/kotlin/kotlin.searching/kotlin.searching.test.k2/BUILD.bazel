@@ -7,9 +7,7 @@ jvm_library(
   srcs = glob([], allow_empty = True),
   runtime_deps = [
     "@lib//:kotlinc-kotlin-compiler-common",
-    "//plugins/kotlin/fir",
     "//platform/usageView",
-    "//plugins/kotlin/base/analysis",
   ]
 )
 
@@ -31,33 +29,18 @@ jvm_library(
     "//platform/indexing-api:indexing_test_lib",
     "//plugins/kotlin/plugin/k2",
     "//plugins/kotlin/plugin/k2:k2_test_lib",
-    "//plugins/kotlin/test-framework",
-    "//plugins/kotlin/test-framework:test-framework_test_lib",
-    "//plugins/kotlin/tests-common:common-tests",
-    "//plugins/kotlin/tests-common:common-tests_test_lib",
-    "//plugins/kotlin/kotlin.searching",
-    "//plugins/kotlin/kotlin.searching:kotlin.searching_test_lib",
     "//java/testFramework",
     "//java/testFramework:testFramework_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//plugins/kotlin/base/test",
-    "//plugins/kotlin/base/test:test_test_lib",
     "//platform/usageView",
     "//platform/usageView:usageView_test_lib",
-    "//plugins/kotlin/base/plugin",
-    "//plugins/kotlin/base/plugin:plugin_test_lib",
-    "//plugins/kotlin/base/analysis",
-    "//plugins/kotlin/base/analysis:analysis_test_lib",
     "//platform/analysis-api:analysis",
     "//platform/analysis-api:analysis_test_lib",
     "//jps/model-api:model",
     "//jps/model-api:model_test_lib",
   ],
-  runtime_deps = [
-    ":test",
-    "//plugins/kotlin/fir:fir_test_lib",
-  ]
+  runtime_deps = [":test"]
 )
 ### auto-generated section `build intellij.kotlin.searching.test` end
 

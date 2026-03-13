@@ -33,9 +33,7 @@
     <orderEntry type="library" scope="TEST" name="opentest4j" level="project" />
     <orderEntry type="module" module-name="intellij.java.rt" scope="TEST" />
     <orderEntry type="module" module-name="kotlin.plugin.k2" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.kotlin.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.core" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.core" scope="TEST" />
-    <orderEntry type="module" module-name="kotlin.base.test" scope="TEST" />
   </component>
 </module>

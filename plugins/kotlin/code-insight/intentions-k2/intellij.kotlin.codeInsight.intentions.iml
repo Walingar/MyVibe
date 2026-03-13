@@ -34,35 +34,23 @@
     <orderEntry type="library" name="kotlinc.kotlin-compiler-common" level="project" />
     <orderEntry type="module" module-name="intellij.libraries.kotlin.reflect" />
     <orderEntry type="module" module-name="intellij.platform.analysis" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
     <orderEntry type="module" module-name="intellij.platform.ide.impl" />
     <orderEntry type="module" module-name="intellij.platform.editor.ui" />
     <orderEntry type="module" module-name="intellij.platform.lang" />
     <orderEntry type="module" module-name="intellij.platform.core.impl" />
     <orderEntry type="module" module-name="intellij.java.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.resources" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.codeInsight" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.utils" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.shared" />
     <orderEntry type="module" module-name="intellij.kotlin.base.analysis.utils" />
     <orderEntry type="library" name="kotlinc.analysis-api-k2" level="project" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.projectStructure" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.descriptions" />
-    <orderEntry type="module" module-name="kotlin.refactorings.common" />
     <orderEntry type="module" module-name="intellij.platform.lang.impl" />
     <orderEntry type="module" module-name="intellij.platform.core.ui" />
     <orderEntry type="module" module-name="intellij.java.impl" />
     <orderEntry type="module" module-name="intellij.java.execution.impl" />
-    <orderEntry type="module" module-name="intellij.kotlin.refactorings" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.analysis" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
     <orderEntry type="module" module-name="intellij.kotlin.refactorings.move" />
-    <orderEntry type="module" module-name="kotlin.code-insight.override-implement.shared" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.overrideImplement" />
     <orderEntry type="module" module-name="kotlin.fir.frontend-independent" />
-    <orderEntry type="module" module-name="intellij.kotlin.codeInsight" />
-    <orderEntry type="module" module-name="intellij.kotlin.searching" />
     <orderEntry type="module" module-name="intellij.libraries.guava" />
   </component>
 </module>

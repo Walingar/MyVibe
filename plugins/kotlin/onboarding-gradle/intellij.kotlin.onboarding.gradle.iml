@@ -41,7 +41,6 @@
     <orderEntry type="module" module-name="intellij.platform.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.ide" />
     <orderEntry type="module" module-name="intellij.platform.ide.impl" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.plugin" />
     <orderEntry type="module" module-name="intellij.libraries.kotlinx.datetime" />
     <orderEntry type="module" module-name="intellij.libraries.kotlinx.serialization.core" />
     <orderEntry type="module" module-name="intellij.libraries.kotlinx.serialization.json" />
@@ -51,11 +50,6 @@
     <orderEntry type="library" scope="TEST" name="JUnit5" level="project" />
     <orderEntry type="module" module-name="intellij.java.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.gradle.common" />
-    <orderEntry type="module" module-name="intellij.kotlin.projectConfiguration" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.facet" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.resources" />
-    <orderEntry type="module" module-name="intellij.kotlin.onboarding" />
-    <orderEntry type="module" module-name="kotlin.gradle.gradle-java" />
     <orderEntry type="module" module-name="intellij.kotlin.gradle.tooling.impl" />
   </component>
 </module>

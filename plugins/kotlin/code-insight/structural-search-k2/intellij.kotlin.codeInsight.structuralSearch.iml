@@ -40,11 +40,6 @@
     <orderEntry type="module" module-name="intellij.platform.structuralSearch" />
     <orderEntry type="module" module-name="intellij.platform.editor.ui" />
     <orderEntry type="module" module-name="intellij.java.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.analysis" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.resources" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.util" />
-    <orderEntry type="module" module-name="kotlin.code-insight.live-templates.shared" />
     <orderEntry type="module" module-name="intellij.kotlin.base.analysis.utils" />
   </component>
 </module>

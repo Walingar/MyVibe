@@ -1,15 +1,10 @@
 ### auto-generated section `build intellij.turboComplete.languages.kotlin.k1` start
-load("@rules_jvm//:jvm.bzl", "jvm_library", "jvm_provided_library", "resourcegroup")
+load("@rules_jvm//:jvm.bzl", "jvm_library", "resourcegroup")
 
 resourcegroup(
   name = "k1_resources",
   srcs = glob(["resources/**/*"]),
   strip_prefix = "resources"
-)
-
-jvm_provided_library(
-  name = "plugins_kotlin_completion_kotlin-completion-impl-k1_provided",
-  lib = "//plugins/kotlin/completion/impl-k1:kotlin-completion-impl-k1"
 )
 
 jvm_library(
@@ -26,7 +21,6 @@ jvm_library(
     "//plugins/turboComplete",
     "//platform/platform-impl/internal",
     "//platform/platform-impl:ide-impl",
-    ":plugins_kotlin_completion_kotlin-completion-impl-k1_provided",
   ]
 )
 
@@ -38,8 +32,6 @@ jvm_library(
   runtime_deps = [
     ":k1",
     "//platform/core-api:core_test_lib",
-    "//plugins/kotlin/completion/impl-k1:kotlin-completion-impl-k1",
-    "//plugins/kotlin/completion/impl-k1:kotlin-completion-impl-k1_test_lib",
     "//platform/ml-impl:ml-impl_test_lib",
     "//plugins/turboComplete:turboComplete_test_lib",
     "//platform/platform-impl/internal:internal_test_lib",

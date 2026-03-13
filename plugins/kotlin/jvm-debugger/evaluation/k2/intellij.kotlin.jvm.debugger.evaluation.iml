@@ -19,11 +19,9 @@
     <orderEntry type="module" module-name="intellij.platform.analysis.impl" />
     <orderEntry type="module" module-name="intellij.java.analysis.impl" />
     <orderEntry type="module" module-name="intellij.kotlin.jvm.debugger.base.util" />
-    <orderEntry type="module" module-name="kotlin.jvm-debugger.evaluation" />
     <orderEntry type="module" module-name="intellij.libraries.asm" />
     <orderEntry type="module" module-name="intellij.platform.debugger.impl" />
     <orderEntry type="module" module-name="intellij.kotlin.codeInsight.shared" />
-    <orderEntry type="module" module-name="intellij.kotlin.base.psi" />
     <orderEntry type="module" module-name="intellij.platform.util" />
     <orderEntry type="module" module-name="intellij.platform.util.multiplatform" />
     <orderEntry type="module" module-name="intellij.kotlin.jvm.debugger.core" />
