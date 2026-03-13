@@ -1,7 +1,0 @@
-// IGNORE_K1
-
-fun test(): Any {
-    return (fun(a: Any?) {
-        a!!<caret>
-    })
-}
