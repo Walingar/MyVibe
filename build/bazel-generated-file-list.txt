@@ -616,11 +616,6 @@ plugins/color-schemes/warm-neon-color-scheme
 plugins/configuration-script
 plugins/copyright
 plugins/copyright/vcs
-plugins/coverage-common
-plugins/coverage-common/intellij.platform.coverage.agent
-plugins/dev/intellij.dev
-plugins/dev/intellij.dev.codeInsight
-plugins/dev/intellij.dev.psiViewer
 plugins/devkit/runtimeModuleRepository/generator
 plugins/editorconfig
 plugins/editorconfig/backend
@@ -630,7 +625,6 @@ plugins/editorconfig/frontend
 plugins/emojipicker
 plugins/git4idea
 plugins/git4idea/frontend
-plugins/git4idea/intellij.vcs.git.coverage
 plugins/git4idea/localHistory
 plugins/git4idea/rt
 plugins/git4idea/shared
@@ -666,7 +660,6 @@ plugins/markdown/model
 plugins/markdown/plugin
 plugins/markdown/spellchecker
 plugins/markdown/xml
-plugins/marketplace-ml
 plugins/maven/artifact-resolver/common
 plugins/mcp-server
 plugins/mcp-server/mcpserver.stdio

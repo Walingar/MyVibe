@@ -8834,21 +8834,6 @@ java_library(
 )
 
 copy_file(
-  name = "org.jetbrains.intellij.deps/intellij-coverage-agent-1.0.771.jar_copy",
-  src = "@org_jetbrains_intellij_deps-intellij-coverage-agent-1_0_771_http//file",
-  out = "org.jetbrains.intellij.deps/intellij-coverage-agent-1.0.771.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "platform-coverage-agent-intellij-coverage",
-  jar = "@org_jetbrains_intellij_deps-intellij-coverage-agent-1_0_771_http//file",
-  source_jar = "@org_jetbrains_intellij_deps-intellij-coverage-agent-1_0_771-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "com.github.hypfvieh/dbus-java-transport-native-unixsocket-4.2.1.jar_copy",
   src = "@com_github_hypfvieh-dbus-java-transport-native-unixsocket-4_2_1_http//file",
   out = "com.github.hypfvieh/dbus-java-transport-native-unixsocket-4.2.1.jar",
