@@ -399,62 +399,6 @@ http_file(
 )
 
 http_file(
-  name = "io_grpc-grpc-inprocess-1_65_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/grpc/grpc-inprocess/1.65.1/grpc-inprocess-1.65.1.jar",
-  sha256 = "6e3b197f5668e26fec19a831d2dd1f6d53b6eb9d4d3978b8ffd4ff68f1aae020",
-  downloaded_file_path = "grpc-inprocess-1.65.1.jar"
-)
-
-http_file(
-  name = "io_grpc-grpc-inprocess-1_65_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/grpc/grpc-inprocess/1.65.1/grpc-inprocess-1.65.1-sources.jar",
-  sha256 = "a3a8212223ff800f249594c1e434ae389438b77959a880ce9213753e076ed122",
-  downloaded_file_path = "grpc-inprocess-1.65.1-sources.jar"
-)
-
-http_file(
-  name = "com_willowtreeapps_assertk-assertk-jvm-0_23_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/willowtreeapps/assertk/assertk-jvm/0.23/assertk-jvm-0.23.jar",
-  sha256 = "424e8f9f9452fa2029ed54f664917b848745e488faaad5eebdb51174683f1db8",
-  downloaded_file_path = "assertk-jvm-0.23.jar"
-)
-
-http_file(
-  name = "com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/willowtreeapps/opentest4k/opentest4k-jvm/1.2.1/opentest4k-jvm-1.2.1.jar",
-  sha256 = "fab15bbc792057f3762867574b3bb7c993b1ee4f9e82b1c79471891c9b3a7055",
-  downloaded_file_path = "opentest4k-jvm-1.2.1.jar"
-)
-
-http_file(
-  name = "org_opentest4j-opentest4j-1_2_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar",
-  sha256 = "58812de60898d976fb81ef3b62da05c6604c18fd4a249f5044282479fc286af2",
-  downloaded_file_path = "opentest4j-1.2.0.jar"
-)
-
-http_file(
-  name = "com_willowtreeapps_assertk-assertk-jvm-0_23-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/willowtreeapps/assertk/assertk-jvm/0.23/assertk-jvm-0.23-sources.jar",
-  sha256 = "0a5ce3d9af7a3cd0e75b0f2aa91860cf8d951b5a31c807aabe26539982f1c20f",
-  downloaded_file_path = "assertk-jvm-0.23-sources.jar"
-)
-
-http_file(
-  name = "com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/willowtreeapps/opentest4k/opentest4k-jvm/1.2.1/opentest4k-jvm-1.2.1-sources.jar",
-  sha256 = "b98781621d61a3042b90b96dfae29ec2631204fae404105673a1a0b921cfb249",
-  downloaded_file_path = "opentest4k-jvm-1.2.1-sources.jar"
-)
-
-http_file(
-  name = "org_opentest4j-opentest4j-1_2_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-sources.jar",
-  sha256 = "b63495ef700fb2af2cdee8dd68659b27822650058234a602f9ed1d14b909a1a8",
-  downloaded_file_path = "opentest4j-1.2.0-sources.jar"
-)
-
-http_file(
   name = "jetbrains_fleet-expects-compiler-plugin-2_3_20-RC2-0_1_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/jetbrains/fleet/expects-compiler-plugin/2.3.20-RC2-0.1/expects-compiler-plugin-2.3.20-RC2-0.1.jar",
   sha256 = "86b37efe5f53e56baff89bbadea6ce8f0983b79a0276a4e8e5d0c14feba0cc72",
@@ -3374,6 +3318,13 @@ http_file(
 )
 
 http_file(
+  name = "org_opentest4j-opentest4j-1_2_0_http",
+  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar",
+  sha256 = "58812de60898d976fb81ef3b62da05c6604c18fd4a249f5044282479fc286af2",
+  downloaded_file_path = "opentest4j-1.2.0.jar"
+)
+
+http_file(
   name = "io_kotest-kotest-common-jvm-5_5_4_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/kotest/kotest-common-jvm/5.5.4/kotest-common-jvm-5.5.4.jar",
   sha256 = "a2a4d02b86b2e849e514d18dbdf4b29e2e9d091e3c6f4d9d028db9cdc55dd28b",
@@ -3399,6 +3350,13 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/kotest/kotest-assertions-shared-jvm/5.5.4/kotest-assertions-shared-jvm-5.5.4-sources.jar",
   sha256 = "b66539f71af1486ab0d6bf3053d1d868095cd9500804ea720b2e0643c469aeb3",
   downloaded_file_path = "kotest-assertions-shared-jvm-5.5.4-sources.jar"
+)
+
+http_file(
+  name = "org_opentest4j-opentest4j-1_2_0-sources_http",
+  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-sources.jar",
+  sha256 = "b63495ef700fb2af2cdee8dd68659b27822650058234a602f9ed1d14b909a1a8",
+  downloaded_file_path = "opentest4j-1.2.0-sources.jar"
 )
 
 http_file(

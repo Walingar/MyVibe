@@ -72,7 +72,6 @@ java/compiler/instrumentation-util
 java/compiler/instrumentation-util-8
 java/java-runtime
 jps/jps-builders
-jps/jps-launcher
 jps/model-api
 jps/model-impl
 jps/model-serialization
@@ -312,10 +311,6 @@ platform/execution
 platform/execution-impl
 platform/execution-impl/backend
 platform/execution-impl/frontend
-platform/execution-process-elevation
-platform/execution-process-mediator/client
-platform/execution-process-mediator/common
-platform/execution-process-mediator/daemon
 platform/execution.dashboard
 platform/execution.dashboard/backend
 platform/execution.dashboard/frontend
@@ -575,7 +570,6 @@ platform/vcs-log/graph-api
 platform/vcs-log/impl
 platform/vcs-tests
 platform/warmup
-platform/warmup/performanceTesting
 platform/welcome-screen
 platform/welcome-screen-impl
 platform/whatsNew
@@ -663,8 +657,6 @@ plugins/keymaps/visual-studio-keymap
 plugins/keymaps/visual-studio2022-keymap
 plugins/keymaps/vscode-keymap
 plugins/keymaps/xcode-keymap
-plugins/laf/macos
-plugins/laf/win10
 plugins/lombok/generated
 plugins/markdown/core
 plugins/markdown/core/backend
@@ -682,13 +674,7 @@ plugins/mcp-server/mcpserver.stdio
 plugins/mcp-server/tests
 plugins/mcp-server/tests/plugin
 plugins/performanceTesting/commands-model
-plugins/performanceTesting/core
 plugins/performanceTesting/event-bus
-plugins/performanceTesting/frontend
-plugins/performanceTesting/remote-driver
-plugins/performanceTesting/remote-driver.compose
-plugins/performanceTesting/scripts-ui
-plugins/performanceTesting/vcs
 plugins/properties
 plugins/properties/copyright
 plugins/properties/properties-common
@@ -729,8 +715,6 @@ tools/apiDump
 tools/apiDump/testData
 tools/devLauncher
 tools/devLauncher/tests
-tools/intellij.lambda.sampleTestsWithFixtures/plugin
-tools/intellij.lambda.sampleTestsWithPlugin/plugin
 tools/intellij.tools.ide.metrics.benchmark
 tools/intellij.tools.ide.metrics.collector
 tools/intellij.tools.ide.metrics.collector.starter

@@ -72,8 +72,6 @@
     <orderEntry type="module" module-name="intellij.markdown" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.markdown.plugin.main" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.emojipicker" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.laf.macos" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.laf.win10" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.marketplaceMl" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.keymap.eclipse" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.keymap.visualStudio" scope="RUNTIME" />
@@ -81,12 +79,10 @@
     <orderEntry type="module" module-name="intellij.platform.warmup" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.remoteControl" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.polySymbols" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.performanceTesting" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.smart.update" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.html.tools" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.ide.newUiOnboarding" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.ide.newUsersOnboarding" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.execution.process.elevation" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.vcs.gitlab.yaml" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.yaml" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.compose" scope="RUNTIME" />

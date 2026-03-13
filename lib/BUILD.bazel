@@ -478,73 +478,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "io.grpc/grpc-inprocess-1.65.1.jar_copy",
-  src = "@io_grpc-grpc-inprocess-1_65_1_http//file",
-  out = "io.grpc/grpc-inprocess-1.65.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "execution-process-mediator-client-grpc-inprocess",
-  jar = "@io_grpc-grpc-inprocess-1_65_1_http//file",
-  source_jar = "@io_grpc-grpc-inprocess-1_65_1-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.willowtreeapps.assertk/assertk-jvm-0.23.jar_copy",
-  src = "@com_willowtreeapps_assertk-assertk-jvm-0_23_http//file",
-  out = "com.willowtreeapps.assertk/assertk-jvm-0.23.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.willowtreeapps.opentest4k/opentest4k-jvm-1.2.1.jar_copy",
-  src = "@com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1_http//file",
-  out = "com.willowtreeapps.opentest4k/opentest4k-jvm-1.2.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.opentest4j/opentest4j-1.2.0.jar_copy",
-  src = "@org_opentest4j-opentest4j-1_2_0_http//file",
-  out = "org.opentest4j/opentest4j-1.2.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "execution-process-mediator-common-com-willowtreeapps-assertk-assertk-jvm",
-  exports = [
-    ":com_willowtreeapps_assertk-assertk-jvm-0_23_http_import",
-    ":com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1_http_import",
-    ":org_opentest4j-opentest4j-1_2_0_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "com_willowtreeapps_assertk-assertk-jvm-0_23_http_import",
-  jar = "@com_willowtreeapps_assertk-assertk-jvm-0_23_http//file",
-  source_jar = "@com_willowtreeapps_assertk-assertk-jvm-0_23-sources_http//file"
-)
-
-jvm_import(
-  name = "com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1_http_import",
-  jar = "@com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1_http//file",
-  source_jar = "@com_willowtreeapps_opentest4k-opentest4k-jvm-1_2_1-sources_http//file"
-)
-
-jvm_import(
-  name = "org_opentest4j-opentest4j-1_2_0_http_import",
-  jar = "@org_opentest4j-opentest4j-1_2_0_http//file",
-  source_jar = "@org_opentest4j-opentest4j-1_2_0-sources_http//file"
-)
-
-copy_file(
   name = "jetbrains.fleet/expects-compiler-plugin-2.3.20-RC2-0.1.jar_copy",
   src = "@jetbrains_fleet-expects-compiler-plugin-2_3_20-RC2-0_1_http//file",
   out = "jetbrains.fleet/expects-compiler-plugin-2.3.20-RC2-0.1.jar",
@@ -3975,6 +3908,14 @@ copy_file(
 )
 
 copy_file(
+  name = "org.opentest4j/opentest4j-1.2.0.jar_copy",
+  src = "@org_opentest4j-opentest4j-1_2_0_http//file",
+  out = "org.opentest4j/opentest4j-1.2.0.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
   name = "io.kotest/kotest-common-jvm-5.5.4.jar_copy",
   src = "@io_kotest-kotest-common-jvm-5_5_4_http//file",
   out = "io.kotest/kotest-common-jvm-5.5.4.jar",
@@ -4012,6 +3953,12 @@ jvm_import(
   name = "io_kotest-kotest-assertions-shared-jvm-5_5_4_http_import",
   jar = "@io_kotest-kotest-assertions-shared-jvm-5_5_4_http//file",
   source_jar = "@io_kotest-kotest-assertions-shared-jvm-5_5_4-sources_http//file"
+)
+
+jvm_import(
+  name = "org_opentest4j-opentest4j-1_2_0_http_import",
+  jar = "@org_opentest4j-opentest4j-1_2_0_http//file",
+  source_jar = "@org_opentest4j-opentest4j-1_2_0-sources_http//file"
 )
 
 jvm_import(

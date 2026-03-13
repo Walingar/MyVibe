@@ -4,7 +4,6 @@
     <exclude-output />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="intellij.platform.jps.model.serialization.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.java.guiForms.jps" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.structuralSearch.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.json.tests" scope="TEST" />
@@ -22,7 +21,6 @@
     <orderEntry type="module" module-name="intellij.configurationScript" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.statistics.envTests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.performanceTesting.ui" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.runtime.repository.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.runtime.product.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.devLauncher.tests" scope="TEST" />
