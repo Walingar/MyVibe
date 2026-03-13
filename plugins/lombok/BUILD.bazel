@@ -120,8 +120,6 @@ jvm_library(
     "//java/java-impl-refactorings:impl-refactorings_test_lib",
     "//tools/intellij.tools.ide.metrics.benchmark:ide-metrics-benchmark",
     "//tools/intellij.tools.ide.metrics.benchmark:ide-metrics-benchmark_test_lib",
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//java/codeserver/highlighting",
     "//java/codeserver/highlighting:highlighting_test_lib",
     "//platform/ide-core-impl",

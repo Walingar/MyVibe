@@ -17,8 +17,6 @@ jvm_library(
   visibility = ["//visibility:public"],
   srcs = glob(["src/**/*.kt", "src/**/*.java", "src/**/*.form"], allow_empty = True),
   deps = [
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//platform/core-api:core",
     "//platform/core-api:core_test_lib",
     "//platform/execution",

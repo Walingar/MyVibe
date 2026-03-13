@@ -47,13 +47,9 @@ jvm_library(
     "@lib//:kotlin-test",
     "//platform/editor-ui-ex:editor-ex",
     "//platform/editor-ui-ex:editor-ex_test_lib",
-    "//plugins/gradle:gradle-tests",
-    "//plugins/gradle:gradle-tests_test_lib",
     "//platform/external-system-impl:externalSystem-tests",
     "//platform/external-system-impl:externalSystem-tests_test_lib",
     "@lib//:kotlinc-kotlin-compiler-tests",
-    "//plugins/gradle/tooling-extension-impl:toolingExtension-tests",
-    "//plugins/gradle/tooling-extension-impl:toolingExtension-tests_test_lib",
   ],
   runtime_deps = [":ide-plugin-shared-tests"]
 )

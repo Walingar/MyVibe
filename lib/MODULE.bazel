@@ -1764,62 +1764,6 @@ http_file(
 )
 
 http_file(
-  name = "org_apache_ant-ant-1_10_15_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/ant/ant/1.10.15/ant-1.10.15.jar",
-  sha256 = "763acda4a69588c9ea8817a952851ff0c2fc4bffa1d081c2565dc407f29d5794",
-  downloaded_file_path = "ant-1.10.15.jar"
-)
-
-http_file(
-  name = "org_apache_ant-ant-1_10_15-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/ant/ant/1.10.15/ant-1.10.15-sources.jar",
-  sha256 = "817ebf06c0a01d5d59cae996815b154b7b7172d40d75304f39ab107e8133c0d6",
-  downloaded_file_path = "ant-1.10.15-sources.jar"
-)
-
-http_file(
-  name = "io_github_classgraph-classgraph-4_8_87_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/github/classgraph/classgraph/4.8.87/classgraph-4.8.87.jar",
-  sha256 = "91d2a2b6048c5cfe19f3982ee84eb5c19cab1d741a45ae1b4360c068331f89e6",
-  downloaded_file_path = "classgraph-4.8.87.jar"
-)
-
-http_file(
-  name = "io_github_classgraph-classgraph-4_8_87-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/github/classgraph/classgraph/4.8.87/classgraph-4.8.87-sources.jar",
-  sha256 = "9d8c36efd9b35d5c86b459df94883839e3e83948ed4146584a4e085656892ff9",
-  downloaded_file_path = "classgraph-4.8.87-sources.jar"
-)
-
-http_file(
-  name = "org_jeasy-easy-random-core-4_2_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jeasy/easy-random-core/4.2.0/easy-random-core-4.2.0.jar",
-  sha256 = "e37f9fd2680da69e6e4e0fef6472b53240a935a18804e957ef60ef20f36281de",
-  downloaded_file_path = "easy-random-core-4.2.0.jar"
-)
-
-http_file(
-  name = "org_objenesis-objenesis-3_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/objenesis/objenesis/3.1/objenesis-3.1.jar",
-  sha256 = "cdb3d038c188de6f46ffd5cd930be2d5e5dba59c53b26437995d534e3db2fb80",
-  downloaded_file_path = "objenesis-3.1.jar"
-)
-
-http_file(
-  name = "org_jeasy-easy-random-core-4_2_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/jeasy/easy-random-core/4.2.0/easy-random-core-4.2.0-sources.jar",
-  sha256 = "ed2760585ae82f5cc2ae636eb469b2350b8b35843a376e343d47cd6697adc61b",
-  downloaded_file_path = "easy-random-core-4.2.0-sources.jar"
-)
-
-http_file(
-  name = "org_objenesis-objenesis-3_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/objenesis/objenesis/3.1/objenesis-3.1-sources.jar",
-  sha256 = "a7a2e9fb069d4d713e0f1628352467c509478f6176b2dc580a1887cde05b44ef",
-  downloaded_file_path = "objenesis-3.1-sources.jar"
-)
-
-http_file(
   name = "ai_grazie_api-api-gateway-client-jvm-0_8_122_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/grazi/grazie-platform-public/ai/grazie/api/api-gateway-client-jvm/0.8.122/api-gateway-client-jvm-0.8.122.jar",
   sha256 = "aaacb38e37113bf4d10d22f5c75032cb5e74de6beddb555c892b29f1b2988cce",
@@ -6363,34 +6307,6 @@ http_file(
 )
 
 http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-common-for-ide-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-common-for-ide/2.4.0-dev-5744/kotlin-jps-common-for-ide-2.4.0-dev-5744.jar",
-  sha256 = "8f8767ddd4cac874f44ab5faaffdcac2f9cf009c4df34e2e73c231f675ddd7f8",
-  downloaded_file_path = "kotlin-jps-common-for-ide-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-jps-common-for-ide-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-jps-common-for-ide/2.4.0-dev-5744/kotlin-jps-common-for-ide-2.4.0-dev-5744-sources.jar",
-  sha256 = "385ec483591f016c5471829d54c830d3250bebeba16a2a7ed12b99682611fef0",
-  downloaded_file_path = "kotlin-jps-common-for-ide-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-scripting-common-2_4_0-dev-5744_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-scripting-common/2.4.0-dev-5744/kotlin-scripting-common-2.4.0-dev-5744.jar",
-  sha256 = "b77ebd27e9031b5843df3591786ca53af1af882f6f8d090be8731acd3144e161",
-  downloaded_file_path = "kotlin-scripting-common-2.4.0-dev-5744.jar"
-)
-
-http_file(
-  name = "org_jetbrains_kotlin-kotlin-scripting-common-2_4_0-dev-5744-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlin-scripting-common/2.4.0-dev-5744/kotlin-scripting-common-2.4.0-dev-5744-sources.jar",
-  sha256 = "3b9c2ea1ce963ff50f342f35e300e1c971c20b413405563fef537e6590a28961",
-  downloaded_file_path = "kotlin-scripting-common-2.4.0-dev-5744-sources.jar"
-)
-
-http_file(
   name = "org_jetbrains_kotlin-kotlinx-serialization-compiler-plugin-for-ide-2_4_0-dev-5744_http",
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/kotlin/kotlinx-serialization-compiler-plugin-for-ide/2.4.0-dev-5744/kotlinx-serialization-compiler-plugin-for-ide-2.4.0-dev-5744.jar",
   sha256 = "056827e05b567a68add96d0e20583b2e3ad56537cd4fea0b62d63319c236de01",
@@ -9723,20 +9639,6 @@ http_file(
 )
 
 http_file(
-  name = "org_codehaus_groovy-groovy-ant-3_0_25_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/codehaus/groovy/groovy-ant/3.0.25/groovy-ant-3.0.25.jar",
-  sha256 = "fd65c1a0cd1c60272b6ed0f45025d7afae8de20b5c11e2a131a7ccb4b0f1f1b2",
-  downloaded_file_path = "groovy-ant-3.0.25.jar"
-)
-
-http_file(
-  name = "org_codehaus_groovy-groovy-ant-3_0_25-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/codehaus/groovy/groovy-ant/3.0.25/groovy-ant-3.0.25-sources.jar",
-  sha256 = "765c5cc21e387e760a68ef873c1790290131080e8525551a84ea0360284d8d39",
-  downloaded_file_path = "groovy-ant-3.0.25-sources.jar"
-)
-
-http_file(
   name = "org_codehaus_groovy-groovy-json-3_0_25_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/codehaus/groovy/groovy-json/3.0.25/groovy-json-3.0.25.jar",
   sha256 = "511cea72a464809d7e376968910fa704f9fa5afa8f2a94b53672a061b45475bb",
@@ -11477,13 +11379,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/apollographql/apollo/apollo-annotations-jvm/4.0.0/apollo-annotations-jvm-4.0.0-sources.jar",
   sha256 = "64a77ba17a56d06dd0b1247960e40841a972a31ecb9707fbf5d602ee71f8c549",
   downloaded_file_path = "apollo-annotations-jvm-4.0.0-sources.jar"
-)
-
-http_file(
-  name = "com_jetbrains_intellij_platform-workspace-model-codegen-0_0_9_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/com/jetbrains/intellij/platform/workspace-model-codegen/0.0.9/workspace-model-codegen-0.0.9.jar",
-  sha256 = "78e527dfea8d79c16ea9ca875bd943d443b63bf9d0df1f253c233dc54366df35",
-  downloaded_file_path = "workspace-model-codegen-0.0.9.jar"
 )
 
 http_file(

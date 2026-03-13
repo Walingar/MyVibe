@@ -7,7 +7,6 @@ jvm_library(
   srcs = glob([], allow_empty = True),
   exports = [
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework",
-    "//java/java-tests:tests",
     "//java/java-impl-inspections:impl-inspections",
     "//platform/testFramework/junit5",
   ]
@@ -31,8 +30,6 @@ jvm_library(
     "//platform/projectModel-api:projectModel_test_lib",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework_test_lib",
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//java/java-impl-inspections:impl-inspections",
     "//java/java-impl-inspections:impl-inspections_test_lib",
     "//platform/testFramework/junit5",
@@ -51,8 +48,6 @@ jvm_library(
   exports = [
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework_test_lib",
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//java/java-impl-inspections:impl-inspections",
     "//java/java-impl-inspections:impl-inspections_test_lib",
     "//platform/testFramework/junit5",

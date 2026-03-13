@@ -121,8 +121,6 @@ jvm_library(
     "//java/typeMigration:typeMigration_test_lib",
     "//platform/util/nanoxml",
     "//platform/util/nanoxml:nanoxml_test_lib",
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//platform/core-ui",
     "//platform/core-ui:core-ui_test_lib",
     "//platform/forms_rt:java-guiForms-rt",

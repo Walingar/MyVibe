@@ -2003,73 +2003,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "org.apache.ant/ant-1.10.15.jar_copy",
-  src = "@org_apache_ant-ant-1_10_15_http//file",
-  out = "org.apache.ant/ant-1.10.15.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "gradle-jps-ant",
-  jar = "@org_apache_ant-ant-1_10_15_http//file",
-  source_jar = "@org_apache_ant-ant-1_10_15-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.github.classgraph/classgraph-4.8.87.jar_copy",
-  src = "@io_github_classgraph-classgraph-4_8_87_http//file",
-  out = "io.github.classgraph/classgraph-4.8.87.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "gradle-tooling_extension-tests-io-github-classgraph-classgraph-4-8-87",
-  jar = "@io_github_classgraph-classgraph-4_8_87_http//file",
-  source_jar = "@io_github_classgraph-classgraph-4_8_87-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jeasy/easy-random-core-4.2.0.jar_copy",
-  src = "@org_jeasy-easy-random-core-4_2_0_http//file",
-  out = "org.jeasy/easy-random-core-4.2.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.objenesis/objenesis-3.1.jar_copy",
-  src = "@org_objenesis-objenesis-3_1_http//file",
-  out = "org.objenesis/objenesis-3.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "gradle-tooling_extension-tests-org-jeasy-easy-random-core-4-2-0",
-  exports = [
-    ":org_jeasy-easy-random-core-4_2_0_http_import",
-    ":org_objenesis-objenesis-3_1_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "org_jeasy-easy-random-core-4_2_0_http_import",
-  jar = "@org_jeasy-easy-random-core-4_2_0_http//file",
-  source_jar = "@org_jeasy-easy-random-core-4_2_0-sources_http//file"
-)
-
-jvm_import(
-  name = "org_objenesis-objenesis-3_1_http_import",
-  jar = "@org_objenesis-objenesis-3_1_http//file",
-  source_jar = "@org_objenesis-objenesis-3_1-sources_http//file"
-)
-
-copy_file(
   name = "ai.grazie.api/api-gateway-client-jvm-0.8.122.jar_copy",
   src = "@ai_grazie_api-api-gateway-client-jvm-0_8_122_http//file",
   out = "ai.grazie.api/api-gateway-client-jvm-0.8.122.jar",
@@ -7606,13 +7539,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "kotlinc-kotlin-compiler-fe10-provided",
-  exports = [":kotlinc-kotlin-compiler-fe10"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.jetbrains.kotlin/kotlin-compiler-tests-for-ide-2.4.0-dev-5744.jar_copy",
   src = "@org_jetbrains_kotlin-kotlin-compiler-tests-for-ide-2_4_0-dev-5744_http//file",
@@ -7625,43 +7551,6 @@ jvm_import(
   name = "kotlinc-kotlin-compiler-tests",
   jar = "@org_jetbrains_kotlin-kotlin-compiler-tests-for-ide-2_4_0-dev-5744_http//file",
   source_jar = "@org_jetbrains_kotlin-kotlin-compiler-tests-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-jps-common-for-ide-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-jps-common-for-ide-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-jps-common-for-ide-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-jps-common",
-  jar = "@org_jetbrains_kotlin-kotlin-jps-common-for-ide-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-jps-common-for-ide-2_4_0-dev-5744-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "kotlinc-kotlin-jps-common-provided",
-  exports = [":kotlinc-kotlin-jps-common"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.kotlin/kotlin-scripting-common-2.4.0-dev-5744.jar_copy",
-  src = "@org_jetbrains_kotlin-kotlin-scripting-common-2_4_0-dev-5744_http//file",
-  out = "org.jetbrains.kotlin/kotlin-scripting-common-2.4.0-dev-5744.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "kotlinc-kotlin-scripting-common",
-  jar = "@org_jetbrains_kotlin-kotlin-scripting-common-2_4_0-dev-5744_http//file",
-  source_jar = "@org_jetbrains_kotlin-kotlin-scripting-common-2_4_0-dev-5744-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -11812,35 +11701,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "org-codehaus-groovy-groovy-provided",
-  exports = [":org-codehaus-groovy-groovy"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.codehaus.groovy/groovy-ant-3.0.25.jar_copy",
-  src = "@org_codehaus_groovy-groovy-ant-3_0_25_http//file",
-  out = "org.codehaus.groovy/groovy-ant-3.0.25.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "org-codehaus-groovy-groovy-ant",
-  jar = "@org_codehaus_groovy-groovy-ant-3_0_25_http//file",
-  source_jar = "@org_codehaus_groovy-groovy-ant-3_0_25-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "org-codehaus-groovy-groovy-ant-provided",
-  exports = [":org-codehaus-groovy-groovy-ant"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.codehaus.groovy/groovy-json-3.0.25.jar_copy",
   src = "@org_codehaus_groovy-groovy-json-3_0_25_http//file",
@@ -13971,20 +13831,6 @@ jvm_import(
   name = "com_apollographql_apollo-apollo-annotations-jvm-4_0_0_http_import",
   jar = "@com_apollographql_apollo-apollo-annotations-jvm-4_0_0_http//file",
   source_jar = "@com_apollographql_apollo-apollo-annotations-jvm-4_0_0-sources_http//file"
-)
-
-copy_file(
-  name = "com.jetbrains.intellij.platform/workspace-model-codegen-0.0.9.jar_copy",
-  src = "@com_jetbrains_intellij_platform-workspace-model-codegen-0_0_9_http//file",
-  out = "com.jetbrains.intellij.platform/workspace-model-codegen-0.0.9.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "workspace-model-codegen",
-  jar = "@com_jetbrains_intellij_platform-workspace-model-codegen-0_0_9_http//file",
-  visibility = ["//visibility:public"]
 )
 
 copy_file(

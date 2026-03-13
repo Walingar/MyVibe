@@ -56,8 +56,6 @@ jvm_library(
     "//plugins/groovy:groovy_test_lib",
     "//plugins/javaFX/common",
     "//plugins/javaFX/common:common_test_lib",
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//plugins/groovy/structuralsearch-groovy:structuralSearch",
     "//plugins/groovy/structuralsearch-groovy:structuralSearch_test_lib",
     "//java/compiler/openapi:java-compiler",

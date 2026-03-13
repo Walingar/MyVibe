@@ -59,8 +59,6 @@ jvm_library(
     "//platform/smRunner:smRunner_test_lib",
     "//plugins/junit",
     "//plugins/junit:junit_test_lib",
-    "//java/java-tests:tests",
-    "//java/java-tests:tests_test_lib",
     "//platform/util/jdom",
     "//platform/util/jdom:jdom_test_lib",
     "//platform/execution",
