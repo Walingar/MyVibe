@@ -231,8 +231,6 @@ jvm_library(
     "//platform/backend/observation:observation_test_lib",
     "//platform/diagnostic/telemetry-impl",
     "//platform/diagnostic/telemetry-impl:telemetry-impl_test_lib",
-    "//plugins/webp",
-    "//plugins/webp:webp_test_lib",
     "//platform/settings",
     "//platform/settings:settings_test_lib",
     "//platform/util/coroutines",

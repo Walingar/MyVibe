@@ -27,7 +27,6 @@ object CommunityProductFragments {
 
     // Optional plugin support (with fallback)
     deprecatedInclude("intellij.platform.remoteServers.impl", "intellij.platform.remoteServers.impl.xml", optional = true)
-    deprecatedInclude("intellij.uiDesigner", "META-INF/DesignerCorePlugin.xml", optional = true)
 
     // Extensions block (UTM tracking, new UI onboarding)
     deprecatedInclude("intellij.java.ide.resources", "META-INF/JavaIdePlugin.xml")

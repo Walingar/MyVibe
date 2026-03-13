@@ -8008,76 +8008,6 @@ http_file(
 )
 
 http_file(
-  name = "net_jqwik-jqwik-1_9_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik/1.9.2/jqwik-1.9.2.jar",
-  sha256 = "92c164d7c9d77b3883f3dd43cec9301603847c30c2e247782dc67fb86a4d8e36",
-  downloaded_file_path = "jqwik-1.9.2.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-api-1_9_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-api/1.9.2/jqwik-api-1.9.2.jar",
-  sha256 = "60244aefd583d349cb26e81f5cc3ef9f66d309d49b6534ab7c9b63be38954054",
-  downloaded_file_path = "jqwik-api-1.9.2.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-web-1_9_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-web/1.9.2/jqwik-web-1.9.2.jar",
-  sha256 = "4f5006f8dd93a13ca59ef92d5476b9aca1c479c0b6d0beb7c3e64970f6b7e632",
-  downloaded_file_path = "jqwik-web-1.9.2.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-time-1_9_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-time/1.9.2/jqwik-time-1.9.2.jar",
-  sha256 = "3d5f67f87a7b305601a8aef6ec400df3ad400123af4e8459acf663126b08e05d",
-  downloaded_file_path = "jqwik-time-1.9.2.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-engine-1_9_2_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-engine/1.9.2/jqwik-engine-1.9.2.jar",
-  sha256 = "623d105e90cd94b688baaa527bd0c4e284001c07c1f53e3b9a2db179ea57a70a",
-  downloaded_file_path = "jqwik-engine-1.9.2.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-1_9_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik/1.9.2/jqwik-1.9.2-sources.jar",
-  sha256 = "941006c7e4db85bf9558b9cda06c954e663a0e06a35cb36a31fe4114fd8e8b82",
-  downloaded_file_path = "jqwik-1.9.2-sources.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-api-1_9_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-api/1.9.2/jqwik-api-1.9.2-sources.jar",
-  sha256 = "687bc9573e54346ed00b39c5db83f461e78274a7e796d5e5ffb3d9d413e7f0d6",
-  downloaded_file_path = "jqwik-api-1.9.2-sources.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-web-1_9_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-web/1.9.2/jqwik-web-1.9.2-sources.jar",
-  sha256 = "f604fa56dbfa4485f4eafb7ada0e625eb301948f3fba594945bdeb866e61b5cf",
-  downloaded_file_path = "jqwik-web-1.9.2-sources.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-time-1_9_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-time/1.9.2/jqwik-time-1.9.2-sources.jar",
-  sha256 = "0bb8d32b4f51f3b9cf3ad449ea803e0afddb7d97964c720bda180a44fe9ce02a",
-  downloaded_file_path = "jqwik-time-1.9.2-sources.jar"
-)
-
-http_file(
-  name = "net_jqwik-jqwik-engine-1_9_2-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/net/jqwik/jqwik-engine/1.9.2/jqwik-engine-1.9.2-sources.jar",
-  sha256 = "56ab98bb17fa2ef3e67e941fae019d0a25aa570494470976af6e37e02fb519da",
-  downloaded_file_path = "jqwik-engine-1.9.2-sources.jar"
-)
-
-http_file(
   name = "com_fasterxml_jackson_dataformat-jackson-dataformat-cbor-2_19_0_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.19.0/jackson-dataformat-cbor-2.19.0.jar",
   sha256 = "ce27bf04655ac4a9f703ebf340782cf6836fc36c569a2daf25077c32532c88be",
@@ -8614,48 +8544,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/xml-resolver/xml-resolver/1.2/xml-resolver-1.2-sources.jar",
   sha256 = "53915f3c5181ec712d18fde7f13a90c53d94a1b2f69f20b604424dbb2be5b227",
   downloaded_file_path = "xml-resolver-1.2-sources.jar"
-)
-
-http_file(
-  name = "org_apache_xmlbeans-xmlbeans-5_1_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar",
-  sha256 = "5f484a78bed71cbffe3709678b6bdd3463781a7c61c6d9872330aecbf150762a",
-  downloaded_file_path = "xmlbeans-5.1.1.jar"
-)
-
-http_file(
-  name = "org_apache_xmlbeans-xmlbeans-5_1_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1-sources.jar",
-  sha256 = "22e5689846077e5561c9facb96b8f81cd019b9b70ffb124d26741ead78f4bc41",
-  downloaded_file_path = "xmlbeans-5.1.1-sources.jar"
-)
-
-http_file(
-  name = "org_apache_logging_log4j-log4j-to-slf4j-2_20_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar",
-  sha256 = "88e731d7f455da59dfa08769527f87d6c496053a712637df7b999f6977933a2c",
-  downloaded_file_path = "log4j-to-slf4j-2.20.0.jar"
-)
-
-http_file(
-  name = "org_apache_logging_log4j-log4j-api-2_20_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar",
-  sha256 = "2f43eea679ea66f14ca0f13fec2a8600ac124f5a5231dcb4df8393eddcb97550",
-  downloaded_file_path = "log4j-api-2.20.0.jar"
-)
-
-http_file(
-  name = "org_apache_logging_log4j-log4j-to-slf4j-2_20_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0-sources.jar",
-  sha256 = "e1b7556e9bd774f032aca6579367cc6a96ae3a389fbe2a286875c1534576a91b",
-  downloaded_file_path = "log4j-to-slf4j-2.20.0-sources.jar"
-)
-
-http_file(
-  name = "org_apache_logging_log4j-log4j-api-2_20_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0-sources.jar",
-  sha256 = "54b4514536902d4d677192928b6a661c3a301c5da47b8e8b18a9bc8d7238f301",
-  downloaded_file_path = "log4j-api-2.20.0-sources.jar"
 )
 
 http_file(

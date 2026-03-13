@@ -17,12 +17,10 @@
     <orderEntry type="module" module-name="intellij.java.indexing" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.uast" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.uast.ide" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.java.uast" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.compiler" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.analysis" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.execution" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.jvm.analysis" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.jsp" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.debugger" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.codeserver.core" exported="" scope="RUNTIME" />
@@ -34,13 +32,10 @@
     <orderEntry type="module" module-name="intellij.java.impl" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.impl.refactorings" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.compiler.impl" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.java.impl.inspections" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.uiDesigner" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.ui" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.execution.impl" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.debugger.impl" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.debugger.memory.agent" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.java.uast.ide" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.jps.build.dependencyGraph" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.backend" scope="RUNTIME" />
   </component>

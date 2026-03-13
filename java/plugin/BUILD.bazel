@@ -20,7 +20,6 @@ jvm_library(
     "//java/java-psi-impl:psi-impl",
     "//java/java-frontback-impl:frontback-impl",
     "//java/debugger/shared",
-    "//java/execution/shared",
   ]
 )
 
@@ -38,7 +37,6 @@ jvm_library(
     "//java/java-psi-impl:psi-impl_test_lib",
     "//java/java-frontback-impl:frontback-impl_test_lib",
     "//java/debugger/shared:shared_test_lib",
-    "//java/execution/shared:shared_test_lib",
   ]
 )
 ### auto-generated section `build intellij.java.plugin` end

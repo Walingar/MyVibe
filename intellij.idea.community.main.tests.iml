@@ -4,10 +4,6 @@
     <exclude-output />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="intellij.java.ui.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.xml.dom.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.platform.langInjection.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.xml.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.jps.model.serialization.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.java.guiForms.jps" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.structuralSearch.tests" scope="TEST" />
@@ -27,16 +23,12 @@
     <orderEntry type="module" module-name="intellij.configurationScript" scope="TEST" />
     <orderEntry type="module" module-name="intellij.configurationScript.test.java" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.statistics.envTests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.platform.jps.build.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.ant.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
     <orderEntry type="module" module-name="intellij.performanceTesting.ui" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.runtime.repository.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.runtime.product.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.devLauncher.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.xml.xmlbeans" scope="TEST" />
     <orderEntry type="module" module-name="intellij.jsonpath" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.java.guiForms.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.ide.nonModalWelcomeScreen" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.util.coroutines.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.util.progress.tests" scope="TEST" />
@@ -66,10 +58,8 @@
     <orderEntry type="module" module-name="intellij.platform.vcs.impl.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.debugger.impl.frontend.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.debugger.impl.ui.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.relaxng.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.vcs.git.coverage" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.tools.launch" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.java.jshell.protocol" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.core.nio.fs.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.diagnostic.telemetry.agent.extension" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.eel.tests" scope="TEST" />

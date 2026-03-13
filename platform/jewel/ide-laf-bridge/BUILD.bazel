@@ -95,8 +95,6 @@ jvm_library(
     "//libraries/compose-foundation-desktop-junit:compose-foundation-desktop-junit_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
-    "//java/testFramework",
-    "//java/testFramework:testFramework_test_lib",
     "//plugins/textmate",
     "//plugins/textmate:textmate_test_lib",
     "//plugins/textmate/plugin",

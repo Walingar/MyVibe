@@ -22,12 +22,6 @@ kt_compiler_plugin(
 load("@rules_java//java:defs.bzl", "java_import", "java_library")
 
 java_import(
-  name = "eclipse",
-  jars = ["ecj-4.25.jar"],
-  visibility = ["//visibility:public"]
-)
-
-java_import(
   name = "mac",
   jars = ["eawtstub.jar"],
   visibility = ["//visibility:public"]
@@ -49,7 +43,6 @@ java_import(
 exports_files([
   "commons-httpclient-3.1-patched.jar",
   "eawtstub.jar",
-  "ecj-4.25.jar",
 ], visibility = ["//visibility:public"])
 ### auto-generated section `local-libs` end
 
@@ -3622,13 +3615,6 @@ jvm_import(
   name = "junit4",
   jar = "@junit-junit-4_13_2_http//file",
   source_jar = "@junit-junit-4_13_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "junit4-provided",
-  exports = [":junit4"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9644,89 +9630,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "net.jqwik/jqwik-1.9.2.jar_copy",
-  src = "@net_jqwik-jqwik-1_9_2_http//file",
-  out = "net.jqwik/jqwik-1.9.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "net.jqwik/jqwik-api-1.9.2.jar_copy",
-  src = "@net_jqwik-jqwik-api-1_9_2_http//file",
-  out = "net.jqwik/jqwik-api-1.9.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "net.jqwik/jqwik-web-1.9.2.jar_copy",
-  src = "@net_jqwik-jqwik-web-1_9_2_http//file",
-  out = "net.jqwik/jqwik-web-1.9.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "net.jqwik/jqwik-time-1.9.2.jar_copy",
-  src = "@net_jqwik-jqwik-time-1_9_2_http//file",
-  out = "net.jqwik/jqwik-time-1.9.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "net.jqwik/jqwik-engine-1.9.2.jar_copy",
-  src = "@net_jqwik-jqwik-engine-1_9_2_http//file",
-  out = "net.jqwik/jqwik-engine-1.9.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "platform-jps-build-tests-jqwik",
-  exports = [
-    ":net_jqwik-jqwik-1_9_2_http_import",
-    ":org_apiguardian-apiguardian-api-1_1_2_http_import",
-    ":net_jqwik-jqwik-api-1_9_2_http_import",
-    ":net_jqwik-jqwik-web-1_9_2_http_import",
-    ":net_jqwik-jqwik-time-1_9_2_http_import",
-    ":net_jqwik-jqwik-engine-1_9_2_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "net_jqwik-jqwik-1_9_2_http_import",
-  jar = "@net_jqwik-jqwik-1_9_2_http//file",
-  source_jar = "@net_jqwik-jqwik-1_9_2-sources_http//file"
-)
-
-jvm_import(
-  name = "net_jqwik-jqwik-api-1_9_2_http_import",
-  jar = "@net_jqwik-jqwik-api-1_9_2_http//file",
-  source_jar = "@net_jqwik-jqwik-api-1_9_2-sources_http//file"
-)
-
-jvm_import(
-  name = "net_jqwik-jqwik-web-1_9_2_http_import",
-  jar = "@net_jqwik-jqwik-web-1_9_2_http//file",
-  source_jar = "@net_jqwik-jqwik-web-1_9_2-sources_http//file"
-)
-
-jvm_import(
-  name = "net_jqwik-jqwik-time-1_9_2_http_import",
-  jar = "@net_jqwik-jqwik-time-1_9_2_http//file",
-  source_jar = "@net_jqwik-jqwik-time-1_9_2-sources_http//file"
-)
-
-jvm_import(
-  name = "net_jqwik-jqwik-engine-1_9_2_http_import",
-  jar = "@net_jqwik-jqwik-engine-1_9_2_http//file",
-  source_jar = "@net_jqwik-jqwik-engine-1_9_2-sources_http//file"
-)
-
-copy_file(
   name = "com.fasterxml.jackson.dataformat/jackson-dataformat-cbor-2.19.0.jar_copy",
   src = "@com_fasterxml_jackson_dataformat-jackson-dataformat-cbor-2_19_0_http//file",
   out = "com.fasterxml.jackson.dataformat/jackson-dataformat-cbor-2.19.0.jar",
@@ -9921,13 +9824,6 @@ copy_file(
 
 jvm_import(
   name = "relaxng-jing",
-  jar = "@thaiopensource-jing-20030619_http//file",
-  source_jar = "@thaiopensource-jing-20030619-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "relaxng-tests-jing",
   jar = "@thaiopensource-jing-20030619_http//file",
   source_jar = "@thaiopensource-jing-20030619-sources_http//file",
   visibility = ["//visibility:public"]
@@ -10371,58 +10267,6 @@ jvm_import(
   jar = "@xml-resolver-xml-resolver-1_2_http//file",
   source_jar = "@xml-resolver-xml-resolver-1_2-sources_http//file",
   visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.xmlbeans/xmlbeans-5.1.1.jar_copy",
-  src = "@org_apache_xmlbeans-xmlbeans-5_1_1_http//file",
-  out = "org.apache.xmlbeans/xmlbeans-5.1.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "xml-xmlbeans-_xml_beans",
-  jar = "@org_apache_xmlbeans-xmlbeans-5_1_1_http//file",
-  source_jar = "@org_apache_xmlbeans-xmlbeans-5_1_1-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.logging.log4j/log4j-to-slf4j-2.20.0.jar_copy",
-  src = "@org_apache_logging_log4j-log4j-to-slf4j-2_20_0_http//file",
-  out = "org.apache.logging.log4j/log4j-to-slf4j-2.20.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.apache.logging.log4j/log4j-api-2.20.0.jar_copy",
-  src = "@org_apache_logging_log4j-log4j-api-2_20_0_http//file",
-  out = "org.apache.logging.log4j/log4j-api-2.20.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "xml-xmlbeans-apache-logging-log4j-to-slf4j",
-  exports = [
-    ":org_apache_logging_log4j-log4j-to-slf4j-2_20_0_http_import",
-    ":org_apache_logging_log4j-log4j-api-2_20_0_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "org_apache_logging_log4j-log4j-to-slf4j-2_20_0_http_import",
-  jar = "@org_apache_logging_log4j-log4j-to-slf4j-2_20_0_http//file",
-  source_jar = "@org_apache_logging_log4j-log4j-to-slf4j-2_20_0-sources_http//file"
-)
-
-jvm_import(
-  name = "org_apache_logging_log4j-log4j-api-2_20_0_http_import",
-  jar = "@org_apache_logging_log4j-log4j-api-2_20_0_http//file",
-  source_jar = "@org_apache_logging_log4j-log4j-api-2_20_0-sources_http//file"
 )
 
 copy_file(
