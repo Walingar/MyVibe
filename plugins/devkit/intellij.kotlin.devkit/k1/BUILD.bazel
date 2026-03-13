@@ -34,7 +34,6 @@ jvm_library(
     "//platform/refactoring",
     "//platform/lang-impl",
     "//plugins/devkit/devkit-core:core",
-    "//plugins/kotlin/code-insight/api",
   ]
 )
 
@@ -64,14 +63,10 @@ jvm_library(
     "//plugins/devkit/devkit-kotlin-tests:kotlin-tests_test_lib",
     "//plugins/devkit/devkit-tests:testFramework",
     "//plugins/devkit/devkit-tests:testFramework_test_lib",
-    "//plugins/kotlin/plugin/k1",
-    "//plugins/kotlin/plugin/k1:k1_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
     "//plugins/devkit/devkit-core:core",
     "//plugins/devkit/devkit-core:core_test_lib",
-    "//plugins/kotlin/code-insight/api",
-    "//plugins/kotlin/code-insight/api:api_test_lib",
   ]
 )
 ### auto-generated section `build intellij.kotlin.devkit.k1` end

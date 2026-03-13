@@ -38,9 +38,7 @@ jvm_library(
     "@lib//:kotlinc-kotlin-compiler-common-provided",
     "@lib//:kotlinc-analysis-api-provided",
     "//java/java-psi-api:psi",
-    "//plugins/kotlin/code-insight/api",
     "//platform/lang-impl",
-    "//plugins/kotlin/code-insight/utils",
   ]
 )
 
@@ -69,9 +67,7 @@ jvm_library(
     "@lib//:kotlinc-kotlin-compiler-common-provided",
     "@lib//:kotlinc-analysis-api-provided",
     "//java/java-psi-api:psi_test_lib",
-    "//plugins/kotlin/code-insight/api:api_test_lib",
     "//platform/lang-impl:lang-impl_test_lib",
-    "//plugins/kotlin/code-insight/utils:utils_test_lib",
   ]
 )
 ### auto-generated section `build intellij.compose.ide.plugin.shared` end
@@ -123,8 +119,6 @@ jvm_library(
     "@lib//:io-mockk",
     "@lib//:io-mockk-jvm",
     "@lib//:kotlin-test",
-    "//plugins/kotlin/code-insight/api",
-    "//plugins/kotlin/code-insight/api:api_test_lib",
     "//platform/editor-ui-ex:editor-ex",
     "//platform/editor-ui-ex:editor-ex_test_lib",
     "//plugins/gradle:gradle-tests",

@@ -38,6 +38,6 @@
     <orderEntry type="module" module-name="intellij.devkit.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework" scope="TEST" />
     <orderEntry type="module" module-name="intellij.devkit.core" />
-    <orderEntry type="module" module-name="intellij.kotlin.codeInsight.api" />
+
   </component>
 </module>

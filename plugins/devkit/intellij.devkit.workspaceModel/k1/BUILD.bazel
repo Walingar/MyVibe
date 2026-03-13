@@ -66,8 +66,6 @@ jvm_library(
     "//platform/util:util_test_lib",
     "//platform/core-api:core",
     "//platform/core-api:core_test_lib",
-    "//plugins/kotlin/plugin/k1",
-    "//plugins/kotlin/plugin/k1:k1_test_lib",
     "//plugins/devkit/intellij.devkit.workspaceModel/tests",
     "//plugins/devkit/intellij.devkit.workspaceModel/tests:tests_test_lib",
     "//platform/testFramework",

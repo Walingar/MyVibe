@@ -6,7 +6,6 @@ jvm_library(
   visibility = ["//visibility:public"],
   srcs = glob([], allow_empty = True),
   exports = [
-    "//plugins/kotlin/plugin/common",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework",
     "//java/java-tests:tests",
     "//java/java-impl-inspections:impl-inspections",
@@ -30,8 +29,6 @@ jvm_library(
     "//jps/model-api:model_test_lib",
     "//platform/projectModel-api:projectModel",
     "//platform/projectModel-api:projectModel_test_lib",
-    "//plugins/kotlin/plugin/common",
-    "//plugins/kotlin/plugin/common:common_test_lib",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework_test_lib",
     "//java/java-tests:tests",
@@ -52,8 +49,6 @@ jvm_library(
     "//platform/testFramework:testFramework_test_lib",
   ],
   exports = [
-    "//plugins/kotlin/plugin/common",
-    "//plugins/kotlin/plugin/common:common_test_lib",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework",
     "//jvm/jvm-analysis-internal-testFramework:analysis-internal-testFramework_test_lib",
     "//java/java-tests:tests",

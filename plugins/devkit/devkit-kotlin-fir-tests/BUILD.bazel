@@ -17,7 +17,6 @@ jvm_library(
     "//plugins/devkit/devkit-core:core",
     "//plugins/devkit/devkit-tests:testFramework",
     "//java/testFramework",
-    "//plugins/devkit/intellij.kotlin.devkit/k2",
     "//platform/core-ui",
   ]
 )
@@ -83,10 +82,7 @@ jvm_library(
     "//platform/execution",
     "//platform/execution:execution_test_lib",
   ],
-  runtime_deps = [
-    ":kotlin-fir-tests",
-    "//plugins/devkit/intellij.kotlin.devkit/k2:k2_test_lib",
-  ]
+  runtime_deps = [":kotlin-fir-tests"]
 )
 ### auto-generated section `build intellij.devkit.kotlin.fir.tests` end
 

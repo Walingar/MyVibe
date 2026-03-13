@@ -34,10 +34,8 @@ jvm_library(
     "//platform/execution",
     "//platform/ide-core-impl",
     "//platform/lang-impl",
-    "//plugins/maven",
     "//plugins/gradle/java",
     "//platform/lang-core",
-    "//plugins/maven/performanceTesting",
   ]
 )
 
@@ -66,10 +64,8 @@ jvm_library(
     "//platform/execution:execution_test_lib",
     "//platform/ide-core-impl:ide-core-impl_test_lib",
     "//platform/lang-impl:lang-impl_test_lib",
-    "//plugins/maven:maven_test_lib",
     "//plugins/gradle/java:java_test_lib",
     "//platform/lang-core:lang-core_test_lib",
-    "//plugins/maven/performanceTesting:performanceTesting_test_lib",
   ]
 )
 ### auto-generated section `build intellij.gradle.java.performance` end

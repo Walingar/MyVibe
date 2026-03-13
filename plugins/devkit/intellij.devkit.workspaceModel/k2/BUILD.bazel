@@ -69,8 +69,6 @@ jvm_library(
     "//java/openapi:java_test_lib",
     "//plugins/devkit/intellij.devkit.workspaceModel/tests",
     "//plugins/devkit/intellij.devkit.workspaceModel/tests:tests_test_lib",
-    "//plugins/kotlin/plugin/k2",
-    "//plugins/kotlin/plugin/k2:k2_test_lib",
     "//platform/testFramework",
     "//platform/testFramework:testFramework_test_lib",
     "//platform/analysis-api:analysis",

@@ -15,7 +15,6 @@ jvm_library(
   resources = [":gradle-java-maven_resources"],
   deps = [
     "//plugins/gradle/java",
-    "//plugins/maven",
     "//plugins/groovy",
     "//platform/core-impl",
     "//platform/analysis-api:analysis",
@@ -39,8 +38,6 @@ jvm_library(
   deps = [
     "//plugins/gradle/java",
     "//plugins/gradle/java:java_test_lib",
-    "//plugins/maven",
-    "//plugins/maven:maven_test_lib",
     "//plugins/groovy",
     "//plugins/groovy:groovy_test_lib",
     "//platform/core-impl",
