@@ -138,6 +138,9 @@
       <module fileurl="file://$PROJECT_DIR$/grid/json/intellij.grid.json.impl.iml" filepath="$PROJECT_DIR$/grid/json/intellij.grid.json.impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/grid/types/intellij.grid.types.iml" filepath="$PROJECT_DIR$/grid/types/intellij.grid.types.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugins/groovy/intellij.groovy.iml" filepath="$PROJECT_DIR$/plugins/groovy/intellij.groovy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/devkit/runtimeModuleRepository/generator/intellij.devkit.runtimeModuleRepository.generator.iml" filepath="$PROJECT_DIR$/plugins/devkit/runtimeModuleRepository/generator/intellij.devkit.runtimeModuleRepository.generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/devkit/runtimeModuleRepository/jps/intellij.devkit.runtimeModuleRepository.jps.iml" filepath="$PROJECT_DIR$/plugins/devkit/runtimeModuleRepository/jps/intellij.devkit.runtimeModuleRepository.jps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jps/standalone-builder/intellij.tools.jps.build.standalone.iml" filepath="$PROJECT_DIR$/jps/standalone-builder/intellij.tools.jps.build.standalone.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugins/groovy/byteCodeViewer/intellij.groovy.byteCodeViewer.iml" filepath="$PROJECT_DIR$/plugins/groovy/byteCodeViewer/intellij.groovy.byteCodeViewer.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugins/groovy/rt-constants/intellij.groovy.constants.rt.iml" filepath="$PROJECT_DIR$/plugins/groovy/rt-constants/intellij.groovy.constants.rt.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugins/groovy/intellij.groovy.copyright/intellij.groovy.copyright.iml" filepath="$PROJECT_DIR$/plugins/groovy/intellij.groovy.copyright/intellij.groovy.copyright.iml" />

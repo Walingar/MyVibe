@@ -7,7 +7,6 @@ import com.intellij.openapi.util.BuildNumber
 import com.intellij.openapi.util.io.FileUtil
 import com.intellij.platform.diagnostic.telemetry.TelemetryManager
 import com.intellij.teamcity.TeamCityClient
-import com.intellij.codeowners.runtime.resolver.TestClassCodeOwnerResolverImpl
 import com.intellij.testFramework.UsefulTestCase
 import com.intellij.tools.ide.metrics.collector.MetricsCollector
 import com.intellij.tools.ide.metrics.collector.metrics.PerformanceMetrics
@@ -56,15 +55,6 @@ internal class IJPerfBenchmarksMetricsPublisher {
       return tempPropertiesFile.toPath()
     }
 
-    private val codeOwnerResolver: TestClassCodeOwnerResolverImpl? by lazy {
-      try {
-        TestClassCodeOwnerResolverImpl()
-      }
-      catch (_: Throwable) {
-        null
-      }
-    }
-
     private val teamCityClient = TeamCityClient(
       systemPropertiesFilePath =
       // ignoring TC system properties for local test run
@@ -97,7 +87,7 @@ internal class IJPerfBenchmarksMetricsPublisher {
         methodName = uniqueTestIdentifier,
         buildNumber = BuildNumber.currentVersion(),
         metrics = metrics,
-        owner = testClass?.let { codeOwnerResolver?.getOwnerGroupName(it) } ?: ""
+        owner = ""
       )
     }
 

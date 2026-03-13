@@ -20,7 +20,6 @@ import org.jetbrains.intellij.build.impl.projectStructureMapping.DistributionFil
 import org.jetbrains.intellij.build.impl.projectStructureMapping.ProjectLibraryEntry
 import org.jetbrains.intellij.build.io.copyDir
 import org.jetbrains.intellij.build.io.copyFileToDir
-import org.jetbrains.intellij.build.kotlin.CommunityKotlinPluginBuilder
 import org.jetbrains.intellij.build.python.PythonCommunityPluginModules
 import org.jetbrains.intellij.build.telemetry.TraceManager.spanBuilder
 import org.jetbrains.intellij.build.telemetry.use
@@ -64,7 +63,6 @@ object CommunityRepositoryModules {
       spec.mainJarName = "uiDesigner.jar"
       spec.withModule("intellij.java.guiForms.jps", "jps/java-guiForms-jps.jar")
     },
-    CommunityKotlinPluginBuilder.kotlinPlugin(),
     pluginAuto(listOf("intellij.vcs.git")) { spec ->
       spec.withModule("intellij.vcs.git.rt", "git4idea-rt.jar")
     },
@@ -76,90 +74,6 @@ object CommunityRepositoryModules {
       spec.withModule("intellij.tasks")
       spec.withModule("intellij.tasks.compatibility")
       spec.withModule("intellij.tasks.java")
-    },
-    plugin("intellij.maven.plugin") { spec ->
-
-      spec.doNotCopyModuleLibrariesAutomatically(
-        listOf(
-          "intellij.maven.artifactResolver.common",
-          "intellij.maven.artifactResolver.m31",
-          "intellij.maven.server.m3.common",
-          "intellij.maven.server.m3.impl",
-          "intellij.maven.server.m36.impl",
-          "intellij.maven.server.m40",
-          "intellij.maven.server.indexer",
-        )
-      )
-
-      spec.withGeneratedResources { targetDir, context ->
-        val targetLib = targetDir.resolve("lib")
-
-        val mavenDist = BundledMavenDownloader.downloadMavenDistribution(context.paths.communityHomeDirRoot)
-        copyDir(mavenDist, targetLib.resolve("maven3"))
-      }
-
-      with("intellij.maven.server3") {
-        spec.withModule("intellij.maven.server.m3.common", "$this/maven3-server-common.jar")
-        spec.withModule("intellij.maven.server.m3.impl", "$this/maven3-server.jar")
-        spec.withModule("intellij.maven.server.telemetry", "$this/maven-server-telemetry.jar")
-
-
-        spec.withGeneratedResources { targetDir, context ->
-          val targetLib = targetDir.resolve("lib")
-          val maven3Libs = BundledMavenDownloader.downloadMaven3Libs(context.paths.communityHomeDirRoot)
-          copyDir(maven3Libs, targetLib.resolve(this))
-          val mavenTelemetryDependencies = BundledMavenDownloader.downloadMavenTelemetryDependencies(context.paths.communityHomeDirRoot)
-          copyDir(mavenTelemetryDependencies, targetLib.resolve(this))
-        }
-      }
-
-      with("intellij.maven.server36") {
-        spec.withModule("intellij.maven.server.m36.impl", "$this/maven36-server.jar")
-      }
-
-      with("intellij.maven.server4") {
-        spec.withModule("intellij.maven.server.m40", "$this/maven40-server.jar")
-        spec.withModule("intellij.maven.server.telemetry", "$this/maven-server-telemetry.jar")
-
-
-        spec.withGeneratedResources { targetDir, context ->
-          val targetLib = targetDir.resolve("lib")
-          val maven4Libs = BundledMavenDownloader.downloadMaven4Libs(context.paths.communityHomeDirRoot)
-          copyDir(maven4Libs, targetLib.resolve(this))
-          val mavenTelemetryDependencies = BundledMavenDownloader.downloadMavenTelemetryDependencies(context.paths.communityHomeDirRoot)
-          copyDir(mavenTelemetryDependencies, targetLib.resolve(this))
-        }
-      }
-
-      with("intellij.maven.rt") {
-        spec.withModule("intellij.maven.server.eventListener", relativeJarPath = "$this/maven-event-listener.jar")
-      }
-
-      with("intellij.maven.server.indexer") {
-        spec.withModule("intellij.maven.server.indexer", "$this/maven-server-indexer.jar")
-        spec.withModuleLibrary(
-          libraryName = "apache.maven.core:3.8.3", moduleName = "intellij.maven.server.indexer",
-          relativeOutputPath = this
-        )
-        spec.withModuleLibrary(
-          libraryName = "apache.maven.wagon.provider.api:3.5.2", moduleName = "intellij.maven.server.indexer",
-          relativeOutputPath = this
-        )
-        spec.withModuleLibrary(
-          libraryName = "apache.maven.archetype.common-no-trans:3.2.1", moduleName = "intellij.maven.server.indexer",
-          relativeOutputPath = this
-        )
-        spec.withModuleLibrary(
-          libraryName = "apache.maven.archetype.catalog-no-trans:321", moduleName = "intellij.maven.server.indexer",
-          relativeOutputPath = this
-        )
-      }
-
-      spec.withModule("intellij.idea.community.build.dependencies")
-      spec.withModule("intellij.maven.jps")
-      spec.withModule("intellij.maven.artifactResolver.m31", "artifact-resolver-m31.jar")
-      spec.withModule("intellij.maven.artifactResolver.common", "artifact-resolver-m31.jar")
-      spec.withModule("intellij.maven.server", relativeJarPath = "maven-server.jar")
     },
     pluginAuto(
       listOf(
@@ -231,10 +145,6 @@ object CommunityRepositoryModules {
     pluginAuto(listOf("intellij.vcs.gitlab")),
     pluginAuto(listOf("intellij.compilation.charts")) { spec ->
       spec.withModule("intellij.compilation.charts.jps")
-    },
-    plugin("intellij.repository.search") { spec ->
-      spec.withModule("intellij.maven.model", relativeJarPath = "maven-model.jar")
-      spec.withProjectLibrary("package-search-api-client")
     },
     pluginAuto("intellij.java.jshell") { spec ->
       spec.withModule("intellij.java.jshell.protocol", "jshell-protocol.jar")

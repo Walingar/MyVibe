@@ -434,4 +434,3 @@ private fun withKotlincInPluginDirectory(libName: String = "kotlin-dist", target
   }
 }
 
-object CommunityKotlinPluginBuilder : KotlinPluginBuilder()

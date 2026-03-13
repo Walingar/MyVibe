@@ -88,6 +88,8 @@ jvm_library(
     "//platform/build-scripts/product-dsl/plugin-graph",
     "//platform/build-scripts/api",
     "//platform/build-scripts/product-dsl",
+    "//plugins/devkit/runtimeModuleRepository/generator",
+    "//jps/standalone-builder:tools-jps-build-standalone",
   ],
   exports = [
     "//platform/build-scripts/api",
@@ -191,6 +193,8 @@ jvm_library(
     "//platform/build-scripts/product-dsl/plugin-graph:plugin-graph_test_lib",
     "//platform/build-scripts/api:api_test_lib",
     "//platform/build-scripts/product-dsl:product-dsl_test_lib",
+    "//plugins/devkit/runtimeModuleRepository/generator:generator_test_lib",
+    "//jps/standalone-builder:tools-jps-build-standalone_test_lib",
   ]
 )
 ### auto-generated section `build intellij.platform.buildScripts` end

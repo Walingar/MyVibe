@@ -139,6 +139,7 @@ jps/model-api
 jps/model-impl
 jps/model-serialization
 jps/model-test-framework
+jps/standalone-builder
 json
 json/backend
 json/backend/regexp
@@ -719,6 +720,8 @@ plugins/dev/intellij.dev.codeInsight
 plugins/dev/intellij.dev.psiViewer
 plugins/dev/intellij.groovy.dev
 plugins/dev/intellij.java.dev
+plugins/devkit/runtimeModuleRepository/generator
+plugins/devkit/runtimeModuleRepository/jps
 plugins/eclipse
 plugins/eclipse/common-eclipse-util
 plugins/eclipse/jps-plugin
