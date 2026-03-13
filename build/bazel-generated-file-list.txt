@@ -714,7 +714,6 @@ plugins/dev
 plugins/dev/intellij.dev
 plugins/dev/intellij.dev.codeInsight
 plugins/dev/intellij.dev.psiViewer
-plugins/dev/intellij.groovy.dev
 plugins/dev/intellij.java.dev
 plugins/devkit/runtimeModuleRepository/generator
 plugins/devkit/runtimeModuleRepository/jps
@@ -741,19 +740,7 @@ plugins/github/ultimate-promo
 plugins/gitlab/gitlab-core
 plugins/gitlab/gitlab-git
 plugins/gitlab/gitlab-yaml
-plugins/groovy
-plugins/groovy-live-templates
-plugins/groovy/byteCodeViewer
-plugins/groovy/git
-plugins/groovy/groovy-psi
-plugins/groovy/groovy-uast-tests
-plugins/groovy/intellij.groovy.copyright
-plugins/groovy/jps-plugin
-plugins/groovy/rt
-plugins/groovy/rt-constants
 plugins/groovy/rt/classLoader
-plugins/groovy/spock-rt
-plugins/groovy/structuralsearch-groovy
 plugins/htmltools
 plugins/ide-startup/importSettings
 plugins/java-decompiler/engine
@@ -832,7 +819,6 @@ plugins/sh/markdown
 plugins/sh/plugin
 plugins/sh/terminal
 plugins/space/jps-plugin
-plugins/stats-collector
 plugins/tasks/tasks-api
 plugins/tasks/tasks-compatibility
 plugins/tasks/tasks-core

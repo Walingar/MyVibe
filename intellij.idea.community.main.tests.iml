@@ -7,7 +7,7 @@
     <orderEntry type="module" module-name="intellij.java.ui.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.junit.java.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.jvm.analysis.java.tests" scope="TEST" />
-     <orderEntry type="module" module-name="intellij.xml.dom.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.xml.dom.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.langInjection.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.xml.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.jps.model.serialization.tests" scope="TEST" />
@@ -20,7 +20,6 @@
     <orderEntry type="module" module-name="intellij.platform.builtInServer.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.scriptDebugger.ui" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.images.build" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.statsCollector.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.completionMlRankingModels.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.completionMlRanking.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.workspace.storage.tests" scope="TEST" />
@@ -29,22 +28,20 @@
     <orderEntry type="module" module-name="intellij.textmate.backend" scope="TEST" />
     <orderEntry type="module" module-name="intellij.space.java.jps" scope="TEST" />
     <orderEntry type="module" module-name="intellij.idea.community.build.tasks" scope="TEST" />
-<orderEntry type="module" module-name="intellij.platform.execution.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.execution.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.commander" scope="TEST" />
     <orderEntry type="module" module-name="intellij.configurationScript" scope="TEST" />
     <orderEntry type="module" module-name="intellij.configurationScript.test.java" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.statistics.envTests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.groovy.uast.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.restructuredtext" scope="TEST" />
-<orderEntry type="module" module-name="intellij.platform.jps.build.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.groovy.jps.tests" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.platform.jps.build.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.ant.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5" scope="TEST" />
     <orderEntry type="module" module-name="intellij.performanceTesting.ui" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.runtime.repository.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.runtime.product.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.devLauncher.tests" scope="TEST" />
-<orderEntry type="module" module-name="intellij.xml.xmlbeans" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.xml.xmlbeans" scope="TEST" />
     <orderEntry type="module" module-name="intellij.jsonpath" scope="TEST" />
     <orderEntry type="module" module-name="intellij.java.guiForms.jps.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.ide.nonModalWelcomeScreen" scope="TEST" />
@@ -57,7 +54,7 @@
     <orderEntry type="module" module-name="intellij.community.wintools" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.indexing.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.monorepo" scope="TEST" />
-<orderEntry type="module" module-name="intellij.tools.ide.starter.junit5" scope="TEST" />
+    <orderEntry type="module" module-name="intellij.tools.ide.starter.junit5" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.buildScripts.productDsl" scope="TEST" />
     <orderEntry type="module" module-name="intellij.terminal.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.vcs.git.terminal" scope="TEST" />

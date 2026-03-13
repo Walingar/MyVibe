@@ -27,13 +27,6 @@ java_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "eclipse-provided",
-  exports = [":eclipse"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 java_import(
   name = "mac",
   jars = ["eawtstub.jar"],
@@ -1933,50 +1926,6 @@ jvm_import(
   name = "gradle",
   jar = "@org_jetbrains_intellij_deps-gradle-api-9_4_0_http//file",
   source_jar = "@org_jetbrains_intellij_deps-gradle-api-9_4_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.spockframework/spock-core-2.1-groovy-3.0.jar_copy",
-  src = "@org_spockframework-spock-core-2_1-groovy-3_0_http//file",
-  out = "org.spockframework/spock-core-2.1-groovy-3.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.junit.platform/junit-platform-engine-1.8.1.jar_copy",
-  src = "@org_junit_platform-junit-platform-engine-1_8_1_http//file",
-  out = "org.junit.platform/junit-platform-engine-1.8.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "groovy-spock-rt-spockframework-spock-core",
-  exports = [
-    ":org_spockframework-spock-core-2_1-groovy-3_0_http_import",
-    ":org_junit_platform-junit-platform-engine-1_8_1_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "org_spockframework-spock-core-2_1-groovy-3_0_http_import",
-  jar = "@org_spockframework-spock-core-2_1-groovy-3_0_http//file",
-  source_jar = "@org_spockframework-spock-core-2_1-groovy-3_0-sources_http//file"
-)
-
-jvm_import(
-  name = "org_junit_platform-junit-platform-engine-1_8_1_http_import",
-  jar = "@org_junit_platform-junit-platform-engine-1_8_1_http//file",
-  source_jar = "@org_junit_platform-junit-platform-engine-1_8_1-sources_http//file"
-)
-
-java_library(
-  name = "groovy-spock-rt-spockframework-spock-core-provided",
-  exports = [":groovy-spock-rt-spockframework-spock-core"],
-  neverlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -9099,13 +9048,6 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
-java_library(
-  name = "opentest4j-provided",
-  exports = [":opentest4j"],
-  neverlink = True,
-  visibility = ["//visibility:public"]
-)
-
 copy_file(
   name = "org.codehaus.groovy/groovy-3.0.25.jar_copy",
   src = "@org_codehaus_groovy-groovy-3_0_25_http//file",
@@ -10818,28 +10760,6 @@ copy_file(
 jvm_import(
   name = "sqlite-native",
   jar = "@org_sqlite-native-3_42_0-jb_1_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps.completion/completion-log-events-0.0.3.jar_copy",
-  src = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3_http//file",
-  out = "org.jetbrains.intellij.deps.completion/completion-log-events-0.0.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "stats_collector-completion-log-events",
-  jar = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3_http//file",
-  source_jar = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "stats_collector-tests-completion-log-events",
-  jar = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3_http//file",
-  source_jar = "@org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3-sources_http//file",
   visibility = ["//visibility:public"]
 )
 

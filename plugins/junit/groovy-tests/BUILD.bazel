@@ -13,8 +13,6 @@ jvm_library(
   visibility = ["//visibility:public"],
   srcs = glob(["test/**/*.kt", "test/**/*.java", "test/**/*.form"], allow_empty = True),
   deps = [
-    "//plugins/groovy",
-    "//plugins/groovy:groovy_test_lib",
     "//java/testFramework",
     "//java/testFramework:testFramework_test_lib",
     "//platform/analysis-api:analysis",

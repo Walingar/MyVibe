@@ -1715,34 +1715,6 @@ http_file(
 )
 
 http_file(
-  name = "org_spockframework-spock-core-2_1-groovy-3_0_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/spockframework/spock-core/2.1-groovy-3.0/spock-core-2.1-groovy-3.0.jar",
-  sha256 = "fa8ff7446df04c51b3ccbc2a1bbc71f9c280878afe2d53be44d59d00b1b9828c",
-  downloaded_file_path = "spock-core-2.1-groovy-3.0.jar"
-)
-
-http_file(
-  name = "org_junit_platform-junit-platform-engine-1_8_1_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar",
-  sha256 = "702868ed7e86b9b4672ede0f1e185e905baca9afab57746a7c650be3c7bca047",
-  downloaded_file_path = "junit-platform-engine-1.8.1.jar"
-)
-
-http_file(
-  name = "org_spockframework-spock-core-2_1-groovy-3_0-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/spockframework/spock-core/2.1-groovy-3.0/spock-core-2.1-groovy-3.0-sources.jar",
-  sha256 = "0f9babd51b924bef47a489ebbbb20b56a5e05503d4cc5f60cfd08bd760a11759",
-  downloaded_file_path = "spock-core-2.1-groovy-3.0-sources.jar"
-)
-
-http_file(
-  name = "org_junit_platform-junit-platform-engine-1_8_1-sources_http",
-  url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1-sources.jar",
-  sha256 = "f9139af4f7efb614457e941614762a486891489b2832300a2925fb90f2ad4648",
-  downloaded_file_path = "junit-platform-engine-1.8.1-sources.jar"
-)
-
-http_file(
   name = "io_grpc-grpc-core-1_73_0_http",
   url = "https://cache-redirector.jetbrains.com/repo1.maven.org/maven2/io/grpc/grpc-core/1.73.0/grpc-core-1.73.0.jar",
   sha256 = "cffb55f1e7268e160647e88da142c09c6175ff72970c64f7cb411d78eb661663",
@@ -8964,20 +8936,6 @@ http_file(
   url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/sqlite/native/3.42.0-jb.1/native-3.42.0-jb.1.jar",
   sha256 = "491c4ae84a1bad34c85624682a80def4f3a3a0fb9d517121d05c2dfeb94966f8",
   downloaded_file_path = "native-3.42.0-jb.1.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-log-events/0.0.3/completion-log-events-0.0.3.jar",
-  sha256 = "f6f453ba3dc824d16ae0911e403dcde8e18e0ea7406c91e2832e8b6248a1f404",
-  downloaded_file_path = "completion-log-events-0.0.3.jar"
-)
-
-http_file(
-  name = "org_jetbrains_intellij_deps_completion-completion-log-events-0_0_3-sources_http",
-  url = "https://cache-redirector.jetbrains.com/packages.jetbrains.team/maven/p/ij/intellij-dependencies/org/jetbrains/intellij/deps/completion/completion-log-events/0.0.3/completion-log-events-0.0.3-sources.jar",
-  sha256 = "e676eba6e23858b42e5cd98139217b1c7e3aa4bf69f47d825b52d27ebfd6357a",
-  downloaded_file_path = "completion-log-events-0.0.3-sources.jar"
 )
 
 http_file(
