@@ -463,44 +463,6 @@ jvm_library(
 )
 ### auto-generated section `build intellij.idea.community.main` end
 
-### auto-generated section `build intellij.idea.community.main.android` start
-jvm_library(
-  name = "main-android",
-  visibility = ["//visibility:public"],
-  srcs = glob([], allow_empty = True),
-  runtime_deps = [
-    "//android/android:core",
-    "//:main",
-    "//android/android-plugin:plugin",
-    "//android/layoutlib",
-    "//plugins/kotlin:kotlin-plugin-community-main",
-    "//android/compose-designer",
-    "//android/compose-ide-plugin",
-    "//android/design-plugin",
-    "//android/android-navigator:navigator",
-  ]
-)
-
-jvm_library(
-  name = "main-android_test_lib",
-  module_name = "intellij.idea.community.main.android",
-  visibility = ["//visibility:public"],
-  srcs = glob([], allow_empty = True),
-  runtime_deps = [
-    ":main-android",
-    "//android/android:core_test_lib",
-    "//:main_test_lib",
-    "//android/android-plugin:plugin_test_lib",
-    "//android/layoutlib:layoutlib_test_lib",
-    "//plugins/kotlin:kotlin-plugin-community-main_test_lib",
-    "//android/compose-designer:compose-designer_test_lib",
-    "//android/compose-ide-plugin:compose-ide-plugin_test_lib",
-    "//android/design-plugin:design-plugin_test_lib",
-    "//android/android-navigator:navigator_test_lib",
-  ]
-)
-### auto-generated section `build intellij.idea.community.main.android` end
-
 ### auto-generated section `build intellij.idea.community.main.tests` start
 jvm_library(
   name = "main-tests",

@@ -80,7 +80,6 @@
     <orderEntry type="library" exported="" scope="TEST" name="kotlin-tooling-core" level="project" />
     <orderEntry type="module" module-name="intellij.kotlin.runConfigurations.jvm" scope="TEST" />
     <orderEntry type="module" module-name="intellij.groovy" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.android.gradle.dsl.kotlin" scope="TEST" />
     <orderEntry type="module" module-name="kotlin.completion.tests.shared" scope="TEST" />
     <orderEntry type="module" module-name="kotlin.completion.tests.k1" scope="TEST" />
     <orderEntry type="library" exported="" scope="TEST" name="kotlin-gradle-plugin-idea" level="project" />
