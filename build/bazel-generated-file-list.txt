@@ -657,7 +657,6 @@ plugins/keymaps/visual-studio-keymap
 plugins/keymaps/visual-studio2022-keymap
 plugins/keymaps/vscode-keymap
 plugins/keymaps/xcode-keymap
-plugins/lombok/generated
 plugins/markdown/core
 plugins/markdown/core/backend
 plugins/markdown/core/frontend
