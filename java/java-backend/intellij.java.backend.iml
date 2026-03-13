@@ -35,13 +35,10 @@
     <orderEntry type="module" module-name="intellij.java.impl.refactorings" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.compiler.impl" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.impl.inspections" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.jvm.analysis.refactoring" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.jvm.analysis.quickFix" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.uiDesigner" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.ui" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.execution.impl" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.debugger.impl" exported="" scope="RUNTIME" />
-    <orderEntry type="module" module-name="intellij.java.debugger.impl.backend" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.debugger.memory.agent" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.java.uast.ide" exported="" scope="RUNTIME" />
     <orderEntry type="module" module-name="intellij.platform.jps.build.dependencyGraph" exported="" scope="RUNTIME" />

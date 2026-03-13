@@ -249,8 +249,6 @@ jvm_library(
     "//platform/code-style-impl:codeStyle-impl",
     "//platform/code-style-impl:codeStyle-impl_test_lib",
     "//platform/platform-util-io-impl:ide-util-io-impl",
-    "//plugins/completion-ml-ranking",
-    "//plugins/completion-ml-ranking:completion-ml-ranking_test_lib",
     "//platform/workspace/storage",
     "//platform/workspace/storage:storage_test_lib",
     "//platform/ml-api:ml",
