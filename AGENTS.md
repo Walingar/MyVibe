@@ -43,6 +43,9 @@ Special handling applies to the directories below. If a file you touch lives und
 
 - Use `get_file_problems` with `errorsOnly=false` to check files for warnings.
   Fix any warnings related to the code changes made. You may ignore unrelated warnings.
+- **Maintain decision docs in `docs/`:** always read relevant existing docs before starting work, and update/create docs after changes with important decisions: what was decided, why, and how it was implemented.
+  It is allowed (and encouraged) to keep separate documents per feature/fix.
+  Decision docs must be written in English.
 
 ## Repository-wide rules
 

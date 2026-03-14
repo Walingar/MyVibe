@@ -2,6 +2,7 @@
 package com.intellij.ide.actions
 
 import com.intellij.ide.RecentProjectsManager
+import com.intellij.ide.projectSwitcher.NoProjectFrameManager
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.PlatformCoreDataKeys
 import com.intellij.openapi.actionSystem.remoting.ActionRemoteBehaviorSpecification
@@ -11,7 +12,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManager
 import com.intellij.openapi.wm.WindowManager
 import com.intellij.openapi.wm.impl.ProjectFrameHelper
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.ui.ComponentUtil
 
 /**
@@ -43,7 +43,7 @@ abstract class CloseProjectsActionBase : DumbAwareAction(), ActionRemoteBehavior
   }
 
   protected open fun showWelcomeFrameIfNeeded() {
-    WelcomeFrame.showIfNoProjectOpened()
+    NoProjectFrameManager.ensureNoProjectFrameShownAsync()
   }
 
   override fun update(e: AnActionEvent) {

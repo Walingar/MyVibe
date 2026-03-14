@@ -10,12 +10,12 @@ import com.intellij.ide.AppLifecycleListener
 import com.intellij.ide.CommandLineProcessor
 import com.intellij.ide.ProtocolHandler
 import com.intellij.ide.RecentProjectsManager
+import com.intellij.ide.projectSwitcher.NoProjectFrameManager
 import com.intellij.ide.impl.ProjectUtil
 import com.intellij.ide.lightEdit.LightEditService
 import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.IconDbMaintainer
 import com.intellij.internal.inspector.UiInspectorUtil
-import com.intellij.openapi.actionSystem.ActionManager
 import com.intellij.openapi.application.Application
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.EDT
@@ -33,10 +33,7 @@ import com.intellij.openapi.util.SystemInfo
 import com.intellij.openapi.util.registry.Registry
 import com.intellij.openapi.util.registry.RegistryManager
 import com.intellij.openapi.util.registry.migrateRegistryToAdvSettings
-import com.intellij.openapi.wm.ex.findNoProjectStateHandler
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.platform.diagnostic.telemetry.impl.span
-import com.intellij.platform.ide.CoreUiCoroutineScopeHolder
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer
 import com.intellij.ui.mac.touchbar.TouchbarSupport
 import com.intellij.ui.updateAppWindowIcon
@@ -149,7 +146,7 @@ open class IdeStarter : ModernApplicationStarter() {
 
       if (uriToOpen != null || args.isNotEmpty() && args.first().contains(SCHEME_SEPARATOR)) {
         FUSProjectHotStartUpMeasurer.reportUriOpening()
-        processUriParameter(uri = uriToOpen ?: args.first(), lifecyclePublisher = publisher)
+        processUriParameter(uri = uriToOpen ?: args.first())
         return@span false
       }
 
@@ -160,16 +157,8 @@ open class IdeStarter : ModernApplicationStarter() {
         return@span true
       }
 
-      FUSProjectHotStartUpMeasurer.reportWelcomeScreenShown()
-
-      val customHandler = findNoProjectStateHandler()
-      if (customHandler == null) {
-        return@span showWelcomeFrame(publisher)
-      }
-      else {
-        customHandler()
-        return@span false
-      }
+      NoProjectFrameManager.ensureNoProjectFrameShown()
+      return@span false
     }
 
     if (!isOpenProjectNeeded) {
@@ -206,32 +195,14 @@ open class IdeStarter : ModernApplicationStarter() {
     }
 
     if (!isOpened) {
-      WelcomeFrame.showIfNoProjectOpened(publisher)
+      // Intentionally do nothing: no welcome screen in single-frame flow.
     }
   }
 
   @ApiStatus.Internal
   protected open fun shouldRunFusStartUpMeasurer(): Boolean = javaClass == IdeStarter::class.java
 
-  private suspend fun showWelcomeFrame(lifecyclePublisher: AppLifecycleListener): Boolean {
-    val showWelcomeFrameTask = WelcomeFrame.prepareToShow() ?: return true
-    serviceAsync<CoreUiCoroutineScopeHolder>().coroutineScope.launch {
-      // https://youtrack.jetbrains.com/issue/IJPL-522
-      launch {
-        serviceAsync<ActionManager>()
-      }
-
-      withContext(Dispatchers.EDT) {
-        showWelcomeFrameTask()
-        runCatching {
-          lifecyclePublisher.welcomeScreenDisplayed()
-        }.getOrLogException(thisLogger())
-      }
-    }
-    return false
-  }
-
-  private suspend fun processUriParameter(uri: String, lifecyclePublisher: AppLifecycleListener) {
+  private suspend fun processUriParameter(uri: String) {
     val result = CommandLineProcessor.processProtocolCommand(uri)
     if (result.exitCode == ProtocolHandler.PLEASE_QUIT) {
       withContext(Dispatchers.EDT) {
@@ -239,7 +210,7 @@ open class IdeStarter : ModernApplicationStarter() {
       }
     }
     else if (result.exitCode != ProtocolHandler.PLEASE_NO_UI) {
-      WelcomeFrame.showIfNoProjectOpened(lifecyclePublisher)
+      // Intentionally do nothing: no welcome screen in single-frame flow.
     }
   }
 

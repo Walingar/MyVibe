@@ -202,6 +202,9 @@
     <extensionPoint name="toolWindow" beanClass="com.intellij.openapi.wm.ToolWindowEP" dynamic="true">
       <with attribute="factoryClass" implements="com.intellij.openapi.wm.ToolWindowFactory"/>
     </extensionPoint>
+    <extensionPoint name="applicationToolWindowFactory"
+                    interface="com.intellij.ide.projectSwitcher.ApplicationToolWindowFactory"
+                    dynamic="true"/>
 
     <extensionPoint name="mouseWheelEventProcessor"
                     interface="com.intellij.openapi.MouseWheelEventInterceptor"

@@ -290,6 +290,11 @@ class WindowManagerImpl : WindowManagerEx(), PersistentStateComponentWithModific
     return frameToReuse.getAndSet(null)
   }
 
+  @Internal
+  fun setRootFrameToReuse(frame: IdeFrameImpl) {
+    frameToReuse.set(frame)
+  }
+
   suspend fun assignFrame(frameHelper: ProjectFrameHelper, project: Project) {
     assignFrame(frameHelper = frameHelper, project = project, withListener = true)
   }

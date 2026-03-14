@@ -254,6 +254,20 @@ internal class IdeProjectFrameAllocator(
         if (!frame.isVisible) {
           throw CancellationException("Pre-allocated frame was already closed")
         }
+        val existingHelper = frame.frameHelper?.helper as? IdeProjectFrameHelper
+        if (existingHelper != null && existingHelper.project == null) {
+          completeFrameAndCloseOnCancel(existingHelper) {
+            if (options.forceOpenInNewFrame) {
+              existingHelper.updateFullScreenState(frameSettings.frameInfo.fullScreen)
+            }
+            span("ProjectFrameHelper.init") {
+              existingHelper.init()
+            }
+            existingHelper.setInitBounds(frameSettings.frameInfo.bounds)
+          }
+          return@withContext
+        }
+
         val frameHelper = IdeProjectFrameHelper(frame = frame, loadingState = loadingState, projectFrameTypeId = frameSettings.projectFrameTypeId)
         completeFrameAndCloseOnCancel(frameHelper) {
           if (options.forceOpenInNewFrame) {

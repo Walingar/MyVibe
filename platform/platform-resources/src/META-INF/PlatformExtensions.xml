@@ -1176,6 +1176,7 @@
     <toolWindow id="Notifications" anchor="right" secondary="true"
                 icon="AllIcons.Toolwindows.Notifications"
                 factoryClass="com.intellij.notification.impl.NotificationsToolWindowFactory"/>
+    <applicationToolWindowFactory implementation="com.intellij.ide.projectSwitcher.ApplicationProjectsToolWindowFactory"/>
     <projectService serviceInterface="com.intellij.notification.NotificationsLogController"
                     serviceImplementation="com.intellij.notification.impl.NotificationsLogToolWindowController"/>
 

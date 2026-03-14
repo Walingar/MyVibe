@@ -34,6 +34,7 @@ import com.intellij.ide.lightEdit.LightEditCompatible
 import com.intellij.ide.lightEdit.LightEditService
 import com.intellij.ide.lightEdit.LightEditUtil
 import com.intellij.ide.plugins.PluginManagerCore
+import com.intellij.ide.projectSwitcher.NoProjectFrameManager
 import com.intellij.ide.startup.impl.StartupManagerImpl
 import com.intellij.ide.trustedProjects.TrustedProjects
 import com.intellij.ide.trustedProjects.TrustedProjectsDialog.confirmOpeningOrLinkingUntrustedProject
@@ -101,7 +102,6 @@ import com.intellij.openapi.wm.ex.ProjectFrameCapabilitiesService
 import com.intellij.openapi.wm.ex.ProjectFrameCapability
 import com.intellij.openapi.wm.ex.WindowManagerEx
 import com.intellij.openapi.wm.ex.isBackgroundActivitiesSuppressed
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.platform.PROJECT_NEWLY_CREATED
 import com.intellij.platform.PROJECT_NEWLY_OPENED
 import com.intellij.platform.PlatformProjectOpenProcessor
@@ -666,9 +666,7 @@ open class ProjectManagerImpl : ProjectManagerEx(), Disposable {
     span("checkTrustedState") {
       if (!checkTrustedState(projectIdentityFile)) {
         LOG.info("Project is not trusted, aborting")
-        if (options.showWelcomeScreen) {
-          WelcomeFrame.showIfNoProjectOpened()
-        }
+        NoProjectFrameManager.ensureNoProjectFrameShown()
         ProcessCanceledException()
       }
       else {
@@ -899,9 +897,7 @@ open class ProjectManagerImpl : ProjectManagerEx(), Disposable {
       }
     }
 
-    if (options.showWelcomeScreen) {
-      WelcomeFrame.showIfNoProjectOpened()
-    }
+    NoProjectFrameManager.ensureNoProjectFrameShown()
   }
 
   override fun newProject(file: Path, options: OpenProjectTask): Project? {
@@ -1467,53 +1463,11 @@ private suspend fun initProject(
 }
 
 @Suppress("DuplicatedCode")
-private suspend fun confirmOpenNewProject(options: OpenProjectTask): Int {
+private suspend fun confirmOpenNewProject(_options: OpenProjectTask): Int {
   if (ApplicationManager.getApplication().isUnitTestMode) {
     return GeneralSettings.OPEN_PROJECT_NEW_WINDOW
   }
-
-  var mode = serviceAsync<GeneralSettings>().confirmOpenNewProject
-  if (mode == GeneralSettings.OPEN_PROJECT_ASK) {
-    val ideUICustomization = serviceAsync<IdeUICustomization>()
-    val message = if (options.projectName == null) {
-      ideUICustomization.projectMessage("prompt.open.project.in.new.frame")
-    }
-    else {
-      ideUICustomization.projectMessage("prompt.open.project.with.name.in.new.frame", options.projectName)
-    }
-
-    val openInExistingFrame = withContext(Dispatchers.EDT) {
-      // readAction is not enough
-      writeIntentReadAction {
-        @NonNls
-        val actionPlace = "Open project action"
-        if (options.isNewProject)
-          MessageDialogBuilder.yesNoCancel(ideUICustomization.projectMessage("title.new.project"), message)
-            .yesText(IdeBundle.message("button.existing.frame"))
-            .noText(IdeBundle.message("button.new.frame"))
-            .doNotAsk(ProjectNewWindowDoNotAskOption())
-            .invocationPlace(actionPlace)
-            .guessWindowAndAsk()
-        else
-          MessageDialogBuilder.yesNoCancel(ideUICustomization.projectMessage("title.open.project"), message)
-            .yesText(IdeBundle.message("button.existing.frame"))
-            .noText(IdeBundle.message("button.new.frame"))
-            .doNotAsk(ProjectNewWindowDoNotAskOption())
-            .invocationPlace(actionPlace)
-            .guessWindowAndAsk()
-      }
-    }
-
-    mode = when (openInExistingFrame) {
-      Messages.YES -> GeneralSettings.OPEN_PROJECT_SAME_WINDOW
-      Messages.NO -> GeneralSettings.OPEN_PROJECT_NEW_WINDOW
-      else -> Messages.CANCEL
-    }
-    if (mode != Messages.CANCEL) {
-      LifecycleUsageTriggerCollector.onProjectFrameSelected(mode)
-    }
-  }
-  return mode
+  return GeneralSettings.OPEN_PROJECT_SAME_WINDOW
 }
 
 private inline fun createActivity(project: ProjectImpl, message: () -> String): Activity? {
