@@ -446,9 +446,6 @@ class BuildContextImpl internal constructor(
     jvmArgs.add("-Dpty4j.preferred.native.folder=${macroName}/lib/pty4j".quoteIfNeeded())
     jvmArgs.add("-Dio.netty.allocator.type=pooled")
 
-    // require bundled Skiko
-    jvmArgs.add("-Dskiko.library.path=${macroName}/lib/skiko-awt-runtime-all".quoteIfNeeded())
-
     if (useModularLoader || generateRuntimeModuleRepository) {
       jvmArgs.add("-Dintellij.platform.runtime.repository.path=${macroName}/${MODULE_DESCRIPTORS_COMPACT_PATH}".quoteIfNeeded())
     }

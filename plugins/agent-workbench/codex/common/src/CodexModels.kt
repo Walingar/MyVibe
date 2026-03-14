@@ -1,9 +1,6 @@
 // Copyright 2000-2026 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
 package com.intellij.agent.workbench.codex.common
 
-import androidx.compose.runtime.Immutable
-
-@Immutable
 data class CodexSubAgent(
   @JvmField val id: String,
   @JvmField val name: String,
@@ -35,7 +32,6 @@ enum class CodexThreadActiveFlag {
   WAITING_ON_USER_INPUT,
 }
 
-@Immutable
 data class CodexThread(
   @JvmField val id: String,
   @JvmField val title: String,
@@ -53,7 +49,6 @@ data class CodexThread(
   @JvmField val activeFlags: List<CodexThreadActiveFlag> = emptyList(),
 )
 
-@Immutable
 data class CodexThreadActivitySnapshot(
   @JvmField val threadId: String,
   @JvmField val updatedAt: Long,
@@ -64,7 +59,6 @@ data class CodexThreadActivitySnapshot(
   @JvmField val hasInProgressTurn: Boolean = false,
 )
 
-@Immutable
 data class CodexThreadPage(
   @JvmField val threads: List<CodexThread>,
   @JvmField val nextCursor: String?,
@@ -80,7 +74,6 @@ enum class CodexAppServerNotificationKind {
   OTHER,
 }
 
-@Immutable
 data class CodexAppServerStartedThread(
   @JvmField val id: String,
   @JvmField val title: String,
@@ -90,7 +83,6 @@ data class CodexAppServerStartedThread(
   @JvmField val activeFlags: List<CodexThreadActiveFlag> = emptyList(),
 )
 
-@Immutable
 data class CodexAppServerNotification(
   @JvmField val method: String,
   @JvmField val kind: CodexAppServerNotificationKind,

@@ -1,3 +1,4 @@
+// Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license.
 package com.intellij.remoteDev.downloader
 
 import com.intellij.execution.ShortenCommandLine
@@ -239,7 +240,6 @@ class EmbeddedClientLauncher private constructor(private val moduleRepository: R
       "jna.noclasspath", 
       "idea.is.internal",
       "intellij.test.jars.location",
-      "skiko.library.path"
     )
     propertiesToPass.forEach { 
       vmParametersList.defineProperty(it, System.getProperty(it))

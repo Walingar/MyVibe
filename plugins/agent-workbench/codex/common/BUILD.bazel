@@ -15,7 +15,6 @@ jvm_library(
   resources = [":common_resources"],
   deps = [
     "@lib//:kotlin-stdlib",
-    "//platform/compose",
     "//platform/core-api:core",
     "//platform/util",
     "//platform/execution-impl",
@@ -31,7 +30,6 @@ jvm_library(
   srcs = glob([], allow_empty = True),
   runtime_deps = [
     ":common",
-    "//platform/compose:compose_test_lib",
     "//platform/core-api:core_test_lib",
     "//platform/util:util_test_lib",
     "//platform/execution-impl:execution-impl_test_lib",

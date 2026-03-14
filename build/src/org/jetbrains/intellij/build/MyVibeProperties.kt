@@ -28,7 +28,7 @@ val MAVEN_ARTIFACTS_ADDITIONAL_MODULES: PersistentList<String> = persistentListO
   "intellij.maven.testFramework",
   "intellij.tools.reproducibleBuilds.diff",
   "intellij.space.java.jps",
-) + JewelMavenArtifacts.STANDALONE.keys
+)
 
 internal suspend fun createMyVibeBuildContext(
   options: BuildOptions,
@@ -72,32 +72,6 @@ open class MyVibeProperties(private val communityHomeDir: Path) : JetBrainsProdu
       "intellij.platform.util.base.multiplatform",
       "intellij.platform.util.zip",
     )
-    mavenArtifacts.validateForMavenCentralPublication = { module ->
-      JewelMavenArtifacts.isPublishedJewelModule(module)
-    }
-    mavenArtifacts.patchCoordinates = { module, coordinates ->
-      when {
-        JewelMavenArtifacts.isPublishedJewelModule(module) -> JewelMavenArtifacts.patchCoordinates(module, coordinates)
-        else -> coordinates
-      }
-    }
-    mavenArtifacts.patchDependencies = { module, dependencies ->
-      when {
-        JewelMavenArtifacts.isPublishedJewelModule(module) -> JewelMavenArtifacts.patchDependencies(module, dependencies)
-        else -> dependencies
-      }
-    }
-    mavenArtifacts.addPomMetadata = { module, model ->
-      when {
-        JewelMavenArtifacts.isPublishedJewelModule(module) -> JewelMavenArtifacts.addPomMetadata(module, model)
-      }
-    }
-    mavenArtifacts.isJavadocJarRequired = {
-      JewelMavenArtifacts.isPublishedJewelModule(it) && it.name != "intellij.platform.jewel.intUi.decoratedWindow"
-    }
-    mavenArtifacts.validate = { context, artifacts ->
-      JewelMavenArtifacts.validate(context, artifacts)
-    }
 
     versionCheckerConfig = CE_CLASS_VERSIONS
     buildDocAuthoringAssets = true

@@ -25,7 +25,6 @@
     <orderEntry type="module" module-name="intellij.platform.runtime.product.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.devLauncher.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.jsonpath" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.platform.ide.nonModalWelcomeScreen" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.util.coroutines.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.util.progress.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.junit5.jimfs" scope="TEST" />
@@ -57,7 +56,6 @@
     <orderEntry type="module" module-name="intellij.platform.core.nio.fs.tests" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.diagnostic.telemetry.agent.extension" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.eel.tests" scope="TEST" />
-    <orderEntry type="module" module-name="intellij.platform.jewel.detektPlugin" scope="TEST" />
     <orderEntry type="module" module-name="intellij.platform.testFramework.selfContainedProjects" scope="TEST" />
     <orderEntry type="module" module-name="intellij.tools.cmd.tests" scope="TEST" />
   </component>
