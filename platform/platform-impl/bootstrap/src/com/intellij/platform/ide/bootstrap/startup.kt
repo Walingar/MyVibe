@@ -172,8 +172,6 @@ fun startApplication(
     }
 
     scheduleUpdateFrameClassAndWindowIconAndPreloadSystemFonts(scope, initAwtToolkitJob, initUiScale, appInfoDeferred)
-
-    scheduleShowSplashIfNeeded(scope, lockSystemDirsJob, initUiScale, appInfoDeferred, args)
   }
 
   val initLafJob = scope.launch {

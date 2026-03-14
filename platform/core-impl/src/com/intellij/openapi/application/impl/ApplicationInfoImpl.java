@@ -138,11 +138,6 @@ public final class ApplicationInfoImpl extends ApplicationInfoEx {
         }
         break;
 
-        case "logo": {
-          splashImageUrl = getAttributeValue(child, "url");
-        }
-        break;
-
         case "logo-eap": {
           eapSplashImageUrl = getAttributeValue(child, "url");
         }

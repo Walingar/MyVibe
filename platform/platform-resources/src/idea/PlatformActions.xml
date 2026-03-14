@@ -1,3 +1,5 @@
+<!-- Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+
 <!--suppress PluginXmlRegistrationCheck -->
 <idea-plugin>
   <actions>
@@ -1487,7 +1489,6 @@
                 class="com.intellij.internal.inspector.themePicker.ToggleUiThemeColorPickerAction"/>
         <action id="GrayFilterConfig" internal="true" class="com.intellij.internal.GrayFilterConfig"/>
         <action id="TextGrayFilterConfig" internal="true" class="com.intellij.internal.TextGrayFilterConfig"/>
-        <action id="ShowSplash" internal="true" class="com.intellij.ui.ShowSplashAction"/>
         <action id="ValidationTest" internal="true" class="com.intellij.internal.validation.TestDialogWithValidationAction"/>
         <action id="MacMessagesTest" internal="true" class="com.intellij.internal.validation.TestMacMessagesAction"/>
         <action id="UnixInfoTest" internal="true" class="com.intellij.internal.ui.UnixInfoTestAction"/>

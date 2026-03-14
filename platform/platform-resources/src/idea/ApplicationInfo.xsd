@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://jetbrains.org/intellij/schema/application-info" xmlns="http://jetbrains.org/intellij/schema/application-info">
   <xs:element name="component">
@@ -7,7 +8,7 @@
         <xs:element type="versionType" name="version"/>
         <xs:element type="companyType" name="company"/>
         <xs:element type="buildType" name="build"/>
-        <xs:element type="logoType" name="logo"/>
+        <xs:element type="logoType" name="logo" minOccurs="0"/>
         <xs:element type="logoType" name="logo-eap" minOccurs="0"/>
         <xs:element type="logoType" name="logo-simplified" minOccurs="0"/>
         <xs:element type="logoType" name="logo-subscription-mode" minOccurs="0"/>
