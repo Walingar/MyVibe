@@ -1,6 +1,6 @@
 {
   "products": {
-    "community": {
+    "MyVibe": {
       "modules": [
         "intellij.idea.community.build",
         "intellij.idea.community.build.dependencies",

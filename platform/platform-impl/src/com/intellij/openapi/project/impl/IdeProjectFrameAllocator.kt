@@ -75,7 +75,6 @@ import com.intellij.openapi.wm.impl.updateFullScreenState
 import com.intellij.platform.diagnostic.telemetry.impl.getTraceActivity
 import com.intellij.platform.diagnostic.telemetry.impl.rootTask
 import com.intellij.platform.diagnostic.telemetry.impl.span
-import com.intellij.platform.ide.bootstrap.hideSplash
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer
 import com.intellij.problems.WolfTheProblemSolver
 import com.intellij.psi.PsiManager
@@ -136,8 +135,6 @@ internal class IdeProjectFrameAllocator(
       }
 
       val project = projectInitObservable.awaitProjectInit()
-      val connection = project.messageBus.connect(this)
-      hideSplashWhenEditorOrToolWindowShown(connection)
     }
   }
 
@@ -372,28 +369,6 @@ internal class IdeProjectFrameAllocator(
       }
     }
   }
-}
-
-private suspend fun hideSplashWhenEditorOrToolWindowShown(connection: SimpleMessageBusConnection) {
-  val splashHiddenDeferred = CompletableDeferred<Unit>()
-
-  fun hideSplashAndComplete() {
-    hideSplash()
-    connection.disconnect()
-    splashHiddenDeferred.complete(Unit)
-  }
-
-  connection.subscribe(ToolWindowManagerListener.TOPIC, object : ToolWindowManagerListener {
-    override fun toolWindowShown(toolWindow: ToolWindow) {
-      hideSplashAndComplete()
-    }
-  })
-  connection.subscribe(FileEditorManagerListener.FILE_EDITOR_MANAGER, object : FileEditorManagerListener {
-    override fun fileOpened(source: FileEditorManager, file: VirtualFile) {
-      hideSplashAndComplete()
-    }
-  })
-  splashHiddenDeferred.await()
 }
 
 private fun applyProjectFrameUiPolicy(toolWindowManager: ToolWindowManager,

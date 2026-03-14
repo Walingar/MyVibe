@@ -48,7 +48,6 @@ import com.intellij.openapi.wm.impl.IdeGlassPaneImpl;
 import com.intellij.openapi.wm.impl.ProjectFrameHelper;
 import com.intellij.openapi.wm.impl.customFrameDecorations.header.CustomFrameDialogContent;
 import com.intellij.openapi.wm.impl.customFrameDecorations.header.CustomHeader;
-import com.intellij.platform.ide.bootstrap.SplashManagerKt;
 import com.intellij.platform.locking.impl.IntelliJLockingUtil;
 import com.intellij.reference.SoftReference;
 import com.intellij.ui.AppUIUtilKt;
@@ -549,7 +548,6 @@ public class DialogWrapperPeerImpl extends DialogWrapperPeer {
     }
 
     CompletableFuture<Void> result = new CompletableFuture<>();
-    SplashManagerKt.hideSplash();
     try ( // numbered in the order of invocation (which is reverse)
       AccessToken ignore5 = AccessToken.create(() -> {
         if (changeModalityState) {

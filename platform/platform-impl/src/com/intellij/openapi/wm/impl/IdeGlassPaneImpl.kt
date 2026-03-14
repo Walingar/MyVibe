@@ -27,8 +27,6 @@ import com.intellij.openapi.util.SystemInfoRt
 import com.intellij.openapi.util.Weighted
 import com.intellij.openapi.wm.IdeFocusManager
 import com.intellij.openapi.wm.IdeGlassPaneUtil
-import com.intellij.platform.ide.bootstrap.hasSplash
-import com.intellij.platform.ide.bootstrap.hideSplash
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer
 import com.intellij.ui.ClientProperty
 import com.intellij.ui.ComponentUtil
@@ -125,19 +123,9 @@ class IdeGlassPaneImpl : JComponent, IdeGlassPaneEx, IdeEventQueue.NonLockedEven
     }
     else if (loadingState == null || loadingState.done.isCompleted) {
       isVisible = false
-      hideSplash()
       FUSProjectHotStartUpMeasurer.reportFrameBecameInteractive()
     }
-    else if (hasSplash()) {
-      loadingState.done.invokeOnCompletion {
-        FUSProjectHotStartUpMeasurer.reportFrameBecameInteractive()
-        coroutineScope.launch(RawSwingDispatcher) {
-          hideSplash()
-        }
-      }
-    }
     else {
-      hideSplash()
       loadingIndicator = IdePaneLoadingLayer(pane = this, loadingState, coroutineScope = coroutineScope) {
         FUSProjectHotStartUpMeasurer.reportFrameBecameInteractive()
         loadingIndicator = null

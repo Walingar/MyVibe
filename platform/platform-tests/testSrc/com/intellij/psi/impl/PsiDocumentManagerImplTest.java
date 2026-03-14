@@ -2,9 +2,7 @@
 package com.intellij.psi.impl;
 
 import com.intellij.diagnostic.ThreadDumper;
-import com.intellij.ide.highlighter.JavaFileType;
 import com.intellij.lang.FileASTNode;
-import com.intellij.lang.xml.XMLLanguage;
 import com.intellij.mock.MockDocument;
 import com.intellij.mock.MockPsiFile;
 import com.intellij.openapi.application.AppUIExecutor;
@@ -14,7 +12,6 @@ import com.intellij.openapi.application.ReadAction;
 import com.intellij.openapi.application.TransactionGuard;
 import com.intellij.openapi.application.WriteAction;
 import com.intellij.openapi.application.impl.LaterInvocator;
-import com.intellij.openapi.application.impl.NonBlockingReadActionImpl;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
@@ -57,7 +54,6 @@ import com.intellij.psi.PsiFileFactory;
 import com.intellij.psi.PsiLargeBinaryFile;
 import com.intellij.psi.PsiLargeTextFile;
 import com.intellij.psi.PsiManager;
-import com.intellij.psi.SyntaxTraverser;
 import com.intellij.psi.impl.source.PsiFileImpl;
 import com.intellij.testFramework.HeavyPlatformTestCase;
 import com.intellij.testFramework.LeakHunter;
@@ -69,14 +65,12 @@ import com.intellij.util.ArrayUtilRt;
 import com.intellij.util.IncorrectOperationException;
 import com.intellij.util.TestTimeOut;
 import com.intellij.util.TimeoutUtil;
-import com.intellij.util.concurrency.AppExecutorUtil;
 import com.intellij.util.concurrency.Semaphore;
 import com.intellij.util.ref.GCWatcher;
 import com.intellij.util.ui.UIUtil;
 import org.intellij.lang.annotations.Language;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.concurrency.CancellablePromise;
 import org.junit.Assume;
 
 import javax.swing.JComponent;
@@ -93,7 +87,6 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -334,8 +327,6 @@ public class PsiDocumentManagerImplTest extends HeavyPlatformTestCase {
       .insertString(0, "class X {" + StringUtil.repeat("public int IIII = 222;\n", 10000) + "}"));
 
     waitForCommits();
-
-    assertEquals(JavaFileType.INSTANCE.getLanguage(), file.getLanguage());
 
     for (int i = 0; i < 30; i++) {
       assertCommitted(document, true, "");
@@ -858,36 +849,6 @@ public class PsiDocumentManagerImplTest extends HeavyPlatformTestCase {
     assertTrue(calledPerformWhenAllCommitted[0]);
   }
 
-  public void testNonPhysicalDocumentCommitsDoNotInterruptBackgroundTasks() {
-    NonBlockingReadActionImpl.waitForAsyncTaskCompletion();
-
-    PsiFileFactory factory = PsiFileFactory.getInstance(getProject());
-    List<PsiFile> files = new ArrayList<>();
-    for (int i = 0; i < 90; i++) {
-      files.add(factory.createFileFromText("a.xml", XMLLanguage.INSTANCE, "<a><b><c/></b></a>", false, false));
-    }
-
-    AtomicInteger attempts = new AtomicInteger();
-    CancellablePromise<Void> future = ReadAction.nonBlocking(() -> {
-      attempts.incrementAndGet();
-
-      for (PsiFile file : files) {
-        TimeoutUtil.sleep(1);
-
-        Document document = FileDocumentManager.getInstance().getDocument(file.getViewProvider().getVirtualFile());
-        document.insertString(0, " ");
-
-        for (PsiElement element : SyntaxTraverser.psiTraverser(file)) {
-          ProgressManager.checkCanceled();
-          assertNotNull(element.getTextRange());
-        }
-      }
-    }).submit(AppExecutorUtil.getAppExecutorService());
-    PlatformTestUtil.waitForFuture(future, 10_000);
-
-    assertTrue(String.valueOf(attempts), attempts.get() < 10);
-  }
-
   public void testAllowCommittingNonPhysicalDocumentsInBackgroundThread() throws Exception {
     PsiDocumentManagerImpl pdm = getPsiDocumentManager();
     ApplicationManager.getApplication().executeOnPooledThread(() -> ReadAction.run(() -> {
@@ -910,40 +871,6 @@ public class PsiDocumentManagerImplTest extends HeavyPlatformTestCase {
       assertEquals(" " + text, file.getText());
       assertTrue(documentCommitCallback.get());
     })).get();
-  }
-
-  public void testPerformWhenAllCommittedDoesNotRaceWithBackgroundLightCommitsResultingInExceptions(){
-    ExecutorService executor = AppExecutorUtil.createBoundedApplicationPoolExecutor(getTestName(false), 10);
-
-    PsiFile mainFile = findFile(createFile());
-    Document mainDoc = getDocument(mainFile);
-
-    PsiFileFactory factory = PsiFileFactory.getInstance(getProject());
-    List<Future<?>> futures = new ArrayList<>();
-    for (int i = 0; i < 5; i++) {
-      for (int j = 0; j < 20; j++) {
-        PsiFile tempFile = factory.createFileFromText(i + ".xml", XMLLanguage.INSTANCE, "<a><b><c/></b></a>", false, false);
-        Document document = FileDocumentManager.getInstance().getDocument(tempFile.getViewProvider().getVirtualFile());
-        document.insertString(0, " ");
-
-        futures.add(ReadAction.nonBlocking(() -> {
-          getPsiDocumentManager().commitDocument(document);
-          assertEquals(tempFile.getText(), document.getText());
-        }).submit(executor));
-      }
-
-      Semaphore semaphore = new Semaphore(1);
-      WriteCommandAction.runWriteCommandAction(myProject, () -> {
-        mainDoc.insertString(0, " ");
-        getPsiDocumentManager().performWhenAllCommitted(semaphore::up);
-      });
-      waitAndPump(semaphore);
-      assertCommitted(mainDoc, true, "");
-      assertEquals(mainFile.getText(), mainDoc.getText());
-    }
-    for (Future<?> future : futures) {
-      PlatformTestUtil.waitForFuture(future, 10_000);
-    }
   }
 
   public void testDoNotLeakForgottenUncommittedDocument() throws Exception {

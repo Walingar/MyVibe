@@ -15,7 +15,6 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.testFramework.IndexingTestUtil
 import com.intellij.testFramework.PsiTestUtil
 import com.intellij.testFramework.rules.ProjectModelRule
-import com.intellij.workspaceModel.ide.legacyBridge.impl.java.JAVA_MODULE_ENTITY_TYPE_ID_NAME
 import org.jetbrains.jps.model.java.JavaResourceRootType
 import org.jetbrains.jps.model.java.JavaSourceRootType
 import org.jetbrains.jps.model.module.JpsModuleSourceRootType
@@ -286,7 +285,7 @@ fun ProjectModelRule.createJavaModule(moduleName: String, content: ModuleContent
 }
 
 private fun createJavaModule(project: Project, moduleName: String, moduleRootDirectory: Path): Module {
-  val type = ModuleTypeManager.getInstance().findByID(JAVA_MODULE_ENTITY_TYPE_ID_NAME)
+  val type = ModuleTypeManager.getInstance().findByID("Java")
   return WriteCommandAction.writeCommandAction(project).compute(
     ThrowableComputable<Module, RuntimeException> {
       val moduleModel = ModuleManager.getInstance(project).getModifiableModel()

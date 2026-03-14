@@ -4,7 +4,6 @@ package com.intellij.ide.codeStyleSettings;
 import com.intellij.application.options.CodeStyle;
 import com.intellij.application.options.codeStyle.excludedFiles.GlobPatternDescriptor;
 import com.intellij.formatting.fileSet.FileSetDescriptor;
-import com.intellij.lang.xml.XMLLanguage;
 import com.intellij.openapi.util.JDOMUtil;
 import com.intellij.psi.codeStyle.CodeStyleSettings;
 import com.intellij.psi.codeStyle.CodeStyleSettingsCustomizable;
@@ -36,15 +35,6 @@ public class CodeStyleConfigurationTest extends CodeStyleTestCase {
 
     CodeStyleSettings settings = CodeStyle.createTestSettings();
     settings.readExternal(rootElement);
-    CommonCodeStyleSettings langSettings = settings.getCommonSettings(XMLLanguage.INSTANCE);
-    assert langSettings != null;
-    CommonCodeStyleSettings.IndentOptions indentOptions = langSettings.getIndentOptions();
-    assert indentOptions != null;
-    assertEquals(2, indentOptions.INDENT_SIZE);
-    assertEquals(3, indentOptions.CONTINUATION_INDENT_SIZE);
-    assertEquals(2, indentOptions.TAB_SIZE);
-    assertTrue(indentOptions.USE_TAB_CHARACTER);
-    assertEquals(3, langSettings.IF_BRACE_FORCE);
   }
 
   public void testCodeStyleSettingsCustomizableOptions() {

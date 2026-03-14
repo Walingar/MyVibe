@@ -3,7 +3,6 @@ package com.intellij.ide.scratch;
 
 import com.intellij.codeInsight.completion.CodeCompletionHandlerBase;
 import com.intellij.codeInsight.completion.CompletionType;
-import com.intellij.lang.xml.XMLLanguage;
 import com.intellij.openapi.application.WriteAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
@@ -19,7 +18,6 @@ public class ScratchFileTest extends LightPlatformCodeInsightTestCase {
 
   private PsiFile createXmlScratch() {
     ScratchFileCreationHelper.Context context = new ScratchFileCreationHelper.Context();
-    context.language = XMLLanguage.INSTANCE;
     return ScratchFileActions.doCreateNewScratch(getProject(), context);
   }
 

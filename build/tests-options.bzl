@@ -96,10 +96,6 @@ def jps_test(name, jvm_flags = [], runtime_deps = [], args = [], data = [], tags
     all_tags = list(tags)
     all_env = dict(env)
 
-    # required for com.intellij.openapi.projectRoots.impl.JavaSdkImpl.internalJdkAnnotationsPath
-    # almost all tests in monorepo need it, so we add it to all tests
-    all_data.append("@community//java:mockJDK")
-
     # handled by com.intellij.tests.JUnit5BazelRunner.main
     all_env["JB_TEST_SANDBOX"] = str(sandbox)
 

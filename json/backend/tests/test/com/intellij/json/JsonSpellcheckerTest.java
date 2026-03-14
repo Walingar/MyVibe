@@ -1,7 +1,6 @@
 // Copyright 2000-2021 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
 package com.intellij.json;
 
-import com.intellij.grazie.spellcheck.GrazieSpellCheckingInspection;
 import com.intellij.json.json5.Json5FileType;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.IdeActions;
@@ -24,7 +23,6 @@ import java.util.function.Predicate;
 public class JsonSpellcheckerTest extends JsonTestCase {
 
   private void doTest() {
-    myFixture.enableInspections(GrazieSpellCheckingInspection.class);
     myFixture.configureByFile(getTestName(false) + ".json");
     myFixture.checkHighlighting(true, false, true);
   }
@@ -52,14 +50,12 @@ public class JsonSpellcheckerTest extends JsonTestCase {
         JsonSchemaTestServiceImpl.setProvider(null);
       }
     });
-    myFixture.enableInspections(GrazieSpellCheckingInspection.class);
     myFixture.checkHighlighting(true, false, true);
   }
 
   // WEB-31894 EA-117068
   public void testAfterModificationOfStringLiteralWithEscaping() {
     myFixture.configureByFile(getTestName(false) + ".json");
-    myFixture.enableInspections(GrazieSpellCheckingInspection.class);
     myFixture.checkHighlighting();
     myFixture.performEditorAction(IdeActions.ACTION_EDITOR_BACKSPACE);
     myFixture.performEditorAction(IdeActions.ACTION_EDITOR_BACKSPACE);
@@ -67,7 +63,6 @@ public class JsonSpellcheckerTest extends JsonTestCase {
   }
 
   public void testHashesQuotedSpelling() {
-    myFixture.enableInspections(GrazieSpellCheckingInspection.class);
     myFixture.configureByText("hashes.json", """
     {
       "typo": "<TYPO>hereistheerror</TYPO>",
@@ -83,7 +78,6 @@ public class JsonSpellcheckerTest extends JsonTestCase {
   }
 
   public void testInjectedFragments() {
-    myFixture.enableInspections(GrazieSpellCheckingInspection.class);
 
     myFixture.configureByText(Json5FileType.INSTANCE, """
     {

@@ -18,7 +18,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.WindowWrapper
 import com.intellij.openapi.util.UserDataHolder
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.platform.ide.bootstrap.hideSplashBeforeShow
 import com.intellij.ui.AppIcon
 import com.intellij.util.ui.UIUtil
 import kotlinx.coroutines.CompletableDeferred
@@ -59,7 +58,6 @@ internal class MergeApplication : ApplicationStarterBase(3, 4) {
       val mode = if (project == null) WindowWrapper.Mode.MODAL else WindowWrapper.Mode.FRAME
       val dialogHints = DiffDialogHints(mode, null) { wrapper ->
         val window = wrapper.window
-        hideSplashBeforeShow(window)
         AppIcon.getInstance().requestFocus(window)
         UIUtil.runWhenWindowClosed(window) { deferred.complete(resultRef.get()) }
       }

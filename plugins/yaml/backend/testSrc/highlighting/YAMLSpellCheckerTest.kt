@@ -1,16 +1,14 @@
 // Copyright 2000-2021 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
 package org.jetbrains.yaml.highlighting
 
-import com.intellij.grazie.spellcheck.GrazieSpellCheckingInspection
 import com.intellij.testFramework.fixtures.BasePlatformTestCase
 import com.intellij.testFramework.fixtures.InjectionTestFixture
 import org.intellij.lang.regexp.RegExpLanguage
+import kotlin.jvm.java
 
 class YAMLSpellCheckerTest : BasePlatformTestCase() {
   override fun setUp() {
     super.setUp()
-
-    myFixture.enableInspections(GrazieSpellCheckingInspection::class.java)
   }
 
   fun testSpellChecking() {

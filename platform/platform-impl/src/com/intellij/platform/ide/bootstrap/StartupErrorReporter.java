@@ -152,11 +152,6 @@ public final class StartupErrorReporter {
     catch (Throwable ignore) { }
 
     try {
-      SplashManagerKt.hideSplash();
-    }
-    catch (Throwable ignore) { }
-
-    try {
       var messageObj = prepareMessage(message);
       var close = message("bootstrap.error.option.close");
       var iconUrl = StartupErrorReporter.class.getResource("/images/questionSign.png");

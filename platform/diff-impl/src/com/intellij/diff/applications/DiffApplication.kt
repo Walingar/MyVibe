@@ -26,7 +26,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.WindowWrapper
 import com.intellij.openapi.util.UserDataHolder
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.platform.ide.bootstrap.hideSplashBeforeShow
 import com.intellij.ui.AppIcon
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
@@ -60,7 +59,6 @@ internal class DiffApplication : ApplicationStarterBase(/* ...possibleArgumentsC
       val task = CompletableDeferred<Unit>()
       val dialogHints = DiffDialogHints(mode, null) { wrapper ->
         val window = wrapper.window
-        hideSplashBeforeShow(window)
         AppIcon.getInstance().requestFocus(window)
         window.addWindowListener(object : WindowAdapter() {
           override fun windowClosed(e: WindowEvent) {

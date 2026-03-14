@@ -39,7 +39,6 @@ import com.intellij.openapi.wm.impl.WindowManagerImpl
 import com.intellij.openapi.wm.impl.status.IdeStatusBarImpl
 import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService
 import com.intellij.platform.ide.CoreUiCoroutineScopeHolder
-import com.intellij.platform.ide.bootstrap.hideSplashBeforeShow
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer
 import com.intellij.platform.ide.menu.installAppMenuIfNeeded
 import com.intellij.ui.BalloonLayout
@@ -72,7 +71,6 @@ class WelcomeFrame : JFrame(), IdeFrame, AccessibleContextAccessor, DisposableWi
   private var isDisposed = false
 
   init {
-    hideSplashBeforeShow(this)
     val rootPane = getRootPane()
     val screen = createScreen(rootPane)
     val glassPane = IdeGlassPaneImpl(rootPane)
@@ -184,7 +182,6 @@ class WelcomeFrame : JFrame(), IdeFrame, AccessibleContextAccessor, DisposableWi
                     ?: throw IllegalStateException("No implementation of `com.intellij.welcomeFrameProvider` extension point")
         val jFrame = frame as JFrame
         registerKeyboardShortcuts(jFrame.rootPane)
-        hideSplashBeforeShow(jFrame)
         jFrame.isVisible = true
         FUSProjectHotStartUpMeasurer.reportWelcomeScreenShown()
         installAppMenuIfNeeded(jFrame)

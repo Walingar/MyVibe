@@ -22,6 +22,7 @@ import com.intellij.platform.workspace.jps.entities.ModuleEntity
 import com.intellij.platform.workspace.jps.entities.ModuleSourceDependency
 import com.intellij.platform.workspace.jps.entities.SourceRootEntity
 import com.intellij.platform.workspace.jps.entities.SourceRootTypeId
+import com.intellij.platform.workspace.storage.EntitySource
 import com.intellij.platform.workspace.storage.MutableEntityStorage
 import com.intellij.testFramework.LightVirtualFile
 import com.intellij.testFramework.PerformanceUnitTest
@@ -32,7 +33,6 @@ import com.intellij.testFramework.junit5.TestApplication
 import com.intellij.testFramework.rules.ClassLevelProjectModelExtension
 import com.intellij.tools.ide.metrics.benchmark.Benchmark
 import com.intellij.workspaceModel.ide.NonPersistentEntitySource
-import com.intellij.workspaceModel.ide.legacyBridge.impl.java.JAVA_SOURCE_ROOT_ENTITY_TYPE_ID
 import org.jetbrains.jps.model.serialization.module.JpsModuleRootModelSerializer
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -102,8 +102,7 @@ class ProjectFileIndexPerformanceTest {
           builder addEntity ModuleEntity("small$i", dependencies, NonPersistentEntitySource) {
             contentRoots = listOf(
               ContentRootEntity(smallModuleRoot.toVirtualFileUrl(fileUrlManager), emptyList(), NonPersistentEntitySource) {
-                sourceRoots = listOf(
-                  SourceRootEntity(srcRoot.toVirtualFileUrl(fileUrlManager), JAVA_SOURCE_ROOT_ENTITY_TYPE_ID, NonPersistentEntitySource))
+                sourceRoots = listOf()
                 excludedUrls = listOf(ExcludeUrlEntity(excludedRoot.toVirtualFileUrl(fileUrlManager), NonPersistentEntitySource))
               })
 

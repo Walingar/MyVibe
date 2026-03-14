@@ -60,7 +60,6 @@ import com.intellij.openapi.util.text.NaturalComparator;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.util.text.Strings;
 import com.intellij.openapi.vfs.CharsetToolkit;
-import com.intellij.platform.ide.bootstrap.SplashManagerKt;
 import com.intellij.platform.ide.bootstrap.StartupErrorReporter;
 import com.intellij.ui.AppUIUtilKt;
 import com.intellij.util.PlatformUtils;
@@ -1232,7 +1231,6 @@ public final class ConfigImportHelper {
       var dialog = new ConfigImportProgressDialog();
       dialog.setModalityType(Dialog.ModalityType.TOOLKIT_MODAL);
       AppUIUtilKt.updateAppWindowIcon(dialog);
-      SplashManagerKt.hideSplash();
       runSynchronouslyInBackground(() -> {
         try {
           downloadUpdatesForPlugins(newPluginsDir, options, plugins, brokenPluginVersions, dialog.getIndicator());

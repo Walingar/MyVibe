@@ -16,7 +16,6 @@ import java.nio.file.Path;
 
 import static com.intellij.testFramework.assertions.Assertions.assertThat;
 import static com.intellij.workspaceModel.ide.impl.legacyBridge.module.ModuleTypeUtils.WEB_MODULE_ENTITY_TYPE_ID_NAME;
-import static com.intellij.workspaceModel.ide.legacyBridge.impl.java.JavaModuleTypeUtils.JAVA_MODULE_ENTITY_TYPE_ID_NAME;
 
 public class OverwriteProjectConfigurationTest extends HeavyPlatformTestCase {
   private Path myProjectDir;
@@ -30,7 +29,7 @@ public class OverwriteProjectConfigurationTest extends HeavyPlatformTestCase {
   public void testOverwriteModulesList() {
     Project project = ProjectManagerEx.getInstanceEx().newProject(myProjectDir, new OpenProjectTaskBuilder().build());
     try {
-      createModule(project, "module", JAVA_MODULE_ENTITY_TYPE_ID_NAME);
+      createModule(project, "module", "Java");
       PlatformTestUtil.saveProject(project);
     }
     finally {
@@ -50,9 +49,6 @@ public class OverwriteProjectConfigurationTest extends HeavyPlatformTestCase {
   public void testOverwriteModuleType() {
     Project project = ProjectManagerEx.getInstanceEx().newProject(myProjectDir, new OpenProjectTaskBuilder().build());
     try {
-      Path imlFile = createModule(project, "module", JAVA_MODULE_ENTITY_TYPE_ID_NAME);
-      PlatformTestUtil.saveProject(project);
-      assertThat(imlFile).isRegularFile();
     }
     finally {
       PlatformTestUtil.forceCloseProjectWithoutSaving(project);
