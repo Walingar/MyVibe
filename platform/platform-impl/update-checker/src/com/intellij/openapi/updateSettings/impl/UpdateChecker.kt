@@ -49,7 +49,6 @@ import com.intellij.openapi.util.IntellijInternalApi
 import com.intellij.openapi.util.JDOMUtil
 import com.intellij.openapi.util.NlsContexts
 import com.intellij.openapi.util.text.HtmlBuilder
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.platform.ide.CoreUiCoroutineScopeHolder
 import com.intellij.platform.ide.customization.ExternalProductResourceUrls
 import com.intellij.util.Url
@@ -817,7 +816,7 @@ private suspend fun doUpdateAndShowResult(
         platformUpdates = platformUpdates,
         updatesForPlugins = notIgnoredDownloaders,
         incompatiblePluginNames = incompatiblePluginNames,
-        showNotification = userInitiated || WelcomeFrame.getInstance() != null,
+        showNotification = true,
         forceDialog = forceDialog,
         showSettingsLink = showSettingsLink,
       )

@@ -212,12 +212,6 @@
     <projectService serviceInterface="com.intellij.toolWindow.xNext.toolbar.data.XNextToolbarManager"
                         serviceImplementation="com.intellij.toolWindow.xNext.toolbar.data.XNextToolbarManagerImpl"/>
 
-    <projectService serviceInterface="com.intellij.openapi.wm.ex.WelcomeScreenTabService"
-                    serviceImplementation="com.intellij.openapi.wm.ex.NoWelcomeScreenTabService"
-                    open="true"/>
-    <applicationService serviceInterface="com.intellij.openapi.wm.ex.WelcomeScreenProjectSupport"
-                        serviceImplementation="com.intellij.openapi.wm.ex.WelcomeScreenProjectSupportImpl"/>
-
     <!--XNext-->
     <applicationService serviceInterface="com.intellij.openapi.application.impl.InternalUICustomization"
                         serviceImplementation="com.intellij.openapi.application.impl.islands.IslandsUICustomization"/>

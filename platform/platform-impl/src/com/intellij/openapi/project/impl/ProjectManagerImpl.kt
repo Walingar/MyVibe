@@ -98,8 +98,6 @@ import com.intellij.openapi.vfs.impl.ZipHandler
 import com.intellij.openapi.vfs.impl.jar.TimedZipHandler
 import com.intellij.openapi.wm.IdeFocusManager
 import com.intellij.openapi.wm.WindowManager
-import com.intellij.openapi.wm.ex.ProjectFrameCapabilitiesService
-import com.intellij.openapi.wm.ex.ProjectFrameCapability
 import com.intellij.openapi.wm.ex.WindowManagerEx
 import com.intellij.openapi.wm.ex.isBackgroundActivitiesSuppressed
 import com.intellij.platform.PROJECT_NEWLY_CREATED
@@ -1088,8 +1086,7 @@ open class ProjectManagerImpl : ProjectManagerEx(), Disposable {
   }
 
   private suspend fun checkExistingProjectOnOpen(projectToClose: Project, options: OpenProjectTask, projectDir: Path): Boolean {
-    if (options.forceReuseFrame ||
-        ProjectFrameCapabilitiesService.getInstance().has(projectToClose, ProjectFrameCapability.WELCOME_EXPERIENCE)) {
+    if (options.forceReuseFrame) {
       return !closeAndDisposeKeepingFrame(projectToClose)
     }
 

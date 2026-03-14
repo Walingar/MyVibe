@@ -25,19 +25,8 @@ internal open class GetFromVersionControlAction : DumbAwareAction() {
       return
     }
     if (e.place == ActionPlaces.WELCOME_SCREEN) {
-      if (e.getData(WelcomeScreenActionsUtil.NON_MODAL_WELCOME_SCREEN) == true) {
-        presentation.icon = AllIcons.General.Vcs
-        presentation.text = ActionsBundle.message("Vcs.VcsClone.Tabbed.Welcome.NonModal.text")
-      }
-      else if (FlatWelcomeFrame.USE_TABBED_WELCOME_SCREEN) {
-        presentation.icon = AllIcons.Welcome.FromVCSTab
-        presentation.selectedIcon = AllIcons.Welcome.FromVCSTabSelected
-        presentation.text = ActionsBundle.message("Vcs.VcsClone.Tabbed.Welcome.text")
-      }
-      else {
-        presentation.icon = AllIcons.Vcs.Branch
-        presentation.text = ActionsBundle.message("Vcs.VcsClone.Welcome.text")
-      }
+      presentation.icon = AllIcons.Vcs.Branch
+      presentation.text = ActionsBundle.message("Vcs.VcsClone.Welcome.text")
     }
     else {
       presentation.icon = if (ExperimentalUI.isNewUI() && (ActionPlaces.PROJECT_WIDGET_POPUP == e.place)) PlatformVcsImplIcons.Vcs else null

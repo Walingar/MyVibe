@@ -40,7 +40,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Divider;
 import com.intellij.openapi.util.text.StringUtilRt;
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame;
 import com.intellij.platform.ide.CoreUiCoroutineScopeHolder;
 import com.intellij.ui.OnePixelSplitter;
 import com.intellij.ui.components.ActionLink;
@@ -314,11 +313,8 @@ public class PluginUpdateDialog extends DialogWrapper {
               .setDisplayId("plugins.updated.without.restart")
               .notify(myProject);
           }
-          else if (WelcomeFrame.getInstance() == null) {
-            PluginManagerMain.notifyPluginsUpdated(null);
-          }
           else {
-            PluginManagerConfigurable.shutdownOrRestartApp();
+            PluginManagerMain.notifyPluginsUpdated(null);
           }
         }, ownerComponent != null ? ModalityState.stateForComponent(ownerComponent) : ModalityState.defaultModalityState());
       }

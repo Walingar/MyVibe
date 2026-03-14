@@ -28,8 +28,6 @@ import com.intellij.openapi.vfs.VfsUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.IdeFocusManager;
 import com.intellij.openapi.wm.IdeFrame;
-import com.intellij.openapi.wm.impl.welcomeScreen.ActionsWithPanelProvider;
-import com.intellij.openapi.wm.impl.welcomeScreen.NewWelcomeScreen;
 import com.intellij.platform.DirectoryProjectGenerator;
 import com.intellij.platform.HideableProjectGenerator;
 import com.intellij.platform.PlatformProjectOpenProcessor;
@@ -59,7 +57,7 @@ import static com.intellij.platform.ProjectTemplatesFactory.CUSTOM_GROUP;
 /**
  * Defines the new project wizard, which is used in small IDEs where we don't need to work with modules directly
  */
-public abstract class AbstractNewProjectStep<T> extends DefaultActionGroup implements DumbAware, ActionsWithPanelProvider {
+public abstract class AbstractNewProjectStep<T> extends DefaultActionGroup implements DumbAware {
   public static final ExtensionPointName<DirectoryProjectGenerator<?>> EP_NAME =
     new ExtensionPointName<>("com.intellij.directoryProjectGenerator");
 
@@ -80,7 +78,6 @@ public abstract class AbstractNewProjectStep<T> extends DefaultActionGroup imple
   @Override
   public final void update(@NotNull AnActionEvent e) {
     super.update(e);
-    NewWelcomeScreen.updateNewProjectIconIfWelcomeScreen(e);
     updateActions();
   }
 

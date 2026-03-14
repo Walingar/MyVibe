@@ -43,7 +43,6 @@ import com.intellij.openapi.wm.IdeFrame
 import com.intellij.openapi.wm.WindowManager
 import com.intellij.openapi.wm.ex.ProgressIndicatorEx
 import com.intellij.openapi.wm.ex.StatusBarEx
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.platform.ide.CoreUiCoroutineScopeHolder
 import com.intellij.platform.ide.progress.withBackgroundProgress
 import com.intellij.platform.util.coroutines.childScope
@@ -1076,7 +1075,6 @@ open class MyPluginModel(project: Project?) : InstalledPluginsTableModel(project
     internal val myInstallingInfos: MutableMap<PluginId, InstallPluginInfo> = mutableMapOf()
 
     private fun getStatusBar(frame: Window?): StatusBarEx? {
-      if (frame is WelcomeFrame) return null
       if (frame is IdeFrame) {
         return frame.statusBar as? StatusBarEx
       }

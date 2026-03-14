@@ -36,9 +36,6 @@ import com.intellij.openapi.ui.Messages
 import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.openapi.vfs.VfsUtil
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.openapi.wm.impl.welcomeScreen.FlatWelcomeFrame
-import com.intellij.openapi.wm.impl.welcomeScreen.NewWelcomeScreen
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenActionsUtil
 import com.intellij.platform.PlatformProjectOpenProcessor
 import com.intellij.platform.ide.CoreUiCoroutineScopeHolder
 import com.intellij.project.ProjectStoreOwner
@@ -120,24 +117,7 @@ open class OpenFileAction : AnAction(), DumbAware, LightEditCompatible, ActionRe
   @Suppress("unused")
   internal class OnWelcomeScreen : OpenFileAction() {
     override fun update(e: AnActionEvent) {
-      val presentation = e.presentation
-      if (!NewWelcomeScreen.isNewWelcomeScreen(e)) {
-        presentation.isEnabledAndVisible = false
-        return
-      }
-
-      if (e.getData(WelcomeScreenActionsUtil.NON_MODAL_WELCOME_SCREEN) == true) {
-        presentation.icon = AllIcons.Nodes.Folder
-        presentation.text = ActionsBundle.message("action.Tabbed.WelcomeScreen.NonModal.OpenProject.text")
-      }
-      else if (FlatWelcomeFrame.USE_TABBED_WELCOME_SCREEN) {
-        presentation.icon = AllIcons.Welcome.Open
-        presentation.selectedIcon = AllIcons.Welcome.OpenSelected
-        presentation.text = ActionsBundle.message("action.Tabbed.WelcomeScreen.OpenProject.text")
-      }
-      else {
-        presentation.icon = AllIcons.Actions.MenuOpen
-      }
+      e.presentation.isEnabledAndVisible = false
     }
   }
 
@@ -145,9 +125,7 @@ open class OpenFileAction : AnAction(), DumbAware, LightEditCompatible, ActionRe
     get() = VfsUtil.getUserHomeDir()
 
   override fun update(e: AnActionEvent) {
-    if (NewWelcomeScreen.isNewWelcomeScreen(e)) {
-      e.presentation.icon = AllIcons.Actions.MenuOpen
-    }
+    e.presentation.icon = AllIcons.Actions.MenuOpen
   }
 
   override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT

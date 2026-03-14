@@ -51,7 +51,6 @@ jvm_library(
     "//platform/remote-core",
     "//platform/ide-core",
     "//platform/project-frame",
-    "//platform/welcome-screen",
     "//platform/util/text-matching",
     "//platform/diagnostic",
     "//libraries/caffeine",
@@ -67,7 +66,6 @@ jvm_library(
     "//platform/editor-ui-api:editor-ui",
     "//platform/util:util-ui",
     "//platform/ide-core",
-    "//platform/welcome-screen",
     "//platform/progress/shared:ide-progress",
   ]
 )
@@ -87,8 +85,6 @@ jvm_library(
     "//platform/util:util-ui_test_lib",
     "//platform/ide-core",
     "//platform/ide-core:ide-core_test_lib",
-    "//platform/welcome-screen",
-    "//platform/welcome-screen:welcome-screen_test_lib",
     "//platform/progress/shared:ide-progress",
     "//platform/progress/shared:ide-progress_test_lib",
   ],
@@ -117,7 +113,6 @@ jvm_library(
     "//platform/remote-core:remote-core_test_lib",
     "//platform/ide-core:ide-core_test_lib",
     "//platform/project-frame:project-frame_test_lib",
-    "//platform/welcome-screen:welcome-screen_test_lib",
     "//platform/util/text-matching:text-matching_test_lib",
     "//platform/diagnostic:diagnostic_test_lib",
     "//libraries/caffeine:caffeine_test_lib",

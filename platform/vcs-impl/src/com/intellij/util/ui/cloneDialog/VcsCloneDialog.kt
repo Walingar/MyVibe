@@ -13,7 +13,6 @@ import com.intellij.openapi.vcs.ui.VcsCloneComponent
 import com.intellij.openapi.vcs.ui.cloneDialog.VcsCloneDialogComponentStateListener
 import com.intellij.openapi.vcs.ui.cloneDialog.VcsCloneDialogExtension
 import com.intellij.openapi.vcs.ui.cloneDialog.VcsCloneDialogExtensionComponent
-import com.intellij.openapi.wm.impl.welcomeScreen.FlatWelcomeFrame
 import com.intellij.ui.CollectionListModel
 import com.intellij.ui.IdeBorderFactory
 import com.intellij.ui.ScrollPaneFactory
@@ -50,7 +49,7 @@ class VcsCloneDialog private constructor(private val project: Project) : DialogW
   init {
     init()
     title = VcsBundle.message("get.from.version.control")
-    JBUI.size(FlatWelcomeFrame.MAX_DEFAULT_WIDTH, FlatWelcomeFrame.DEFAULT_HEIGHT).let {
+    JBUI.size(1000, 670).let {
       rootPane.minimumSize = it
       rootPane.preferredSize = it
     }

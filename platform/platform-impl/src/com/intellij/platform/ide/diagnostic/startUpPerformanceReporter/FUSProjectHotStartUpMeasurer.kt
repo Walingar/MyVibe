@@ -28,7 +28,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManager
 import com.intellij.openapi.vfs.FileIdAdapter
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.openapi.wm.ex.WelcomeScreenProjectProvider
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer.EmptyProjectMarker
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer.MarkupType
 import com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.FUSProjectHotStartUpMeasurer.getContextElementWithEmptyProjectElementToPass
@@ -259,7 +258,6 @@ object FUSProjectHotStartUpMeasurer {
     when {
       size == 0 -> reportViolation(Violation.NoProjectFound)
       size > 1 -> openingMultipleProjects(true, size, false)
-      openPaths[0] == WelcomeScreenProjectProvider.getWelcomeScreenProjectPath() -> reportWelcomeScreenShown()
       else -> reportProjectType(ProjectsType.Reopened)
       // light edit files are not reopened
     }
@@ -285,10 +283,6 @@ object FUSProjectHotStartUpMeasurer {
 
     if (currentThreadContext().getProjectMarker() != null) {
       return block.invoke()
-    }
-
-    if (projectFile == WelcomeScreenProjectProvider.getWelcomeScreenProjectPath()) {
-      reportWelcomeScreenShown()
     }
 
     val projectId = if (IdeProductMode.isFrontend) {

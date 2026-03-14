@@ -22,10 +22,6 @@ import com.intellij.openapi.util.registry.Registry
 import com.intellij.openapi.util.text.NaturalComparator
 import com.intellij.openapi.wm.impl.headertoolbar.ProjectStatus
 import com.intellij.openapi.wm.impl.headertoolbar.ProjectToolbarWidgetPresentable
-import com.intellij.openapi.wm.impl.welcomeScreen.recentProjects.ProjectsGroupItem
-import com.intellij.openapi.wm.impl.welcomeScreen.recentProjects.ProviderRecentProjectItem
-import com.intellij.openapi.wm.impl.welcomeScreen.recentProjects.RecentProjectItem
-import com.intellij.openapi.wm.impl.welcomeScreen.recentProjects.RecentProjectTreeItem
 import com.intellij.ui.UIBundle
 import com.intellij.util.containers.forEachLoggingErrors
 import org.jetbrains.annotations.ApiStatus.Internal
@@ -492,18 +488,39 @@ private fun getProviderProjectId(provider: RecentProjectProvider, project: Recen
   return provider.providerId + "$" + (project.projectId ?: project.displayName)
 }
 
-private val RecentProjectTreeItem.activationTimestamp
-  get() = when (this) {
-    is RecentProjectItem -> activationTimestamp
-    is ProviderRecentProjectItem -> activationTimestamp
-    else -> null
-  }
-
 private val AnAction.activationTimestamp
   get() = when (this) {
     is ProjectToolbarWidgetPresentable -> activationTimestamp
     else -> null
   }
+
+sealed interface RecentProjectTreeItem {
+  val activationTimestamp: Long?
+}
+
+data class ProjectsGroupItem(
+  val projectGroup: ProjectGroup,
+  val children: List<RecentProjectItem>,
+) : RecentProjectTreeItem {
+  override val activationTimestamp: Long? = children.maxOfOrNull { it.activationTimestamp ?: 0L }
+}
+
+data class RecentProjectItem(
+  val projectPath: String,
+  val projectName: String,
+  val displayName: String,
+  val branchName: String?,
+  override val activationTimestamp: Long?,
+  val projectGroup: ProjectGroup?,
+) : RecentProjectTreeItem
+
+data class ProviderRecentProjectItem(
+  val projectId: String,
+  val recentProject: RecentProject,
+) : RecentProjectTreeItem {
+  override val activationTimestamp: Long?
+    get() = recentProject.activationTimestamp
+}
 
 private val EP_NAME: ExtensionPointName<RecentProjectsBranchesProvider> = ExtensionPointName("com.intellij.recentProjectsBranchesProvider")
 

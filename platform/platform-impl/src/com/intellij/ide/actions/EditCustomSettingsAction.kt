@@ -26,7 +26,6 @@ import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.openapi.vfs.VfsUtilCore
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.psi.PsiManager
 import com.intellij.ui.EditorTextField
 import com.intellij.util.ui.IoErrorText
@@ -38,6 +37,7 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
 import javax.swing.JFrame
+import javax.swing.JOptionPane
 import javax.swing.ScrollPaneConstants
 
 @ApiStatus.Internal
@@ -50,7 +50,7 @@ abstract class EditCustomSettingsAction : DumbAwareAction() {
   override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT
 
   override fun update(e: AnActionEvent) {
-    e.presentation.isEnabled = (e.project != null || WelcomeFrame.getInstance() != null) && file() != null
+    e.presentation.isEnabled = file() != null
   }
 
   override fun actionPerformed(e: AnActionEvent) {
@@ -63,7 +63,7 @@ abstract class EditCustomSettingsAction : DumbAwareAction() {
       }
     }
     else {
-      val frame = WelcomeFrame.getInstance() as JFrame?
+      val frame = JOptionPane.getRootFrame() as? JFrame
       if (frame != null) {
         WriteIntentReadAction.run {
           openInDialog(file, frame)

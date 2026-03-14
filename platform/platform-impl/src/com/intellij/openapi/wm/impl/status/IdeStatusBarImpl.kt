@@ -64,8 +64,6 @@ import com.intellij.openapi.wm.impl.status.TextPanel.WithIconAndArrows
 import com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsActionGroup
 import com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager
 import com.intellij.openapi.wm.impl.status.widget.WidgetPresentationWrapper
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService.CloneProjectListener
 import com.intellij.platform.diagnostic.telemetry.impl.span
 import com.intellij.platform.ide.progress.ModalTaskOwner
 import com.intellij.platform.ide.progress.runWithModalProgressBlocking
@@ -298,7 +296,6 @@ open class IdeStatusBarImpl @Internal constructor(
   internal fun initialize() {
     LOG.info("Initializing status bar")
 
-    registerCloneTasks()
     project?.service<PerProjectTaskInfoEntityCollector>()?.startCollectingActiveTasks()
   }
 
@@ -814,19 +811,6 @@ open class IdeStatusBarImpl @Internal constructor(
 
   private fun fireWidgetRemoved(id: String) {
     listeners.multicaster.widgetRemoved(id)
-  }
-
-  private fun registerCloneTasks() {
-    CloneableProjectsService.getInstance()
-      .collectCloneableProjects()
-      .map { it.cloneableProject }
-      .forEach { addProgress(indicator = it.progressIndicator, info = it.cloneTaskInfo) }
-    ApplicationManager.getApplication().messageBus.connect(coroutineScope)
-      .subscribe(CloneableProjectsService.TOPIC, object : CloneProjectListener {
-        override fun onCloneAdded(progressIndicator: ProgressIndicatorEx, taskInfo: TaskInfo) {
-          addProgress(progressIndicator, taskInfo)
-        }
-      })
   }
 
   @Suppress("RedundantInnerClassModifier")

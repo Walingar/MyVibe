@@ -678,26 +678,6 @@
 
     <registryKey key="lists.use.open.in.right.splitter" defaultValue="true"
                  description="Add icon 'open In right splitter' to recent files menu"/>
-    <welcomeFrameProvider implementation="com.intellij.openapi.wm.impl.welcomeScreen.FlatWelcomeFrameProvider"/>
-    <welcomeTabFactory id="ProjectsWelcomeTab" implementation="com.intellij.openapi.wm.impl.welcomeScreen.ProjectsTabFactory"/>
-    <registryKey defaultValue="3" description="Number of primary buttons on welcome screen (other go to 'more actions')" key="welcome.screen.primaryButtonsCount" restartRequired="true"/>
-    <statistics.counterUsagesCollector
-      implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.survey.IdeSurveyCollector"/>
-    <statistics.counterUsagesCollector
-      implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.statistics.WelcomeScreenCounterUsageCollector"/>
-    <statistics.counterUsagesCollector
-      implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.statistics.WslPromoPanelUsageCollector"/>
-    <welcomeTabFactory id="CustomizeWelcomeTab" implementation="com.intellij.openapi.wm.impl.welcomeScreen.CustomizeTabFactory"
-                       order="after ProjectsWelcomeTab"/>
-    <welcomeTabFactory id="PluginsWelcomeTab" implementation="com.intellij.openapi.wm.impl.welcomeScreen.PluginsTabFactory"
-                       order="after CustomizeWelcomeTab"/>
-    <welcomeTabFactory id="LearnIdeWelcomeTab" implementation="com.intellij.openapi.wm.impl.welcomeScreen.LearnIdeTabFactory"
-                       order="after PluginsWelcomeTab"/>
-    <welcomeScreenCustomization id="defaultCustomization"
-                                implementation="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenDefaultCustomization"/>
-
-    <startPagePromoter implementation="com.intellij.openapi.wm.impl.welcomeScreen.TechInsightsLabPromoter"/>
-    <statistics.counterUsagesCollector implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.TechInsightsLabCollector"/>
 
     <statistics.counterUsagesCollector implementationClass="com.intellij.platform.ide.bootstrap.IdeStartupWizardCollector"/>
     <registryKey defaultValue="-1"
@@ -1025,11 +1005,6 @@
     <statistics.projectUsagesCollector
       implementation="com.intellij.internal.statistic.collectors.fus.project.IntelliJProjectUsageCollector"/>
     <statistics.counterUsagesCollector implementationClass="com.intellij.ide.ui.localization.statistics.LocalizationActionsStatistics"/>
-    <statistics.counterUsagesCollector implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenEventCollector"/>
-    <statistics.counterUsagesCollector
-      implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.WelcomeScreenCloneCollector"/>
-    <statistics.counterUsagesCollector
-      implementationClass="com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.VcsCloneCollector"/>
 
     <statistics.counterUsagesCollector implementationClass="com.intellij.internal.statistic.collectors.fus.SpeculativeUndoStatCollector" />
     <statistics.counterUsagesCollector
@@ -1531,8 +1506,6 @@
     <postStartupActivity implementation="com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.StartupMetricCollector"/>
 
     <statistics.counterUsagesCollector
-      implementationClass="com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.WelcomeScreenPerformanceCollector"/>
-    <statistics.counterUsagesCollector
       implementationClass="com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.HotProjectReopenStartUpPerformanceCollector"/>
 
     <postStartupActivity implementation="com.intellij.ide.startup.CheckProjectActivity"/>
@@ -1841,9 +1814,6 @@
     <registryKey key="wayland.screen.vInsets" defaultValue="50" description="The sum of vertical screen insets (top + bottom) assumed for Wayland (because it doesn't report the actual insets)"/>
     <actionPromoter implementation="com.intellij.ide.actions.speedSearch.SpeedSearchActionPromoter"/>
 
-    <fileEditorProvider id="learnIde" implementation="com.intellij.openapi.wm.impl.welcomeScreen.learnIde.editorTab.LearnIdeFileEditorProvider"/>
-    <interactiveCourseFactory implementation="com.intellij.openapi.wm.impl.welcomeScreen.learnIde.jbAcademy.JBAcademyInteractiveCourse"/>
-
     <cachesInvalidator implementation="com.intellij.ide.ui.IconCacheInvalidator"/>
 
     <cachesInvalidator implementation="com.intellij.openapi.editor.impl.zombie.NecropolisDestroyer$InvalidationRequest"/>
@@ -2093,8 +2063,6 @@
               topic="com.intellij.openapi.actionSystem.ex.AnActionListener" activeInTestMode="false"/>
     <listener class="com.intellij.internal.statistic.collectors.fus.TypingEventsLogger$TypingLatencyReporter"
               topic="com.intellij.openapi.fileEditor.FileEditorManagerListener" activeInTestMode="false"/>
-    <listener class="com.intellij.featureStatistics.StatisticsStateCollectorsTrigger" activeInTestMode="false" activeInHeadlessMode="false"
-              topic="com.intellij.ide.AppLifecycleListener"/>
     <listener class="com.intellij.ide.plugins.CreateAllServicesAndExtensionsActivity"
               topic="com.intellij.ide.AppLifecycleListener" activeInHeadlessMode="false" activeInTestMode="false"/>
     <listener class="com.intellij.ide.actionsOnSave.impl.CurrentActionListener"

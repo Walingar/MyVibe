@@ -8,7 +8,6 @@ import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.ex.CheckboxAction
 import com.intellij.openapi.project.DumbAware
-import com.intellij.openapi.wm.impl.welcomeScreen.projectActions.repaintFrame
 
 internal class UseProjectColorsCheckboxAction : CheckboxAction(), DumbAware {
   override fun update(e: AnActionEvent) {
@@ -25,7 +24,6 @@ internal class UseProjectColorsCheckboxAction : CheckboxAction(), DumbAware {
     val uiSettings = UISettings.getInstance()
     uiSettings.differentiateProjects = state
     uiSettings.fireUISettingsChanged()
-    repaintFrame(e.project)
   }
 
   override fun getActionUpdateThread() = ActionUpdateThread.BGT

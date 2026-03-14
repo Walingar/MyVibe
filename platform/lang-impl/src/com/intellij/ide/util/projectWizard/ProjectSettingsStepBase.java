@@ -8,6 +8,7 @@ import com.intellij.ide.IdeBundle;
 import com.intellij.ide.impl.ProjectUtil;
 import com.intellij.lang.LangBundle;
 import com.intellij.openapi.Disposable;
+import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.AccessToken;
 import com.intellij.openapi.application.WriteIntentReadAction;
@@ -28,7 +29,6 @@ import com.intellij.openapi.util.io.FileUtil;
 import com.intellij.openapi.util.io.OSAgnosticPathUtil;
 import com.intellij.openapi.util.text.HtmlChunk;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.openapi.wm.impl.welcomeScreen.AbstractActionWithPanel;
 import com.intellij.platform.DirectoryProjectGenerator;
 import com.intellij.platform.ProjectGeneratorPeer;
 import com.intellij.platform.templates.TemplateProjectDirectoryGenerator;
@@ -65,12 +65,12 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import static com.intellij.openapi.ui.UiUtils.getPresentablePath;
-import static com.intellij.openapi.wm.impl.welcomeScreen.FlatWelcomeFrame.BOTTOM_PANEL;
 
 /**
  * {@link AbstractNewProjectStep}
  */
-public class ProjectSettingsStepBase<T> extends AbstractActionWithPanel implements DumbAware, Disposable {
+public class ProjectSettingsStepBase<T> extends AnAction implements DumbAware, Disposable {
+  private static final String BOTTOM_PANEL = "BOTTOM_PANEL";
   protected final DirectoryProjectGenerator<T> myProjectGenerator;
   protected AbstractNewProjectStep.AbstractCallback<T> myCallback;
   protected TextFieldWithBrowseButton myLocationField;
@@ -110,12 +110,10 @@ public class ProjectSettingsStepBase<T> extends AbstractActionWithPanel implemen
   public void actionPerformed(@NotNull AnActionEvent e) {
   }
 
-  @Override
   public void onPanelSelected() {
     checkWebProjectValid();
   }
 
-  @Override
   public @NotNull JButton getActionButton() {
     return myCreateButton;
   }
@@ -124,7 +122,6 @@ public class ProjectSettingsStepBase<T> extends AbstractActionWithPanel implemen
     return myProjectGenerator.createLazyPeer();
   }
 
-  @Override
   public JPanel createPanel() {
     myLazyGeneratorPeer = createLazyPeer();
     final JPanel mainPanel = new JPanel(new BorderLayout());

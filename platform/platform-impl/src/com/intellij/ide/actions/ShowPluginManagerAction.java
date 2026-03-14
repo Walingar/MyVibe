@@ -19,11 +19,11 @@ import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectUtil;
 import com.intellij.openapi.util.registry.Registry;
-import com.intellij.openapi.wm.impl.welcomeScreen.PluginsTabFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.JComponent;
+import java.util.Objects;
 
 final class ShowPluginManagerAction extends AnAction implements DumbAware, ActionRemoteBehaviorSpecification.Frontend {
   @Override
@@ -66,7 +66,7 @@ final class ShowPluginManagerAction extends AnAction implements DumbAware, Actio
     @Override
     public @NotNull JComponent createComponent() {
       configurable = new PluginManagerConfigurable();
-      return PluginsTabFactory.createPluginsPanel(configurable);
+      return Objects.requireNonNull(configurable.createComponent());
     }
 
     @Override

@@ -12,7 +12,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
 import com.intellij.openapi.util.SystemInfo
 import com.intellij.openapi.util.SystemInfoRt
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jetbrains.annotations.ApiStatus
@@ -79,23 +78,12 @@ object WslUsagesCollector : CounterUsagesCollector() {
 
   override fun getGroup(): EventLogGroup = WSL_USAGES_GROUP
 
-  fun beforeProjectCreated(path: Path, task: CloneableProjectsService.CloneTask? = null) {
+  fun beforeProjectCreated(path: Path) {
     if (!SystemInfo.isWindows) return
     path.invariantSeparatorsPathString.takeIf { it.isWslPath() }?.let {
-      newProjectData.put(it, ProjectData(getVcsType(task)))
+      newProjectData.put(it, ProjectData(VcsType.None))
     }
   }
-
-  private fun getVcsType(task: CloneableProjectsService.CloneTask? = null): VcsType =
-    task?.let {
-      val className = it.javaClass.name
-      when {
-        className.contains("SvnCheckout") -> VcsType.Svn
-        className.contains("GitCheckout") -> VcsType.Git
-        className.contains("HgCheckout") -> VcsType.Hg
-        else -> VcsType.Other
-      }
-    } ?: VcsType.None
 
   private fun String.isWslPath() = WSL_PATH_PREFIXES.any { this.startsWith(it) }
 
@@ -150,4 +138,3 @@ object WslUsagesCollector : CounterUsagesCollector() {
 
   }
 }
-

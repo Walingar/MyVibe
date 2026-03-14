@@ -3,7 +3,6 @@ package com.intellij.ide.startup.importSettings.chooser.ui
 
 import com.intellij.ide.startup.importSettings.data.NotificationData
 import com.intellij.openapi.ui.VerticalFlowLayout
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenUIManager
 import com.intellij.ui.AnimatedIcon
 import com.intellij.ui.EditorNotificationPanel
 import com.intellij.ui.InlineBanner
@@ -13,6 +12,7 @@ import com.intellij.ui.components.panels.HorizontalLayout
 import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.util.ui.JBUI
+import com.intellij.util.ui.UIUtil
 import com.jetbrains.rd.util.lifetime.Lifetime
 import java.awt.Dimension
 import javax.swing.JComponent
@@ -50,7 +50,7 @@ internal class BannerOverlay(comp: JComponent) {
            }?.let {
       val banner =
         if (isPlain) PlainInlineBanner(notification.message, it).apply {
-          background = WelcomeScreenUIManager.getMainAssociatedComponentBackground()
+          background = UIUtil.getPanelBackground()
         }
         else InlineBanner(notification.message, it)
 

@@ -3,6 +3,7 @@ package com.intellij.ide
 
 import com.intellij.CommonBundle
 import com.intellij.ide.impl.OpenProjectTask
+import com.intellij.ide.impl.ProjectUtil
 import com.intellij.ide.lightEdit.LightEdit
 import com.intellij.ide.lightEdit.LightEditCompatible
 import com.intellij.openapi.actionSystem.ActionPlaces
@@ -17,7 +18,6 @@ import com.intellij.openapi.util.NlsSafe
 import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.util.io.FileUtilRt
 import com.intellij.openapi.wm.impl.headertoolbar.ProjectToolbarWidgetPresentable
-import com.intellij.openapi.wm.impl.welcomeScreen.recentProjects.RecentProjectItem.Companion.openProjectAndLogRecent
 import com.intellij.platform.eel.provider.EelInitialization
 import com.intellij.platform.eel.EelUnavailableException
 import com.intellij.platform.ide.progress.ModalTaskOwner
@@ -125,7 +125,7 @@ open class ReopenProjectAction @JvmOverloads constructor(
                             LightEdit.owns(project)
       runConfigurators = true
     }
-    openProjectAndLogRecent(file = file, options = options, projectGroup = projectGroup)
+    ProjectUtil.openOrImport(file, options)
   }
 
   val projectName: @NlsSafe String?

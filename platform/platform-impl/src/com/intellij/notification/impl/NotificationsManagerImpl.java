@@ -52,8 +52,6 @@ import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.wm.IdeFrame;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.WindowManager;
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeBalloonLayoutImpl;
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame;
 import com.intellij.platform.diagnostic.telemetry.IJTracer;
 import com.intellij.platform.diagnostic.telemetry.TelemetryManager;
 import com.intellij.platform.diagnostic.telemetry.helpers.TraceKt;
@@ -417,7 +415,7 @@ public final class NotificationsManagerImpl extends NotificationsManager {
     if (project == null || project.isDefault()) {
       BalloonLayoutData layoutData = new BalloonLayoutData();
       layoutData.groupId = "";
-      layoutData.welcomeScreen = layout instanceof WelcomeBalloonLayoutImpl;
+      layoutData.welcomeScreen = false;
       layoutData.type = notification.getType();
       layoutDataRef.set(layoutData);
     }
@@ -480,9 +478,6 @@ public final class NotificationsManagerImpl extends NotificationsManager {
 
   public static @Nullable Window findWindowForBalloon(@Nullable Project project) {
     Window frame = WindowManager.getInstance().getFrame(project);
-    if (frame == null && project == null) {
-      frame = (Window)WelcomeFrame.getInstance();
-    }
     if (frame == null && project == null) {
       frame = KeyboardFocusManager.getCurrentKeyboardFocusManager().getActiveWindow();
       while (frame instanceof DialogWrapperDialog) {

@@ -69,7 +69,6 @@ import com.intellij.openapi.util.SystemInfoRt
 import com.intellij.openapi.util.registry.Registry
 import com.intellij.openapi.wm.impl.IdeGlassPaneImpl
 import com.intellij.openapi.wm.impl.ToolWindowManagerImpl
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.platform.diagnostic.telemetry.impl.span
 import com.intellij.ui.AppUIUtil
 import com.intellij.ui.CollectionComboBoxModel
@@ -570,7 +569,7 @@ class LafManagerImpl(private val coroutineScope: CoroutineScope) : LafManager(),
   }
 
   override fun getLookAndFeelCellRenderer(component: JComponent): ListCellRenderer<LafReference> {
-    val welcomeMode = WelcomeFrame.getInstance() != null
+    val welcomeMode = false
 
     return listCellRenderer {
       toolTipText = null
@@ -672,9 +671,6 @@ class LafManagerImpl(private val coroutineScope: CoroutineScope) : LafManager(),
   }
 
   private fun checkRestart(lookAndFeelInfo: UIThemeLookAndFeelInfo, oldLaf: UIThemeLookAndFeelInfo?): Boolean {
-    if (WelcomeFrame.getInstance() != null) {
-      return false
-    }
     if (!lookAndFeelInfo.isRestartRequired() && oldLaf?.isRestartRequired() == false) {
       return false
     }

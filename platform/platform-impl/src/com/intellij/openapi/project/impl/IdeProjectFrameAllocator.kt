@@ -59,7 +59,6 @@ import com.intellij.openapi.wm.WindowManager
 import com.intellij.openapi.wm.ex.ProjectFrameCapabilitiesService
 import com.intellij.openapi.wm.ex.ProjectFrameUiPolicy
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener
-import com.intellij.openapi.wm.ex.WelcomeScreenTabService
 import com.intellij.openapi.wm.impl.FrameBoundsConverter
 import com.intellij.openapi.wm.impl.FrameInfo
 import com.intellij.openapi.wm.impl.FrameInfoHelper
@@ -474,7 +473,6 @@ private suspend fun restoreEditors(project: Project, fileEditorManager: FileEdit
 
     val (editorComponent, editorState) = fileEditorManager.init()
     if (editorState == null) {
-      WelcomeScreenTabService.getInstance(fileEditorManager.project).openTab()
       serviceAsync<StartUpPerformanceService>().editorRestoringTillHighlighted()
       return@coroutineScope
     }

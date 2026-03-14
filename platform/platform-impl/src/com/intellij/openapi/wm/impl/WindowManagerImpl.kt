@@ -31,7 +31,6 @@ import com.intellij.openapi.wm.ex.WindowManagerListener
 import com.intellij.openapi.wm.impl.FrameInfoHelper.Companion.isFullScreenSupportedInCurrentOs
 import com.intellij.openapi.wm.impl.FrameInfoHelper.Companion.isMaximized
 import com.intellij.openapi.wm.impl.status.IdeStatusBarImpl
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame
 import com.intellij.ui.ComponentUtil
 import com.intellij.ui.ScreenUtil
 import com.intellij.util.application
@@ -130,9 +129,7 @@ class WindowManagerImpl : WindowManagerEx(), PersistentStateComponentWithModific
 
   override fun getProjectFrameHelpers(): List<ProjectFrameHelper> = projectToFrame.values.map { it.frameHelper }
 
-  override fun findVisibleFrame(): JFrame? {
-    return projectToFrame.values.firstOrNull()?.frameHelper?.frame ?: WelcomeFrame.getInstance() as? JFrame
-  }
+  override fun findVisibleFrame(): JFrame? = projectToFrame.values.firstOrNull()?.frameHelper?.frame
 
   override fun findFirstVisibleFrameHelper(): ProjectFrameHelper? = projectToFrame.values.asSequence().map { it.frameHelper }.firstOrNull()
 
@@ -247,7 +244,7 @@ class WindowManagerImpl : WindowManagerEx(), PersistentStateComponentWithModific
   override fun findFrameFor(project: Project?): IdeFrame? {
     return when {
       project == null -> ProjectFrameHelper.getFrameHelper(mostRecentFocusedWindow) ?: tryToFindTheOnlyFrame()
-      project.isDefault -> WelcomeFrame.getInstance()
+      project.isDefault -> null
       else -> getFrameHelper(project) ?: getFrameHelper(null)
     }
   }

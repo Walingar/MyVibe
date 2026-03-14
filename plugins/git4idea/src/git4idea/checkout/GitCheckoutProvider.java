@@ -3,12 +3,12 @@ package git4idea.checkout;
 
 import com.intellij.dvcs.DvcsUtil;
 import com.intellij.dvcs.ui.DvcsBundle;
-import com.intellij.internal.statistic.eventLog.events.EventPair;
 import com.intellij.openapi.application.ModalityState;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
+import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.NlsSafe;
 import com.intellij.openapi.util.text.HtmlBuilder;
@@ -20,11 +20,6 @@ import com.intellij.openapi.vcs.ui.VcsCloneComponent;
 import com.intellij.openapi.vcs.ui.cloneDialog.VcsCloneDialogComponentStateListener;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService;
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService.CloneStatus;
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService.CloneTask;
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.CloneableProjectsService.CloneTaskInfo;
-import com.intellij.openapi.wm.impl.welcomeScreen.cloneableProjects.VcsCloneCollector;
 import com.intellij.util.containers.ContainerUtil;
 import git4idea.GitUtil;
 import git4idea.GitVcs;
@@ -41,9 +36,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static git4idea.GitNotificationIdsHolder.CLONE_FAILED;
@@ -102,31 +95,9 @@ public final class GitCheckoutProvider extends CheckoutProviderEx {
                            final String directoryName,
                            final String parentDirectory,
                            final GitShallowCloneOptions shallowCloneOptions) {
-    Path projectPath = Paths.get(parentDirectory, directoryName).toAbsolutePath();
-
-    CloneTask cloneTask = new CloneTask() {
-
+    ProgressManager.getInstance().run(new Task.Backgroundable(project, DvcsBundle.message("cloning.repository", sourceRepositoryURL), true) {
       @Override
-      public @NotNull CloneTaskInfo taskInfo() {
-        return new CloneTaskInfo(DvcsBundle.message("cloning.repository", sourceRepositoryURL),
-                                 DvcsBundle.message("cloning.repository.cancel", sourceRepositoryURL),
-                                 DvcsBundle.message("clone.repository"),
-                                 DvcsBundle.message("clone.repository.tooltip"),
-                                 DvcsBundle.message("clone.repository.failed"),
-                                 DvcsBundle.message("clone.repository.canceled"),
-                                 DvcsBundle.message("clone.stop.message.title"),
-                                 DvcsBundle.message("clone.stop.message.description", sourceRepositoryURL)) {
-          @Override
-          public @NotNull List<@NotNull EventPair<?>> getActivityData() {
-            if (shallowCloneOptions == null || shallowCloneOptions.getDepth() == null) return Collections.emptyList();
-            int depth = shallowCloneOptions.getDepth();
-            return List.of(VcsCloneCollector.SHALLOW_CLONE_DEPTH.with(depth));
-          }
-        };
-      }
-
-      @Override
-      public @NotNull CloneStatus run(@NotNull ProgressIndicator indicator) {
+      public void run(@NotNull ProgressIndicator indicator) {
         indicator.setIndeterminate(false);
         GitLineHandlerListener progressListener = GitStandardProgressAnalyzer.createListener(indicator);
 
@@ -150,20 +121,15 @@ public final class GitCheckoutProvider extends CheckoutProviderEx {
 
           listener.directoryCheckedOut(directory, GitVcs.getKey());
           listener.checkoutCompleted();
-
-          return CloneStatus.SUCCESS;
+          return;
         }
 
         notifyError(project, result, sourceRepositoryURL);
         if (listener instanceof GitCheckoutListener) {
           ((GitCheckoutListener) listener).checkoutFailed(result);
         }
-
-        return CloneStatus.FAILURE;
       }
-    };
-
-    CloneableProjectsService.getInstance().runCloneTask(projectPath, cloneTask);
+    });
   }
 
   public static boolean doClone(@NotNull Project project,

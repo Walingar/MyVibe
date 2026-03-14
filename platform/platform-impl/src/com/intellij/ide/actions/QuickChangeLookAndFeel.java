@@ -31,7 +31,6 @@ import com.intellij.openapi.util.Condition;
 import com.intellij.openapi.util.Disposer;
 import com.intellij.openapi.util.Ref;
 import com.intellij.openapi.util.registry.Registry;
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame;
 import com.intellij.ui.components.panels.NonOpaquePanel;
 import com.intellij.ui.icons.IconUtilKt;
 import com.intellij.ui.popup.ActionPopupOptions;
@@ -83,8 +82,7 @@ public final class QuickChangeLookAndFeel extends QuickSwitchSchemeAction implem
 
   @Override
   protected @NotNull ListPopup createPopup(AnActionEvent e, DefaultActionGroup group, JBPopupFactory.ActionSelectionAid aid) {
-    if (WelcomeFrame.getInstance() == null &&
-        ContainerUtil.exists(group.getChildren(e), action -> action instanceof LafChangeAction lafAction &&
+    if (ContainerUtil.exists(group.getChildren(e), action -> action instanceof LafChangeAction lafAction &&
                                                              (lafAction.myLookAndFeelInfo.isRestartRequired()))) {
       return new PopupFactoryImpl.ActionGroupPopup(null, getPopupTitle(e), group, e.getDataContext(),
                                                    myActionPlace == null ? ActionPlaces.POPUP : myActionPlace, new PresentationFactory(),

@@ -56,9 +56,6 @@ import com.intellij.openapi.util.Disposer;
 import com.intellij.openapi.util.NlsContexts;
 import com.intellij.openapi.util.text.HtmlChunk;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.openapi.wm.WelcomeScreen;
-import com.intellij.openapi.wm.impl.welcomeScreen.PluginsTabFactory;
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenEventCollector;
 import com.intellij.ui.ComponentUtil;
 import com.intellij.ui.GotItTooltip;
 import com.intellij.ui.components.JBScrollPane;
@@ -472,7 +469,7 @@ public final class PluginManagerConfigurablePanel implements Disposable {
       myDisposeStarted = true;
     }
 
-    if (ComponentUtil.getParentOfType(WelcomeScreen.class, myCardPanel) != null && isModified()) {
+    if (isModified()) {
       scheduleApply();
     }
     InstalledPluginsState pluginsState = InstalledPluginsState.getInstance();
@@ -522,7 +519,6 @@ public final class PluginManagerConfigurablePanel implements Disposable {
     ApplicationManager.getApplication().invokeLater(() -> {
       try {
         apply();
-        WelcomeScreenEventCollector.logPluginsModified();
         synchronized (myCallbackLock) {
           if (myDisposeStarted && !myShutdownCallbackExecuted) {
             InstalledPluginsState.getInstance().runShutdownCallback();
@@ -530,7 +526,7 @@ public final class PluginManagerConfigurablePanel implements Disposable {
         }
       }
       catch (ConfigurationException exception) {
-        Logger.getInstance(PluginsTabFactory.class).error(exception);
+        Logger.getInstance(PluginManagerConfigurablePanel.class).error(exception);
       }
     }, ModalityState.nonModal());
   }

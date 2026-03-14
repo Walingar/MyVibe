@@ -2,28 +2,24 @@
 package com.intellij.ide.util.projectWizard;
 
 import com.intellij.diagnostic.PluginException;
-import com.intellij.ide.wizard.Step;
+import com.intellij.ide.util.projectWizard.actions.ProjectSpecificAction;
 import com.intellij.ide.wizard.StepAdapter;
-import com.intellij.openapi.Disposable;
+import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.project.ProjectBundle;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.DialogWrapperPeer;
-import com.intellij.openapi.ui.UiUtils;
 import com.intellij.openapi.util.Disposer;
-import com.intellij.openapi.util.Pair;
-import com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper;
-import com.intellij.openapi.wm.impl.welcomeScreen.FlatWelcomeFrame;
 import com.intellij.platform.ProjectGeneratorPeer;
+import com.intellij.ui.SimpleListCellRenderer;
 import com.intellij.ui.ScrollingUtil;
+import com.intellij.ui.components.JBScrollPane;
 import com.intellij.ui.components.JBList;
-import com.intellij.util.containers.ContainerUtil;
 import com.intellij.util.ui.JBDimension;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.update.UiNotifyConnector;
-import kotlin.sequences.SequencesKt;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -33,17 +29,23 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JRootPane;
 import javax.swing.ListModel;
+import java.awt.BorderLayout;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.Map;
 import java.util.function.Predicate;
-
-import static com.intellij.ide.wizard.GeneratorNewProjectWizardBuilderAdapter.NPW_PREFIX;
 
 /**
  * @author Dennis.Ushakov
  */
 public abstract class AbstractNewProjectDialog extends DialogWrapper {
-  private Pair<JPanel, JBList<AnAction>> myPair;
+  private static final int DEFAULT_DIALOG_WIDTH = 1000;
+  private static final int DEFAULT_DIALOG_HEIGHT = 670;
+
+  private JBList<AnAction> myActionList;
+  private JPanel mySettingsPanel;
+  private final Map<AnAction, JComponent> myActionPanels = new HashMap<>();
 
   public AbstractNewProjectDialog() {
     super(ProjectManager.getInstance().getDefaultProject());
@@ -56,7 +58,7 @@ public abstract class AbstractNewProjectDialog extends DialogWrapper {
     DialogWrapperPeer peer = getPeer();
     JRootPane pane = peer.getRootPane();
     if (pane != null) {
-      JBDimension size = JBUI.size(FlatWelcomeFrame.MAX_DEFAULT_WIDTH, FlatWelcomeFrame.DEFAULT_HEIGHT);
+      JBDimension size = JBUI.size(DEFAULT_DIALOG_WIDTH, DEFAULT_DIALOG_HEIGHT);
       pane.setMinimumSize(size);
       pane.setPreferredSize(size);
     }
@@ -66,46 +68,41 @@ public abstract class AbstractNewProjectDialog extends DialogWrapper {
   protected final @Nullable JComponent createCenterPanel() {
     setTitle(AbstractNewProjectStep.EP_NAME.hasAnyExtensions() ? ProjectBundle.message("dialog.title.new.project")
                                                                : ProjectBundle.message("dialog.title.create.project"));
-    var root = createNewProjectStep();
+    AbstractNewProjectStep<?> root = createNewProjectStep();
     Disposer.register(getDisposable(), () -> root.removeAll());
+    root.setWizardContext(new WizardContext(null, getDisposable()));
 
-    Pair<JPanel, JBList<AnAction>> pair = ActionGroupPanelWrapper.createActionGroupPanel(root, null, getDisposable());
-    root.setWizardContext(createWizardContext(pair, getDisposable()));
-    JPanel component = pair.first;
-    myPair = pair;
-    UiNotifyConnector.doWhenFirstShown(myPair.second, () -> ScrollingUtil.ensureSelectionExists(myPair.second));
-
-    ActionGroupPanelWrapper.installQuickSearch(pair.second);
-    return component;
-  }
-
-  private static @NotNull WizardContext createWizardContext(@NotNull Pair<JPanel, JBList<AnAction>> pair, Disposable disposable) {
-    WizardContext wizardContext = new WizardContext(null, disposable);
-    wizardContext.addContextListener(new WizardContext.Listener() {
-      @Override
-      public void switchToRequested(@NotNull String placeId, @NotNull Consumer<? super Step> configure) {
-        String wizardName = clearPrefix(placeId);
-        List<AnAction> allWizards = SequencesKt.toList(UiUtils.asSequence(pair.second.getModel()));
-        AnAction wizardToSelect = ContainerUtil.find(allWizards, wizard -> wizard.getTemplateText().equals(wizardName));
-        if (wizardToSelect != null) {
-          pair.second.setSelectedValue(wizardToSelect, true);
-        }
-        if (wizardToSelect instanceof ProjectSettingsStepBase<?> stepBase) {
-          ProjectGeneratorPeer<?> peer = stepBase.getPeer();
-          configure.accept(new ProjectStepPeerHolder(peer));
-        }
-      }
-
-      private static @NotNull String clearPrefix(@NotNull String placeId) {
-        return placeId.startsWith(NPW_PREFIX) ? placeId.substring(NPW_PREFIX.length()) : placeId;
+    List<AnAction> actions = collectProjectActions(root);
+    myActionList = new JBList<>(actions);
+    myActionList.setCellRenderer(SimpleListCellRenderer.create("", action -> action.getTemplateText()));
+    myActionList.addListSelectionListener(e -> {
+      if (!e.getValueIsAdjusting()) {
+        showSelectedActionPanel(myActionList.getSelectedValue());
       }
     });
-    return wizardContext;
+
+    mySettingsPanel = new JPanel(new BorderLayout());
+    if (!actions.isEmpty()) {
+      myActionList.setSelectedIndex(0);
+      showSelectedActionPanel(actions.get(0));
+    }
+
+    JPanel leftPanel = new JPanel(new BorderLayout());
+    leftPanel.setBorder(JBUI.Borders.emptyRight(8));
+    leftPanel.add(new JBScrollPane(myActionList), BorderLayout.CENTER);
+    leftPanel.setPreferredSize(JBUI.size(320, DEFAULT_DIALOG_HEIGHT));
+
+    JPanel mainPanel = new JPanel(new BorderLayout());
+    mainPanel.add(leftPanel, BorderLayout.WEST);
+    mainPanel.add(mySettingsPanel, BorderLayout.CENTER);
+
+    UiNotifyConnector.doWhenFirstShown(myActionList, () -> ScrollingUtil.ensureSelectionExists(myActionList));
+    return mainPanel;
   }
 
   @Override
   public @Nullable JComponent getPreferredFocusedComponent() {
-    return FlatWelcomeFrame.getPreferredFocusedComponent(myPair);
+    return myActionList;
   }
 
   @Override
@@ -147,8 +144,8 @@ public abstract class AbstractNewProjectDialog extends DialogWrapper {
 
   @ApiStatus.Internal
   public boolean setSelectedAction(@NotNull Predicate<AnAction> actionSelector) {
-    if (myPair == null) return false;
-    JBList<AnAction> actionList = myPair.second;
+    if (myActionList == null) return false;
+    JBList<AnAction> actionList = myActionList;
     ListModel<AnAction> model = actionList.getModel();
 
     for (int i = 0; i < model.getSize(); i++) {
@@ -161,6 +158,44 @@ public abstract class AbstractNewProjectDialog extends DialogWrapper {
     return false;
   }
 
+  private static @NotNull List<AnAction> collectProjectActions(@NotNull DefaultActionGroup root) {
+    List<AnAction> result = new ArrayList<>();
+    collectProjectActionsRecursively(root, result);
+    return result;
+  }
+
+  private static void collectProjectActionsRecursively(@NotNull DefaultActionGroup group, @NotNull List<AnAction> result) {
+    for (AnAction action : group.getChildren(ActionManager.getInstance())) {
+      if (action instanceof ProjectSettingsStepBase<?> || action instanceof ProjectSpecificAction) {
+        result.add(action);
+      }
+      else if (action instanceof DefaultActionGroup nestedGroup) {
+        collectProjectActionsRecursively(nestedGroup, result);
+      }
+    }
+  }
+
+  private void showSelectedActionPanel(@Nullable AnAction action) {
+    if (mySettingsPanel == null || action == null) return;
+    mySettingsPanel.removeAll();
+
+    if (action instanceof ProjectSpecificAction group) {
+      AnAction[] children = group.getChildren(ActionManager.getInstance());
+      if (children.length > 0) {
+        action = children[0];
+      }
+    }
+
+    if (action instanceof ProjectSettingsStepBase<?> step) {
+      JComponent panel = myActionPanels.computeIfAbsent(action, __ -> step.createPanel());
+      step.onPanelSelected();
+      mySettingsPanel.add(panel, BorderLayout.CENTER);
+    }
+
+    mySettingsPanel.revalidate();
+    mySettingsPanel.repaint();
+  }
+
   static class ProjectStepPeerHolder extends StepAdapter {
     private final ProjectGeneratorPeer<?> myPeer;
 
@@ -168,7 +203,7 @@ public abstract class AbstractNewProjectDialog extends DialogWrapper {
       myPeer = peer;
     }
 
-    ProjectGeneratorPeer<?> getPeer() {
+    public ProjectGeneratorPeer<?> getPeer() {
       return myPeer;
     }
 

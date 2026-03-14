@@ -525,8 +525,6 @@ platform/vcs-log/graph-api
 platform/vcs-log/impl
 platform/vcs-tests
 platform/warmup
-platform/welcome-screen
-platform/welcome-screen-impl
 platform/whatsNew
 platform/workspace/jps
 platform/workspace/storage

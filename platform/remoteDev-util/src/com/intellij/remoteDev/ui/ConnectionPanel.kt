@@ -1,8 +1,6 @@
 package com.intellij.remoteDev.ui
 
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.openapi.wm.impl.welcomeScreen.ActionPanel
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenUIManager
 import com.intellij.remoteDev.RemoteDevUtilBundle
 import com.intellij.remoteDev.util.LocalUserSettings
 import com.intellij.remoteDev.util.UrlUtil
@@ -11,6 +9,7 @@ import com.intellij.ui.components.JBTextField
 import com.intellij.ui.scale.JBUIScale
 import com.intellij.util.ui.JBUI
 import com.intellij.util.ui.StartupUiUtil
+import com.intellij.util.ui.UIUtil
 import net.miginfocom.swing.MigLayout
 import org.jetbrains.annotations.ApiStatus
 import java.awt.BorderLayout
@@ -24,13 +23,14 @@ import javax.swing.AbstractAction
 import javax.swing.Action
 import javax.swing.BorderFactory
 import javax.swing.JButton
+import javax.swing.JPanel
 import javax.swing.JRootPane
 import javax.swing.SwingConstants
 import javax.swing.UIManager
 
 @Suppress("LeakingThis")
 @ApiStatus.Experimental
-open class ConnectionPanel(private val manager: ConnectionManager) : ActionPanel(
+open class ConnectionPanel(private val manager: ConnectionManager) : JPanel(
   MigLayout("wrap 2, ins 20 20 0 0, novisualpadding, gap 5, flowy", null)) {
 
   private var defaultButtonArc = 0
@@ -44,7 +44,7 @@ open class ConnectionPanel(private val manager: ConnectionManager) : ActionPanel
 
   init {
     border = BorderFactory.createEmptyBorder()
-    background = WelcomeScreenUIManager.getMainAssociatedComponentBackground()
+    background = UIUtil.getPanelBackground()
 
     val connectKeyAdapter = object : KeyAdapter() {
       override fun keyPressed(e: KeyEvent?) {

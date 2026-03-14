@@ -13,7 +13,6 @@ import com.intellij.openapi.actionSystem.IdeActions;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.Pair;
 import com.intellij.openapi.wm.ToolWindowId;
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomePopupAction;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -99,8 +98,6 @@ final class ActionsLoader {
             butt.setHasArrowIcon(false);
             butt.setLayout(0, 0, 5, 8);
           }
-        } else if (butt.getAnAction() instanceof WelcomePopupAction) {
-          butt.setHasArrowIcon(true);
         }
     });
     return Pair.create(defaultGroup, customizer);

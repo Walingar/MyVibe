@@ -15,10 +15,9 @@
  */
 package com.intellij.ide.util.projectWizard;
 
-import com.intellij.openapi.wm.impl.welcomeScreen.AbstractActionWithPanel;
 import com.intellij.platform.DirectoryProjectGenerator;
 
 public interface CustomStepProjectGenerator<T> {
-  AbstractActionWithPanel createStep(DirectoryProjectGenerator<T> projectGenerator,
-                                     AbstractNewProjectStep.AbstractCallback<T> callback);
+  ProjectSettingsStepBase<T> createStep(DirectoryProjectGenerator<T> projectGenerator,
+                                        AbstractNewProjectStep.AbstractCallback<T> callback);
 }

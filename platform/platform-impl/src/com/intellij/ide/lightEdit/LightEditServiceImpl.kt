@@ -33,7 +33,6 @@ import com.intellij.openapi.vfs.encoding.EncodingManager
 import com.intellij.openapi.vfs.encoding.EncodingManagerImpl
 import com.intellij.openapi.wm.ex.WindowManagerEx
 import com.intellij.openapi.wm.impl.FrameInfo
-import com.intellij.openapi.wm.impl.welcomeScreen.WelcomeFrame.Companion.getInstance
 import com.intellij.testFramework.LightVirtualFile
 import com.intellij.util.concurrency.NonUrgentExecutor
 import com.intellij.util.disposeOnCompletion
@@ -241,9 +240,9 @@ class LightEditServiceImpl(private val coroutineScope: CoroutineScope)
 
     LOG.info("Window closed")
     ApplicationManager.getApplication().getMessageBus().syncPublisher(LightEditServiceListener.TOPIC).lightEditWindowClosed(project)
-    if (ProjectManager.getInstance().getOpenProjects().size == 0 && getInstance() == null) {
+    if (ProjectManager.getInstance().openProjects.size == 0) {
       closeAndDisposeFrame()
-      LOG.info("No open projects or welcome frame, exiting")
+      LOG.info("No open projects, exiting")
       try {
         Disposer.dispose(editorManager)
         ApplicationManager.getApplication().exit()

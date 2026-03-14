@@ -84,9 +84,8 @@ open class MyVibeProperties(private val communityHomeDir: Path) : JetBrainsProdu
   override val baseFileName: String
     get() = "idea"
 
-  override fun getProductContentDescriptor(): ProductModulesContentSpec = productModules {
-    include(intellijCommunityBaseFragment())
-  }
+  // use plugin.xml since it is much easier to control
+  override fun getProductContentDescriptor(): ProductModulesContentSpec? = null
 
   override suspend fun copyAdditionalFiles(targetDir: Path, context: BuildContext) {
     super.copyAdditionalFiles(targetDir, context)
@@ -118,39 +117,4 @@ open class MyVibeProperties(private val communityHomeDir: Path) : JetBrainsProdu
   override fun getBaseArtifactName(appInfo: ApplicationInfoProperties, buildNumber: String): String = "MyVibe-$buildNumber"
 
   override fun getOutputDirectoryName(appInfo: ApplicationInfoProperties): String = "MyVibe"
-}
-
-/**
- * Base IntelliJ Community content fragment.
- * This fragment is composable - subclasses can include this and optionally add community extensions.
- */
-fun intellijCommunityBaseFragment(): ProductModulesContentSpec = productModules {
-  alias("com.intellij.modules.idea")
-  alias("com.intellij.modules.idea.community")
-
-  alias("com.intellij.modules.java-capable")
-  alias("com.intellij.modules.python-core-capable")
-  alias("com.intellij.modules.python-in-non-pycharm-ide-capable")
-
-  alias("com.intellij.platform.ide.provisioner")
-  alias("com.intellij.modules.jcef")
-
-  include(CommunityProductFragments.javaIdeBaseFragment())
-  deprecatedInclude("intellij.idea.community.customization", "META-INF/tips-intellij-idea-community.xml")
-
-  module("intellij.platform.coverage")
-  module("intellij.platform.coverage.agent")
-  module("intellij.xml.xmlbeans")
-  module("intellij.platform.ide.newUiOnboarding")
-  module("intellij.platform.ide.newUsersOnboarding")
-  module("intellij.ide.startup.importSettings")
-  module("intellij.platform.customization.min")
-  module("intellij.idea.customization.base")
-  module("intellij.idea.customization.backend")
-  module("intellij.platform.tips")
-
-  moduleSet(CommunityModuleSets.ideCommon())
-  moduleSet(CommunityModuleSets.rdCommon())
-
-  deprecatedInclude("intellij.idea.community.customization", "META-INF/community-customization.xml")
 }
