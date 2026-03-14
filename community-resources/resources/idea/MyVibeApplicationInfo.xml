@@ -1,10 +1,10 @@
 <!-- Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 <component xmlns="http://jetbrains.org/intellij/schema/application-info">
   <version major="2026" minor="2" eap="true"/>
-  <company name="JetBrains s.r.o." url="https://www.jetbrains.com"/>
+  <company name="MyVibe" url="https://github.com/Walingar/MyVibe"/>
   <build number="MV-__BUILD__" date="__BUILD_DATE__"/> <!--majorReleaseDate="20170321"-->
   <logo url="/idea_community_logo.png"/>
-  <icon svg="/idea-ce.svg" svg-small="/idea-ce_16.svg"/>
-  <icon-eap svg="/idea-ce-eap.svg" svg-small="/idea-ce-eap_16.svg"/>
+  <icon svg="/myvibe_logo_64.svg" svg-small="/myvibe_logo_16.svg"/>
+  <icon-eap svg="/myvibe_logo_64.svg" svg-small="/myvibe_logo_16.svg"/>
   <names product="MY_VIBE" fullname="MyVibe" script="myVibe" motto="Development Environment that feels your Vibe"/>
 </component>

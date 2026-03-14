@@ -1,0 +1,92 @@
+<!-- Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="120" x2="884" y2="904" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111426"/>
+      <stop offset="0.55" stop-color="#121B33"/>
+      <stop offset="1" stop-color="#0E1530"/>
+    </linearGradient>
+
+    <radialGradient id="bgGlowTop" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(390 350) rotate(28) scale(360 260)">
+      <stop offset="0" stop-color="#C94BFF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#C94BFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bgGlowBottom" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(640 640) rotate(-22) scale(360 250)">
+      <stop offset="0" stop-color="#3EDCFF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#3EDCFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="waveTop" x1="270" y1="298" x2="665" y2="474" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F08BFF"/>
+      <stop offset="0.34" stop-color="#C355FF"/>
+      <stop offset="0.68" stop-color="#824BFF"/>
+      <stop offset="1" stop-color="#4C47F4"/>
+    </linearGradient>
+
+    <linearGradient id="waveTopInner" x1="330" y1="320" x2="610" y2="435" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white" stop-opacity="0.82"/>
+      <stop offset="0.45" stop-color="white" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="waveBottom" x1="360" y1="505" x2="798" y2="705" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#93F6FF"/>
+      <stop offset="0.34" stop-color="#54D9FF"/>
+      <stop offset="0.66" stop-color="#2F9BFF"/>
+      <stop offset="1" stop-color="#2668FF"/>
+    </linearGradient>
+
+    <linearGradient id="waveBottomInner" x1="410" y1="535" x2="720" y2="658" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white" stop-opacity="0.86"/>
+      <stop offset="0.45" stop-color="white" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="180" y="220" width="650" height="520" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <filter id="starGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="clip">
+      <rect x="96" y="96" width="832" height="832" rx="212"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect x="96" y="96" width="832" height="832" rx="212" fill="url(#bg)"/>
+    <rect x="96" y="96" width="832" height="832" rx="212" stroke="white" stroke-opacity="0.05" stroke-width="2"/>
+
+    <ellipse cx="390" cy="350" rx="250" ry="180" fill="url(#bgGlowTop)"/>
+    <ellipse cx="650" cy="648" rx="265" ry="180" fill="url(#bgGlowBottom)"/>
+
+    <g opacity="0.22" filter="url(#softShadow)">
+      <path d="M262 448C248 404 270 355 325 320C394 277 500 260 592 276C662 288 712 330 726 389C739 444 710 500 653 536C597 571 518 586 437 576C350 565 282 515 262 448Z" fill="#A24EFF"/>
+      <path d="M340 628C327 585 350 541 406 507C479 463 593 455 696 479C774 497 827 540 840 597C854 655 821 711 757 745C695 778 604 787 513 771C427 755 360 711 340 628Z" fill="#37C6FF"/>
+    </g>
+
+    <path d="M272 438C258 395 281 349 337 316C406 275 510 262 601 277C672 289 721 330 734 387C747 442 718 496 661 532C604 568 524 583 442 572C354 561 291 511 272 438Z" fill="url(#waveTop)"/>
+    <path d="M326 335C379 301 463 289 542 298C595 303 637 320 666 346C609 332 540 331 477 339C424 346 377 362 337 388C314 403 298 420 287 440C285 399 298 363 326 335Z" fill="url(#waveTopInner)"/>
+    <path d="M325 419C377 387 454 377 525 383C576 388 618 405 643 431C606 420 560 417 517 420C450 424 392 442 337 480C317 458 311 437 325 419Z" fill="#2D1FC9" fill-opacity="0.28"/>
+
+    <path d="M347 622C334 578 357 534 414 499C489 454 605 448 708 473C787 491 839 534 852 591C865 648 832 702 768 736C705 769 613 778 521 762C434 747 366 704 347 622Z" fill="url(#waveBottom)"/>
+    <path d="M406 518C462 486 551 478 635 490C688 497 733 516 764 543C704 528 631 526 564 535C507 542 457 559 415 586C389 603 371 623 360 645C358 602 372 551 406 518Z" fill="url(#waveBottomInner)"/>
+    <path d="M408 603C459 575 536 568 608 576C664 582 709 600 736 627C697 616 647 612 601 615C535 619 474 638 419 670C397 648 391 622 408 603Z" fill="#1A57E8" fill-opacity="0.25"/>
+
+    <g filter="url(#starGlow)">
+      <path d="M760 286L770 315L799 325L770 335L760 364L750 335L721 325L750 315L760 286Z" fill="#D984FF"/>
+      <path d="M710 334L716 351L733 357L716 363L710 380L704 363L687 357L704 351L710 334Z" fill="#9AA4FF"/>
+      <path d="M275 611L285 640L314 650L285 660L275 689L265 660L236 650L265 640L275 611Z" fill="#C970FF"/>
+      <path d="M322 658L328 675L345 681L328 687L322 704L316 687L299 681L316 675L322 658Z" fill="#8AAEFF"/>
+    </g>
+  </g>
+</svg>
