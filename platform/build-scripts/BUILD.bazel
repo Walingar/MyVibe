@@ -88,7 +88,7 @@ jvm_library(
     "//platform/build-scripts/product-dsl/plugin-graph",
     "//platform/build-scripts/api",
     "//platform/build-scripts/product-dsl",
-    "//plugins/devkit/runtimeModuleRepository/generator",
+    "//build/devkit/runtimeModuleRepository/generator",
     "//jps/standalone-builder:tools-jps-build-standalone",
   ],
   exports = [
@@ -98,7 +98,7 @@ jvm_library(
   runtime_deps = [
     "//libraries/commons/cli",
     "//libraries/jackson/jackson",
-    "//plugins/ui-designer/jps-plugin:java-guiForms-jps",
+    "//build/jps-plugin:java-guiForms-jps",
     "//libraries/jackson/databind",
     "//libraries/jackson/dataformat-yaml:libraries-jackson-dataformat-yaml",
     "@lib//:jackson-datatype-joda",
@@ -149,7 +149,7 @@ jvm_library(
     "//libraries/fastutil:fastutil_test_lib",
     "//libraries/gson:gson_test_lib",
     "//libraries/protobuf:protobuf_test_lib",
-    "//plugins/ui-designer/jps-plugin:java-guiForms-jps_test_lib",
+    "//build/jps-plugin:java-guiForms-jps_test_lib",
     "//build/tasks:tasks_test_lib",
     "//build/deps:dependencies_test_lib",
     "//platform/util/jdom:jdom_test_lib",
@@ -193,7 +193,7 @@ jvm_library(
     "//platform/build-scripts/product-dsl/plugin-graph:plugin-graph_test_lib",
     "//platform/build-scripts/api:api_test_lib",
     "//platform/build-scripts/product-dsl:product-dsl_test_lib",
-    "//plugins/devkit/runtimeModuleRepository/generator:generator_test_lib",
+    "//build/devkit/runtimeModuleRepository/generator:generator_test_lib",
     "//jps/standalone-builder:tools-jps-build-standalone_test_lib",
   ]
 )

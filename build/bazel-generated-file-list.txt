@@ -2,7 +2,11 @@ RegExpSupport
 aether-dependency-resolver
 build
 build/deps
+build/devkit/runtimeModuleRepository/generator
+build/groovy/rt/classLoader
+build/jps-plugin
 build/launch
+build/maven/artifact-resolver/common
 build/tasks
 build/tests
 community-resources
@@ -616,7 +620,6 @@ plugins/color-schemes/warm-neon-color-scheme
 plugins/configuration-script
 plugins/copyright
 plugins/copyright/vcs
-plugins/devkit/runtimeModuleRepository/generator
 plugins/editorconfig
 plugins/editorconfig/backend
 plugins/editorconfig/backend.spellchecking
@@ -637,9 +640,8 @@ plugins/github/ultimate-promo
 plugins/gitlab/gitlab-core
 plugins/gitlab/gitlab-git
 plugins/gitlab/gitlab-yaml
-plugins/groovy/rt/classLoader
 plugins/htmltools
-plugins/ide-startup/importSettings
+plugins/importSettings
 plugins/jsonpath
 plugins/keymaps/eclipse-keymap
 plugins/keymaps/netbeans5.6-keymap
@@ -660,13 +662,10 @@ plugins/markdown/model
 plugins/markdown/plugin
 plugins/markdown/spellchecker
 plugins/markdown/xml
-plugins/maven/artifact-resolver/common
 plugins/mcp-server
 plugins/mcp-server/mcpserver.stdio
 plugins/mcp-server/tests
 plugins/mcp-server/tests/plugin
-plugins/performanceTesting/commands-model
-plugins/performanceTesting/event-bus
 plugins/properties
 plugins/properties/copyright
 plugins/properties/properties-common
@@ -698,7 +697,6 @@ plugins/textmate/core
 plugins/textmate/core/tests
 plugins/textmate/joni
 plugins/textmate/plugin
-plugins/ui-designer/jps-plugin
 plugins/yaml
 plugins/yaml/backend
 spellchecker
@@ -717,6 +715,8 @@ tools/intellij.tools.ide.starter.driver
 tools/intellij.tools.ide.starter.junit5
 tools/intellij.tools.ide.util.common
 tools/launcher-generator
+tools/performanceTesting/commands-model
+tools/performanceTesting/event-bus
 tools/reproducibleBuilds.diff
 tools/tests
 updater
