@@ -11,7 +11,7 @@ import org.jetbrains.annotations.TestOnly
 import org.jetbrains.intellij.build.BuildOptions.Companion.BUILD_STEPS_TO_SKIP_PROPERTY
 import org.jetbrains.intellij.build.BuildOptions.Companion.INTELLIJ_BUILD_COMPILER_CLASSES_ARCHIVES_METADATA
 import org.jetbrains.intellij.build.BuildOptions.Companion.MAC_DMG_STEP
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.dependencies.DependenciesProperties
 import org.jetbrains.intellij.build.dependencies.TeamCityHelper
 import org.jetbrains.jps.api.GlobalOptions
@@ -572,7 +572,7 @@ private fun parseBooleanValue(text: String): Boolean = when {
 }
 
 private val DEPENDENCIES_PROPERTIES: DependenciesProperties by lazy {
-  DependenciesProperties(COMMUNITY_ROOT)
+  DependenciesProperties(MY_VIBE_ROOT)
 }
 
 private fun computeBuildDateInSeconds(): Long {

@@ -10,7 +10,7 @@ import java.nio.file.Path
 
 object SnapshotBuildNumber {
   val PATH: Path by lazy {
-    BuildPaths.COMMUNITY_ROOT.communityRoot.resolve("build.txt")
+    BuildPaths.MY_VIBE_ROOT.myVibeRoot.resolve("build.txt")
   }
 
   const val SNAPSHOT_SUFFIX: String = ".SNAPSHOT"

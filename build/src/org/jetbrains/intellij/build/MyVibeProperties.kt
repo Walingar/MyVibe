@@ -5,7 +5,7 @@ package org.jetbrains.intellij.build
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.plus
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.impl.createBuildContext
 import org.jetbrains.intellij.build.impl.qodana.QodanaProductProperties
 import org.jetbrains.intellij.build.io.copyDir
@@ -30,22 +30,22 @@ val MAVEN_ARTIFACTS_ADDITIONAL_MODULES: PersistentList<String> = persistentListO
   "intellij.space.java.jps",
 ) + JewelMavenArtifacts.STANDALONE.keys
 
-internal suspend fun createCommunityBuildContext(
+internal suspend fun createMyVibeBuildContext(
   options: BuildOptions,
-  projectHome: Path = COMMUNITY_ROOT.communityRoot,
+  projectHome: Path = MY_VIBE_ROOT.myVibeRoot,
 ): BuildContext {
   return createBuildContext(
     projectHome = projectHome,
-    productProperties = IdeaCommunityProperties(COMMUNITY_ROOT.communityRoot),
+    productProperties = MyVibeProperties(MY_VIBE_ROOT.myVibeRoot),
     setupTracer = true,
     options = options,
   )
 }
 
-open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrainsProductProperties() {
+open class MyVibeProperties(private val communityHomeDir: Path) : JetBrainsProductProperties() {
   init {
     configurePropertiesForAllEditionsOfIntelliJIdea(this)
-    platformPrefix = "Idea"
+    platformPrefix = "MyVibe"
     applicationInfoModule = "intellij.idea.community.customization"
     scrambleMainJar = false
     useSplash = true
@@ -61,11 +61,7 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrai
 
     productLayout.prepareCustomPluginRepositoryForPublishedPlugins = false
     productLayout.buildAllCompatiblePlugins = true
-    productLayout.pluginLayouts = CommunityRepositoryModules.COMMUNITY_REPOSITORY_PLUGINS + persistentListOf(
-      JavaPluginLayout.javaPlugin(),
-      CommunityRepositoryModules.androidPlugin(allPlatforms = true),
-      CommunityRepositoryModules.groovyPlugin(),
-    )
+    productLayout.pluginLayouts = CommunityRepositoryModules.COMMUNITY_REPOSITORY_PLUGINS
 
     productLayout.skipUnresolvedContentModules = true
 
@@ -104,7 +100,6 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrai
     }
 
     versionCheckerConfig = CE_CLASS_VERSIONS
-    baseDownloadUrl = "https://download.jetbrains.com/idea/"
     buildDocAuthoringAssets = true
 
     @Suppress("SpellCheckingInspection")
@@ -116,18 +111,18 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrai
     get() = "idea"
 
   override fun getProductContentDescriptor(): ProductModulesContentSpec = productModules {
-    include(intellijCommunityBaseFragment(platformPrefix))
-    include(communityExtensionsFragment())
+    include(intellijCommunityBaseFragment())
   }
 
   override suspend fun copyAdditionalFiles(targetDir: Path, context: BuildContext) {
     super.copyAdditionalFiles(targetDir, context)
 
-    copyFileToDir(context.paths.communityHomeDir.resolve("LICENSE.txt"), targetDir)
-    copyFileToDir(context.paths.communityHomeDir.resolve("NOTICE.txt"), targetDir)
+    copyFileToDir(context.paths.myVibeHomeDir.resolve("LICENSE.txt"), targetDir)
+    copyFileToDir(context.paths.myVibeHomeDir.resolve("NOTICE.txt"), targetDir)
+    copyFileToDir(context.paths.myVibeHomeDir.resolve("MODIFICATIONS.md"), targetDir)
 
     copyDir(
-      sourceDir = context.paths.communityHomeDir.resolve("build/conf/ideaCE/common/bin"),
+      sourceDir = context.paths.myVibeHomeDir.resolve("build/conf/MyVibe/common/bin"),
       targetDir = targetDir.resolve("bin"),
     )
 
@@ -143,61 +138,28 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : JetBrai
   override fun createMacCustomizer(projectHome: Path): MacDistributionCustomizer = communityMacCustomizer(communityHomeDir)
 
   override fun getSystemSelector(appInfo: ApplicationInfoProperties, buildNumber: String): String {
-    return "IdeaIC${appInfo.majorVersion}.${appInfo.minorVersionMainPart}"
+    return "MyVibe${appInfo.majorVersion}.${appInfo.minorVersionMainPart}"
   }
 
-  override fun getBaseArtifactName(appInfo: ApplicationInfoProperties, buildNumber: String): String = "ideaIC-$buildNumber"
+  override fun getBaseArtifactName(appInfo: ApplicationInfoProperties, buildNumber: String): String = "MyVibe-$buildNumber"
 
-  override fun getOutputDirectoryName(appInfo: ApplicationInfoProperties): String = "idea-ce"
-}
-
-@Suppress("unused")
-open class AndroidStudioProperties(communityHomeDir: Path) : IdeaCommunityProperties(communityHomeDir) {
-  init {
-    platformPrefix = "AndroidStudio"
-    applicationInfoModule = "intellij.idea.android.customization"
-
-    productLayout.productImplementationModules += "intellij.idea.android.customization"
-
-    val defaultBundledPlugins = IDEA_BUNDLED_PLUGINS
-      .remove("intellij.mcpserver")
-      .remove("intellij.featuresTrainer")
-
-    productLayout.bundledPluginModules = defaultBundledPlugins + persistentListOf(
-      "intellij.android.compose-ide-plugin",
-      "intellij.android.design-plugin.descriptor",
-      "intellij.android.plugin.descriptor",
-      "intellij.android.smali",
-    )
-  }
-
-  override fun getProductContentDescriptor(): ProductModulesContentSpec = productModules {
-    include(intellijCommunityBaseFragment(platformPrefix))
-    // no community extensions
-  }
+  override fun getOutputDirectoryName(appInfo: ApplicationInfoProperties): String = "MyVibe"
 }
 
 /**
  * Base IntelliJ Community content fragment.
  * This fragment is composable - subclasses can include this and optionally add community extensions.
  */
-fun intellijCommunityBaseFragment(platformPrefix: String? = null): ProductModulesContentSpec = productModules {
-  if (platformPrefix == "AndroidStudio") {
-    alias("com.intellij.modules.androidstudio")
-  }
-  else {
-    alias("com.intellij.modules.idea")
-    alias("com.intellij.modules.idea.community")
-  }
+fun intellijCommunityBaseFragment(): ProductModulesContentSpec = productModules {
+  alias("com.intellij.modules.idea")
+  alias("com.intellij.modules.idea.community")
 
   alias("com.intellij.modules.java-capable")
   alias("com.intellij.modules.python-core-capable")
   alias("com.intellij.modules.python-in-non-pycharm-ide-capable")
 
-  if (platformPrefix != "AndroidStudio") {
-    alias("com.intellij.platform.ide.provisioner")
-    alias("com.intellij.modules.jcef")
-  }
+  alias("com.intellij.platform.ide.provisioner")
+  alias("com.intellij.modules.jcef")
 
   include(CommunityProductFragments.javaIdeBaseFragment())
   deprecatedInclude("intellij.idea.community.customization", "META-INF/tips-intellij-idea-community.xml")
@@ -213,20 +175,8 @@ fun intellijCommunityBaseFragment(platformPrefix: String? = null): ProductModule
   module("intellij.idea.customization.backend")
   module("intellij.platform.tips")
 
-  if (System.getProperty("idea.platform.prefix") == "AndroidStudio") {
-    module("intellij.idea.android.customization")
-  }
-
   moduleSet(CommunityModuleSets.ideCommon())
   moduleSet(CommunityModuleSets.rdCommon())
 
   deprecatedInclude("intellij.idea.community.customization", "META-INF/community-customization.xml")
-}
-
-/**
- * Community extensions fragment for Ultimate builds.
- * This fragment is composable - subclasses can choose to include or exclude it.
- */
-fun communityExtensionsFragment(): ProductModulesContentSpec = productModules {
-  deprecatedInclude("intellij.platform.extended.community.impl", "META-INF/community-extensions.xml", ultimateOnly = true)
 }

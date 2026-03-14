@@ -7,7 +7,7 @@ import com.intellij.testFramework.common.BazelTestUtil
 import com.intellij.testFramework.common.BazelTestUtil.getFileFromBazelRuntime
 import com.intellij.util.io.DigestUtil
 import org.jetbrains.intellij.bazelEnvironment.BazelLabel
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader
 import java.net.URI
 import java.nio.file.Files
@@ -22,7 +22,7 @@ abstract class BazelTestDependencyHttpFileDownloader(
 
   private val LOG = logger<BazelTestDependencyHttpFileDownloader>()
   private val communityRoot by lazy {
-    BuildDependenciesCommunityRoot(Path.of(PathManager.getCommunityHomePath()))
+    BuildDependenciesMyVibeRoot(Path.of(PathManager.getCommunityHomePath()))
   }
 
   abstract val dependenciesDescFile: Path

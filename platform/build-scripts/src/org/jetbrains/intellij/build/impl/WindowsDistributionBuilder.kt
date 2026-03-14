@@ -86,7 +86,7 @@ internal class WindowsDistributionBuilder(
       writeVmOptions(distBinDir)
 
       context.executeStep(spanBuilder("copy product bin files"), BuildOptions.PRODUCT_BIN_DIR_STEP) {
-        val sourceBinDir = context.paths.communityHomeDir.resolve("bin/win")
+        val sourceBinDir = context.paths.myVibeHomeDir.resolve("bin/win")
 
         copyDir(sourceBinDir.resolve(arch.dirName), distBinDir)
         copyDir(sourceBinDir, distBinDir, dirFilter = { it == sourceBinDir })
@@ -241,7 +241,7 @@ private fun generateScripts(distBinDir: Path, arch: JvmArchitecture, context: Bu
   }
 
   val additionalJvmArguments = context.getAdditionalJvmArguments(OsFamily.WINDOWS, arch, isScript = true)
-  val winScripts = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/win/scripts")
+  val winScripts = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/win/scripts")
   val actualScriptNames = Files.newDirectoryStream(winScripts).use { dirStream -> dirStream.map { it.fileName.toString() }.sorted() }
 
   val expectedScriptNames = listOf("executable-template.bat", "format.bat", "inspect.bat", "ltedit.bat")
@@ -344,7 +344,7 @@ private suspend fun createBuildWinZipTask(
 
 private suspend fun buildWinLauncher(winDistPath: Path, arch: JvmArchitecture, copyLicense: Boolean, customizer: WindowsDistributionCustomizer, context: BuildContext) {
   spanBuilder("build Windows executable").use {
-    val communityHome = context.paths.communityHomeDir
+    val communityHome = context.paths.myVibeHomeDir
     val appInfo = context.applicationInfo
     val executableBaseName = "${context.productProperties.baseFileName}64"
     val launcherPropertiesPath = context.paths.tempDir.resolve("launcher-${arch.dirName}.properties")

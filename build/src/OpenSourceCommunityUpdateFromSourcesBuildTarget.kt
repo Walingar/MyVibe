@@ -3,9 +3,9 @@
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.intellij.build.BuildOptions
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.createBuildTasks
-import org.jetbrains.intellij.build.createCommunityBuildContext
+import org.jetbrains.intellij.build.createMyVibeBuildContext
 import java.nio.file.Path
 
 /**
@@ -30,9 +30,9 @@ object OpenSourceCommunityUpdateFromSourcesBuildTarget {
     val distOutputRelativePath = System.getProperty("distOutputRelativePath")!!
 
     // when IDEA CE is updated from IDEA, a UE sources project should be loaded from IDEA UE directory
-    val projectHome = System.getProperty("devIdeaHome")?.let { Path.of(it) } ?: COMMUNITY_ROOT.communityRoot
+    val projectHome = System.getProperty("devIdeaHome")?.let { Path.of(it) } ?: MY_VIBE_ROOT.myVibeRoot
     runBlocking(Dispatchers.Default) {
-      createBuildTasks(createCommunityBuildContext(options, projectHome))
+      createBuildTasks(createMyVibeBuildContext(options, projectHome))
         .buildUnpackedDistribution(options.outRootDir!!.resolve(distOutputRelativePath), includeBinAndRuntime = true)
     }
   }

@@ -134,7 +134,7 @@ class MacDistributionBuilder(
     writeVmOptions(macBinDir)
 
     context.executeStep(spanBuilder("copy product bin files"), BuildOptions.PRODUCT_BIN_DIR_STEP) {
-      copyDirWithFileFilter(context.paths.communityHomeDir.resolve("bin/mac"), macBinDir, customizer.binFilesFilter)
+      copyDirWithFileFilter(context.paths.myVibeHomeDir.resolve("bin/mac"), macBinDir, customizer.binFilesFilter)
       copyFileToDir(NativeBinaryDownloader.getRestarter(context, OsFamily.MACOS, arch), macBinDir)
 
       createFrontendContextForLaunchers(context)?.let { clientContext ->
@@ -305,7 +305,7 @@ class MacDistributionBuilder(
     macDistDir: Path,
     arch: JvmArchitecture,
   ) {
-    copyDir(context.paths.communityHomeDir.resolve("platform/build-scripts/resources/mac/Contents"), macDistDir)
+    copyDir(context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/mac/Contents"), macDistDir)
 
     val executable = context.productProperties.baseFileName
     val (execPath, licensePath) = NativeBinaryDownloader.getLauncher(context, OsFamily.MACOS, arch)
@@ -683,7 +683,7 @@ class MacDistributionBuilder(
 }
 
 private fun generateScripts(macBinDir: Path, executable: String, context: BuildContext) {
-  val sourceScriptDir = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/mac/scripts")
+  val sourceScriptDir = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/mac/scripts")
   Files.newDirectoryStream(sourceScriptDir).use { stream ->
     val inspectCommandName = context.productProperties.inspectCommandName
     for (file in stream) {
@@ -725,7 +725,7 @@ private fun prepareDmgBuildScripts(tempDir: Path, staple: Boolean, customizer: M
   Files.createDirectories(tempDir)
   val dmgImageCopy = tempDir.resolve("${context.fullBuildNumber}.png")
     Files.copy(locateDmgImageForMacApp(customizer, context), dmgImageCopy)
-  val scriptsDir = context.paths.communityHomeDir.resolve("platform/build-scripts/tools/mac/scripts")
+  val scriptsDir = context.paths.myVibeHomeDir.resolve("platform/build-scripts/tools/mac/scripts")
   Files.copy(scriptsDir.resolve("makedmg.sh"), tempDir.resolve("makedmg.sh"), StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES)
   NioFiles.setExecutable(tempDir.resolve("makedmg.sh"))
   Files.copy(scriptsDir.resolve("makedmg.py"), tempDir.resolve("makedmg.py"), StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES)

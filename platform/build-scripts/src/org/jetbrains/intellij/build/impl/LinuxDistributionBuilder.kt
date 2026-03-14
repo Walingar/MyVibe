@@ -76,7 +76,7 @@ class LinuxDistributionBuilder(
         writeVmOptions(distBinDir)
 
         context.executeStep(spanBuilder("copy product bin files"), BuildOptions.PRODUCT_BIN_DIR_STEP) {
-          val sourceBinDir = context.paths.communityHomeDir.resolve("bin/linux")
+          val sourceBinDir = context.paths.myVibeHomeDir.resolve("bin/linux")
 
           copyFileToDir(NativeBinaryDownloader.getRestarter(context, OsFamily.LINUX, arch), distBinDir)
           copyFileToDir(sourceBinDir.resolve("${arch.dirName}/fsnotifier"), distBinDir)
@@ -177,7 +177,7 @@ class LinuxDistributionBuilder(
   private fun generateReadme(unixDistPath: Path) {
     if (context.options.isLanguageServer) return
     val fullName = context.applicationInfo.fullProductName
-    val sourceFile = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/linux/Install-Linux-tar.txt")
+    val sourceFile = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/linux/Install-Linux-tar.txt")
     val targetFile = unixDistPath.resolve("Install-Linux-tar.txt")
     substituteTemplatePlaceholders(
       inputFile = sourceFile,
@@ -287,7 +287,7 @@ class LinuxDistributionBuilder(
         val appInfo = context.applicationInfo
         val productName = appInfo.productNameWithEdition
         substituteTemplatePlaceholders(
-          inputFile = context.paths.communityHomeDir.resolve("platform/platform-resources/src/entry.desktop"),
+          inputFile = context.paths.myVibeHomeDir.resolve("platform/platform-resources/src/entry.desktop"),
           outputFile = snapDir.resolve("$snapName.desktop"),
           placeholder = "$",
           values = listOf(
@@ -299,7 +299,7 @@ class LinuxDistributionBuilder(
           )
         )
         copyFile(iconPngPath, snapDir.resolve("$snapName.png"))
-        val snapcraftTemplate = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/linux/snap/snapcraft-template.yaml")
+        val snapcraftTemplate = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/linux/snap/snapcraft-template.yaml")
         val snapcraftConfig = snapDir.resolve("snapcraft.yaml")
         substituteTemplatePlaceholders(
           inputFile = snapcraftTemplate,
@@ -418,7 +418,7 @@ class LinuxDistributionBuilder(
   private fun generateScripts(distBinDir: Path, arch: JvmArchitecture, targetLibcImpl: LinuxLibcImpl, context: BuildContext) {
     Files.createDirectories(distBinDir)
 
-    val sourceScriptDir = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/linux/scripts")
+    val sourceScriptDir = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/linux/scripts")
     Files.newDirectoryStream(sourceScriptDir).use {
       for (file in it) {
         val fileName = file.fileName.toString()
@@ -474,7 +474,7 @@ class LinuxDistributionBuilder(
       Pair("main_class_name", context.ideMainClassName),
     )
 
-    val template = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/linux/scripts/${EXECUTABLE_TEMPLATE_NAME}")
+    val template = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/linux/scripts/${EXECUTABLE_TEMPLATE_NAME}")
     val targetFile = distBinDir.resolve("${context.productProperties.baseFileName}.sh")
     copyScript(template, targetFile, additionalTemplateValues, context)
   }

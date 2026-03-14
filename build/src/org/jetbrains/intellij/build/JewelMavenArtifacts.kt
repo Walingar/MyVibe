@@ -8,7 +8,7 @@ import kotlinx.collections.immutable.plus
 import org.apache.maven.model.Developer
 import org.apache.maven.model.License
 import org.apache.maven.model.Model
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.dependencies.DependenciesProperties
 import org.jetbrains.intellij.build.impl.libraries.isLibraryModule
 import org.jetbrains.intellij.build.impl.maven.DependencyScope
@@ -72,9 +72,9 @@ internal object JewelMavenArtifacts {
   }
 
   private val VERSION: String by lazy {
-    val jewelProperties = COMMUNITY_ROOT.communityRoot.resolve("platform/jewel/gradle.properties")
+    val jewelProperties = MY_VIBE_ROOT.myVibeRoot.resolve("platform/jewel/gradle.properties")
     check(jewelProperties.exists()) { "$jewelProperties is missing" }
-    DependenciesProperties(COMMUNITY_ROOT, jewelProperties).property("jewel.release.version")
+    DependenciesProperties(MY_VIBE_ROOT, jewelProperties).property("jewel.release.version")
   }
 
   fun isPublishedJewelModule(module: JpsModule): Boolean =

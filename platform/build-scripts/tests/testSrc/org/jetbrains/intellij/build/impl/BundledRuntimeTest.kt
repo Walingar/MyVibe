@@ -5,7 +5,7 @@ import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.util.io.NioFiles
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.CompilationContext
 import org.jetbrains.intellij.build.JetBrainsRuntimeDistribution
 import org.jetbrains.intellij.build.JvmArchitecture
@@ -83,7 +83,7 @@ class BundledRuntimeTest {
     try {
       val context = runBlocking(Dispatchers.Default) {
         createCompilationContext(
-          projectHome = COMMUNITY_ROOT.communityRoot,
+          projectHome = MY_VIBE_ROOT.myVibeRoot,
           defaultOutputRoot = tempDir
         )
       }

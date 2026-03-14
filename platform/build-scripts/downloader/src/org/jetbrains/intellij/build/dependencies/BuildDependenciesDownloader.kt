@@ -87,7 +87,7 @@ object BuildDependenciesDownloader {
   @Volatile
   var TRACER: Tracer = TracerProvider.noop().get("noop-build-dependencies")
 
-  fun getDependencyProperties(communityRoot: BuildDependenciesCommunityRoot): DependenciesProperties = DependenciesProperties(communityRoot)
+  fun getDependencyProperties(communityRoot: BuildDependenciesMyVibeRoot): DependenciesProperties = DependenciesProperties(communityRoot)
 
   @JvmStatic
   fun getUriForMavenArtifact(mavenRepository: String, groupId: String, artifactId: String, version: String, packaging: String): URI {
@@ -110,16 +110,16 @@ object BuildDependenciesDownloader {
   }
 
   @JvmStatic
-  fun downloadFileToCacheLocation(communityRoot: BuildDependenciesCommunityRoot, uri: URI): Path {
+  fun downloadFileToCacheLocation(communityRoot: BuildDependenciesMyVibeRoot, uri: URI): Path {
     return downloadFileToCacheLocationSync(uri.toString(), communityRoot)
   }
 
   @JvmStatic
-  fun downloadFileToCacheLocation(communityRoot: BuildDependenciesCommunityRoot, uri: URI, credentialsProvider: () -> Credentials): Path {
+  fun downloadFileToCacheLocation(communityRoot: BuildDependenciesMyVibeRoot, uri: URI, credentialsProvider: () -> Credentials): Path {
     return downloadFileToCacheLocationSync(uri.toString(), communityRoot, credentialsProvider)
   }
 
-  fun getTargetFile(communityRoot: BuildDependenciesCommunityRoot, uriString: String): Path {
+  fun getTargetFile(communityRoot: BuildDependenciesMyVibeRoot, uriString: String): Path {
     val lastNameFromUri = uriString.substring(uriString.lastIndexOf('/') + 1)
     val hashString = hashString("${uriString}V${DOWNLOAD_CODE_VERSION}").substring(0, 10)
     return getDownloadCachePath(communityRoot).resolve("${hashString}-${lastNameFromUri}")
@@ -127,9 +127,9 @@ object BuildDependenciesDownloader {
 
   @Synchronized
   fun extractFileToCacheLocation(
-    communityRoot: BuildDependenciesCommunityRoot,
-    archiveFile: Path,
-    vararg options: BuildDependenciesExtractOptions,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      archiveFile: Path,
+      vararg options: BuildDependenciesExtractOptions,
   ): Path {
     cleanUpIfRequired(communityRoot)
     val cachePath = getDownloadCachePath(communityRoot)
@@ -142,17 +142,17 @@ object BuildDependenciesDownloader {
   }
 
   @Deprecated("Use BuildDependenciesDownloader.extractFile(communityRoot, archiveFile, options)", level = DeprecationLevel.ERROR)
-  fun extractFileSync(archiveFile: Path, target: Path, communityRoot: BuildDependenciesCommunityRoot) {
+  fun extractFileSync(archiveFile: Path, target: Path, communityRoot: BuildDependenciesMyVibeRoot) {
     runBlocking {
       extractFile(archiveFile, target, communityRoot)
     }
   }
 
   suspend fun extractFile(
-    archiveFile: Path,
-    target: Path,
-    communityRoot: BuildDependenciesCommunityRoot,
-    vararg options: BuildDependenciesExtractOptions,
+      archiveFile: Path,
+      target: Path,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      vararg options: BuildDependenciesExtractOptions,
   ) {
     cleanUpIfRequired(communityRoot)
     fileLocks.getLock(target.toString()).withLock {
@@ -164,7 +164,7 @@ object BuildDependenciesDownloader {
     }
   }
 
-  fun cleanUpIfRequired(communityRoot: BuildDependenciesCommunityRoot) {
+  fun cleanUpIfRequired(communityRoot: BuildDependenciesMyVibeRoot) {
     if (!cleanupFlag.getAndSet(true)) {
       // run only once per process
       return
@@ -193,7 +193,7 @@ object BuildDependenciesDownloader {
   }
 }
 
-suspend fun extractFileToCacheLocation(archiveFile: Path, communityRoot: BuildDependenciesCommunityRoot, stripRoot: Boolean = false): Path {
+suspend fun extractFileToCacheLocation(archiveFile: Path, communityRoot: BuildDependenciesMyVibeRoot, stripRoot: Boolean = false): Path {
   cleanUpIfRequired(communityRoot)
 
   val archivePath = archiveFile.invariantSeparatorsPathString
@@ -223,11 +223,11 @@ suspend fun extractFileToCacheLocation(archiveFile: Path, communityRoot: BuildDe
 
 private val EMPTY_OPTIONS = emptyArray<BuildDependenciesExtractOptions>()
 
-private fun getProjectLocalDownloadCache(communityRoot: BuildDependenciesCommunityRoot): Path {
-  return Files.createDirectories(communityRoot.communityRoot.resolve("build/download"))
+private fun getProjectLocalDownloadCache(communityRoot: BuildDependenciesMyVibeRoot): Path {
+  return Files.createDirectories(communityRoot.myVibeRoot.resolve("build/download"))
 }
 
-private fun getDownloadCachePath(communityRoot: BuildDependenciesCommunityRoot): Path {
+private fun getDownloadCachePath(communityRoot: BuildDependenciesMyVibeRoot): Path {
   val path: Path = if (TeamCityHelper.isUnderTeamCity) {
     TeamCityHelper.persistentCachePath ?: error("'agent.persistent.cache' system property is required under TeamCity")
   }

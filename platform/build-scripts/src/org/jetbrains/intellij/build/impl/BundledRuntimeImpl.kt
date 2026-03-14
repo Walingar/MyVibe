@@ -93,13 +93,13 @@ class BundledRuntimeImpl(
   override suspend fun extract(os: OsFamily, arch: JvmArchitecture, libc: LibcImpl, prefix: String): Path {
     val isMusl = os == OsFamily.LINUX && libc == LinuxLibcImpl.MUSL
     val effectivePrefix = if (libc == LinuxLibcImpl.MUSL) JetBrainsRuntimeDistribution.LIGHTWEIGHT.artifactPrefix else prefix
-    val targetDir = paths.communityHomeDir.resolve("build/download/${effectivePrefix}${build}-${os.jbrArchiveSuffix}-${if (isMusl) "musl-" else ""}$arch")
+    val targetDir = paths.myVibeHomeDir.resolve("build/download/${effectivePrefix}${build}-${os.jbrArchiveSuffix}-${if (isMusl) "musl-" else ""}$arch")
     val jbrDir = targetDir.resolve("jbr")
 
     val archive = findArchive(os, arch, libc, effectivePrefix)
     BuildDependenciesDownloader.extractFile(
       archive, jbrDir,
-      paths.communityHomeDirRoot,
+      paths.myVibeHomeDirRoot,
       BuildDependenciesExtractOptions.STRIP_ROOT,
     )
     fixPermissions(jbrDir, os == OsFamily.WINDOWS)
@@ -121,7 +121,7 @@ class BundledRuntimeImpl(
     "https://cache-redirector.jetbrains.com/intellij-jbr/${archiveName(os, arch, libc, prefix)}"
 
   override suspend fun findArchive(os: OsFamily, arch: JvmArchitecture, libc: LibcImpl, prefix: String): Path =
-    downloadFileToCacheLocation(downloadUrlFor(os, arch, libc, prefix), paths.communityHomeDirRoot)
+    downloadFileToCacheLocation(downloadUrlFor(os, arch, libc, prefix), paths.myVibeHomeDirRoot)
 
   /**
    * Update this method together with:

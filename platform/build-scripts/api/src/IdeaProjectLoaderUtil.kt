@@ -1,9 +1,10 @@
+// Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license.
 package org.jetbrains.intellij.build
 
 import com.intellij.openapi.application.PathManager
 import com.intellij.util.lang.UrlClassLoader
 import org.jetbrains.annotations.ApiStatus.Internal
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import java.nio.file.Path
 import java.nio.file.Paths
 import kotlin.io.path.absolute
@@ -65,10 +66,10 @@ internal object IdeaProjectLoaderUtil {
   }
 
   /**
-   * This method only for internal usage. Use [BuildPaths.COMMUNITY_ROOT] instead.
+   * This method only for internal usage. Use [BuildPaths.MY_VIBE_ROOT] instead.
    */
   @Internal
-  fun guessCommunityHome(): BuildDependenciesCommunityRoot {
+  fun guessCommunityHome(): BuildDependenciesMyVibeRoot {
     val directMarker = COMMUNITY_REPO_MARKER_FILE
     val inSubdirMarker = Path.of("community").resolve(COMMUNITY_REPO_MARKER_FILE)
 
@@ -78,7 +79,7 @@ internal object IdeaProjectLoaderUtil {
       root.resolve(directMarker).exists() -> root
       root.resolve(inSubdirMarker).exists() -> root.resolve("community")
       else -> error("should not happen")
-    }.let { BuildDependenciesCommunityRoot(it) }
+    }.let { BuildDependenciesMyVibeRoot(it) }
   }
 
   /**

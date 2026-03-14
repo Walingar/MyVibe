@@ -9,13 +9,13 @@ import java.nio.file.StandardOpenOption
 import java.util.TreeMap
 
 @ApiStatus.Internal
-class DependenciesProperties(communityRoot: BuildDependenciesCommunityRoot, vararg customPropertyFiles: Path?) {
+class DependenciesProperties(communityRoot: BuildDependenciesMyVibeRoot, vararg customPropertyFiles: Path?) {
   private val dependencies: MutableMap<String, String?> = TreeMap()
 
   init {
-    val communityPropertiesFile = communityRoot.communityRoot.resolve("build/dependencies/dependencies.properties")
-    val runtimePropertiesFile = communityRoot.communityRoot.resolve("build/dependencies/runtime.properties")
-    val ultimatePropertiesFile = communityRoot.communityRoot.parent.resolve("build/dependencies.properties")
+    val communityPropertiesFile = communityRoot.myVibeRoot.resolve("build/dependencies/dependencies.properties")
+    val runtimePropertiesFile = communityRoot.myVibeRoot.resolve("build/dependencies/runtime.properties")
+    val ultimatePropertiesFile = communityRoot.myVibeRoot.parent.resolve("build/dependencies.properties")
     sequenceOf(*customPropertyFiles, communityPropertiesFile, ultimatePropertiesFile, runtimePropertiesFile)
       .filterNotNull()
       .distinct()

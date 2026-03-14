@@ -1,7 +1,7 @@
 // Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
 package org.jetbrains.intellij.build
 
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.dependencies.JdkDownloader
 import org.jetbrains.intellij.build.io.runProcess
 import org.jetbrains.intellij.build.telemetry.block
@@ -22,7 +22,7 @@ suspend fun createPluginVerifier(
   errorHandler: (exception: String) -> Unit = {},
 ): PluginVerifier {
   val url = "https://packages.jetbrains.team/maven/p/intellij-plugin-verifier/intellij-plugin-verifier/org/jetbrains/intellij/plugins/verifier-cli/$pluginVerifierVersion/verifier-cli-$pluginVerifierVersion-all.jar"
-  val verifier = downloadFileToCacheLocation(url, COMMUNITY_ROOT)
+  val verifier = downloadFileToCacheLocation(url, MY_VIBE_ROOT)
   return PluginVerifier(
     verifierJar = verifier,
     compatibilityExceptions = compatibilityExceptions,
@@ -61,7 +61,7 @@ class PluginVerifier internal constructor(
     mute: List<String> = emptyList(),
     offline: Boolean = true,
   ): Boolean = block("Checking compatibility of $plugin with $ide") {
-    val java = JdkDownloader.getJavaExecutable(JdkDownloader.getJdkHomeAndLog(COMMUNITY_ROOT))
+    val java = JdkDownloader.getJavaExecutable(JdkDownloader.getJdkHomeAndLog(MY_VIBE_ROOT))
 
     val args = mutableListOf(
       java.pathString,

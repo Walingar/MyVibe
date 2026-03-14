@@ -27,7 +27,7 @@ class BuildDependenciesJpsTest {
       iml,
       "debugger-agent",
       BuildDependenciesConstants.INTELLIJ_DEPENDENCIES_URL,
-      BuildPaths.COMMUNITY_ROOT,
+      BuildPaths.MY_VIBE_ROOT,
       null
     )
     assertTrue(root.pathString, root.pathString.endsWith("debugger-agent-1.9.jar"))
@@ -47,7 +47,7 @@ class BuildDependenciesJpsTest {
         iml,
         "debugger-agent",
         BuildDependenciesConstants.INTELLIJ_DEPENDENCIES_URL,
-        BuildPaths.COMMUNITY_ROOT,
+        BuildPaths.MY_VIBE_ROOT,
         null
       )
       assertEquals("must resolve to a local file from .m2/repository", localFile.pathString, resolved.pathString)
@@ -65,7 +65,7 @@ class BuildDependenciesJpsTest {
         iml,
         "debugger-agent",
         BuildDependenciesConstants.INTELLIJ_DEPENDENCIES_URL,
-        BuildPaths.COMMUNITY_ROOT,
+        BuildPaths.MY_VIBE_ROOT,
         null
       )
     }
@@ -83,7 +83,7 @@ class BuildDependenciesJpsTest {
         iml,
         "debugger-agent",
         BuildDependenciesConstants.INTELLIJ_DEPENDENCIES_URL,
-        BuildPaths.COMMUNITY_ROOT,
+        BuildPaths.MY_VIBE_ROOT,
         null
       )
     }
@@ -103,7 +103,7 @@ class BuildDependenciesJpsTest {
         iml,
         "debugger-agent",
         BuildDependenciesConstants.INTELLIJ_DEPENDENCIES_URL,
-        BuildPaths.COMMUNITY_ROOT,
+        BuildPaths.MY_VIBE_ROOT,
         null
       )
       assertEquals("must resolve to a local file from .m2/repository", localFile.pathString, resolved.pathString)
@@ -114,7 +114,7 @@ class BuildDependenciesJpsTest {
   }
 
   private fun getTestDataRoot(): Path {
-    val testData = BuildPaths.COMMUNITY_ROOT.communityRoot.resolve("platform/build-scripts/tests/testData")
+    val testData = BuildPaths.MY_VIBE_ROOT.myVibeRoot.resolve("platform/build-scripts/tests/testData")
     check(testData.isDirectory()) {
       "not a directory: $testData"
     }

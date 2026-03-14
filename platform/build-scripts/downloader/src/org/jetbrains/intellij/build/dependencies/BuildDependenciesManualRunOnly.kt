@@ -8,7 +8,7 @@ import java.nio.file.Paths
 @ApiStatus.Internal
 object BuildDependenciesManualRunOnly {
   @JvmStatic
-  val communityRootFromWorkingDirectory: BuildDependenciesCommunityRoot
+  val communityRootFromWorkingDirectory: BuildDependenciesMyVibeRoot
     get() {
       // This method assumes the current working directory is inside intellij-based product checkout root
       val workingDirectory = Paths.get(System.getProperty("user.dir"))
@@ -17,7 +17,7 @@ object BuildDependenciesManualRunOnly {
         for (pathCandidate in mutableListOf(".", "community", "ultimate/community")) {
           val probeFile = current.resolve(pathCandidate).resolve("intellij.idea.community.main.iml").normalize()
           if (Files.exists(probeFile)) {
-            return BuildDependenciesCommunityRoot(probeFile.parent)
+            return BuildDependenciesMyVibeRoot(probeFile.parent)
           }
         }
         current = current.parent

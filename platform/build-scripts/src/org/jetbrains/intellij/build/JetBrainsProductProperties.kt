@@ -28,7 +28,7 @@ import java.util.function.BiPredicate
 
 fun isCommunityModule(module: JpsModule, context: BuildContext): Boolean {
   return module.contentRootsList.urls.all { url ->
-    Path.of(JpsPathUtil.urlToPath(url)).startsWith(context.paths.communityHomeDir)
+    Path.of(JpsPathUtil.urlToPath(url)).startsWith(context.paths.myVibeHomeDir)
   }
 }
 

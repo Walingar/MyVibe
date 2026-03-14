@@ -34,7 +34,7 @@ internal fun validateProductJson(archiveFile: Path, pathInArchive: String, conte
  * (the first part specifies a path to the archive, the second part - a path inside the archive)
  */
 internal fun validateProductJson(jsonText: String, installationDirectories: List<Path>, installationArchives: List<Pair<Path, String>>, context: BuildContext) {
-  val schemaPath = context.paths.communityHomeDir.resolve("platform/buildData/resources/product-info.schema.json")
+  val schemaPath = context.paths.myVibeHomeDir.resolve("platform/buildData/resources/product-info.schema.json")
   verifyJsonBySchema(jsonText, schemaPath, context.messages)
 
   val productJson = jsonEncoder.decodeFromString<ProductInfoData>(jsonText)

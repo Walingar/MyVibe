@@ -1,6 +1,7 @@
+// Copyright 2026 MyVibe developers and contributors. Use of this source code is governed by the Apache 2.0 license.
 package com.intellij.tools.launch
 
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.JdkDownloader
 import org.jetbrains.intellij.build.dependencies.TeamCityHelper
 import org.jetbrains.intellij.build.getMavenRepositoryPath
@@ -31,7 +32,7 @@ interface PathsProvider {
     get() = launcherFolder.resolve("system")
 
   val javaHomeFolder: File
-    get() = JdkDownloader.blockingGetJdkHomeAndLog(BuildDependenciesCommunityRoot(communityRootFolder.toPath())).normalize().toFile()
+    get() = JdkDownloader.blockingGetJdkHomeAndLog(BuildDependenciesMyVibeRoot(communityRootFolder.toPath())).normalize().toFile()
 
   val mavenRepositoryFolder: File
     get() = File(getMavenRepositoryPath())

@@ -3,7 +3,7 @@ package org.jetbrains.intellij.build
 
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.annotations.ApiStatus
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader.Credentials
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesUtil
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesUtil.asText
@@ -42,10 +42,10 @@ object BuildDependenciesJps {
 
   @OptIn(ExperimentalStdlibApi::class)
   private suspend fun getLibraryRoots(
-    library: Element,
-    mavenRepositoryUrl: String,
-    communityRoot: BuildDependenciesCommunityRoot,
-    credentialsProvider: (() -> Credentials)?
+      library: Element,
+      mavenRepositoryUrl: String,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      credentialsProvider: (() -> Credentials)?
   ): List<Path> {
     val properties = library.getSingleChildElement("properties")
     val mavenId = properties.getAttribute("maven-id")
@@ -105,11 +105,11 @@ object BuildDependenciesJps {
   }
 
   suspend fun getModuleLibraryRoots(
-    iml: Path,
-    libraryName: String,
-    mavenRepositoryUrl: String,
-    communityRoot: BuildDependenciesCommunityRoot,
-    credentialsProvider: (() -> Credentials)?
+      iml: Path,
+      libraryName: String,
+      mavenRepositoryUrl: String,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      credentialsProvider: (() -> Credentials)?
   ): List<Path> {
     return try {
       val root = BuildDependenciesUtil.createDocumentBuilder().parse(iml.toFile()).documentElement
@@ -130,10 +130,10 @@ object BuildDependenciesJps {
 
   @Deprecated("Use getModuleLibraryRoots instead", ReplaceWith("getModuleLibraryRoots(iml, libraryName, mavenRepositoryUrl, communityRoot, null)"), level = DeprecationLevel.ERROR)
   fun getModuleLibrarySingleRootSync(
-    iml: Path,
-    libraryName: String,
-    mavenRepositoryUrl: String,
-    communityRoot: BuildDependenciesCommunityRoot,
+      iml: Path,
+      libraryName: String,
+      mavenRepositoryUrl: String,
+      communityRoot: BuildDependenciesMyVibeRoot,
   ): Path {
     return runBlocking {
       getModuleLibrarySingleRoot(iml = iml, libraryName = libraryName, mavenRepositoryUrl = mavenRepositoryUrl, communityRoot = communityRoot)
@@ -141,20 +141,20 @@ object BuildDependenciesJps {
   }
 
   suspend fun getModuleLibrarySingleRoot(
-    iml: Path,
-    libraryName: String,
-    mavenRepositoryUrl: String,
-    communityRoot: BuildDependenciesCommunityRoot,
+      iml: Path,
+      libraryName: String,
+      mavenRepositoryUrl: String,
+      communityRoot: BuildDependenciesMyVibeRoot,
   ): Path {
     return getModuleLibrarySingleRoot(iml = iml, libraryName = libraryName, mavenRepositoryUrl = mavenRepositoryUrl, communityRoot = communityRoot, credentialsProvider = null)
   }
 
   suspend fun getModuleLibrarySingleRoot(
-    iml: Path,
-    libraryName: String,
-    mavenRepositoryUrl: String,
-    communityRoot: BuildDependenciesCommunityRoot,
-    credentialsProvider: (() -> Credentials)?
+      iml: Path,
+      libraryName: String,
+      mavenRepositoryUrl: String,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      credentialsProvider: (() -> Credentials)?
   ): Path {
     val roots = getModuleLibraryRoots(iml, libraryName, mavenRepositoryUrl, communityRoot, credentialsProvider)
     if (roots.size != 1) {
@@ -165,11 +165,11 @@ object BuildDependenciesJps {
   }
 
   suspend fun getProjectLibraryRoots(
-    libraryXml: Path,
-    libraryName: String,
-    mavenRepositoryUrl: String,
-    communityRoot: BuildDependenciesCommunityRoot,
-    credentialsProvider: (() -> Credentials)?
+      libraryXml: Path,
+      libraryName: String,
+      mavenRepositoryUrl: String,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      credentialsProvider: (() -> Credentials)?
   ): List<Path> = try {
     val document = BuildDependenciesUtil.createDocumentBuilder().parse(libraryXml.toFile())
 

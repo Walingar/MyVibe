@@ -4,7 +4,7 @@ package org.jetbrains.intellij.build.impl
 import com.intellij.openapi.application.PathManager
 import com.intellij.util.text.nullize
 import org.jetbrains.annotations.ApiStatus
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import tools.jackson.databind.JsonNode
 import tools.jackson.databind.ObjectMapper
 import tools.jackson.dataformat.yaml.YAMLFactory
@@ -23,9 +23,9 @@ data class DevBuildServerSettings(
 ) {
   companion object {
     private val runners: List<DevBuildServerSettings> by lazy {
-      var intellijYaml = COMMUNITY_ROOT.communityRoot.parent.resolve("intellij.yaml")
+      var intellijYaml = MY_VIBE_ROOT.myVibeRoot.parent.resolve("intellij.yaml")
       if (!intellijYaml.exists()) {
-        intellijYaml = COMMUNITY_ROOT.communityRoot.resolve("intellij.yaml")
+        intellijYaml = MY_VIBE_ROOT.myVibeRoot.resolve("intellij.yaml")
       }
       if (!intellijYaml.exists()) {
         return@lazy emptyList()

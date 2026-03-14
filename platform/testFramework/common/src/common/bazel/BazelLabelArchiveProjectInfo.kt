@@ -4,7 +4,7 @@ package com.intellij.testFramework.common.bazel
 import com.intellij.openapi.application.PathManager
 import com.intellij.testFramework.common.BazelTestUtil
 import org.jetbrains.intellij.bazelEnvironment.BazelLabel
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader.extractFileToCacheLocation
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesUtil.extractZip
 import java.nio.file.Path
@@ -24,7 +24,7 @@ data class BazelLabelArchiveProjectInfo(
       extractZip(projectZipFile, target, false)
       target
     } else {
-      extractFileToCacheLocation(communityRoot = BuildDependenciesCommunityRoot(Path.of(PathManager.getCommunityHomePath())), projectZipFile)
+      extractFileToCacheLocation(communityRoot = BuildDependenciesMyVibeRoot(Path.of(PathManager.getCommunityHomePath())), projectZipFile)
     }
 
     val projectHome = projectsUnpacked.let(projectHomeRelativePath)

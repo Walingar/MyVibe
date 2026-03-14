@@ -442,7 +442,7 @@ class PluginLayout(val mainModule: String, @Internal @JvmField val auto: Boolean
       targetDir: Path,
       context: BuildContext
     ) {
-      val source = context.paths.communityHomeDir.resolve(binPathRelativeToCommunity).normalize()
+      val source = context.paths.myVibeHomeDir.resolve(binPathRelativeToCommunity).normalize()
       val attributes = try {
         Files.readAttributes(source, BasicFileAttributes::class.java)
       }
@@ -536,7 +536,7 @@ class PluginLayout(val mainModule: String, @Internal @JvmField val auto: Boolean
     }
 
     /**
-     * Specifies a relative to [org.jetbrains.intellij.build.BuildPaths.communityHomeDir] path to a zkm script stub file.
+     * Specifies a relative to [org.jetbrains.intellij.build.BuildPaths.myVibeHomeDir] path to a zkm script stub file.
      * If scramble tool is not defined, scramble toot will expect to find the script stub file at "[org.jetbrains.intellij.build.BuildPaths.projectHome]/plugins/`pluginName`/build/script.zkm.stub".
      * Project home cannot be used since it is not constant (for example, for Rider).
      *

@@ -152,7 +152,7 @@ private suspend fun copyZipReplacing(origin: Path, entries: Map<String, Path>, c
 internal fun macSigningOptions(contentType: String, context: BuildContext): PersistentMap<String, String> {
   val certificateID = context.proprietaryBuildTools.signTool.macOsCodesignIdentity?.certificateID
   check(certificateID != null || context.isStepSkipped(BuildOptions.MAC_SIGN_STEP)) { "Missing certificate ID" }
-  val entitlements = context.paths.communityHomeDir.resolve("platform/build-scripts/tools/mac/scripts/entitlements.xml")
+  val entitlements = context.paths.myVibeHomeDir.resolve("platform/build-scripts/tools/mac/scripts/entitlements.xml")
   check(entitlements.exists()) { "Missing $entitlements file" }
   return persistentMapOf(
     "mac_codesign_options" to "runtime",

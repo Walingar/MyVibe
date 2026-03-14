@@ -34,10 +34,10 @@ class JdkDownloaderTest {
   }
 
   private fun checkJdkVariantCouldBeDownloaded(
-    communityRoot: BuildDependenciesCommunityRoot,
-    os: OS,
-    arch: Arch,
-    isMusl: Boolean,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      os: OS,
+      arch: Arch,
+      isMusl: Boolean,
   ) {
     val jdkHome = runBlocking(Dispatchers.IO) { getJdkHome(communityRoot = communityRoot, os = os, arch = arch, isMusl = isMusl) { } }
     val javaExecutable = getJavaExecutable(jdkHome)

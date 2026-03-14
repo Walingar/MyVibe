@@ -12,7 +12,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesConstants
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesExtractOptions
@@ -73,29 +73,29 @@ object BundledMavenDownloader {
     return BigInteger(1, digest).toString(32)
   }
 
-  fun downloadMaven4LibsSync(communityRoot: BuildDependenciesCommunityRoot): Path {
+  fun downloadMaven4LibsSync(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return runBlocking(Dispatchers.Default) {
       downloadMaven4Libs(communityRoot)
     }
   }
 
-  suspend fun downloadMaven4Libs(communityRoot: BuildDependenciesCommunityRoot): Path {
+  suspend fun downloadMaven4Libs(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return downloadMavenLibs(communityRoot, "plugins/maven/maven40-server-impl/lib", maven4Libs)
   }
 
-  fun downloadMaven3LibsSync(communityRoot: BuildDependenciesCommunityRoot): Path {
+  fun downloadMaven3LibsSync(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return runBlocking(Dispatchers.Default) {
       downloadMaven3Libs(communityRoot)
     }
   }
 
-  suspend fun downloadMaven3Libs(communityRoot: BuildDependenciesCommunityRoot): Path {
+  suspend fun downloadMaven3Libs(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return downloadMavenLibs(communityRoot, "plugins/maven/maven3-server-common/lib", maven3Libs)
   }
 
   @OptIn(ExperimentalCoroutinesApi::class)
-  private suspend fun downloadMavenLibs(communityRoot: BuildDependenciesCommunityRoot, path: String, libs: List<String>): Path {
-    val root = communityRoot.communityRoot.resolve(path)
+  private suspend fun downloadMavenLibs(communityRoot: BuildDependenciesMyVibeRoot, path: String, libs: List<String>): Path {
+    val root = communityRoot.myVibeRoot.resolve(path)
     Files.createDirectories(root)
     val targetFileToUris = libs.associate { coordinates ->
       val split = coordinates.split(':')
@@ -154,14 +154,14 @@ object BundledMavenDownloader {
     return root
   }
 
-  fun downloadMavenDistributionSync(communityRoot: BuildDependenciesCommunityRoot): Path {
+  fun downloadMavenDistributionSync(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return runBlocking(Dispatchers.Default) {
       downloadMavenDistribution(communityRoot)
     }
   }
 
-  suspend fun downloadMavenDistribution(communityRoot: BuildDependenciesCommunityRoot): Path {
-    val extractDir = communityRoot.communityRoot.resolve("plugins/maven/maven36-server-impl/lib/maven3")
+  suspend fun downloadMavenDistribution(communityRoot: BuildDependenciesMyVibeRoot): Path {
+    val extractDir = communityRoot.myVibeRoot.resolve("plugins/maven/maven36-server-impl/lib/maven3")
     val properties = BuildDependenciesDownloader.getDependencyProperties(communityRoot)
     val bundledMavenVersion = properties.property("bundledMavenVersion")
     mutex.withLock {
@@ -179,7 +179,7 @@ object BundledMavenDownloader {
     return extractDir
   }
 
-  suspend fun downloadMavenTelemetryDependencies(communityRoot: BuildDependenciesCommunityRoot): Path {
+  suspend fun downloadMavenTelemetryDependencies(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return downloadMavenLibs(communityRoot, "plugins/maven/maven-server-telemetry/lib", mavenTelemetryDependencies)
   }
 }

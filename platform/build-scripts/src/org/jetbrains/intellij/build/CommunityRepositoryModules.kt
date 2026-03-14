@@ -6,7 +6,6 @@ package org.jetbrains.intellij.build
 import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.persistentListOf
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader
-import org.jetbrains.intellij.build.impl.BundledMavenDownloader
 import org.jetbrains.intellij.build.impl.LibraryPackMode
 import org.jetbrains.intellij.build.impl.ModuleItem
 import org.jetbrains.intellij.build.impl.PluginLayout
@@ -169,8 +168,8 @@ object CommunityRepositoryModules {
       // jSerialComm native library
       spec.withGeneratedResources { targetDir, context ->
         val uri = URI.create("https://packages.jetbrains.team/files/p/ij/intellij-build-dependencies/jSerialComm/9a7813435b79aa2e23c7f2a78f1b66b48c0504c4/jSerialComm.zip")
-        val downloaded = BuildDependenciesDownloader.downloadFileToCacheLocation(context.paths.communityHomeDirRoot, uri)
-        BuildDependenciesDownloader.extractFile(downloaded, targetDir.resolve("bin"), context.paths.communityHomeDirRoot)
+        val downloaded = BuildDependenciesDownloader.downloadFileToCacheLocation(context.paths.myVibeHomeDirRoot, uri)
+        BuildDependenciesDownloader.extractFile(downloaded, targetDir.resolve("bin"), context.paths.myVibeHomeDirRoot)
       }
     },
   )
@@ -597,7 +596,7 @@ private suspend fun copyAnt(mainModule: String, pluginDir: Path, context: BuildC
     val antModuleItem = ModuleItem(mainModule, relativeOutputFile = antTargetFile.fileName.toString(), reason = "ant")
     val libraryData = ProjectLibraryData(libraryName = "Ant", packMode = LibraryPackMode.STANDALONE_MERGED, reason = "ant", owner = antModuleItem)
     copyDir(
-      sourceDir = context.paths.communityHomeDir.resolve("lib/ant"),
+      sourceDir = context.paths.myVibeHomeDir.resolve("lib/ant"),
       targetDir = antDir,
       dirFilter = { !it.endsWith("src") },
       fileFilter = { file ->
@@ -621,7 +620,7 @@ private suspend fun copyAnt(mainModule: String, pluginDir: Path, context: BuildC
         path = antTargetFile,
         data = libraryData,
         libraryFile = source.file,
-        canonicalLibraryPath = context.paths.communityHomeDir.relativize(source.file).toString(),
+        canonicalLibraryPath = context.paths.myVibeHomeDir.relativize(source.file).toString(),
         hash = 0,
         size = 0,
         relativeOutputFile = "dist/ant.jar",

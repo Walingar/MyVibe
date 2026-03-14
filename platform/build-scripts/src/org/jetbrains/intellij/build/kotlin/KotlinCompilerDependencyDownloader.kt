@@ -5,7 +5,7 @@ import com.intellij.util.xml.dom.XmlElement
 import com.intellij.util.xml.dom.readXmlAsModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader.downloadFileToCacheLocation
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader.extractFileToCacheLocation
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader.getTargetFile
@@ -43,7 +43,7 @@ object KotlinCompilerDependencyDownloader {
   }
 
 
-  fun downloadAndExtractKotlinCompiler(communityRoot: BuildDependenciesCommunityRoot): Path {
+  fun downloadAndExtractKotlinCompiler(communityRoot: BuildDependenciesMyVibeRoot): Path {
     val kotlinJpsPluginVersion = getKotlinJpsPluginVersion(communityRoot)
     val kotlinDistUrl = getUriForMavenArtifact(getMavenRepositoryUrl(), ARTIFACT_GROUP_ID, "kotlin-dist-for-ide", kotlinJpsPluginVersion, "jar")
     val kotlinDistJar = if (shouldUseMavenLocal()) {
@@ -56,7 +56,7 @@ object KotlinCompilerDependencyDownloader {
     return extractFileToCacheLocation(communityRoot, kotlinDistJar)
   }
 
-  suspend fun downloadKotlinJpsPlugin(communityRoot: BuildDependenciesCommunityRoot): Path = withContext(Dispatchers.IO) {
+  suspend fun downloadKotlinJpsPlugin(communityRoot: BuildDependenciesMyVibeRoot): Path = withContext(Dispatchers.IO) {
     val kotlinJpsPluginVersion = getKotlinJpsPluginVersion(communityRoot)
     val kotlinJpsPluginUrl = getUriForMavenArtifact(getMavenRepositoryUrl(), ARTIFACT_GROUP_ID, "kotlin-jps-plugin-classpath", kotlinJpsPluginVersion, "jar")
 
@@ -85,8 +85,8 @@ object KotlinCompilerDependencyDownloader {
     return@withContext cacheLocation
   }
 
-  fun getKotlinJpsPluginVersion(communityRoot: BuildDependenciesCommunityRoot): String {
-    val kotlinCompilerSettingsFile = communityRoot.communityRoot.resolve(".idea/kotlinc.xml")
+  fun getKotlinJpsPluginVersion(communityRoot: BuildDependenciesMyVibeRoot): String {
+    val kotlinCompilerSettingsFile = communityRoot.myVibeRoot.resolve(".idea/kotlinc.xml")
     val root = readXmlAsModel(kotlinCompilerSettingsFile)
     val kotlinJpsPluginSettingsTag = findNode(root, "component", "KotlinJpsPluginSettings")
                                      ?: throw IllegalStateException("KotlinJpsPluginSettings was not found in $kotlinCompilerSettingsFile")

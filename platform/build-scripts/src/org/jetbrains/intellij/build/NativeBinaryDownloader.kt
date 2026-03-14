@@ -39,7 +39,7 @@ object NativeBinaryDownloader {
   }
 
   private fun findLocalLauncher(context: BuildContext, os: OsFamily): Pair<Path, Path>? {
-    val targetDir = context.paths.communityHomeDirRoot.communityRoot.resolve("native/XPlatLauncher/target/debug")
+    val targetDir = context.paths.myVibeHomeDirRoot.myVibeRoot.resolve("native/XPlatLauncher/target/debug")
     if (targetDir.isDirectory()) {
       val executableName = os.binaryName("xplat-launcher")
       val executableFile = targetDir.resolve(executableName)
@@ -64,7 +64,7 @@ object NativeBinaryDownloader {
   }
 
   private suspend fun downloadAndUnpack(context: BuildContext, propertyName: String, artifactId: String): Pair<Path, Path> {
-    val communityRoot = context.paths.communityHomeDirRoot
+    val communityRoot = context.paths.myVibeHomeDirRoot
     val version = context.dependenciesProperties.property(propertyName)
     val uri = BuildDependenciesDownloader.getUriForMavenArtifact(INTELLIJ_DEPENDENCIES_URL, GROUP_ID, artifactId, version, PACKAGING)
     val archiveFile = downloadFileToCacheLocation(uri.toString(), communityRoot)

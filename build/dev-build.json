@@ -6,7 +6,7 @@
         "intellij.idea.community.build.dependencies",
         "intellij.platform.buildScripts"
       ],
-      "class": "org.jetbrains.intellij.build.IdeaCommunityProperties"
+      "class": "org.jetbrains.intellij.build.MyVibeProperties"
     },
     "AndroidStudio": {
       "modules": [

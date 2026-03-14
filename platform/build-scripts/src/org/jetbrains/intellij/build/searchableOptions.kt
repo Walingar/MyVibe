@@ -76,16 +76,16 @@ internal suspend fun buildSearchableOptions(
     // so it's pre-downloaded with proper synchronization
     withContext(Dispatchers.IO) {
       launch(CoroutineName("download maven4 libs")) {
-        BundledMavenDownloader.downloadMaven4Libs(context.paths.communityHomeDirRoot)
+        BundledMavenDownloader.downloadMaven4Libs(context.paths.myVibeHomeDirRoot)
       }
       launch(CoroutineName("download maven3 libs")) {
-        BundledMavenDownloader.downloadMaven3Libs(context.paths.communityHomeDirRoot)
+        BundledMavenDownloader.downloadMaven3Libs(context.paths.myVibeHomeDirRoot)
       }
       launch(CoroutineName("download maven distribution")) {
-        BundledMavenDownloader.downloadMavenDistribution(context.paths.communityHomeDirRoot)
+        BundledMavenDownloader.downloadMavenDistribution(context.paths.myVibeHomeDirRoot)
       }
       launch(CoroutineName("download maven telemetry dependencies")) {
-        BundledMavenDownloader.downloadMavenTelemetryDependencies(context.paths.communityHomeDirRoot)
+        BundledMavenDownloader.downloadMavenTelemetryDependencies(context.paths.myVibeHomeDirRoot)
       }
     }
 

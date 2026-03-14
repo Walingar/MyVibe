@@ -20,7 +20,7 @@ import org.jetbrains.annotations.ApiStatus.Internal
 import org.jetbrains.intellij.build.BuildMessages
 import org.jetbrains.intellij.build.BuildOptions
 import org.jetbrains.intellij.build.BuildPaths
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.CompilationContext
 import org.jetbrains.intellij.build.JpsCompilationData
 import org.jetbrains.intellij.build.ModuleOutputProvider
@@ -82,7 +82,7 @@ suspend fun createCompilationContext(
 internal fun computeBuildPaths(options: BuildOptions, buildOut: Path, projectHome: Path, artifactDir: Path? = null): BuildPaths {
   val tempDir = buildOut.resolve("temp")
   val result = BuildPaths(
-    communityHomeDirRoot = COMMUNITY_ROOT,
+    myVibeHomeDirRoot = MY_VIBE_ROOT,
     buildOutputDir = buildOut,
     logDir = options.logDir ?: buildOut.resolve("log"),
     projectHome = projectHome,
@@ -108,14 +108,14 @@ suspend fun createCompilationContext(
   }
 
   check(sequenceOf("platform/build-scripts", "bin/idea.properties", "build.txt").all {
-    Files.exists(COMMUNITY_ROOT.communityRoot.resolve(it))
+    Files.exists(MY_VIBE_ROOT.myVibeRoot.resolve(it))
   }) {
-    "communityHome ($COMMUNITY_ROOT) doesn't point to a directory containing IntelliJ Community sources"
+    "communityHome ($MY_VIBE_ROOT) doesn't point to a directory containing IntelliJ Community sources"
   }
 
   if (options.printEnvironmentInfo) {
     Span.current().addEvent("environment info", Attributes.of(
-      AttributeKey.stringKey("community home"), COMMUNITY_ROOT.communityRoot.toString(),
+      AttributeKey.stringKey("community home"), MY_VIBE_ROOT.myVibeRoot.toString(),
       AttributeKey.stringKey("project home"), projectHome.toString(),
     ))
     printEnvironmentDebugInfo()
@@ -125,7 +125,7 @@ suspend fun createCompilationContext(
     logFreeDiskSpace(dir = projectHome, phase = "before downloading dependencies")
   }
 
-  val model = loadProject(projectHome = projectHome, kotlinBinaries = KotlinBinaries(COMMUNITY_ROOT), isCompilationRequired = isCompilationRequired(options))
+  val model = loadProject(projectHome = projectHome, kotlinBinaries = KotlinBinaries(MY_VIBE_ROOT), isCompilationRequired = isCompilationRequired(options))
 
   val buildPaths = customBuildPaths ?: computeBuildPaths(options, options.outRootDir ?: buildOutputRootEvaluator(model.project), projectHome)
 
@@ -185,7 +185,7 @@ class CompilationContextImpl internal constructor(
   override val projectModel: JpsModel
     get() = model
 
-  override val dependenciesProperties: DependenciesProperties = DependenciesProperties(paths.communityHomeDirRoot)
+  override val dependenciesProperties: DependenciesProperties = DependenciesProperties(paths.myVibeHomeDirRoot)
 
   override val bundledRuntime: BundledRuntime = BundledRuntimeImpl(this)
 
@@ -199,7 +199,7 @@ class CompilationContextImpl internal constructor(
     if (jdkHome == null) {
       // blocking doesn't matter, getStableJdkHome is mostly always called before
       @Suppress("DEPRECATION")
-      jdkHome = JdkDownloader.blockingGetJdkHome(COMMUNITY_ROOT, infoLog = Span.current()::addEvent)
+      jdkHome = JdkDownloader.blockingGetJdkHome(MY_VIBE_ROOT, infoLog = Span.current()::addEvent)
       cachedJdkHome = jdkHome
     }
     JdkDownloader.getJavaExecutable(jdkHome)
@@ -217,7 +217,7 @@ class CompilationContextImpl internal constructor(
   override suspend fun getStableJdkHome(): Path {
     var jdkHome = cachedJdkHome
     if (jdkHome == null) {
-      jdkHome = JdkDownloader.getJdkHome(COMMUNITY_ROOT, infoLog = Span.current()::addEvent)
+      jdkHome = JdkDownloader.getJdkHome(MY_VIBE_ROOT, infoLog = Span.current()::addEvent)
       cachedJdkHome = jdkHome
     }
     return jdkHome

@@ -19,7 +19,7 @@ import java.nio.file.Path
 /**
  * Creates JARs containing classes required to run the external build for IDEA project without IDE.
  */
-suspend fun buildCommunityStandaloneJpsBuilder(
+suspend fun buildMyVibeStandaloneJpsBuilder(
   targetDir: Path,
   context: BuildContext,
   dryRun: Boolean = false,

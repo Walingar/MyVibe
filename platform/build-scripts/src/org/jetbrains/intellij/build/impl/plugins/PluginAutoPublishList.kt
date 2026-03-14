@@ -20,13 +20,13 @@ import kotlin.io.path.useLines
  */
 @ApiStatus.Internal
 class PluginAutoPublishList(private val context: BuildContext) : Predicate<PluginLayout> {
-  private val expectedFile: Path = context.paths.communityHomeDir.resolve("../build/plugins-autoupload.txt")
+  private val expectedFile: Path = context.paths.myVibeHomeDir.resolve("../build/plugins-autoupload.txt")
 
   private val file: Path? by lazy {
     when {
       Files.isRegularFile(expectedFile) -> expectedFile
       // public sources build
-      context.paths.projectHome.toUri() == context.paths.communityHomeDir.toUri() -> null
+      context.paths.projectHome.toUri() == context.paths.myVibeHomeDir.toUri() -> null
       else -> error("File '$expectedFile' must exist")
     }
   }

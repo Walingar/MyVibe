@@ -1,14 +1,14 @@
 // Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
 package org.jetbrains.intellij.build
 
-import OpenSourceCommunityInstallersBuildTarget
+import MyVibeInstallersBuildTarget
 import com.intellij.openapi.application.PathManager
 import com.intellij.platform.buildScripts.testFramework.createBuildOptionsForTest
 import com.intellij.platform.buildScripts.testFramework.runEssentialPluginsTest
 import com.intellij.platform.buildScripts.testFramework.runTestBuild
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.impl.createBuildContext
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInfo
@@ -17,9 +17,9 @@ class IdeaCommunityBuildTest {
   @Test
   fun build(testInfo: TestInfo) {
     val homePath = PathManager.getHomeDirFor(javaClass)!!
-    val productProperties = IdeaCommunityProperties(COMMUNITY_ROOT.communityRoot)
+    val productProperties = MyVibeProperties(MY_VIBE_ROOT.myVibeRoot)
     runTestBuild(
-      homeDir = COMMUNITY_ROOT.communityRoot,
+      homeDir = MY_VIBE_ROOT.myVibeRoot,
       testInfo = testInfo,
       productProperties = productProperties,
     ) {
@@ -28,7 +28,7 @@ class IdeaCommunityBuildTest {
        * [com.intellij.platform.buildScripts.testFramework.customizeBuildOptionsForTest] modified [BuildOptions.buildStepsToSkip]
        * which should never be changed for this test because it's expected to match the production behavior
        */
-      it.buildStepsToSkip = OpenSourceCommunityInstallersBuildTarget.OPTIONS.buildStepsToSkip +
+      it.buildStepsToSkip = MyVibeInstallersBuildTarget.OPTIONS.buildStepsToSkip +
                             // no need to publish TeamCity artifacts from a test
                             BuildOptions.TEAMCITY_ARTIFACTS_PUBLICATION_STEP
     }
@@ -41,7 +41,7 @@ class IdeaCommunityBuildTest {
       runTestBuild(
         testInfo = testInfo,
         context = {
-          val productProperties = IdeaCommunityProperties(COMMUNITY_ROOT.communityRoot)
+          val productProperties = MyVibeProperties(MY_VIBE_ROOT.myVibeRoot)
           val options = createBuildOptionsForTest(
             productProperties = productProperties,
             homeDir = homePath,
@@ -51,7 +51,7 @@ class IdeaCommunityBuildTest {
           createBuildContext(projectHome = homePath, productProperties = productProperties, setupTracer = false, options = options)
         },
       ) {
-        buildCommunityStandaloneJpsBuilder(targetDir = it.paths.artifactDir.resolve("jps"), context = it)
+        buildMyVibeStandaloneJpsBuilder(targetDir = it.paths.artifactDir.resolve("jps"), context = it)
       }
     }
   }
@@ -61,7 +61,7 @@ class IdeaCommunityBuildTest {
     val homePath = PathManager.getHomeDirFor(javaClass)!!
     runEssentialPluginsTest(
       homePath = homePath,
-      productProperties = IdeaCommunityProperties(COMMUNITY_ROOT.communityRoot),
+      productProperties = MyVibeProperties(MY_VIBE_ROOT.myVibeRoot),
       buildTools = ProprietaryBuildTools.DUMMY,
     )
   }

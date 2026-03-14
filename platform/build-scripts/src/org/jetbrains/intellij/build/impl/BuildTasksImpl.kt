@@ -141,10 +141,10 @@ internal class BuildTasksImpl(private val context: BuildContextImpl) : BuildTask
       SoftwareBillOfMaterials.STEP_ID,
     )
     context.reportDistributionBuildNumber()
-    BundledMavenDownloader.downloadMaven4Libs(context.paths.communityHomeDirRoot)
-    BundledMavenDownloader.downloadMaven3Libs(context.paths.communityHomeDirRoot)
-    BundledMavenDownloader.downloadMavenDistribution(context.paths.communityHomeDirRoot)
-    BundledMavenDownloader.downloadMavenTelemetryDependencies(context.paths.communityHomeDirRoot)
+    BundledMavenDownloader.downloadMaven4Libs(context.paths.myVibeHomeDirRoot)
+    BundledMavenDownloader.downloadMaven3Libs(context.paths.myVibeHomeDirRoot)
+    BundledMavenDownloader.downloadMavenDistribution(context.paths.myVibeHomeDirRoot)
+    BundledMavenDownloader.downloadMavenTelemetryDependencies(context.paths.myVibeHomeDirRoot)
     val arch = if (SystemInfoRt.isMac && CpuArch.isIntel64() && CpuArch.isEmulated()) {
       JvmArchitecture.aarch64
     }
@@ -183,7 +183,7 @@ val SUPPORTED_DISTRIBUTIONS: List<SupportedDistribution> = listOf(
 )
 
 fun createIdeaPropertyFile(context: BuildContext): CharSequence {
-  val builder = StringBuilder(Files.readString(context.paths.communityHomeDir.resolve(when {
+  val builder = StringBuilder(Files.readString(context.paths.myVibeHomeDir.resolve(when {
     context.options.isLanguageServer -> "../language-server/building/idea.properties"
     else -> "bin/idea.properties"
   })))
@@ -224,7 +224,7 @@ private suspend fun layoutShared(context: BuildContext) {
   spanBuilder("copy files shared among all distributions").use {
     val licenseOutDir = context.paths.distAllDir.resolve("license")
     withContext(Dispatchers.IO) {
-      copyDir(context.paths.communityHomeDir.resolve("license"), licenseOutDir)
+      copyDir(context.paths.myVibeHomeDir.resolve("license"), licenseOutDir)
       for (additionalDirWithLicenses in context.productProperties.additionalDirectoriesWithLicenses) {
         copyDir(additionalDirWithLicenses, licenseOutDir)
       }

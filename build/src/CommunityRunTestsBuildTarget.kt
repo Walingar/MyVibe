@@ -2,7 +2,7 @@
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.intellij.build.BuildOptions
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.TestingOptions
 import org.jetbrains.intellij.build.TestingTasks
 import org.jetbrains.intellij.build.impl.createCompilationContext
@@ -21,8 +21,8 @@ object CommunityRunTestsBuildTarget {
   fun main(args: Array<String>) {
     runBlocking(Dispatchers.Default) {
       val context = createCompilationContext(
-        projectHome = COMMUNITY_ROOT.communityRoot,
-        defaultOutputRoot = COMMUNITY_ROOT.communityRoot.resolve("out/tests"),
+        projectHome = MY_VIBE_ROOT.myVibeRoot,
+        defaultOutputRoot = MY_VIBE_ROOT.myVibeRoot.resolve("out/tests"),
         options = BuildOptions().also {
           it.useTestCompilationOutput = true
         },

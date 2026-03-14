@@ -2,7 +2,7 @@
 package org.jetbrains.intellij.build
 
 import kotlinx.coroutines.runBlocking
-import org.jetbrains.intellij.build.BuildPaths.Companion.COMMUNITY_ROOT
+import org.jetbrains.intellij.build.BuildPaths.Companion.MY_VIBE_ROOT
 import org.jetbrains.intellij.build.BuildPaths.Companion.ULTIMATE_HOME
 import org.jetbrains.intellij.build.impl.createBuildContext
 import org.jetbrains.intellij.build.impl.maven.MavenArtifactsBuilder
@@ -15,7 +15,7 @@ class MavenArtifactsBuilderTest {
       MavenArtifactsBuilder(
         createBuildContext(
           projectHome = ULTIMATE_HOME,
-          productProperties = IdeaCommunityProperties(COMMUNITY_ROOT.communityRoot),
+          productProperties = MyVibeProperties(MY_VIBE_ROOT.myVibeRoot),
           setupTracer = false,
         )
       )

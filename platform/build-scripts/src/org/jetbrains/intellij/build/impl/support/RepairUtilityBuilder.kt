@@ -146,7 +146,7 @@ class RepairUtilityBuilder {
     }
 
     private fun repairUtilityProjectHome(context: BuildContext): Path? {
-      val projectHome = context.paths.communityHomeDir.resolve("native/repair-utility")
+      val projectHome = context.paths.myVibeHomeDir.resolve("native/repair-utility")
       if (Files.exists(projectHome)) {
         return projectHome
       }

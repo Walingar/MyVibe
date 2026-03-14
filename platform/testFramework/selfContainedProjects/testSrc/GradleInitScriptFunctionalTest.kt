@@ -5,7 +5,7 @@ import com.intellij.openapi.application.PathManager
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.greaterThan
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.extractFileToCacheLocation
 import org.jetbrains.intellij.build.downloadFileToCacheLocation
 import org.junit.jupiter.api.AfterEach
@@ -97,7 +97,7 @@ class GradleInitScriptFunctionalTest {
   }
 
   val gradleHome: Path by lazy {
-    val communityRoot = BuildDependenciesCommunityRoot(Path(PathManager.getCommunityHomePath()))
+    val communityRoot = BuildDependenciesMyVibeRoot(Path(PathManager.getCommunityHomePath()))
     runBlocking {
       val gradleZip = downloadFileToCacheLocation("https://cache-redirector.jetbrains.com/services.gradle.org/distributions/gradle-9.2.1-bin.zip", communityRoot)
       extractFileToCacheLocation(gradleZip, communityRoot, stripRoot = true)

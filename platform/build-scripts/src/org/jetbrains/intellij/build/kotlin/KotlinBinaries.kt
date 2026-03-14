@@ -5,7 +5,7 @@ import io.opentelemetry.api.trace.Span
 import kotlinx.collections.immutable.persistentListOf
 import org.jetbrains.annotations.ApiStatus
 import org.jetbrains.intellij.bazelEnvironment.BazelRunfiles
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.impl.addToClasspathAgent.AddToClasspathUtil
 import java.nio.file.Files
 import java.nio.file.Path
@@ -14,7 +14,7 @@ import java.nio.file.Path
  * Sets up Kotlin compiler (downloaded from Marketplace) which is required for JPS to compile the repository
  */
 @ApiStatus.Internal
-class KotlinBinaries(private val communityHome: BuildDependenciesCommunityRoot) {
+class KotlinBinaries(private val communityHome: BuildDependenciesMyVibeRoot) {
   companion object {
     val kotlinCompilerExecutables: List<String>
       get() {

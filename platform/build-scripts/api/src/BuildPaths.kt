@@ -1,14 +1,14 @@
 // Copyright 2000-2025 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
 package org.jetbrains.intellij.build
 
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import java.nio.file.Path
 
 /**
  * All paths are absolute and use '/' as a separator
  */
 class BuildPaths(
-  val communityHomeDirRoot: BuildDependenciesCommunityRoot,
+  val myVibeHomeDirRoot: BuildDependenciesMyVibeRoot,
 
   /**
    * Path to a directory where build script will store temporary and resulting files
@@ -50,7 +50,7 @@ class BuildPaths(
     }
 
     @JvmStatic
-    val COMMUNITY_ROOT: BuildDependenciesCommunityRoot by lazy {
+    val MY_VIBE_ROOT: BuildDependenciesMyVibeRoot by lazy {
       IdeaProjectLoaderUtil.guessCommunityHome()
     }
   }
@@ -58,7 +58,7 @@ class BuildPaths(
   /**
    * Path to a directory where idea/community Git repository is checked out
    */
-  val communityHomeDir: Path = communityHomeDirRoot.communityRoot
+  val myVibeHomeDir: Path = myVibeHomeDirRoot.myVibeRoot
 
   /**
    * Path to a directory containing distribution files ('bin', 'lib', 'plugins' directories) common for all operating systems

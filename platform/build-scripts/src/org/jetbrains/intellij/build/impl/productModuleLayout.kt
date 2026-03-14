@@ -62,7 +62,7 @@ internal suspend fun processAndGetProductPluginContentModules(
       metadataBuilder = { sb ->
         sb.append("  <id>com.intellij</id>\n")
       },
-      isUltimateBuild = context.paths.projectHome != context.paths.communityHomeDir
+      isUltimateBuild = context.paths.projectHome != context.paths.myVibeHomeDir
     )
     Span.current().addEvent("Generated ${buildResult.contentBlocks.size} content blocks with ${buildResult.contentBlocks.sumOf { it.modules.size }} total modules")
 
@@ -230,7 +230,7 @@ private fun isModuleCloseSource(moduleName: String, context: CompilationContext)
   }
 
   return sourceRoots.any {
-    !it.path.startsWith(context.paths.communityHomeDir)
+    !it.path.startsWith(context.paths.myVibeHomeDir)
   }
 }
 

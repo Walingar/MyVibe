@@ -43,7 +43,7 @@ internal suspend fun buildNsisInstaller(
     return null
   }
 
-  val communityHome = context.paths.communityHomeDir
+  val communityHome = context.paths.myVibeHomeDir
   val installerFileName = context.productProperties.getBaseArtifactName(context) + suffix
   val uninstallerFileName = "Uninstall-${context.applicationInfo.productCode}-${arch.dirName}.exe"
   Span.current().setAttribute(installerFileName, installerFileName)
@@ -55,7 +55,7 @@ internal suspend fun buildNsisInstaller(
 
     val nsiConfDir = box.resolve("nsi-conf")
     Files.createDirectories(nsiConfDir)
-    NioFiles.copyRecursively(context.paths.communityHomeDir.resolve("build/conf/nsis"), nsiConfDir)
+    NioFiles.copyRecursively(context.paths.myVibeHomeDir.resolve("build/conf/nsis"), nsiConfDir)
 
     if (OsFamily.currentOs != OsFamily.WINDOWS) {
       val ideaNsiPath = nsiConfDir.resolve("idea.nsi")
@@ -151,7 +151,7 @@ private suspend fun prepareNsis(context: BuildContext, tempDir: Path): Pair<Path
   val nsisDir = context.options.useLocalNSIS?.let { Path.of(it) } ?: run {
     val nsisVersion = context.dependenciesProperties.property("nsisBuild")
     val nsisUrl = "https://packages.jetbrains.team/files/p/ij/intellij-build-dependencies/org/jetbrains/intellij/deps/nsis/NSIS-${nsisVersion}.zip"
-    val nsisZip = downloadFileToCacheLocation(nsisUrl, context.paths.communityHomeDirRoot)
+    val nsisZip = downloadFileToCacheLocation(nsisUrl, context.paths.myVibeHomeDirRoot)
     Decompressor.Zip(nsisZip).withZipExtensions().extract(tempDir)
     val nsisDir = tempDir.resolve("NSIS")
     require(nsisDir.isDirectory()) { "'${nsisDir.fileName}' is missing from ${nsisUrl}" }

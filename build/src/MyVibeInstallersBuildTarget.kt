@@ -4,14 +4,14 @@ import kotlinx.coroutines.runBlocking
 import org.jetbrains.annotations.ApiStatus
 import org.jetbrains.intellij.build.BuildOptions
 import org.jetbrains.intellij.build.OsFamily
-import org.jetbrains.intellij.build.buildCommunityStandaloneJpsBuilder
-import org.jetbrains.intellij.build.createCommunityBuildContext
+import org.jetbrains.intellij.build.buildMyVibeStandaloneJpsBuilder
+import org.jetbrains.intellij.build.createMyVibeBuildContext
 import org.jetbrains.intellij.build.impl.buildDistributions
 import org.jetbrains.intellij.build.telemetry.TraceManager.spanBuilder
 import org.jetbrains.intellij.build.telemetry.use
 
 @ApiStatus.Internal
-object OpenSourceCommunityInstallersBuildTarget {
+object MyVibeInstallersBuildTarget {
   /**
    * The steps which are excessive because the results're never published from .github/workflows/IntelliJ_IDEA.yml.
    * Also, skipping them allows sparing GitHub runner's disk space.
@@ -39,11 +39,11 @@ object OpenSourceCommunityInstallersBuildTarget {
   @JvmStatic
   fun main(args: Array<String>) {
     runBlocking(Dispatchers.Default) {
-      val context = createCommunityBuildContext(OPTIONS.copy(buildStepsToSkip = OPTIONS.buildStepsToSkip + BUILD_STEPS_DISABLED_FOR_GITHUB_ACTIONS))
+      val context = createMyVibeBuildContext(OPTIONS.copy(buildStepsToSkip = OPTIONS.buildStepsToSkip + BUILD_STEPS_DISABLED_FOR_GITHUB_ACTIONS))
       context.compileModules(moduleNames = null, includingTestsInModules = listOf("intellij.platform.jps.build.tests"))
       buildDistributions(context)
       spanBuilder("build standalone JPS").use {
-        buildCommunityStandaloneJpsBuilder(targetDir = context.paths.artifactDir.resolve("jps"), context)
+        buildMyVibeStandaloneJpsBuilder(targetDir = context.paths.artifactDir.resolve("jps"), context)
       }
     }
   }

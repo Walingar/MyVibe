@@ -15,13 +15,13 @@ import java.util.logging.Logger
  */
 object JdkDownloader {
   @Deprecated("Use getJdkHome(communityRoot, jdkBuildNumber, variation, infoLog)", level = DeprecationLevel.WARNING)
-  fun blockingGetJdkHome(communityRoot: BuildDependenciesCommunityRoot, jdkBuildNumber: String? = null, variation: String? = null, infoLog: (String) -> Unit): Path {
+  fun blockingGetJdkHome(communityRoot: BuildDependenciesMyVibeRoot, jdkBuildNumber: String? = null, variation: String? = null, infoLog: (String) -> Unit): Path {
     return runBlocking(Dispatchers.IO) {
       getJdkHome(communityRoot = communityRoot, jdkBuildNumber = jdkBuildNumber, variation = variation, infoLog = infoLog)
     }
   }
 
-  suspend fun getJdkHome(communityRoot: BuildDependenciesCommunityRoot, jdkBuildNumber: String? = null, variation: String? = null, infoLog: (String) -> Unit): Path {
+  suspend fun getJdkHome(communityRoot: BuildDependenciesMyVibeRoot, jdkBuildNumber: String? = null, variation: String? = null, infoLog: (String) -> Unit): Path {
     return getJdkHome(
       communityRoot = communityRoot,
       os = OS.current,
@@ -32,13 +32,13 @@ object JdkDownloader {
     )
   }
 
-  suspend fun getJdkHomeAndLog(communityRoot: BuildDependenciesCommunityRoot, jdkBuildNumber: String? = null, variation: String? = null): Path {
+  suspend fun getJdkHomeAndLog(communityRoot: BuildDependenciesMyVibeRoot, jdkBuildNumber: String? = null, variation: String? = null): Path {
     return getJdkHome(communityRoot = communityRoot, jdkBuildNumber = jdkBuildNumber, variation = variation, infoLog = {
       Logger.getLogger(JdkDownloader::class.java.name).info(it)
     })
   }
 
-  fun blockingGetJdkHomeAndLog(communityRoot: BuildDependenciesCommunityRoot, jdkBuildNumber: String? = null, variation: String? = null): Path {
+  fun blockingGetJdkHomeAndLog(communityRoot: BuildDependenciesMyVibeRoot, jdkBuildNumber: String? = null, variation: String? = null): Path {
     return runBlocking(Dispatchers.IO) {
       getJdkHomeAndLog(communityRoot, jdkBuildNumber, variation)
     }
@@ -49,7 +49,7 @@ object JdkDownloader {
    */
   @Suppress("unused")
   @JvmStatic
-  fun getRuntimeHome(communityRoot: BuildDependenciesCommunityRoot): Path {
+  fun getRuntimeHome(communityRoot: BuildDependenciesMyVibeRoot): Path {
     return runBlocking(Dispatchers.IO) {
       val dependenciesProperties = BuildDependenciesDownloader.getDependencyProperties(communityRoot)
       val runtimeBuild = dependenciesProperties.property("runtimeBuild")
@@ -60,13 +60,13 @@ object JdkDownloader {
   }
 
   suspend fun getJdkHome(
-    communityRoot: BuildDependenciesCommunityRoot,
-    os: OS,
-    arch: Arch,
-    isMusl: Boolean = false,
-    jdkBuildNumber: String? = null,
-    variation: String? = null,
-    infoLog: (String) -> Unit,
+      communityRoot: BuildDependenciesMyVibeRoot,
+      os: OS,
+      arch: Arch,
+      isMusl: Boolean = false,
+      jdkBuildNumber: String? = null,
+      variation: String? = null,
+      infoLog: (String) -> Unit,
   ): Path {
     val effectiveVariation = if (isMusl) null else variation
     val jdkUrl = getUrl(communityRoot = communityRoot, os = os, arch = arch, isMusl = isMusl, jdkBuildNumber = jdkBuildNumber, variation = effectiveVariation)
@@ -88,7 +88,7 @@ object JdkDownloader {
     throw IllegalStateException("No java executables were found under $jdkHome")
   }
 
-  private fun getUrl(communityRoot: BuildDependenciesCommunityRoot, os: OS, arch: Arch, isMusl: Boolean = false, jdkBuildNumber: String? = null, variation: String? = null): String {
+  private fun getUrl(communityRoot: BuildDependenciesMyVibeRoot, os: OS, arch: Arch, isMusl: Boolean = false, jdkBuildNumber: String? = null, variation: String? = null): String {
     val ext = ".tar.gz"
     val osString: String = when (os) {
       OS.WINDOWS -> "windows"

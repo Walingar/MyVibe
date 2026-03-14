@@ -142,7 +142,7 @@ class SoftwareBillOfMaterialsImpl(
    * See https://github.com/JetBrains/intellij-community/blob/master/platform/platform-impl/src/com/intellij/ide/gdpr/EndUserAgreement.java
    */
   private val jetBrainsOwnLicense: Options.DistributionLicense by lazy {
-    val eula = context.paths.communityHomeDir
+    val eula = context.paths.myVibeHomeDir
       .resolve("platform/platform-resources/src")
       .resolve(when {
                  context.applicationInfo.isEAP -> "euaEap.html"
@@ -999,7 +999,7 @@ class SoftwareBillOfMaterialsImpl(
     retryWithExponentialBackOff {
       context.runProcess(
         args = listOf("docker", "build", ".", "--tag", ntiaChecker),
-        workingDir = context.paths.communityHomeDir.resolve("platform/build-scripts/resources/sbom/$ntiaChecker"),
+        workingDir = context.paths.myVibeHomeDir.resolve("platform/build-scripts/resources/sbom/$ntiaChecker"),
       )
     }
     supervisorScope {

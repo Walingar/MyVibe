@@ -50,7 +50,7 @@ class MavenArtifactsProperties {
    * A predicate which returns `true` for modules which sources should be published as Maven artifacts.
    */
   var publishSourcesFilter: (JpsModule, BuildContext) -> Boolean = { module, context ->
-    module.contentRootsList.urls.all { Path.of(JpsPathUtil.urlToPath(it)).startsWith(context.paths.communityHomeDir) }
+    module.contentRootsList.urls.all { Path.of(JpsPathUtil.urlToPath(it)).startsWith(context.paths.myVibeHomeDir) }
   }
 
   /**

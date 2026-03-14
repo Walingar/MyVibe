@@ -43,7 +43,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import org.jetbrains.intellij.build.dependencies.BuildDependenciesCommunityRoot
+import org.jetbrains.intellij.build.dependencies.BuildDependenciesMyVibeRoot
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader
 import org.jetbrains.intellij.build.dependencies.BuildDependenciesDownloader.Credentials
 import java.io.IOException
@@ -197,21 +197,21 @@ suspend fun downloadAsText(url: String): String {
   }
 }
 
-fun downloadFileToCacheLocationSync(url: String, communityRoot: BuildDependenciesCommunityRoot): Path {
+fun downloadFileToCacheLocationSync(url: String, communityRoot: BuildDependenciesMyVibeRoot): Path {
   return runBlocking(Dispatchers.IO) {
     downloadFileToCacheLocation(url, communityRoot)
   }
 }
 
-fun downloadFileToCacheLocationSync(url: String, communityRoot: BuildDependenciesCommunityRoot, credentialsProvider: () -> Credentials): Path = runBlocking(Dispatchers.IO) {
+fun downloadFileToCacheLocationSync(url: String, communityRoot: BuildDependenciesMyVibeRoot, credentialsProvider: () -> Credentials): Path = runBlocking(Dispatchers.IO) {
   downloadFileToCacheLocation(url, communityRoot, credentialsProvider)
 }
 
-suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDependenciesCommunityRoot): Path {
+suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDependenciesMyVibeRoot): Path {
   return downloadFileToCacheLocation(url = url, communityRoot = communityRoot, authConfigSettings = null)
 }
 
-suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDependenciesCommunityRoot, token: String): Path {
+suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDependenciesMyVibeRoot, token: String): Path {
   return downloadFileToCacheLocation(url = url, communityRoot = communityRoot, authConfigSettings = {
     bearer {
       loadTokens {
@@ -222,9 +222,9 @@ suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDepende
 }
 
 suspend fun downloadFileToCacheLocation(
-  url: String,
-  communityRoot: BuildDependenciesCommunityRoot,
-  credentialsProvider: () -> Credentials,
+    url: String,
+    communityRoot: BuildDependenciesMyVibeRoot,
+    credentialsProvider: () -> Credentials,
 ): Path {
   return downloadFileToCacheLocation(url = url, communityRoot = communityRoot, authConfigSettings = {
     basic {
@@ -237,7 +237,7 @@ suspend fun downloadFileToCacheLocation(
   })
 }
 
-suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDependenciesCommunityRoot, authProvider: AuthProvider): Path {
+suspend fun downloadFileToCacheLocation(url: String, communityRoot: BuildDependenciesMyVibeRoot, authProvider: AuthProvider): Path {
   return downloadFileToCacheLocation(url = url, communityRoot = communityRoot, authConfigSettings = {
     providers.add(authProvider)
   })
@@ -254,9 +254,9 @@ private fun downloadFileIsRetryAllowed(e: Exception): Boolean {
 }
 
 private suspend fun downloadFileToCacheLocation(
-  url: String,
-  communityRoot: BuildDependenciesCommunityRoot,
-  authConfigSettings: (AuthConfig.() -> Unit)?,
+    url: String,
+    communityRoot: BuildDependenciesMyVibeRoot,
+    authConfigSettings: (AuthConfig.() -> Unit)?,
 ): Path {
   BuildDependenciesDownloader.cleanUpIfRequired(communityRoot)
 

@@ -468,7 +468,7 @@ private suspend fun createBuildContext(
 
         val tempDir = buildDir.resolve("temp")
         val result = BuildPaths(
-          communityHomeDirRoot = BuildPaths.COMMUNITY_ROOT,
+          myVibeHomeDirRoot = BuildPaths.MY_VIBE_ROOT,
           buildOutputDir = runDir,
           logDir = options.logDir!!,
           projectHome = request.projectDir,
