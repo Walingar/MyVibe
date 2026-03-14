@@ -328,21 +328,6 @@ jvm_import(
 )
 
 copy_file(
-  name = "com.typesafe/config-1.4.4.jar_copy",
-  src = "@com_typesafe-config-1_4_4_http//file",
-  out = "com.typesafe/config-1.4.4.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "com-typesafe-config",
-  jar = "@com_typesafe-config-1_4_4_http//file",
-  source_jar = "@com_typesafe-config-1_4_4-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
   name = "commons-cli/commons-cli-1.10.0.jar_copy",
   src = "@commons-cli-commons-cli-1_10_0_http//file",
   out = "commons-cli/commons-cli-1.10.0.jar",
@@ -508,1028 +493,10 @@ jvm_import(
 )
 
 copy_file(
-  name = "aws.sdk.kotlin/s3-jvm-1.0.69.jar_copy",
-  src = "@aws_sdk_kotlin-s3-jvm-1_0_69_http//file",
-  out = "aws.sdk.kotlin/s3-jvm-1.0.69.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.sdk.kotlin/aws-config-jvm-1.0.69.jar_copy",
-  src = "@aws_sdk_kotlin-aws-config-jvm-1_0_69_http//file",
-  out = "aws.sdk.kotlin/aws-config-jvm-1.0.69.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/serde-json-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-serde-json-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/serde-json-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/serde-form-url-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-serde-form-url-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/serde-form-url-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-json-protocols-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-json-protocols-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-json-protocols-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.sdk.kotlin/aws-core-jvm-1.0.69.jar_copy",
-  src = "@aws_sdk_kotlin-aws-core-jvm-1_0_69_http//file",
-  out = "aws.sdk.kotlin/aws-core-jvm-1.0.69.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.sdk.kotlin/aws-endpoint-jvm-1.0.69.jar_copy",
-  src = "@aws_sdk_kotlin-aws-endpoint-jvm-1_0_69_http//file",
-  out = "aws.sdk.kotlin/aws-endpoint-jvm-1.0.69.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-client-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-client-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-client-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/runtime-core-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-runtime-core-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/runtime-core-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.squareup.okio/okio-jvm-3.6.0.jar_copy",
-  src = "@com_squareup_okio-okio-jvm-3_6_0_http//file",
-  out = "com.squareup.okio/okio-jvm-3.6.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/smithy-client-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-smithy-client-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/smithy-client-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/telemetry-api-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-telemetry-api-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/telemetry-api-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-credentials-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-credentials-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-credentials-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-event-stream-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-event-stream-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-event-stream-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.sdk.kotlin/aws-http-jvm-1.0.69.jar_copy",
-  src = "@aws_sdk_kotlin-aws-http-jvm-1_0_69_http//file",
-  out = "aws.sdk.kotlin/aws-http-jvm-1.0.69.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-protocol-core-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-protocol-core-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-protocol-core-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-signing-common-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-signing-common-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-signing-common-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-signing-default-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-signing-default-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-signing-default-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/aws-xml-protocols-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-aws-xml-protocols-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/aws-xml-protocols-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-auth-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-auth-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-auth-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-auth-api-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-auth-api-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-auth-api-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-auth-aws-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-auth-aws-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-auth-aws-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-client-engine-default-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-client-engine-default-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-client-engine-default-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/http-client-engine-okhttp-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-http-client-engine-okhttp-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/http-client-engine-okhttp-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.squareup.okhttp3/okhttp-jvm-5.0.0-alpha.11.jar_copy",
-  src = "@com_squareup_okhttp3-okhttp-jvm-5_0_0-alpha_11_http//file",
-  out = "com.squareup.okhttp3/okhttp-jvm-5.0.0-alpha.11.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.squareup.okhttp3/okhttp-coroutines-jvm-5.0.0-alpha.11.jar_copy",
-  src = "@com_squareup_okhttp3-okhttp-coroutines-jvm-5_0_0-alpha_11_http//file",
-  out = "com.squareup.okhttp3/okhttp-coroutines-jvm-5.0.0-alpha.11.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/identity-api-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-identity-api-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/identity-api-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/serde-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-serde-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/serde-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/serde-xml-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-serde-xml-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/serde-xml-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/telemetry-defaults-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-telemetry-defaults-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/telemetry-defaults-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "aws.smithy.kotlin/logging-slf4j2-jvm-1.0.16.jar_copy",
-  src = "@aws_smithy_kotlin-logging-slf4j2-jvm-1_0_16_http//file",
-  out = "aws.smithy.kotlin/logging-slf4j2-jvm-1.0.16.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "fleet-aws-sdk-kotlin-s3-jvm",
-  exports = [
-    ":aws_sdk_kotlin-s3-jvm-1_0_69_http_import",
-    ":aws_sdk_kotlin-aws-config-jvm-1_0_69_http_import",
-    ":aws_smithy_kotlin-serde-json-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-serde-form-url-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-aws-json-protocols-jvm-1_0_16_http_import",
-    ":aws_sdk_kotlin-aws-core-jvm-1_0_69_http_import",
-    ":aws_sdk_kotlin-aws-endpoint-jvm-1_0_69_http_import",
-    ":aws_smithy_kotlin-http-client-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-runtime-core-jvm-1_0_16_http_import",
-    ":com_squareup_okio-okio-jvm-3_6_0_http_import",
-    ":aws_smithy_kotlin-smithy-client-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-telemetry-api-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-aws-credentials-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-aws-event-stream-jvm-1_0_16_http_import",
-    ":aws_sdk_kotlin-aws-http-jvm-1_0_69_http_import",
-    ":aws_smithy_kotlin-aws-protocol-core-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-aws-signing-common-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-aws-signing-default-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-aws-xml-protocols-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-http-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-http-auth-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-http-auth-api-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-http-auth-aws-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-http-client-engine-default-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-http-client-engine-okhttp-jvm-1_0_16_http_import",
-    ":com_squareup_okhttp3-okhttp-jvm-5_0_0-alpha_11_http_import",
-    ":com_squareup_okhttp3-okhttp-coroutines-jvm-5_0_0-alpha_11_http_import",
-    ":aws_smithy_kotlin-identity-api-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-serde-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-serde-xml-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-telemetry-defaults-jvm-1_0_16_http_import",
-    ":aws_smithy_kotlin-logging-slf4j2-jvm-1_0_16_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "aws_sdk_kotlin-s3-jvm-1_0_69_http_import",
-  jar = "@aws_sdk_kotlin-s3-jvm-1_0_69_http//file",
-  source_jar = "@aws_sdk_kotlin-s3-jvm-1_0_69-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_sdk_kotlin-aws-config-jvm-1_0_69_http_import",
-  jar = "@aws_sdk_kotlin-aws-config-jvm-1_0_69_http//file",
-  source_jar = "@aws_sdk_kotlin-aws-config-jvm-1_0_69-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-serde-json-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-serde-json-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-serde-json-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-serde-form-url-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-serde-form-url-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-serde-form-url-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-json-protocols-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-json-protocols-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-json-protocols-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_sdk_kotlin-aws-core-jvm-1_0_69_http_import",
-  jar = "@aws_sdk_kotlin-aws-core-jvm-1_0_69_http//file",
-  source_jar = "@aws_sdk_kotlin-aws-core-jvm-1_0_69-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_sdk_kotlin-aws-endpoint-jvm-1_0_69_http_import",
-  jar = "@aws_sdk_kotlin-aws-endpoint-jvm-1_0_69_http//file",
-  source_jar = "@aws_sdk_kotlin-aws-endpoint-jvm-1_0_69-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-client-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-client-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-client-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-runtime-core-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-runtime-core-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-runtime-core-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "com_squareup_okio-okio-jvm-3_6_0_http_import",
-  jar = "@com_squareup_okio-okio-jvm-3_6_0_http//file",
-  source_jar = "@com_squareup_okio-okio-jvm-3_6_0-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-smithy-client-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-smithy-client-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-smithy-client-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-telemetry-api-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-telemetry-api-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-telemetry-api-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-credentials-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-credentials-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-credentials-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-event-stream-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-event-stream-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-event-stream-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_sdk_kotlin-aws-http-jvm-1_0_69_http_import",
-  jar = "@aws_sdk_kotlin-aws-http-jvm-1_0_69_http//file",
-  source_jar = "@aws_sdk_kotlin-aws-http-jvm-1_0_69-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-protocol-core-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-protocol-core-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-protocol-core-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-signing-common-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-signing-common-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-signing-common-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-signing-default-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-signing-default-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-signing-default-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-aws-xml-protocols-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-aws-xml-protocols-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-aws-xml-protocols-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-auth-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-auth-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-auth-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-auth-api-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-auth-api-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-auth-api-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-auth-aws-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-auth-aws-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-auth-aws-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-client-engine-default-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-client-engine-default-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-client-engine-default-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-http-client-engine-okhttp-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-http-client-engine-okhttp-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-http-client-engine-okhttp-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "com_squareup_okhttp3-okhttp-jvm-5_0_0-alpha_11_http_import",
-  jar = "@com_squareup_okhttp3-okhttp-jvm-5_0_0-alpha_11_http//file",
-  source_jar = "@com_squareup_okhttp3-okhttp-jvm-5_0_0-alpha_11-sources_http//file"
-)
-
-jvm_import(
-  name = "com_squareup_okhttp3-okhttp-coroutines-jvm-5_0_0-alpha_11_http_import",
-  jar = "@com_squareup_okhttp3-okhttp-coroutines-jvm-5_0_0-alpha_11_http//file",
-  source_jar = "@com_squareup_okhttp3-okhttp-coroutines-jvm-5_0_0-alpha_11-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-identity-api-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-identity-api-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-identity-api-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-serde-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-serde-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-serde-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-serde-xml-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-serde-xml-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-serde-xml-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-telemetry-defaults-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-telemetry-defaults-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-telemetry-defaults-jvm-1_0_16-sources_http//file"
-)
-
-jvm_import(
-  name = "aws_smithy_kotlin-logging-slf4j2-jvm-1_0_16_http_import",
-  jar = "@aws_smithy_kotlin-logging-slf4j2-jvm-1_0_16_http//file",
-  source_jar = "@aws_smithy_kotlin-logging-slf4j2-jvm-1_0_16-sources_http//file"
-)
-
-copy_file(
-  name = "com.github.ajalt.clikt/clikt-jvm-5.0.3.jar_copy",
-  src = "@com_github_ajalt_clikt-clikt-jvm-5_0_3_http//file",
-  out = "com.github.ajalt.clikt/clikt-jvm-5.0.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.github.ajalt.mordant/mordant-jvm-3.0.1.jar_copy",
-  src = "@com_github_ajalt_mordant-mordant-jvm-3_0_1_http//file",
-  out = "com.github.ajalt.mordant/mordant-jvm-3.0.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.github.ajalt.mordant/mordant-core-jvm-3.0.1.jar_copy",
-  src = "@com_github_ajalt_mordant-mordant-core-jvm-3_0_1_http//file",
-  out = "com.github.ajalt.mordant/mordant-core-jvm-3.0.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.github.ajalt.colormath/colormath-jvm-3.6.0.jar_copy",
-  src = "@com_github_ajalt_colormath-colormath-jvm-3_6_0_http//file",
-  out = "com.github.ajalt.colormath/colormath-jvm-3.6.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "fleet-clikt",
-  exports = [
-    ":com_github_ajalt_clikt-clikt-jvm-5_0_3_http_import",
-    ":com_github_ajalt_mordant-mordant-jvm-3_0_1_http_import",
-    ":com_github_ajalt_mordant-mordant-core-jvm-3_0_1_http_import",
-    ":com_github_ajalt_colormath-colormath-jvm-3_6_0_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "com_github_ajalt_clikt-clikt-jvm-5_0_3_http_import",
-  jar = "@com_github_ajalt_clikt-clikt-jvm-5_0_3_http//file",
-  source_jar = "@com_github_ajalt_clikt-clikt-jvm-5_0_3-sources_http//file"
-)
-
-jvm_import(
-  name = "com_github_ajalt_mordant-mordant-jvm-3_0_1_http_import",
-  jar = "@com_github_ajalt_mordant-mordant-jvm-3_0_1_http//file",
-  source_jar = "@com_github_ajalt_mordant-mordant-jvm-3_0_1-sources_http//file"
-)
-
-jvm_import(
-  name = "com_github_ajalt_mordant-mordant-core-jvm-3_0_1_http_import",
-  jar = "@com_github_ajalt_mordant-mordant-core-jvm-3_0_1_http//file",
-  source_jar = "@com_github_ajalt_mordant-mordant-core-jvm-3_0_1-sources_http//file"
-)
-
-jvm_import(
-  name = "com_github_ajalt_colormath-colormath-jvm-3_6_0_http_import",
-  jar = "@com_github_ajalt_colormath-colormath-jvm-3_6_0_http//file",
-  source_jar = "@com_github_ajalt_colormath-colormath-jvm-3_6_0-sources_http//file"
-)
-
-copy_file(
-  name = "com.github.ajalt.clikt/clikt-core-jvm-5.0.3.jar_copy",
-  src = "@com_github_ajalt_clikt-clikt-core-jvm-5_0_3_http//file",
-  out = "com.github.ajalt.clikt/clikt-core-jvm-5.0.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-clikt-core",
-  jar = "@com_github_ajalt_clikt-clikt-core-jvm-5_0_3_http//file",
-  source_jar = "@com_github_ajalt_clikt-clikt-core-jvm-5_0_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.github.luben/zstd-jni-1.5.5-11.jar_copy",
-  src = "@com_github_luben-zstd-jni-1_5_5-11_http//file",
-  out = "com.github.luben/zstd-jni-1.5.5-11.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-github-luben-zstd-jni",
-  jar = "@com_github_luben-zstd-jni-1_5_5-11_http//file",
-  source_jar = "@com_github_luben-zstd-jni-1_5_5-11-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.github.pdvrieze.xmlutil/core-0.91.3.jar_copy",
-  src = "@io_github_pdvrieze_xmlutil-core-0_91_3_http//file",
-  out = "io.github.pdvrieze.xmlutil/core-0.91.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-github-pdvrieze-xmlutil-core",
-  jar = "@io_github_pdvrieze_xmlutil-core-0_91_3_http//file",
-  source_jar = "@io_github_pdvrieze_xmlutil-core-0_91_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.github.pdvrieze.xmlutil/serialization-jvm-0.91.3.jar_copy",
-  src = "@io_github_pdvrieze_xmlutil-serialization-jvm-0_91_3_http//file",
-  out = "io.github.pdvrieze.xmlutil/serialization-jvm-0.91.3.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-github-pdvrieze-xmlutil-serialization-jvm",
-  jar = "@io_github_pdvrieze_xmlutil-serialization-jvm-0_91_3_http//file",
-  source_jar = "@io_github_pdvrieze_xmlutil-serialization-jvm-0_91_3-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-client-cio-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-client-cio-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-client-cio-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-client-cio",
-  jar = "@io_ktor-ktor-client-cio-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-client-cio-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-client-core-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-client-core-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-client-core-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-client-core",
-  jar = "@io_ktor-ktor-client-core-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-client-core-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-client-logging-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-client-logging-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-client-logging-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-client-logging",
-  jar = "@io_ktor-ktor-client-logging-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-client-logging-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-client-mock-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-client-mock-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-client-mock-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-client-mock",
-  jar = "@io_ktor-ktor-client-mock-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-client-mock-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-events-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-events-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-events-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-events",
-  jar = "@io_ktor-ktor-events-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-events-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-http-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-http-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-http-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-http",
-  jar = "@io_ktor-ktor-http-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-http-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-http-cio-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-http-cio-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-http-cio-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-http-cio",
-  jar = "@io_ktor-ktor-http-cio-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-http-cio-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-io-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-io-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-io-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-io",
-  jar = "@io_ktor-ktor-io-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-io-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-network-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-network-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-network-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-network",
-  jar = "@io_ktor-ktor-network-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-network-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-network-tls-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-network-tls-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-network-tls-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-network-tls",
-  jar = "@io_ktor-ktor-network-tls-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-network-tls-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-serialization-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-serialization-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-serialization-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-serialization",
-  jar = "@io_ktor-ktor-serialization-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-serialization-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-server-cio-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-server-cio-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-server-cio-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-server-cio",
-  jar = "@io_ktor-ktor-server-cio-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-server-cio-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-server-core-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-server-core-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-server-core-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-server-core",
-  jar = "@io_ktor-ktor-server-core-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-server-core-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-server-host-common-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-server-host-common-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-server-host-common-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-server-host-common",
-  jar = "@io_ktor-ktor-server-host-common-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-server-host-common-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-sse-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-sse-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-sse-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-sse",
-  jar = "@io_ktor-ktor-sse-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-sse-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-utils-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-utils-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-utils-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-utils",
-  jar = "@io_ktor-ktor-utils-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-utils-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-websocket-serialization-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-websocket-serialization-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-websocket-serialization-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-websocket-serialization",
-  jar = "@io_ktor-ktor-websocket-serialization-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-websocket-serialization-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.ktor/ktor-websockets-jvm-3.3.2.jar_copy",
-  src = "@io_ktor-ktor-websockets-jvm-3_3_2_http//file",
-  out = "io.ktor/ktor-websockets-jvm-3.3.2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-io-ktor-websockets",
-  jar = "@io_ktor-ktor-websockets-jvm-3_3_2_http//file",
-  source_jar = "@io_ktor-ktor-websockets-jvm-3_3_2-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.amper/async-processes-0.8.0.jar_copy",
-  src = "@org_jetbrains_amper-async-processes-0_8_0_http//file",
-  out = "org.jetbrains.amper/async-processes-0.8.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-jetbrains-amper-async-processes",
-  jar = "@org_jetbrains_amper-async-processes-0_8_0_http//file",
-  source_jar = "@org_jetbrains_amper-async-processes-0_8_0-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.jetbrains.intellij.idea/idea-community-build-zip-252.11244.jar_copy",
-  src = "@com_jetbrains_intellij_idea-idea-community-build-zip-252_11244_http//file",
-  out = "com.jetbrains.intellij.idea/idea-community-build-zip-252.11244.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.netty/netty-buffer-4.2.0.RC2.jar_copy",
-  src = "@io_netty-netty-buffer-4_2_0_RC2_http//file",
-  out = "io.netty/netty-buffer-4.2.0.RC2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "io.netty/netty-common-4.2.0.RC2.jar_copy",
-  src = "@io_netty-netty-common-4_2_0_RC2_http//file",
-  out = "io.netty/netty-common-4.2.0.RC2.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.jetbrains.intellij.deps.fastutil/intellij-deps-fastutil-8.5.15-jb1.jar_copy",
-  src = "@org_jetbrains_intellij_deps_fastutil-intellij-deps-fastutil-8_5_15-jb1_http//file",
-  out = "org.jetbrains.intellij.deps.fastutil/intellij-deps-fastutil-8.5.15-jb1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "com.dynatrace.hash4j/hash4j-0.20.0.jar_copy",
-  src = "@com_dynatrace_hash4j-hash4j-0_20_0_http//file",
-  out = "com.dynatrace.hash4j/hash4j-0.20.0.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-java_library(
-  name = "fleet-jetbrains-intellij-idea-community-build-zip",
-  exports = [
-    ":com_jetbrains_intellij_idea-idea-community-build-zip-252_11244_http_import",
-    ":io_netty-netty-buffer-4_2_0_RC2_http_import",
-    ":io_netty-netty-common-4_2_0_RC2_http_import",
-    ":org_jetbrains_intellij_deps_fastutil-intellij-deps-fastutil-8_5_15-jb1_http_import",
-    ":com_dynatrace_hash4j-hash4j-0_20_0_http_import",
-  ],
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "com_jetbrains_intellij_idea-idea-community-build-zip-252_11244_http_import",
-  jar = "@com_jetbrains_intellij_idea-idea-community-build-zip-252_11244_http//file",
-  source_jar = "@com_jetbrains_intellij_idea-idea-community-build-zip-252_11244-sources_http//file"
-)
-
-jvm_import(
-  name = "io_netty-netty-buffer-4_2_0_RC2_http_import",
-  jar = "@io_netty-netty-buffer-4_2_0_RC2_http//file",
-  source_jar = "@io_netty-netty-buffer-4_2_0_RC2-sources_http//file"
-)
-
-jvm_import(
-  name = "io_netty-netty-common-4_2_0_RC2_http_import",
-  jar = "@io_netty-netty-common-4_2_0_RC2_http//file",
-  source_jar = "@io_netty-netty-common-4_2_0_RC2-sources_http//file"
-)
-
-jvm_import(
-  name = "org_jetbrains_intellij_deps_fastutil-intellij-deps-fastutil-8_5_15-jb1_http_import",
-  jar = "@org_jetbrains_intellij_deps_fastutil-intellij-deps-fastutil-8_5_15-jb1_http//file",
-  source_jar = "@org_jetbrains_intellij_deps_fastutil-intellij-deps-fastutil-8_5_15-jb1-sources_http//file"
-)
-
-jvm_import(
-  name = "com_dynatrace_hash4j-hash4j-0_20_0_http_import",
-  jar = "@com_dynatrace_hash4j-hash4j-0_20_0_http//file",
-  source_jar = "@com_dynatrace_hash4j-hash4j-0_20_0-sources_http//file"
-)
-
-copy_file(
   name = "com.jetbrains.intellij.platform/util-zip-squashed-252.16432.jar_copy",
   src = "@com_jetbrains_intellij_platform-util-zip-squashed-252_16432_http//file",
   out = "com.jetbrains.intellij.platform/util-zip-squashed-252.16432.jar",
   allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-jetbrains-intellij-platform-util-zip-squashed",
-  jar = "@com_jetbrains_intellij_platform-util-zip-squashed-252_16432_http//file",
-  source_jar = "@com_jetbrains_intellij_platform-util-zip-squashed-252_16432-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.fusesource.jansi/jansi-2.4.1.jar_copy",
-  src = "@org_fusesource_jansi-jansi-2_4_1_http//file",
-  out = "org.fusesource.jansi/jansi-2.4.1.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-org-fusesource-jansi",
-  jar = "@org_fusesource_jansi-jansi-2_4_1_http//file",
-  source_jar = "@org_fusesource_jansi-jansi-2_4_1-sources_http//file",
-  visibility = ["//visibility:public"]
-)
-
-copy_file(
-  name = "org.tukaani/xz-1.9.jar_copy",
-  src = "@org_tukaani-xz-1_9_http//file",
-  out = "org.tukaani/xz-1.9.jar",
-  allow_symlink = True,
-  visibility = ["//visibility:public"]
-)
-
-jvm_import(
-  name = "fleet-tukaani-xz",
-  jar = "@org_tukaani-xz-1_9_http//file",
-  source_jar = "@org_tukaani-xz-1_9-sources_http//file",
   visibility = ["//visibility:public"]
 )
 
@@ -3053,6 +2020,14 @@ copy_file(
 )
 
 copy_file(
+  name = "org.fusesource.jansi/jansi-2.4.1.jar_copy",
+  src = "@org_fusesource_jansi-jansi-2_4_1_http//file",
+  out = "org.fusesource.jansi/jansi-2.4.1.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
   name = "org.jline/jline-terminal-3.27.0.jar_copy",
   src = "@org_jline-jline-terminal-3_27_0_http//file",
   out = "org.jline/jline-terminal-3.27.0.jar",
@@ -4198,6 +3173,70 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
+copy_file(
+  name = "io.ktor/ktor-client-core-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-client-core-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-client-core-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-http-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-http-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-http-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-http-cio-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-http-cio-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-http-cio-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-events-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-events-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-events-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-websocket-serialization-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-websocket-serialization-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-websocket-serialization-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-serialization-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-serialization-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-serialization-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-websockets-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-websockets-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-websockets-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-sse-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-sse-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-sse-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
 java_library(
   name = "ktor-client-core",
   exports = [
@@ -4276,6 +3315,22 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
+copy_file(
+  name = "io.ktor/ktor-network-tls-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-network-tls-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-network-tls-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-network-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-network-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-network-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
 java_library(
   name = "ktor-network-tls",
   exports = [
@@ -4335,9 +3390,41 @@ jvm_import(
 )
 
 copy_file(
+  name = "io.ktor/ktor-server-cio-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-server-cio-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-server-cio-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-server-core-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-server-core-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-server-core-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
   name = "com.typesafe/config-1.4.5.jar_copy",
   src = "@com_typesafe-config-1_4_5_http//file",
   out = "com.typesafe/config-1.4.5.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-utils-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-utils-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-utils-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-io-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-io-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-io-jvm-3.3.2.jar",
   allow_symlink = True,
   visibility = ["//visibility:public"]
 )
@@ -6046,6 +5133,14 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
+copy_file(
+  name = "io.ktor/ktor-client-cio-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-client-cio-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-client-cio-jvm-3.3.2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
 jvm_import(
   name = "libraries-ktor-client-cio-ktor-client-cio-internal",
   jar = "@io_ktor-ktor-client-cio-jvm-3_3_2_http//file",
@@ -6095,6 +5190,14 @@ jvm_import(
   name = "libraries-ktor-client-ktor-client-encoding",
   jar = "@io_ktor-ktor-client-encoding-jvm-3_3_2_http//file",
   source_jar = "@io_ktor-ktor-client-encoding-jvm-3_3_2-sources_http//file",
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.ktor/ktor-client-logging-jvm-3.3.2.jar_copy",
+  src = "@io_ktor-ktor-client-logging-jvm-3_3_2_http//file",
+  out = "io.ktor/ktor-client-logging-jvm-3.3.2.jar",
+  allow_symlink = True,
   visibility = ["//visibility:public"]
 )
 
@@ -7165,6 +6268,22 @@ jvm_import(
   visibility = ["//visibility:public"]
 )
 
+copy_file(
+  name = "io.netty/netty-buffer-4.2.0.RC2.jar_copy",
+  src = "@io_netty-netty-buffer-4_2_0_RC2_http//file",
+  out = "io.netty/netty-buffer-4.2.0.RC2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
+copy_file(
+  name = "io.netty/netty-common-4.2.0.RC2.jar_copy",
+  src = "@io_netty-netty-common-4_2_0_RC2_http//file",
+  out = "io.netty/netty-common-4.2.0.RC2.jar",
+  allow_symlink = True,
+  visibility = ["//visibility:public"]
+)
+
 java_library(
   name = "netty-buffer",
   exports = [
@@ -7172,6 +6291,18 @@ java_library(
     ":io_netty-netty-common-4_2_0_RC2_http_import",
   ],
   visibility = ["//visibility:public"]
+)
+
+jvm_import(
+  name = "io_netty-netty-buffer-4_2_0_RC2_http_import",
+  jar = "@io_netty-netty-buffer-4_2_0_RC2_http//file",
+  source_jar = "@io_netty-netty-buffer-4_2_0_RC2-sources_http//file"
+)
+
+jvm_import(
+  name = "io_netty-netty-common-4_2_0_RC2_http_import",
+  jar = "@io_netty-netty-common-4_2_0_RC2_http//file",
+  source_jar = "@io_netty-netty-common-4_2_0_RC2-sources_http//file"
 )
 
 copy_file(
