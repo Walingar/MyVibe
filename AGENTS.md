@@ -55,34 +55,6 @@ Preserve IDE-serialized .iml files in canonical form. Do not:
 - prune (remove) empty tags
 - reorder elements or attributes
 
-## Tools (use in this order)
-
-### ijproxy (required when available)
-
-- Read: `mcp__ijproxy__read_file`
-- Edit/Write: `mcp__ijproxy__apply_patch`
-- **Search symbols (preferred):** `mcp__ijproxy__search_symbol`
-- Find files (glob): `mcp__ijproxy__search_file`
-- Search text: `mcp__ijproxy__search_text`
-- Search regex: `mcp__ijproxy__search_regex`
-- List dir: `mcp__ijproxy__list_dir`
-
-### jetbrains MCP (fallback)
-Direct JetBrains MCP connection. Use when ijproxy unavailable.
-
-- Read: `get_file_text_by_path`
-- Edit: `replace_text_in_file`
-- Write: `create_new_file`
-- Find by glob: `find_files_by_glob`
-- Find by name: `find_files_by_name_keyword`
-- Search text: `search_in_files_by_text`
-- Search regex: `search_in_files_by_regex`
-- List dir: `list_directory_tree`
-
-### Client fallback (no MCP)
-
-- **No MCP:** use `./tools/fd.cmd` (file search) and `./tools/rg.cmd` (text/regex search). These are the only allowed shell file ops on repo paths.
-
 ### IDE-backed semantic tools
 Available via ijproxy or JetBrains MCP. Use these for semantic operations; avoid manual search/replace when a refactor exists.
 
@@ -93,17 +65,6 @@ Available via ijproxy or JetBrains MCP. Use these for semantic operations; avoid
 - Concurrency checks: `find_threading_requirements_usages`, `find_lock_requirements_usages`
 - Project structure & VCS: `get_project_modules`, `get_project_dependencies`, `get_repositories`, `git_status`
 - Run configs: `get_run_configurations`, `execute_run_configuration`
-
-### Tooling rules
-- When ijproxy MCP is available, all repo file ops (read/search/edit/write) MUST use ijproxy tools. Do not use JetBrains MCP or generic tools.
-- Fallback tools (JetBrains MCP / client) are allowed only when ijproxy is unavailable.
-
-- For repo edits, use `mcp__ijproxy__apply_patch`. Generic `apply_patch` is forbidden unless ijproxy is unavailable.
-
-- Never shell for file ops (`cat`, `sed`, `find`, `grep`) on repo paths, except the client fallback (`./tools/fd.cmd`, `./tools/rg.cmd`) when no MCP is available.
-
-- Shell OK for: git (prefer `git_status` if the tool is available), build/test.
-- Outside repo: native shell permitted.
 
 ## Individual Preferences
 
